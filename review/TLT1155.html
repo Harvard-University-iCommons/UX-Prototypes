@@ -1,0 +1,356 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Relative links start -->
+<link rel="stylesheet" href="../bootstrap/css/docs.min.css" media="screen"/>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+<link rel="stylesheet" href="../font-awesome-4.4.0/css/font-awesome.css" media="screen"/>
+
+<!-- Relative links end -->
+
+    <title>Course People</title>
+</head>
+<body class="lti-tool" role="application">
+    
+<div class="container-fluid">
+    
+        <title>Course People</title>
+</head>
+<body class="lti-tool" role="application">
+    
+<div class="container-fluid">
+    
+        <div class="container-fluid">
+            <div class="container">
+                <div class="col-md-12">
+                    <header>
+                        <h2><a href="#">Find Course</a> <small><i class="fa fa-chevron-right"></i></small> People in [course name]</h2>
+                    </header>
+                </div>
+                <div role="tabpanel" class="tab-pane active fade in active" id="people">
+                    &nbsp;<br>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <i class="fa fa-navicon"></i> Add People  <span class="caret"></span>
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="well container-fluid col-md-8">
+                            <div class="form-group-inline">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail3">Enter Harvard University ID or email addresses</label>
+                                        <input type="email" class="form-control" id="emailHUID" placeholder="Enter Harvard University ID or email addresses">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Role <spa class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="disabled"><a href="#">Select Role</a></li>
+                                        <li class=""><a href="#">Student (0)</a></li>
+                                        <li><a href="#">Guest (3)</a></li>
+                                        <li><a href="#">Shopper (0)</a></li>
+                                        <li><a href="#">Harvard-Viewer (0)</a></li>
+                                        <li><a href="#">Teacher (2)</a></li>
+                                        <li><a href="#">Course Head (0)</a></li>
+                                        <li><a href="#">Faculty (0)</a></li>
+                                        <li><a href="#">Teaching Staff (0)</a></li>
+                                        <li><a href="#">Course Support Staff (0)</a></li>
+                                        <li><a href="#">TA (0)</a></li>
+                                        <li><a href="#">Designer (0)</a></li>
+                                        <li><a href="#">Observer (0)</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-info-circle"></i> Privacy Disclaimer <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right" style="width:30em; padding:1em;">
+                                            <li>The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both "directory information" (i.e. student's name) and "non-directory information" (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.</li>
+                                        </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12" style="margin-bottom: 1em;">
+                                <a href="https://connections.harvard.edu" target="_blank">Go to the Harvard Directory</a> to find someone's official email address.
+                            </div>
+
+                            <div class="col-md-8 col-md-offset-2 hidden" style="padding-top: 1em">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                      <span class="sr-only">Search in progress</span>
+                                    </div>
+                                </div>
+                            </div>
+
+<!-- Warning if people and roles already in the course, start -->
+                      <div class="col-md-12 alert alert-warning alert-dismissible hidden" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>Crystal_Aaberg@harvard.edu</strong> was found in the course:</p>
+                          <p>Crystal Aaberg has the following email/id and role associated with this course:</p>
+                      <!-- list of ids already in course -->
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              Crystal_Aaberg@harvard.edu
+                              <span class="label label-primary">XID</span>
+                              <strong>Enrolled as Student</strong>
+                          </div>
+                      </div>
+<!-- Warning if people and roles already in the course, end -->
+
+<!-- Warning on non valid email addrerss or ID, start -->
+                      <div class="col-md-12 alert alert-warning alert-dismissible hidden" role="alert" id="msg-not-found" >
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><i class="fa fa-warning"></i> vitriol_bookyehree@harvard.edu was not found. Please check the email or Harvard University ID and try again.</p>
+                      </div>
+<!-- Warning on non valid email addrerss or ID, end -->
+
+<!-- List of people and roles not in the course and with matching records, start -->
+                      <div class="col-md-12 hidden">
+                          <h4>Some of the information you entered matches more than one record.</h4>
+                      </div>
+                      <form method="post">
+                          <div class="radio hidden">
+                              <table class="table table-hover ">
+                                  <thead>
+                                      <tr>
+                                          <th>&nbsp;</th>
+                                          <th>Name</th>
+                                          <th>ID</th>
+                                          <th>Email</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr class="">
+                                          <td scope="row">
+                                              <label>
+                                                  <input type="radio" class="check_search" name="matching_records" id="add_person1"> <span class="sr-only">Smith, Joan</span>
+                                              </label>
+                                          </td>
+                                          <td>
+                                              <span>Smith, Joan</span>
+                                          </td>
+                                          <td>
+                                              <span class="label label-primary">XID</span> 23456789
+                                          </td>
+                                          <td>
+                                              <span>joan_smith@harvard.edu</span>
+                                          </td>
+                                      </tr>
+                                      <tr class="">
+                                          <td scope="row">
+                                              <label>
+                                                  <input type="radio" class="check_search" name="matching_records" id="add_person2"> <span class="sr-only">Smith, Joan</span>
+                                              </label>
+                                          </td>
+                                          <td>
+                                              <span>Smith, Joan</span>
+                                          </td>
+                                          <td>
+                                              <span class="label label-danger">HUID</span> 23456789
+                                          </td>
+                                          <td>
+                                              <span>joan_smith@harvard.edu</span>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="col-md-12 row " >
+                              <a class="btn btn-primary" type="button" disabled>
+                                <i class="fa fa-plus-circle"></i> Add to Course
+                              </a>
+                          </div>
+                      </form>
+                      <div class="col-md-8 col-md-offset-2 hidden" style="padding-top: 1em">
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                <span class="sr-only">Search in progress</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+<!-- List of people and roles not in the course and with matching records, end -->
+                      
+              </div>
+            </div>
+
+
+            <h3>People in Administration and Leadership</h3>
+
+<!-- Confirm person added to the course, start -->
+            <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>joan_smith@harvard.edu</strong> was just added to this course:</p>
+            <!-- list of ids already in course -->
+                <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                    joan_smith@harvard.edu
+                    <span class="label label-danger">HUID</span> 123456789
+                    <strong>Teaching Staff</strong>
+                </div>
+            </div>
+<!-- Confirm person added to the course, end -->
+
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr><th class="sorting" tabindex="0">Name</th>
+                                        <th class="sorting" tabindex="0">ID</th>
+                                        <th class="sorting" tabindex="0">Role</th>
+                                        <th class="sorting" tabindex="0">Source</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span>Chow, Hiu-Kei</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 34567890
+                                            </td>
+                                            <td>
+                                                <span>Student</span>
+                                            </td>
+                                            <td>
+                                                <span>Registrar Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Chow, Hiu-Kei</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">XID</span> 45678901
+                                            </td>
+                                            <td>
+                                                <span>Teaching Assistant</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hidden">
+                                            <td>
+                                                <span>Ehrenzweig, Jill</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 123456789
+                                            </td>
+                                            <td>
+                                                <span>Teaching Staff</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="hidden">
+                                            <td>
+                                                <span>Brooke, Danny</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 234567890
+                                            </td>
+                                            <td>
+                                                <span>Guest</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Mysore, Sapna</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-success">LIBRARY</span> 12345678
+                                            </td>
+                                            <td>
+                                                <span>Teacher</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Parker, Eric P.</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">XID</span> 45678901
+                                            </td>
+                                            <td>
+                                                <span>Guest</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Yip, Josie</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-warning">OTHER</span> 56789012
+                                            </td>
+                                            <td>
+                                                <span>Teaching Assistant</span>
+                                            </td>
+                                            <td>
+                                                <span>Registrar Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>Yip, Josie</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">XID</span> 45678901
+                                            </td>
+                                            <td>
+                                                <span>Teaching Staff</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>      
+            </div>
+
+        <main class="float-left col-60">
+          
+    <div id="user-removed-success" class="infoBlock-success alert-lti hidden">
+        <p>User '<span id="success_username"> </span>' successfully removed.</p>
+    </div>
+
+    <div id="user-removed-failed" class="infoBlock-error alert-lti hidden">
+        <p>
+            There was a problem removing '<span id="err_username"> </span>'. Please try again. If the problem persists,
+            please contact your <a href="http://tlt.harvard.edu/get-started" target="_blank">local support staff</a>.
+        </p>
+    </div>
+
+        
+
+        </div>
+
+
+    <script src="../bootstrap/js/list.min.js"></script>
+    <script src="../bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script src="../bootstrap/js/docs.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</script>
+
+    
+</body>
+</html>

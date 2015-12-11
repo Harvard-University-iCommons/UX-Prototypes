@@ -1,0 +1,130 @@
+<html>
+
+	<body class="backgroundPhotography">
+		<head>
+      <link href="voiceportal/HarvardUni_selfservice.css" rel="stylesheet">
+      <link href="voiceportal/selfservice.css" rel="stylesheet">
+
+
+<style>
+  .backgroundPhotography {
+    background: #ffffff url(Harvard_University_Voice_Portal_login.png) no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 100%;
+  }
+
+
+.main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  resize: vertical;
+  overflow: auto;
+}
+
+.main div {
+  background-color: rgba(255, 255, 254, 0.92);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  height: 400px;
+  width: 400px;
+  margin-top: -17em;
+  margin-left: -17em;
+  color: black;
+  font-size: 80%;
+  font-family: sans-serif;
+}
+</style>
+		</head>
+<main>
+  
+  <!-- <div class="login box homescreen"> -->
+  <div>
+     <div class="login-box">
+                <div class="header" style="background: url('voiceportal/harvard-logo.png');
+                background-size: contain;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                margin: -0px -20px 120px -20px;
+                height: 70px;
+                opacity: 1;
+                filter: alpha(opacity=100);"></div>
+                <!--[if lte IE 8]>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="browser-warning" class="alert alert-danger" role="alert">
+                                <strong></strong> {{ UNSUPPORTED_BROWSER_WARNING | translate }}
+                            </div>
+                        </div>
+                    </div>
+                    <![endif]-->
+                <form name="forms.loginForm" class="form-horizontal login ng-pristine ng-invalid ng-invalid-empty_string" data-ng-submit="login(credentials)" method="post" id="loginform" novalidate="">
+                    <!--[if lte IE 8]>
+                        <fieldset class="col-sm-12" data-ng-disabled="true">
+                            <![endif]-->
+                    <!--[if (gte IE 9)|(!IE)]><!-->
+                        <fieldset class="col-sm-12">
+                            <!--<![endif]-->
+                        <input type="hidden" class="form-control" id="csrfmiddlewaretoken" name="csrfmiddlewaretoken">
+                        <div class="form-group">
+                            <div class="controls row">
+                                <div class="input-group col-sm-12" data-ng-class="{'ss-stressed-invalid-input': (forms.loginForm.$dirty || is.showUserNameMandatoryAlert)
+                                                    &amp;&amp; forms.loginForm.username.$error.empty_string}">
+                                    <input type="text" class="form-control ng-pristine ng-invalid ng-invalid-empty_string" id="username" name="username" data-ng-model="credentials.username" placeholder="" data-ui-validate="{empty_string: '$value != &quot;&quot;'}" ng-focus="hideAlerts()">
+                                </div>
+                                <!-- <div data-ng-show="(forms.loginForm.$dirty || is.showUserNameMandatoryAlert) &amp;&amp; -->
+                                                   <!-- forms.loginForm.username.$error.empty_string" class="ng-hide"> -->
+                                    <!-- You must provide your username/email -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="controls row">
+                                <div class="input-group col-sm-12" data-ng-class="{'ss-stressed-invalid-input': forms.loginForm.$dirty &amp;&amp; forms.loginForm.password.$error.empty_string}">
+                                    <input type="password" class="form-control ng-pristine ng-invalid ng-invalid-empty_string" id="password" name="password" data-ng-model="credentials.password" placeholder="" data-ui-validate="{empty_string: '$value != &quot;&quot;'}" ng-focus="hideAlerts()">
+                                </div>
+                                <!-- <div data-ng-show="forms.loginForm.$dirty &amp;&amp; forms.loginForm.password.$error.empty_string" class="ng-hide"> -->
+                                    <!-- You must provide your password -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="ss-clickable ss-forget-password-link" data-ng-click="forgotPassword()">
+                                    I forgot my password
+                                </a>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="alert alert-danger ss-login-alert text-center ng-hide" data-ng-show="is.showUserNameMandatoryAlert &amp;&amp; forms.loginForm.username.$error.empty_string">
+                                    Please enter your username/email first to reset your password
+                                </div>
+                                <!-- <div class="alert alert-danger ss-login-alert text-center ng-binding" data-ng-show="error_message"> -->
+                                     <!-- Please enter a valid username and password. -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <button data-ng-disabled="forms.loginForm.$dirty &amp;&amp; forms.loginForm.$invalid" type="submit" class="btn btn-lg btn-primary ss-btn-login ng-binding" style="width: 168px">
+                                Login
+                            </button>
+                        </div>
+                        <div class="row text-center">
+                            <label class="control-label ng-binding"></label>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+  </div>
+  </main>
+	</body>
+</html>

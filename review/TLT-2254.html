@@ -1,0 +1,370 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- UI comment - adding BASE tag to make CSS and JS links absolute - start -->
+    <base href="https://canvas-account-admin-tools.dev.tlt.harvard.edu" target="_blank">
+    <!-- UI comment - adding BASE tag to make CSS and JS links absolute - end -->
+
+    <link href="/static/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-3.3.4/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/datatables-1.10.7/media/css/jquery.dataTables.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/datatables-bootstrap3/BS3/assets/css/datatables.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/course_info/css/index.css">
+
+    
+    <script src="/static/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="/static/datatables-1.10.7/media/js/jquery.dataTables.min.js"></script>
+    <script src="/static/underscore-1.8.2/underscore.min.js"></script>
+    <script src="/static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="/static/angular-1.3.9/angular.min.js"></script>
+    <script src="/static/angular-1.3.9/angular-route.min.js"></script>
+    <script src="/static/angular-1.3.9/angular-sanitize.min.js"></script>
+    <script src="/static/djangular/js/django-angular.min.js"></script>
+    <script src="/static/angular-datatables-0.5.1/angular-datatables.min.js"></script>
+    <script src="/static/datatables-bootstrap3/BS3/assets/js/datatables.js"></script>
+    
+
+<script>
+    window.globals = {
+        RESOURCE_LINK_ID: '797339d3befe291c48613f2c9c18b8d5c2bea77f'
+    };
+</script>
+<script src="/static/django_auth_lti/js/resource_link_id.js"></script>
+    <script>
+      window.globals.STATIC_URL = '/static/';
+      window.schoolOptions = [{"query": true, "text": "Divinity School <span class=\"caret\"></span>", "value": "hds", "key": "school", "name": "Divinity School"}, {"query": true, "text": "Graduate School of Education <span class=\"caret\"></span>", "value": "gse", "key": "school", "name": "Graduate School of Education"}, {"query": true, "text": "HILR <span class=\"caret\"></span>", "value": "hilr", "key": "school", "name": "HILR"}, {"query": true, "text": "HKS Exec Ed <span class=\"caret\"></span>", "value": "ksg", "key": "school", "name": "HKS Exec Ed"}, {"query": true, "text": "HLS Executive Education <span class=\"caret\"></span>", "value": "hlsexec", "key": "school", "name": "HLS Executive Education"}, {"query": true, "text": "Harvard <span class=\"caret\"></span>", "value": "hu", "key": "school", "name": "Harvard"}, {"query": true, "text": "Harvard Business School Doctoral Program <span class=\"caret\"></span>", "value": "hbsdoc", "key": "school", "name": "Harvard Business School Doctoral Program"}, {"query": true, "text": "Harvard Business School MBA Program <span class=\"caret\"></span>", "value": "hbsmba", "key": "school", "name": "Harvard Business School MBA Program"}, {"query": true, "text": "Harvard Chan School <span class=\"caret\"></span>", "value": "hsph", "key": "school", "name": "Harvard Chan School"}, {"query": true, "text": "Harvard College Library <span class=\"caret\"></span>", "value": "hcl", "key": "school", "name": "Harvard College Library"}, {"query": true, "text": "Harvard College/GSAS <span class=\"caret\"></span>", "value": "colgsas", "key": "school", "name": "Harvard College/GSAS"}, {"query": true, "text": "Harvard Design School <span class=\"caret\"></span>", "value": "gsd", "key": "school", "name": "Harvard Design School"}, {"query": true, "text": "Harvard Extension School <span class=\"caret\"></span>", "value": "ext", "key": "school", "name": "Harvard Extension School"}, {"query": true, "text": "Harvard Kennedy School (HKS) <span class=\"caret\"></span>", "value": "hks", "key": "school", "name": "Harvard Kennedy School (HKS)"}, {"query": true, "text": "Harvard Law School <span class=\"caret\"></span>", "value": "hls", "key": "school", "name": "Harvard Law School"}, {"query": true, "text": "Harvard Medical School <span class=\"caret\"></span>", "value": "hms", "key": "school", "name": "Harvard Medical School"}, {"query": true, "text": "Harvard School of Dental Medicine <span class=\"caret\"></span>", "value": "hsdm", "key": "school", "name": "Harvard School of Dental Medicine"}, {"query": true, "text": "Harvard Summer School <span class=\"caret\"></span>", "value": "sum", "key": "school", "name": "Harvard Summer School"}, {"query": true, "text": "MIT <span class=\"caret\"></span>", "value": "mit", "key": "school", "name": "MIT"}, {"query": true, "text": "Radcliffe <span class=\"caret\"></span>", "value": "rad", "key": "school", "name": "Radcliffe"}];
+    </script>
+    <title>Course People</title>
+  </head>
+
+  <body class="lti-tool ng-scope" role="application" ng-app="CourseInfo" style="">
+
+    <div class="modal fade" id="confirm-remove-user" tabindex="0" role="dialog" aria-labelledby="confirm-remove-user-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i class="fa fa-info-circle"></i></span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="confirm-remove-user-title">Confirm Remove User</h4>
+                </div>
+                <div class="modal-body">Are you sure you want to remove Patrick Haagenson from this course?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirm-remove-user-button">Yes, Remove User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ngView:  --><div ng-view="" class="ng-scope container">
+<nav class="ng-scope">
+  <h1 class="ng-binding">
+    <a href="#/">Find Course</a>
+    <small><i class="fa fa-chevron-right"></i></small>
+    People in Administration and Leadership
+  </h1>
+</nav>
+
+<main class="float=left col=60 ng-scope">
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="form-group col-md-12">
+
+            <div role="tabpanel" class="tab-pane active fade in active" id="people">
+              &nbsp;<br>
+              <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa fa-navicon"></i> Add People  <span class="caret"></span>
+              </button>
+              <div class="collapse" id="collapseExample">
+                  <div class="well container-fluid col-md-12">
+                      <div class="form-group-inline">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label class="sr-only" for="exampleInputEmail3">Enter Harvard University ID or email addresses</label>
+                                  <input type="email" class="form-control" id="emailHUID" placeholder="Enter Harvard University ID or email addresses">
+                              </div>
+                          </div>
+                          <div class="col-md-2">
+                              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select Role <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                  <li class="disabled"><a href="#">Select Role</a></li>
+                                  <li class=""><a href="#">Student</a></li>
+                                  <li><a href="#">Guest</a></li>
+                                  <li><a href="#">Shopper</a></li>
+                                  <li><a href="#">Harvard-Viewer</a></li>
+                                  <li><a href="#">Teacher</a></li>
+                                  <li><a href="#">Course Head</a></li>
+                                  <li><a href="#">Faculty</a></li>
+                                  <li><a href="#">Teaching Staff</a></li>
+                                  <li><a href="#">Teaching Assistant</a></li>
+                                  <li><a href="#">Course Support Staff</a></li>
+                                  <li><a href="#">TA</a></li>
+                                  <li><a href="#">Designer</a></li>
+                                  <li><a href="#">Observer</a></li>
+                              </ul>
+                          </div>
+
+                          <div class="col-md-4">
+                              <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fa fa-info-circle"></i> Privacy Disclaimer <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu pull-right" style="width:30em; padding:1em;">
+                                      <li>The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both "directory information" (i.e. student's name) and "non-directory information" (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.</li>
+                                  </ul>
+                          </div>
+                      </div>
+
+                      <div class="col-md-12" style="margin-bottom: 1em;">
+                          <a href="https://connections.harvard.edu" target="_blank">Go to the Harvard Directory</a> to find someone's official email address.
+                      </div>
+
+                      <div class="col-md-8 col-md-offset-2 hidden" style="padding-top: 1em">
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                <span class="sr-only">Search in progress</span>
+                              </div>
+                          </div>
+                      </div>
+
+<!-- Warning if people and roles already in the course, start -->
+                      <div class="col-md-12 alert alert-warning alert-dismissible hidden" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>Crystal_Aaberg@harvard.edu</strong> was found in the course:</p>
+                          <p>Crystal Aaberg has the following email/id and role associated with this course:</p>
+                      <!-- list of ids already in course -->
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              Crystal_Aaberg@harvard.edu
+                              <span class="label label-primary">XID</span>
+                              <strong>Enrolled as Student</strong>
+                          </div>
+                      </div>
+<!-- Warning if people and roles already in the course, end -->
+
+<!-- Warning on non valid email addrerss or ID, start -->
+                      <div class="col-md-12 alert alert-warning alert-dismissible hidden" role="alert" id="msg-not-found" >
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><i class="fa fa-warning"></i> vitriol_bookyehree@harvard.edu was not found. Please check the email or Harvard University ID and try again.</p>
+                      </div>
+<!-- Warning on non valid email addrerss or ID, end -->
+
+<!-- List of people and roles not in the course and with matching records, start -->
+                      <div class="col-md-12 hidden">
+                          <h4>Some of the information you entered matches more than one record.</h4>
+                      </div>
+                      <form method="post">
+                          <div class="radio hidden">
+                              <table class="table table-hover ">
+                                  <thead>
+                                      <tr>
+                                          <th>&nbsp;</th>
+                                          <th>Name</th>
+                                          <th>ID</th>
+                                          <th>Email</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr class="">
+                                          <td scope="row">
+                                              <label>
+                                                  <input type="radio" class="check_search" name="matching_records" id="add_person1"> <span class="sr-only">Smith, Joan</span>
+                                              </label>
+                                          </td>
+                                          <td>
+                                              <span>Smith, Joan</span>
+                                          </td>
+                                          <td>
+                                              <span class="label label-primary">XID</span> 23456789
+                                          </td>
+                                          <td>
+                                              <span>joan_smith@harvard.edu</span>
+                                          </td>
+                                      </tr>
+                                      <tr class="">
+                                          <td scope="row">
+                                              <label>
+                                                  <input type="radio" class="check_search" name="matching_records" id="add_person2"> <span class="sr-only">Smith, Joan</span>
+                                              </label>
+                                          </td>
+                                          <td>
+                                              <span>Smith, Joan</span>
+                                          </td>
+                                          <td>
+                                              <span class="label label-danger">HUID</span> 23456789
+                                          </td>
+                                          <td>
+                                              <span>joan_smith@harvard.edu</span>
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                          <div class="col-md-12 row " >
+                              <a class="btn btn-primary" type="button" disabled>
+                                <i class="fa fa-plus-circle"></i> Add to Course
+                              </a>
+                          </div>
+                      </form>
+                      <div class="col-md-8 col-md-offset-2 hidden" style="padding-top: 1em">
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                <span class="sr-only">Search in progress</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+<!-- List of people and roles not in the course and with matching records, end -->
+                      
+              </div>
+            </div>
+
+
+            <h3>People in Administration and Leadership</h3>
+
+<!-- Confirm person added to the course, start -->
+            <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>joan_smith@harvard.edu</strong> was just added to this course:</p>
+            <!-- list of ids already in course -->
+                <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                    joan_smith@harvard.edu
+                    <span class="label label-danger">HUID</span> 123456789
+                    <strong>Teaching Staff</strong>
+                </div>
+            </div>
+<!-- Confirm person added to the course, end -->
+          </div>
+        <div id="DataTables_Table_2_wrapper" class="dataTables_wrapper form-inline no-footer"><div class="row"><div class="col-sm-12"><div class="pull-right"></div><div class="pull-left"></div><div class="clearfix"></div></div></div>
+        <div>
+        
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="exampleInputName2">Show</label>
+              <select class="form-control">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+                <option>All</option>
+              </select>
+              <label for="exampleInputName2">People</label>
+            </div>
+          </form>
+       
+      </div><table datatable="" dt-options="dtOptions" dt-columns="dtColumns" dt-instance="dtInstance" class="table table-striped table-hover ng-isolate-scope dataTable no-footer" style="display: table; width: 940px;" id="DataTables_Table_2" role="grid" aria-describedby="DataTables_Table_2_info">
+        <thead><tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" width="30%">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" width="20%">ID</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" width="20%">Role</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Source: activate to sort column ascending" width="20%">Source</th><th class="" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" width="10%">Remove</th></tr></thead><tbody><tr role="row" class="odd"><td class="ng-scope sorting_1">Aaberg, Crystal</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="checkbox text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Aagaard, Aisha</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-primary">XID</span></badge> 23456789</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="checkbox text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Baade, Hira</td><td class="ng-scope"><badge role="STUDENT" class="ng-isolate-scope"><span class="label label-success">LIBRARY</span></badge> 34567890</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Baasch, Melissa</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-warning">OTHER</span></badge> 45678901</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Babbit, Tajay</td><td class="ng-scope"><badge role="STUDENT" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 56789012</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Caamano, Emily</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 67890123</td><td class="ng-scope">Faculty</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Caballero, Ryan</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 78901234</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Cabanas, Heike</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 89012345</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Daane, Aileen</td><td class="ng-scope"><badge role="CLASPART" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 90123456</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Haacke, Patrick</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 01234567</td><td class="ng-scope">Student</td><td class="ng-scope">Registrar Added</td><td class="text-center"><a disabled><i class="fa fa-trash-o" style="color: #ccc; font-size: 0.9375em;"></i></a></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Haagenson, Patrick</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Student</td><td class="ng-scope">Manually Added</td><td class="checkbox text-center"><link type="button" class="fa fa-trash" data-toggle="modal" data-target="#myModal" style="color:#337ab7"></link></td></tr></tbody></table></div>
+        <div class="row">
+          <!-- Pagination for less than 59 people - start -->
+          <div class="col-sm-12 ">
+            <div class="pull-left" style="margin:2em 0 0 0">
+            <div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">
+              Showing 1 to 10 of 21 people
+            </div>
+          </div>
+          <div class="pull-right">
+            <div class="dataTables_paginate paging_bs_normal" id="DataTables_Table_2_paginate">
+              <ul class="pagination">
+                <li class="prev disabled">
+                  <a href="#">
+                    <span class="fa fa-chevron-left"></span>&nbsp;
+                  </a>
+                </li>
+                <li class="active">
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li class="next">
+                  <a href="#">&nbsp;
+                    <span class="fa fa-chevron-right"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- Pagination for less than 59 people - end -->
+
+
+          <!-- Pagination for more than 59 people - start -->
+          <div class="col-sm-12 hidden">
+            <div class="pull-left" style="margin:2em 0 0 0">
+            <div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">
+              Showing 1 to 10 of 53 people
+            </div>
+          </div>
+          <div class="pull-right">
+            <div class="dataTables_paginate paging_bs_normal" id="DataTables_Table_2_paginate">
+              <ul class="pagination">
+                <li class="first disabled">
+                  <a href="#">&nbsp;
+                    <span class="fa fa-fast-backward"></span>
+                  </a>
+                </li>
+                <li class="prev disabled">
+                  <a href="#">
+                    <span class="fa fa-chevron-left"></span>&nbsp;
+                  </a>
+                </li>
+                <li class="active">
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li>
+                  <a href="#">4</a>
+                </li>
+                <li>
+                  <a href="#">5</a>
+                </li>
+                <li class="disabled">
+                  <a>...</a>
+                </li>
+                <li>
+                  <a href="#">6</a>
+                </li>
+                <li class="next">
+                  <a href="#">&nbsp;
+                    <span class="fa fa-chevron-right"></span>
+                  </a>
+                </li>
+                <li class="next">
+                  <a href="#">&nbsp;
+                    <span class="fa fa-fast-forward"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- Pagination for more than 59 people - end -->
+
+      </div>
+    </div>
+      </div>
+    </div>      
+  </div>
+</main>
+
+</div>
+
+    <!-- Deleted this script to make the table visible <script src="/static/course_info/js/app.js"></script> -->
+    <script src="/static/course_info/js/controllers/SearchController.js"></script>
+    <script src="/static/course_info/js/controllers/EnrollmentsController.js"></script>
+    <script src="/static/course_info/js/services/CourseInstancesService.js"></script>
+    <script src="/static/course_info/js/directives/BadgeDirective.js"></script>
+  
+
+</body></html>

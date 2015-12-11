@@ -1,0 +1,1109 @@
+/* Harvard University self-service */
+
+
+/* Icon changes required by Harvard University */
+
+/* Change the forwarding icon to use fa-mail-forward icon */
+.fa-exchange:before {
+    content: '\f064';
+}
+
+/* Change the Dashboard asterisk icon in the menu to use fa-home icon and make it a big bigger */
+.fa-asterisk:before {
+    content: '\f015';
+    font-size: 18px; 
+}
+
+/* Change the umbrella manager icon used in the My Information page screen to a group icon */
+.input-group-addon .fa-umbrella:before {
+    content: '\f0c0';
+}
+
+/* Change the comment icon used in the My Information page screen to globe icon */
+.input-group-addon .fa-comment:before {
+    content: '\f0ac';
+}
+
+/* enlarge mobile icon on My Information page */
+.input-group-addon .fa-mobile-phone:before, .fa-mobile:before {
+    content: '\f10b';
+    font-size: 20px;
+}
+
+/* Change the home icon used in the Voicemail language screen to a globe icon - NOTE this also changes the Home Number icon on my information page as shares a class*/
+.input-group-addon .fa-home:before {
+    content: '\f0ac';
+}
+
+/* Change the loud-hailer icon in My Availability - Automatically update my Presence Status box to a calendar icon */
+#autoupdatebox.box-header .fa-bullhorn:before {
+    content: '\f073';
+}
+
+.fa.fa-info-circle::before {
+    color: #a51c30;
+    content: '\f05a';
+}
+
+.fa.fa-plus::before {
+    color: #a51c30;
+    content: '\f067';
+}
+
+.fa.fa-refresh::before {
+    color: #a51c30;
+    content: '\f021';
+}
+
+.fa.fa-times::before {
+    color: #a51c30;
+    content: '\f00d';
+}
+
+/* Change the phone icon in the Your Company Phones window to a building icon */
+.ss-dashboard-box .fa-phone:before {
+    content: '\f0f7';
+}
+.ss-dashboard-box .quick-menu .fa-phone:before {
+    content: "\f095";
+}
+/* fix padding IE's padding of the native browser dropdown control.*/
+select.form-control::-ms-expand{
+    margin-right: -10px;
+}
+
+/* Change Your Personal Phones box and Mobile Phone box phone icon to mobile phone icon */
+#personalphonebox .fa-phone:before,
+#mobile-phone-box .fa-phone:before {
+    content: "\f10b";
+    font-size: 22px;
+    line-height: 0;
+    vertical-align: middle;
+}
+#mobile-box-header-text {
+    margin-top: -5px;
+}
+
+/* Change Phone detail icon to building icon */
+div[data-ng-controller='phoneListCtrl'] div[data-ui-view] .fa-phone:before {
+    content: '\f0f7';
+}
+
+/* Navbar (page heading) colour to #e6e6e3 */
+.navbar {
+    background-color: #e6e6e3;
+}
+
+/* Home icon colour set to #a51c30 */
+a#main-menu-toggle {
+    color: #a51c30;
+    left: -10px !important;
+    font-size: 20px !important;
+}
+
+/* Active icon color set to #a51c30 */
+.sidebar-nav .active i {
+    color: #a51c30 ;
+}
+
+/* Background of hovered over icon */
+.ss-sidebar-left.minified .sidebar-nav > ul > li:hover > a {
+    background-color: #f3f3f1;
+    color: #a51c30;
+}
+
+.nav.main-menu > li > a {
+    color: #333 !important;
+}
+
+/* Remove dotted box around icons with focus */
+a:focus {
+    outline: 0;
+}
+
+/* Background of active icon */
+.sidebar-nav .active {
+    background: #f3f3f1 !important;
+}
+
+/* Foreground colour of active icon when hovered over */
+.sidebar-nav .active:hover i {
+    color: #a51c30 !important;
+}
+
+/* Global font change */
+body {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* Font corrections for phone line display */
+i#openlinelink0 {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+i#openlinelink0::before {
+    font-family:FontAwesome;
+}
+
+a#closelinelink0.ss-clickable .fa {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a#closelinelink0.ss-clickable .fa::before {
+    font-family:FontAwesome;
+}
+
+/* Active button color (Green) */
+.label-success {
+    background: #33cc00;
+    color: #000!important;
+    font-weight: 500
+}
+
+.toggle-switch .switch-left {
+    background: #33cc00;
+}
+
+.ss-activity-feed-box {
+    right: 17px !important;
+}
+
+.ss-activity-feed-box .ss-activity-feed-header {
+    top: 50px !important;
+    right: 17px !important;
+}
+
+.ss-activity-feed-box .ss-activity-feed-box-inner {
+    top: 10px !important;
+    background: #F3F3F1;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+.ss-activity-feed-box .ss-activity-feed-box-inner ul.ss-activity-feed-timeline > li  i {
+    background: #F3F3F1;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.ss-activity-feed-box .ss-activity-feed-box-inner ul.ss-activity-feed-timeline .green {
+    color: #33cc00;
+}
+
+/* Inactive buttons/switches (Grey) */
+.toggle-switch .switch-right {
+    background: #b6b6b6;
+    color: #fff;
+}
+
+.label-default {
+    background-color: #b6b6b6;
+    color: #000!important;
+    font-weight: 500
+}
+
+/* Primary button color  - note that not all buttons have an id and all buttons are btn-primary class */
+.btn-primary,
+.btn-danger,
+.btn-danger:active,
+.btn-primary:active {
+    background-color: #a31c2f !important;
+    background: linear-gradient(to bottom, #a31c2f 0, #801323 100%) !important;
+}
+
+/* Activity Feed text color */
+.ss-activity-feed-header, .title, .desc {
+    color:#333;
+}
+
+/* Activity Feed mod */
+.ss-activity-feed-box {
+    position: fixed;
+    top: 25px;
+    right: 16px;
+    margin: 0px;
+    height: 100%;
+    z-index: 1;
+}
+
+.ss-activity-feed-box .ss-activity-feed-header {
+    position: fixed;
+    top: 70px;
+    background:#f3f3f1;
+    border: 1px solid #999;
+    height: 41px;
+    right: 16px;
+    margin: 0px;
+    display: block;
+    padding: 11px;
+    z-index: 3;
+    text-align: center;
+    color: #333;
+}
+
+.ss-activity-feed-box .ss-activity-feed-box-inner {
+    border-left: 1px solid #999;
+}
+
+/* Change edit labels colour */
+.label-info {
+    background: #a51c30;
+}
+.label-info .fa::before {
+    color: #fff;
+}
+
+.label-important {
+    background-color: #a51c30 !important;
+}
+
+.label-important .fa::before {
+    color: #fff;
+}
+/* Add the word "Portal" to the Self Service title */
+.ss-tagline:after{
+    content:" Portal";
+}
+
+/* Change the Username placeholder text */
+
+/* First hide the current text */
+/* Chrome and others */
+input#username::-webkit-input-placeholder {
+    visibility: hidden;
+}
+/* Mozilla */
+input#username::-moz-placeholder {
+    visibility: hidden;
+}
+input#username:-moz-placeholder {
+    visibility: hidden;
+}
+
+/* Change the text and position at the start of the input box for each browser */
+/* Chrome and others */
+input#username::-webkit-input-placeholder::after {
+    visibility: visible;
+    position: relative;
+    margin-left: -120px;
+}
+
+/* Mozilla */
+input#username::-moz-placeholder::after {
+    visibility: visible;
+    position: relative;
+    margin-left: -125px;
+}
+input#username::-moz-placeholder:after {
+    visibility: visible;
+    position: relative;
+    margin-left: -125px;
+}
+/*   Custom CSS and Overwrite CSS - Warren  */
+body,html {
+    background-color: #F0F0F0;
+    background-size: cover;
+}
+
+.box {
+    border:1px solid #999;
+}
+
+.login-bg {
+    background: url('Harvard_University_Voice_Portal_login.jpg') no-repeat top center fixed;
+    background-size: cover;
+    background-repeat:no-repeat;
+    /*background-position:center top;*/
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.login-bg > .container {
+	height: 100%;
+	width: 100%;
+	resize: vertical;
+	overflow: auto;
+}
+.container,
+#content.sidebar-minified {
+    background: none !important;
+}
+#content {
+    background: none;
+}
+#feed {
+    background: url('sidebar/bck.png');
+}
+#feed h2 {
+    background-color: #2c68a6;
+    color: #fff;
+}
+.breadcrumb {
+    background-color: #162b43;
+}
+.breadcrumb span,
+.breadcrumb a:link,
+.breadcrumb a:visited {
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 0;
+}
+#timeline {
+    color: #fff;
+}
+#timeline .title {
+    letter-spacing: 1px;
+}
+#feed ul#timeline {
+    border-left: 1px solid #999;
+}
+.ss-sidebar-left {
+    background-color: #dadada;
+    color: #a51c30;
+    height: 100%;
+    position: fixed;
+}
+
+.login-box .form-control {
+    /*background: url('sidebar/bck.png') !important;*/
+    background: rgba(255,255,255);
+}
+
+.login-box .alert-danger {
+    padding: 5px 15px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-box button.ss-btn-login {
+    margin-top: 10px !important;
+}
+
+.ss-sidebar-left.minified .sidebar-nav > ul > li > a {
+    color: #333;
+    border-top: 1px solid #333;
+}
+
+.ss-sidebar-left.minified .sidebar-nav > ul > li:hover > a .text {
+    background-color: #f3f3f1;
+    color: #a51c30;
+}
+
+.ss-sidebar-left.minified .sidebar-nav > ul > li:hover > a {
+    border-top: 1px solid #333;
+}
+
+.voss-logo {
+    width: 690px;
+    height: 40px;
+    display: block;
+    background: url('harvard-logo.png');
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*margin: 5px 20px 5px 43px;*/
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .voss-logo {
+        background-size: 50%;
+        margin-left: 170px;
+        margin-top: 11px;
+    }
+}
+
+@media (min-width: 488px) and (max-width: 767px) {
+    .voss-logo {
+        background-size: 65%;
+        margin-left: 170px;
+        margin-top: 11px;
+    }
+}
+
+
+/* laptop */
+@media (min-width: 769px) and (max-width: 991px) {
+    .voss-logo {
+        background-size: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7px;
+    }
+}
+
+/* Position the header logo in the centre */
+.logo-holder-header {
+    width: 690px;
+    position: relative;
+    left: 42%;
+    margin-left: -345px;
+}
+
+/* Left hand menu un-highlighted icon colour */
+.nav.main-menu > li > a,
+.nav.main-menu > li > ul > li > a,
+.nav.main-menu > li > ul > li > ul > li > a,
+.nav.main-menu > li > ul > li > ul > li > ul > li > a {
+    color: #d9d9d9;
+}
+
+/* Change colour of icons on the left when hovering */
+.main-menu li a:hover i {
+    color: #a51c30;
+}
+
+/* Hide the tagline text (now included in the banner image) */
+.ss-tagline {
+    visibility: hidden;
+}
+.header-nav a.btn {
+    background-color: #a31c2f;
+    background-image: linear-gradient(to bottom, #a31c2f 0, #801323 100%);
+}
+
+.navbar-nav {
+    margin: 5px 15px 5px 0;
+}
+.box .box-header {
+    background-color: #f3f3f1;
+}
+
+/* Harvard Uni #333 font colour */
+.box .box-header h2 {
+    color: #333;
+}
+/* Harvard Uni #333 font colour for icons */
+.box .box-header i.fa,
+.box .box-icon i.fa {
+    color: #333 !important;
+}
+.input-group-addon {
+    background-color: #a51c30;
+    color: #fff;
+}
+
+.login-box {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 480px !important;
+    width: 400px;
+    margin: auto !important;
+    background: rgba(255,255,254,0.92);
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #999;
+    position: fixed;
+    z-index:0;
+}
+
+.ss-forget-password-link {
+    display: none;
+/*    position: fixed;
+    top: 500px !important;
+    left: 45px !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 20px !important;
+    width: 600px;
+    text-decoration: none!important;
+    margin: auto !important;
+    background: transparent;
+    font-size: 0;
+    cursor: pointer;
+    display: block;*/
+}
+
+.ss-forget-password-link:before {
+    content: 'Recover/Reset Your Password >';
+    font-weight: 600;
+    font-size: 14px;
+    color: #3a68bb;
+}
+
+.login-box .header {
+    background: url('login/harvard-logo.png');
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin: -0px -20px 120px -20px;
+    height: 70px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 350px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .ss-forget-password-link {
+        width: 350px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header:after {
+        content: 'Welcome to Harvard Phone Self-Service\A______________________________________\A\APlease login using your HarvardKey\A\A Login Name (in the form of an email address):' !important;
+    }
+}
+
+/* Add Welcome message etc to login box */
+.header::after {
+    color:#333;
+    position: relative;
+    top: 80px;
+    float: left;
+    margin-left: 5px;
+    text-align: left;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    font-weight: 400;
+    content: "Welcome to Harvard Phone Self-Service\A_____________________________________________\A\APlease login using your HarvardKey\A\A Login Name (in the form of an email address):";
+    white-space: pre;
+    line-height: 1em;
+}
+
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    border: 1px solid #999;
+    color: #cacaca;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: #999;
+}
+.quick-button {
+    color: #606365;
+    border-color: #a51c30;
+}
+
+.quick-button .notification {
+    top: 0;
+    right: 0;
+}
+
+.login-box .input-group-addon {
+    border-color: #999 !important;
+    background: url('sidebar/bck.png') !important;
+    color: #cacaca !important;
+    width: 40px;
+}
+
+.login-box button {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    margin:30px 0 !important;
+}
+
+footer {
+    background: url('sidebar/bck.png') !important;
+    bottom: 0;
+    color: white;
+    position: fixed;
+    right: 0;
+    width: calc(100% - 40px);
+    display: none;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media all and (max-width: 640px) and (min-width: 320px) {
+    #sidebar-left {
+        background: none;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    .login-box {
+        margin-top: 30px;
+    }
+}
+
+.login-box form.login input[type="text"],
+.login-box form.login input[type="password"] {
+    border-right: 1px solid #999 !important;
+}
+
+.add-link {
+    background: #A51C30;
+    background: linear-gradient(to bottom, #a31c2f 0, #801323 100%) !important;
+    color: #fff;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin-bottom: 4px;
+    margin-right: 10px;
+}
+
+.add-link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.add-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.add-link:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.add-link .fa.fa-plus::before {
+    color: #fff;
+}
+
+h2.ss-activity-feed-header:before {
+    content: '\f0ca';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.dropdown-menu li > a:focus,
+.dropdown-menu li > a:hover {
+    background: #a51c30;
+}
+
+.login-box .login fieldset > .form-group:nth-child(3):before {
+    content: 'Password: ';
+    font-weight: 400;
+    margin-left: -15px;
+}
+
+.login-box .form-horizontal .form-group {
+    margin-top: -5px;
+}
+
+.ss-rd-add-step-buttons {
+    background: #f3f3f1 !important;
+    border-top: 1px solid #999 !important;
+    border-bottom: 1px solid #999 !important;
+}
+
+.ss-rd-add-step-buttons .ss-step-container .ss-step.active {
+    background-color: #a51c30 !important;
+    border: 2px solid #a51c30 !important;
+}
+
+.ss-rd-add-step-buttons .ss-step-container .ss-step.active + span {
+    color: #a51c30 !important;
+}
+
+.ss-snap-left-toggle {
+    z-index: 1000;
+}
+
+/* Checkbox overwrite  START */
+input[type='checkbox']:hover {
+    padding-left: 0;
+}
+
+.ss-checkbox-no-select {
+    position: relative;
+}
+
+.ss-checkbox-no-select .f-checkbox {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.ss-checkbox-no-select i.blue-checkbox-icon {
+    cursor: pointer;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: -5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #f3f3f1;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #ddd;
+}
+
+.ss-checkbox-no-select i.blue-checkbox-icon:after {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    background: transparent;
+    top: 4px;
+    left: 2px;
+    border: 3px solid #a51c30;
+    border-top: none;
+    border-right: none;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.ss-checkbox-no-select input[type=checkbox]:checked + i.blue-checkbox-icon:after {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.ss-timer-panel .ss-checkbox-no-select {
+    padding-left: 20px;
+}
+/* Checkbox overwrite  END */
+
+/* Help Page START */
+h2[ng-bind-html="'HELP_TITLE_HELP' | translate | safe"]:before {
+    content: "\f128";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+/* FIXME: this is not a sustainable way to 'access help page .box-content' class */
+/* div[data-ui-view=""] .row .col-lg-12 .box .box-content {} */
+
+div[data-ui-view=""] .row .col-lg-12 .box .box-content .ss-checkbox-no-select {
+    white-space: nowrap;
+}
+
+div[data-ui-view=""] .row .col-lg-12 .box .box-content .ss-checkbox-no-select i.blue-checkbox-icon::before {
+    content: '';
+    padding-right: 22px;
+}
+
+#buttons-and-icons ul li {
+    position: relative;
+    margin-top: 5px;
+}
+
+#buttons-and-icons ul li img {
+    padding-top: 0;
+    margin-top: -1px;
+}
+
+/* overwrite dashboard image */
+#buttons-and-icons ul li:nth-child(1) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(1):before {
+    content: "\f015";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    background: #787878;
+    position: absolute;
+    top: -1px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-top: 5px;
+    color: #fff;
+}
+
+/* overwrite call forwarding image */
+#buttons-and-icons ul li:nth-child(5) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(5):before {
+    content: "";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    background: #787878;
+    position: absolute;
+    top: -1px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-top: 5px;
+    color: #fff;
+}
+
+/* overwrite add/insert image */
+#buttons-and-icons ul li:nth-child(10) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(10):before {
+    color: #fff;
+    content: '\f067';
+    background: #a51c30;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 6px;
+    padding-top: 5px;
+}
+
+/* overwrite edit image */
+#buttons-and-icons ul li:nth-child(11) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(11):before {
+    content: "";
+    color: #fff;
+    background: #a51c30;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 6px;
+    padding-top: 5px;
+}
+
+/* overwrite remove/delete image */
+#buttons-and-icons ul li:nth-child(12) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(12):before {
+    content: "";
+    color: #fff;
+    background: #a51c30;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 6px;
+    padding-top: 5px;
+}
+
+/* overwrite information image */
+#buttons-and-icons ul li:nth-child(13) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(13):before {
+    content: '\f05a';
+    color: #a51c30;
+    background:  #f3f3f1;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/* overwrite active label image */
+#buttons-and-icons ul li:nth-child(14) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(14):before {
+    content: "Active";
+    background: #33cc00;
+    color: #000;
+    font-weight: 500;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 12px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+}
+
+/* overwrite inactive label image */
+#buttons-and-icons ul li:nth-child(15) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(15):before {
+    content: "Inactive";
+    background-color: #b6b6b6;
+    color: #000;
+    font-weight: 500;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 12px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+}
+
+/* overwrite refresh image */
+#buttons-and-icons ul li:nth-child(16) img {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#buttons-and-icons ul li:nth-child(16):before {
+    content: '\f021';
+    color: #a51c30;
+    background:  #f3f3f1;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    margin-left: -10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/* Help Page END */
