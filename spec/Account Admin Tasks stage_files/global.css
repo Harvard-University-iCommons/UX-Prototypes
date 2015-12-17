@@ -1,0 +1,186 @@
+/* CSS for text block on analytics page
+
+named using tlt-analytics as a prefix to avoid clashing with Canvas styles.
+
+*/
+
+.tlt-analytics-center-alert-info {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.tlt-analytics-alert-info {
+  background-image: -webkit-linear-gradient(top, #d9edf7 0%, #b9def0 100%);
+  background-image: -o-linear-gradient(top, #d9edf7 0%, #b9def0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9edf7), to(#b9def0));
+  background-image: linear-gradient(to bottom, #d9edf7 0%, #b9def0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  border: solid 1px #9acfea;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  display: inline-block;
+  width: 60%;
+  margin: 1em 0.5em 2% 1em;
+  padding: 0.5em 2%;
+}
+#header {
+  background: #A51C30 url("img/noiseBkgIndigo.jpg") repeat-x left top;
+}
+
+#header.no-user {
+  height: 70px;
+  display: inline-block;
+  width: 100%;
+  background-position: left top;
+}
+
+#header.no-user #header-inner {
+  height: 44px;
+}
+
+#header-logo,
+#header.no-user #header-logo {
+  position: absolute;
+  right: 0;
+  left: inherit;
+  display: block;
+  top: 35px;
+}
+
+.harvardLogo {
+  display: inline-block;
+  left: 16px;
+  bottom: 0;
+  position: absolute;
+  background-image: url("img/harvardCanvasLogo.png");
+  background-size: 170px 62px;
+  width: 170px;
+  height: 62px;
+}
+
+.menu-item .menu-item-no-drop {
+  text-shadow: 0px 0px 1px #ccc;
+}
+
+#header-inner {
+  background: transparent url("img/veritasIndigo.jpg") no-repeat center top;
+}
+
+#header-logo,
+#header.no-user #header-logo {
+  background-position: -27px 0px;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .harvardLogo {
+    background-image: url("img/harvardCanvasLogo@2x.png");
+  }
+}
+#right-side a.conclude_course_link p {
+  border-top: solid 1px #cccccc;
+  margin-bottom: -.2em;
+  margin-top: .7em;
+  padding-top: .3em;
+}
+
+#right-side button.unconclude_course_link p {
+  border-top: solid 1px #cccccc;
+  margin-bottom: -.2em;
+  margin-top: .7em;
+  padding-top: .3em;
+}
+
+#right-side a.conclude_course_link em {
+  line-height: 1.2em;
+}
+#hu-feedback a {
+  display: block;
+  background: #cc6d00;
+  border-image: none;
+  border-radius: 4px 4px 0px 0px;
+  border-width: 1px 1px medium;
+  border-style: solid solid none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25) inset, 0px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font: bold 16px/1em Arial,sans-serif;
+  height: 15px;
+  width: 180px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+  z-index: 9999;
+}
+
+#hu-feedback a:hover {
+  background: #b35f00;
+  cursor: pointer;
+}
+
+ul.hu-feedback-options li {
+  font: bold 16px/1em Arial,sans-serif;
+  padding-bottom: 10px;
+}
+
+ul.hu-feedback-options {
+  list-style-image: url("/canvas/images/arrow_right.png");
+}
+
+ul.hu-feedback-options li a {
+  font: bold 16px/1em Arial,sans-serif;
+  color: #cc6d00;
+}
+/*
+    new styles for help menu options
+*/
+
+/* hide the menu options until the new options have 
+   been added via javascript */
+
+#help-dialog-options {
+  display: none;
+}
+
+#help-dialog #help-dialog-options {
+  background: #f3f4f5;
+}
+
+#help-dialog #help-dialog-options li span.info-no-url {
+  display: block;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #d4d5d7;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+
+#help-dialog #help-dialog-options li a .text,
+#help-dialog #help-dialog-options li span.info-no-url .text {
+  color: #1967aa;
+  font-size: 1.1em;
+}
+
+#help-dialog #help-dialog-options li a .subtext,
+#help-dialog #help-dialog-options li span.info-no-url .subtext {
+  color: #666666;
+  font-style: italic;
+  display: block;
+  font-size: 0.9em;
+  line-height: 1.1em;
+}
+
+/* end help menu options */
+.message .posted_at {
+  padding: 2px 10px;
+}
+#hu-autosave-warning {
+  /* override ic-flash-error z-index so #combo_box_container student dropdown isn't overlaid by error msg */
+  z-index: inherit;
+}
