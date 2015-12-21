@@ -1,0 +1,21 @@
+#header-inner {
+  background-color: #52A0B5 !important;
+  background-image: none !important;
+}
+
+#header {
+  background-color: #52A0B5 !important;
+  background-image: none !important;
+}
+
+.harvardLogo {
+  display: inline-block;
+  left: 16px;
+  bottom: 0;
+  position: absolute;
+  background-image: url("img/HDSlow.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 170px 62px;
+  width: 170px;
+  height: 62px;
+}
