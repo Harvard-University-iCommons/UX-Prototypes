@@ -11,42 +11,11 @@
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
 <link rel="stylesheet" href="../font-awesome-4.4.0/css/font-awesome.css" media="screen"/>
 <!-- Relative links end -->
+<link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
 
     <title>Course Information</title>
 </head>
 <body class="lti-tool" role="application">
-
-    <!-- Fixed navbar start-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="navbar-brand"><a href="../index.html" style="padding-right: 1em;" data-toggle="tooltip" data-placement="right" title="TLT Prototypes home page"><i class="fa fa-home"></i></a> Concept - Tools Streamlining</span>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-
-          <ul class="nav navbar-nav navbar-right hidden">
-            <li>
-                <a href="https://wiki.harvard.edu/confluence/display/UIS/Admin+Tools+-+Add+People+-+TLT-1155" target="blank">UI Specifications</a>
-            </li>
-            <li>
-                <a href="https://jira.huit.harvard.edu/browse/TLT-1155" target="blank">User Story</a>
-            </li>
-            <li>
-                <a href="https://github.com/Harvard-University-iCommons/TLT-UX/commit/e9766c1346fbe1ccc214dfba8b991a9608dfff21#diff-e7991c4eaa77318ca6fd182a52060659" target="blank">GitHub</a>
-            </li>
-          </ul>
-            
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-    <div class="col-md-12" style="padding-top: 5em"></div>
-        <!-- Fixed navbar end-->
 
 <div class="container-fluid">
 
@@ -88,8 +57,8 @@
     <li role="presentation"><a href="#find" aria-controls="find" role="tab" data-toggle="tab">Find Course</a></li>
     <li role="presentation"><a href="#course" aria-controls="course" role="tab" data-toggle="tab">Course Details</a></li>
     <li role="presentation" class=""><a href="#people" role="tab" data-toggle="tab">Course People <span class="badge">53</span></a></li>
-    <li class="presentation dropdown active">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="profile">Create Non Fed Courses <span class="caret"></span></a>
+    <li class="presentation dropdown active navbar-right">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="profile"><i class="fa fa-bars"></i> Create Non Fed Courses <span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a href="streamline_conclusion.html" target="_blank"><i class="fa fa-external-link"></i> Course Conclusion</a></li>
         <li><a href="streamline_create.html"><strong>Create Non Fed Courses</strong></a></li>
@@ -117,7 +86,7 @@
   <div class="btn-toolbar" role="toolbar" aria-label="...">
     <div class="btn-group" role="group" aria-label="...">
       <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.schools.text" id="dropdownMenuSchools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HKS Exec Ed <span class="caret"></span></button>
+        <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.schools.text" id="dropdownMenuSchools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Divinity School <span class="caret"></span></button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuSchools">
           <!-- ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
             <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Divinity School</a>
@@ -271,7 +240,7 @@
       </div>
     </div>
 
-    <div class="input-group" style="margin-top: 1em; width: 60%">
+    <div class="input-group" style="margin-top: 1em; width: 50%">
       <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Search by course code, SIS or Canvas course ID, course title">
     </div>
   </div>
@@ -306,7 +275,7 @@
             classes: "td"
         );
     </script>
-    <table class="table">
+   <table class="table">
       <thead>
             <th class="sorting" tabindex="0">Department&nbsp;&nbsp;</th>
             <th class="sorting" tabindex="0">Course Details&nbsp;&nbsp;</th>
@@ -319,7 +288,7 @@
          </thead>
          <tr role="row"> 
             <td>GEN ED</td>
-            <td><a href="#">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td><a href="streamline.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
             <td>2015-2016</td>
             <td>Spring</td>
             <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
@@ -329,7 +298,7 @@
         </tr>
          <tr role="row">
             <td>ECON</td>
-            <td><a href="#">Administrative Law</td>
+            <td><a href="streamline.html">Administrative Law</td>
             <td>2015</td>
             <td>Fall</td>
             <td><a href="https://canvas.harvard.edu/courses/327">327</a></td>
@@ -339,13 +308,83 @@
         </tr>
          <tr role="row">
             <td>HISTORY</td>
-            <td><a href="#">Constitutional Law: First Amendment</a></td>
+            <td><a href="streamline.html">Constitutional Law: First Amendment</a></td>
             <td>2015</td>
             <td>Fall</td>
             <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
             <td>GSE E-1000 (24179)</td>
             <td>567890</td>
             <td><span class="label label-info">Secondary</span></td>
+        </tr>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
+        </tr>
+         <tr role="row">
+            <td>ECON</td>
+            <td><a href="streamline.html">Administrative Law</td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/327">327</a></td>
+            <td>GSE E-182W (23949)</td>
+            <td>456789</td>
+            <td><span class=""></span></td>
+        </tr>
+         <tr role="row">
+            <td>HISTORY</td>
+            <td><a href="streamline.html">Constitutional Law: First Amendment</a></td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1000 (24179)</td>
+            <td>567890</td>
+            <td><span class="label label-info">Secondary</span></td>
+        </tr>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
+        </tr>
+         <tr role="row">
+            <td>ECON</td>
+            <td><a href="streamline.html">Administrative Law</td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/327">327</a></td>
+            <td>GSE E-182W (23949)</td>
+            <td>456789</td>
+            <td><span class=""></span></td>
+        </tr>
+         <tr role="row">
+            <td>HISTORY</td>
+            <td><a href="streamline.html">Constitutional Law: First Amendment</a></td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1000 (24179)</td>
+            <td>567890</td>
+            <td><span class="label label-info">Secondary</span></td>
+        </tr>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
         </tr>
          <tr role="row">
             <td colspan="8"></td>
