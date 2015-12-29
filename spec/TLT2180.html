@@ -9,27 +9,16 @@
         <base href="https://icommons-lti-tools.tlt.harvard.edu" target="_blank">
         <!-- UI delete end -->
         <link href="/lti_tools/static/favicon.ico" rel="icon" type="image/x-icon">
-        
 
-    <!-- UI comment - commenting manage-people.css since it causes conflicts with bootstrap.min.css -->
-        <!-- <link rel="stylesheet" type="text/css" href="/lti_tools/static/lti-css/manage-people.css" media="screen"/> -->
-        <link rel="stylesheet" type="text/css" href="/lti_tools/static/font-awesome-4.2.0/css/font-awesome.min.css" media="screen"/>
-        <link rel="stylesheet" type="text/css" href="/lti_tools/static/course_add_people/css/base.css" media="screen"/>
+        <!-- datatables.net css for the current pagination style -->
+        <link rel="stylesheet" type="text/css" href="https://datatables.net/media/css/site.css?_=63e2c6d94b6d3d84d41a319bfecf7b5c">
+
         <!-- UI comment - Boostrap css -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        
-        <style type="text/css">
-           
-            .error {
-                color: #A64343;
-            }
-            #canvas_course_id {display: none;}
-            .tlt-alert-info-blue-fg {
-                color: #31708f;
-            }
-        </style>
 
-    
+        <!-- Font Awesome for pagination icons -->
+        <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
         <title>Cross Listing Single Pair of Courses</title>
     </head>
     <body class="lti-tool" role="application">
@@ -70,7 +59,7 @@
         <div class="container" style="padding-top: 3em">
     
             <header>
-                <h1>Cross Listing Single Pair of Courses</h1>
+                <h3><a href="#/">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Cross Listing Single Pair of Courses</h3>
             </header>
                 
             
@@ -179,100 +168,35 @@
                 </div>
             </div>
 
-            <!-- Pagination for less than 59 pair of courses - start -->
-          <div class="col-sm-12 ">
-            <div class="pull-left" style="margin:2em 0 0 0">
-            <div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">
-              Showing 1 to 10 of 21 courses
+            <!-- Pagination from datatables.net - current - start -->
+            <div id="example_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 157 entries</div>
+                <div class="dataTables_paginate paging_full_numbers" id="example_paginate">
+                    <a class="paginate_button first disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_first" aria-label="First">
+                        <span aria-hidden="true"><i class="fa fa-fast-backward"></i></span>
+                    </a>
+                    <a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="1" tabindex="0" id="example_previous" aria-label="Previous">
+                        <span aria-hidden="true"><i class="fa fa-backward"></i></span>
+                    </a>
+                    <span>
+                        <a class="paginate_button current" aria-controls="example" data-dt-idx="2" tabindex="0">1</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="3" tabindex="0">2</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="4" tabindex="0">3</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="5" tabindex="0">4</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="6" tabindex="0">5</a>
+                        <!-- Vittorio's poetic license here, in case we have a great number of pages. Open for feedback, of course -->
+                        <span class=" " aria-controls="example" data-dt-idx="6" tabindex="0">...</span>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="16" tabindex="0">16</a>
+                    </span>
+                    <a class="paginate_button next" aria-controls="example" data-dt-idx="8" tabindex="0" id="example_next" aria-label="Next">
+                        <span aria-hidden="true"><i class="fa fa-forward"></i></span>
+                    </a>
+                    <a class="paginate_button last" aria-controls="example" data-dt-idx="9" tabindex="0" id="example_last">
+                        <span aria-hidden="true"><i class="fa fa-fast-forward"></i></span>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="pull-right">
-            <div class="dataTables_paginate paging_bs_normal" id="DataTables_Table_2_paginate">
-              <ul class="pagination">
-                <li class="prev disabled">
-                  <a href="#">
-                    <span class="fa fa-chevron-left"></span>&nbsp;
-                  </a>
-                </li>
-                <li class="active">
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li class="next">
-                  <a href="#">&nbsp;
-                    <span class="fa fa-chevron-right"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <!-- Pagination for less than 59 pair of courses - end -->
-
-
-          <!-- Pagination for more than 59 pair of courses - start -->
-          <div class="col-sm-12 ">
-            <div class="pull-left" style="margin:2em 0 0 0">
-            <div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">
-              Showing 1 to 10 of 53 courses
-            </div>
-          </div>
-          <div class="pull-right">
-            <div class="dataTables_paginate paging_bs_normal" id="DataTables_Table_2_paginate">
-              <ul class="pagination">
-                <li class="first disabled">
-                  <a href="#">&nbsp;
-                    <span class="fa fa-fast-backward"></span>
-                  </a>
-                </li>
-                <li class="prev disabled">
-                  <a href="#">
-                    <span class="fa fa-chevron-left"></span>&nbsp;
-                  </a>
-                </li>
-                <li class="active">
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#">4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li class="disabled">
-                  <a>...</a>
-                </li>
-                <li>
-                  <a href="#">6</a>
-                </li>
-                <li class="next">
-                  <a href="#">&nbsp;
-                    <span class="fa fa-chevron-right"></span>
-                  </a>
-                </li>
-                <li class="next">
-                  <a href="#">&nbsp;
-                    <span class="fa fa-fast-forward"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <!-- Pagination for more than 59 pair of courses - end -->
+            <!-- Pagination from datatables.net - current - end -->
             </nav>
 
         </div> <!-- container-fluid end -->
