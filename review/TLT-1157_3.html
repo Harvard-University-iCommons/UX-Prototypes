@@ -66,21 +66,6 @@
 
 <!-- UI comment - instyle below is only needed to make room for the above nav bar  -->
       <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 alert alert-warning alert-dismissible " role="alert" >
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <p><strong>Prototype instructions</strong></p>
-            <p>Select any of the radio buttons.
-              <br />
-              Select any of the blue buttons to see the result of a search for an existing course, or of the creation of a new one.
-              <br />
-              Select these blue buttons again on those pages to get back to this page
-              <br />
-              (This alert box can be closed)</p>
-          </div>
-        </div>
-
         <nav class="ng-scope">
           <h3><a href="#/">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a new course site</h3>
         </nav>
@@ -132,7 +117,7 @@
           <div class="col-md-2">
             <div class="btn-group" role="group" aria-label="...">
               <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.terms.text" id="dropdownMenuTerm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">July and August <span class="caret"></span></button>
+                <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.terms.text" id="dropdownMenuTerm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Spring <span class="caret"></span></button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuTerm">
                   </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
                     <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Summer</a>
@@ -201,7 +186,7 @@
         <div class="col-md-12"><hr></div>
 
           <div class="col-md-12" id="radiocontainer">
-            <input type="radio" class="check_search" name="matching_records" id="coursecode_1" checked>
+            <input type="radio" class="check_search" name="matching_records" id="coursecode_1" >
             <input type="radio" class="check_search" name="matching_records" id="coursecode_1" hidden>
             &nbsp;
             Find an existing course code and course instance
@@ -216,22 +201,14 @@
                   <div class="col-md-6">
                     <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Existing course instance">
                   </div>
-
                 </div>
               </div>
-
-                  <!-- UI comment, AC: From Find Course search results, a selected course cannot be found (in an alert box above the table a-la TLT-1155), start -->
-                  <div class="col-md-12 alert alert-warning alert-dismissible " role="alert" hidden>
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <p>This course cannot be found.</p>
-                  </div>
-                  <!-- UI comment, AC: From Find Course search results, a selected course cannot be found (in an alert box above the table a-la TLT-1155), end -->
             </div>
           </div>
 
           <div class="col-md-12" id="radiocontainer1">
             <input type="radio" class="check_search" name="matching_records" id="coursecode_1" hidden>
-            <input type="radio" class="check_search" name="matching_records" id="coursecode_1">
+            <input type="radio" class="check_search" name="matching_records" id="coursecode_1" checked>
             &nbsp;
             Create a new course code and course instance
             <h5>
@@ -240,28 +217,28 @@
                 <div class="panel-body col-md-12">
                   <div class="col-md-12">
                     <div class="col-md-3">
-                      <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="New course code">
+                      <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="HDS 2925">
                     </div>
                     <div class="col-md-3">
-                      <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="New course instance">
+                      <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="347604">
                     </div>
                 </div>
 
                 <div class="col-md-12">
                   <div class="btn-group col-md-4">
-                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Course Title">
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Administration and Leadership">
                   </div>
 
                   <div class="btn-group col-md-2">
-                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Instructors">
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Prof. Jane Smith">
                   </div>
 
                   <div class="btn-group col-md-3">
-                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Location">
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Lecture Hall">
                   </div>
 
                   <div class="btn-group col-md-3">
-                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Meeting Time">
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="10:00am - 12:00pm">
                   </div>
                 </div>
                   </div>
@@ -272,8 +249,8 @@
           <!-- UI comment - button for when the Find an existing course code and course instance radio button is selected -->
           <div id ="divcontainer">
           <!-- <div class="row" hidden> -->
-            <div class="col-md-12">
-              <a type="link" class="btn btn-primary btn-block center-block" ng-click="searchCourseInstances($event)" style="width:25em" href="TLT-1157_2.html">
+            <div class="col-md-12" style="display:none">
+              <a type="link" class="btn btn-primary btn-block center-block" ng-click="searchCourseInstances($event)" style="width:25em" href="TLT-1157_1.html">
                 Find an Existing Course Record
               </a>
             </div>
@@ -282,14 +259,16 @@
 
           <!-- UI comment - button for when the Create a new course code and course instance radio button is selected -->
           <!-- <div class="row" > -->
-            <div class="col-md-12" style="display:none">
-              <a type="link" class="btn btn-primary btn-block center-block" ng-click="searchCourseInstances($event)" style="width:25em" href="TLT-1157_3.html">
+            <div class="col-md-12">
+              <a type="link" class="btn btn-primary btn-block center-block" ng-click="searchCourseInstances($event)" style="width:25em" href="TLT-1157_1.html">
                 Create a New Course Record
               </a>
             </div>
             <!-- <div class="col-mid-5"></div> -->
           <!-- </div> -->
         </div>
+
+        <div class="row col-md-12"><hr></div>
 
       <div class="row ng-hide" ng-show="searchInProgress">
         <div class="col-md-8 col-md-offset-2">
@@ -303,7 +282,24 @@
 
       <p></p>
 
+      <!-- UI comment, AC: From Find Course search results, a selected course cannot be found (in an alert box above the table a-la TLT-1155), start -->
+      <div class="col-md-8 alert alert-warning alert-dismissible " role="alert" hidden>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <p>This course cannot be found.</p>
+      </div>
+      <!-- UI comment, AC: From Find Course search results, a selected course cannot be found (in an alert box above the table a-la TLT-1155), end -->
+
       <p class="panel"></p>
+
+
+
+      <div ng-show="showDataTable" class="">
+      <div id="courseInfoDT_wrapper" class="dataTables_wrapper form-inline no-footer"><div><div><table id="courseInfoDT" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="courseInfoDT_info" style="width: 100%;">
+        <thead>
+          <tr role="row"><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="School&amp;nbsp;&amp;nbsp;" style="width: 54px;">School&nbsp;&nbsp;</th><th class="sorting_asc" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Details&amp;nbsp;&amp;nbsp;" style="width: 200px;">Course Details&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Year&amp;nbsp;&amp;nbsp;" style="width: 92px;">Academic Year&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Term&amp;nbsp;&amp;nbsp;" style="width: 94px;">Academic Term&nbsp;&nbsp;</th><th class="sorting sorting_disabled" tabindex="0" rowspan="1" colspan="1" aria-label="Associated Site&amp;nbsp;&amp;nbsp;" style="width: 94px;">Associated Site&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Code&amp;nbsp;&amp;nbsp;" style="width: 82px;">Course Code&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Instance ID&amp;nbsp;&amp;nbsp;" style="width: 115px;">Course Instance ID&nbsp;&nbsp;</th><!-- <th class="sorting sorting_disabled" tabindex="0" rowspan="1" colspan="1" aria-label="Cross Listing&amp;nbsp;&amp;nbsp;" style="width: 81px;">Cross Listing&nbsp;&nbsp;</th> --></tr></thead>
+        <tbody><!-- <tr role="row" class="odd"><td>HDS</td><td class="sorting_1"><a href="#/people/347516">A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2895 (45078)</td><td>347516</td><td>N/A</td></tr> <tr role="row" class="even"><td>HDS</td><td class="sorting_1"><a href="#/people/347547">A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2895 (45078)</td><td>347547</td><td>N/A</td> </tr><tr role="row" class="odd"><td>HDS</td><td class="sorting_1"><a href="#/people/347518">A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2895 (45078)</td><td>347518</td><td>N/A</td></tr><tr role="row" class="even"><td>HDS</td><td class="sorting_1"><a href="#/people/347517">A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2895 (45078)</td><td>347517</td><td>N/A</td></tr><tr role="row" class="odd"><td>HDS</td><td class="sorting_1"><a href="#/people/347776">Adam &amp; Eve</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 37 (82396)</td><td>347776</td><td>N/A</td></tr><tr role="row" class="even"><td>HDS</td><td class="sorting_1"><a href="#/people/347603">Administration and Leadership</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2925 (11551)</td><td>347603</td><td>N/A</td></tr><tr role="row" class="odd"><td>HDS</td><td class="sorting_1"><a href="#/people/339590">Administration and Leadership</a></td><td>2015</td><td>Fall 2015</td><td><a href="https://canvas.icommons.harvard.edu/courses/7029" target="_parent">7029</a></td><td>HDS 2925 (11551)</td><td>339590</td><td>N/A</td></tr><tr role="row" class="even"><td>HDS</td><td class="sorting_1"><a href="#/people/339589">Administration and Leadership</a></td><td>2015</td><td>Fall 2015</td><td><a href="https://canvas.icommons.harvard.edu/courses/6992" target="_parent">6992</a></td><td>HDS 2925 (11551)</td><td>339589</td><td>N/A</td></tr><tr role="row" class="odd"><td>HDS</td><td class="sorting_1"><a href="#/people/347607">Administration and Leadership</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2925 (11551)</td><td>347607</td><td>N/A</td></tr> --><tr role="row" class="even"><td>HDS</td><td class="sorting_1"><a href="#/people/347604">Administration and Leadership</a></td><td>2015</td><td>Spring 2015</td><td>N/A</td><td>HDS 2925 (11551)</td><td>347604</td><!-- <td>N/A</td> --></tr> </tbody></table> <!--</div><div class="dataTables_info" id="courseInfoDT_info" role="status" aria-live="polite">Showing 1 to 10 of 704 courses</div><div class="dataTables_paginate paging_bs_normal" id="courseInfoDT_paginate"><ul class="pagination"><li class="prev disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div> --></div></div>
+    </div>
+
       <p></p>
 
     </div>
