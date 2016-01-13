@@ -15,7 +15,15 @@
     <link href="../iCommons/global.css" media="all" rel="stylesheet" type="text/css">
     <link href="../iCommons/hds.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../font-awesome-4.4.0/css/font-awesome.css">
+
+    <script src="/static/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="/static/datatables-1.10.7/media/js/jquery.dataTables.min.js"></script>
+    <script src="/static/underscore-1.8.2/underscore.min.js"></script>
+    <script src="/static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+
   </head>
+
+
 
   <body class="with-left-side context_external_tool_1910 context-account_13 webkit chrome no-touch">
 
@@ -106,7 +114,9 @@
                   <li class="section section-tab-hidden"><a class="outcomes">Outcomes<span id="inactive_nav_link" class="screenreader-only">* No content has been added</span></a></li>
                   <li class="section "><a class="context_external_tool_1888">Lecture Video</a></li>
                   <li class="section "><a class="settings" aria-label="Course Settings">Settings</a></li>
-                  <li class="section "><a href="streamline_menu_faculty.html" class="console" aria-label="Admin Console"><i class="fa fa-gear"></i> Admin Console</a></li>
+                  <li class="section">
+                    <a onclick="document.getElementById('div_name2').style.display='';return false;" 
+      href=""><i class="fa fa-gear"></i> Admin Console</a></li>
 
               </nav>
 
@@ -137,8 +147,12 @@
           <div id="content" role="main" class="container-fluid padless">
 
             <div class="tool_content_wrapper" style="height: 60em;">   
-                     
-            <div style="border: solid 1px #ccc; background-color: white; position: absolute; margin-left: -3em; margin-top: 300px; width: 18em; height: 19em;">
+
+              <div id="div_name2" style="display:none; border: solid 1px #ccc; background-color: white; position: absolute; margin-left: -3em; margin-top: 300px; width: 18em; height: 19em;">
+
+                <!-- <div class="row"><a onclick="document.getElementById('div_name2').style.display='none';return false;" href="" class="pull-right"style="margin-right: 1em">
+                  <i class="fa fa-times"></i>
+                </a></div> -->
 
                 <!-- <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
                   <a href="streamline_menu.html"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
@@ -172,7 +186,7 @@
 
 
               </div>
-              <iframe allowfullscreen="true" height="100%" id="tool_content" mozallowfullscreen="true" name="tool_content" src="streamline_menu_faculty_home.html" tabindex="0" webkitallowfullscreen="true" width="100%">
+              <iframe allowfullscreen="true" height="100%" id="tool_content" mozallowfullscreen="true" name="tool_content" src="streamline_menu_nav_faculty_home.html" tabindex="0" webkitallowfullscreen="true" width="100%">
               </iframe>
             </div>
 
@@ -185,6 +199,8 @@
       </div>
     </div>
     <footer role="contentinfo" id="footer"><p>Copyright © 2015 The President and Fellows of Harvard College</p><p><a>Privacy Policy</a> | <a>Acceptable Use Policy</a></p></footer>
+
+
 
   </body>
 
