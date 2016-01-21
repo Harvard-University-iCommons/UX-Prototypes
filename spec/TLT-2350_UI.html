@@ -54,22 +54,38 @@
 
 
 <main class="float=left col=60 ng-scope">
-<div class="container-fluid">
+  <div class="container-fluid">
 
-<div class="col-md-12">
-    <div ng-show="showDataTable" class="">
-      <div id="courseInfoDT_wrapper" class="dataTables_wrapper form-inline no-footer"><div><div><table id="courseInfoDT" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="courseInfoDT_info"  style="width: 978px;">
-        <thead>
-          <tr role="row"><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="School&amp;nbsp;&amp;nbsp;" style="width: 0px;">School&nbsp;&nbsp;</th><th class="sorting_asc" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Details&amp;nbsp;&amp;nbsp;" style="width: 0px;">Course Details&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Year&amp;nbsp;&amp;nbsp;" style="width: 0px;">Academic Year&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Term&amp;nbsp;&amp;nbsp;" style="width: 0px;">Academic Term&nbsp;&nbsp;</th><th class="sorting sorting_disabled" tabindex="0" rowspan="1" colspan="1" aria-label="Associated Site&amp;nbsp;&amp;nbsp;" style="width: 0px;">Associated Site&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Code&amp;nbsp;&amp;nbsp;" style="width: 0px;">Course Code&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Instance ID&amp;nbsp;&amp;nbsp;" style="width: 0px;">Course Instance ID&nbsp;&nbsp;</th><th class="sorting sorting_disabled" tabindex="0" rowspan="1" colspan="1" aria-label="Cross Listing&amp;nbsp;&amp;nbsp;" style="width: 0px;">Cross Listing&nbsp;&nbsp;</th></tr></thead>
-      <tbody><tr role="row" class="odd"><td>GSE</td><td class="sorting_1"><a href="#/people/338296">Active Learning in Museums</a></td><td>2015</td><td>Winter 2015</td><td>N/A</td><td>S305 (13515)</td><td>338296</td><td>N/A</td></tr></tbody></table></div></div></div>
+    <div class="col-md-12">
+        <!-- <nav class="navbar navbar-default" style="display:inline-block; float:none; width: 978px; align: center;"> -->
+      <div class="container-fluid">
+          <div ng-show="showDataTable" class="">
+            <div id="courseInfoDT_wrapper" class="dataTables_wrapper form-inline no-footer">
+              <!-- UI comment - inline style for a table border until table-box makes it to Bootrsap 4 -->
+              <table id="courseInfoDT" class="display dataTable" cellspacing="0" role="grid" aria-describedby="courseInfoDT_info" style="width: 978px; border: solid 1px #ccc; margin-top: 1em;">
+                <tbody>
+                  <tr role="row" class="odd">
+                    <td>GSE</td>
+                    <td>Active Learning in Museums</td>
+                    <td>2015</td>
+                    <td>Winter 2015</td>
+                    <td>N/A</td>
+                    <td>S305 (13515)</td>
+                    <td>338296</td>
+                    <td>N/A</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
     </div>
-  </div>
 
   <!-- begin add people interface -->
   <!-- begin add person expand-o-widget -->
   <div role="tabpanel" class="tab-pane active fade in active col-md-12" id="people">
     <br>
-    <button id="addPeopleBtn" class="btn btn-default" type="button" data-toggle="collapse" data-target="#addPeopleDialog" aria-expanded="false" aria-controls="addPeopleDialog">
+    <button id="addPeopleBtn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#addPeopleDialog" aria-expanded="false" aria-controls="addPeopleDialog">
        Add People <span class="caret"></span>
     </button>
     <div class="collapse" id="addPeopleDialog">
