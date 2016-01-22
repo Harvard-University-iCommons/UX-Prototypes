@@ -1,0 +1,865 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- UI delete start -->
+<base href="https://icommons-lti-tools.tlt.harvard.edu" target="_blank">
+<!-- UI delete end -->
+    <link href="/lti_tools/static/favicon.ico" rel="icon" type="image/x-icon">
+    
+
+<!-- UI comment - commenting manage-people.css since it causes conflicts with bootstrap.min.css -->
+        <!-- <link rel="stylesheet" type="text/css" href="/lti_tools/static/lti-css/manage-people.css" media="screen"/> -->
+        <link rel="stylesheet" type="text/css" href="/lti_tools/static/font-awesome-4.2.0/css/font-awesome.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="/lti_tools/static/course_add_people/css/base.css" media="screen"/>
+<!-- UI comment - Boostrap css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="/lti_tools/static/datatables-bootstrap3/BS3/assets/css/datatables.css" media="screen">
+
+    
+   <style type="text/css">
+       
+        .error {
+            color: #A64343;
+        }
+        #canvas_course_id {display: none;}
+        .tlt-alert-info-blue-fg {
+            color: #31708f;
+        }
+    </style>
+
+<!-- UI comment - style for highlighting table start -->
+    <style type='text/css'>
+        .even_row {
+        background-color: #f9f9f9;
+        color: #000000;
+    }
+    thead:hover {
+        background-color:#f5f5f5;
+        color: #000000;
+    }
+    .selected_row {
+        background-color: #fcf9e3 !important;
+        color: #000000;
+    }
+    thead tr {
+        cursor: pointer;
+        * cursor: hand;
+    }
+    tr {
+        cursor: pointer;
+        * cursor: hand;
+    }
+    input[type="submit"] {
+    font-family: FontAwesome;
+}
+  </style>
+<!-- UI comment - style for highlighting table end -->
+    <title>Course Details</title>
+</head>
+<body class="lti-tool" role="application">
+        <div class="container-fluid">
+    
+
+    
+        <header>
+            </h3><h3 class="ng-binding"><a href="/account_dashboard?resource_link_id=2a1bd07608a1489164cc74109b7dfdc66b8a2505">Admin Console</a> &gt; <a href="#/">Find Course Info</a>
+    
+    <small><i class="fa fa-chevron-right"></i></small>
+    Course Details
+  </h3>
+        </header>
+<!-- UI comment - Insert tabs - start     -->
+            <div>
+                <!-- Nav tabs -->
+                
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active fade in active" id="course">
+                    <p>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Short Title: </strong>
+                                            </span>
+                                            <span class="col-md-9">PORTUG C</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Subtitle: </strong>
+                                            </span>
+                                            <span class="col-md-9">Intermediate Portuguese</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Description: </strong>
+                                            </span>
+                                            <span class="col-md-9">An intermediate course for students interested in expanding and strengthening their Portuguese language skills. Reading, writing and conversational competency is emphasize though the study of the Luso-Sfrican-Brazilian cultures. The course aims to promote cross-cultural understanding through teh use of authentic materials such as literary texts, multimedia, film, music and videos.</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Instructors (display): </strong>
+                                            </span>
+                                            <span class="col-md-9">Surname First, Surname First, Surname First</span>
+                                           
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>People: </strong>
+                                            </span>
+                                            <span class="col-md-9"><a>There are 35 people in this course</a></span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Location: </strong>
+                                            </span>
+                                            <span class="col-md-9">Gutman LaunchPad (3rd floor)</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Meeting Time: </strong>
+                                            </span>
+                                            <span class="col-md-9">Monday, Tuesday, Wednesday, 10:00 - 10:59</span>
+                                            
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Department: </strong>
+                                            </span>
+                                            <span class="col-md-9">Romance Languages and Literatures</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Course Group: </strong>
+                                            </span>
+                                            <span class="col-md-9">Portuguese</span>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <span class="col-md-2">
+                                                <strong>Associated Official and Unofficial Site(s): </strong>
+                                            </span>
+                                            <span class="col-md-9">
+                                                <div class="list-group">
+                                                  <a href="#" class="list-group-item">PORTUG C - Canvas
+                                                    <span class="label label-primary pull-right">Official</span>
+                                                </a>
+                                                  <a href="#" class="list-group-item">PORTUG C - iSites
+                                                    <span class="label label-default pull-right">Unofficial</span></a>
+                                                  <a href="#" class="list-group-item">Word Press
+                                                    <span class="label label-default pull-right">Unofficial</span></a>
+                                                </div>
+                                            </span>
+                                            
+                                        </div>
+                                    </li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="people">
+                    &nbsp;<br>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <i class="fa fa-plus-circle"></i> Add People  <span class="caret"></span>
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="well container-fluid">
+                            <div class="form-group-inline">
+                                <div class="col-md-10">
+                                    <input type="text" name="user_search_term" placeholder="Enter Harvard University ID or email address" class="form-control" id="emailHUID">
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" id="user_search_button" data-loading-text="Searching..." class="btn btn-primary btn-block pull-right disabled col-md-2"><i class="fa fa-search"></i> Search</button>
+                                </div>
+                            </div>
+                            <div class="col-md-10" style="padding-top: 1em">
+                                <a href="https://connections.harvard.edu" target="_blank">Go to the Harvard Directory</a> to find someone's official email address.
+                            </div>  
+
+                            <div class="col-md-8 col-md-offset-2" style="padding-top: 1em">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                      <span class="sr-only">Search in progress</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <form method="post">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <label>
+                                                        <input type="checkbox" id="check_all_serach" /> <span class="sr-only">Select all rows for deletion</span>
+                                                    </label>
+                                                </th>
+                                                <th>Name</th>
+                                                <th>ID</th>
+                                                <th>Email</th>
+                                                <th>Current Role</th>
+                                                <th>Assign Role</th>
+                                                <th>Add to Section</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">
+                                                    <label>
+                                                        <input type="checkbox" class="check_search"> <span class="sr-only">Delete Bucchieri, Vittorio</span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <span>Bucchieri, Vittorio</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-danger">HUID</span> 12345678
+                                                </td>
+                                                <td>
+                                                    <span>vittorio_bucchieri@harvard.edu</span>
+                                                </td>
+                                                <td>
+                                                    <span>Guest</span>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Role <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li class="disabled"><a href="#">Select Role</a></li>
+                                                        <li class="disabled"><a href="#">Guest</a></li>
+                                                        <li><a href="#">Designer</a></li>
+                                                        <li><a href="#">Teaching Assistant</a></li>
+                                                        <li><a href="#">Teaching Staff</a></li>
+                                                        <li><a href="#">Teacher</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Section <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a href="#">Select Section</a></li>
+                                                        <li><a href="#">Section 1</a></li>
+                                                        <li><a href="#">Section 2</a></li>
+                                                        <li><a href="#">Section 3</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">
+                                                    <label>
+                                                        <input type="checkbox" class="check_search"> <span class="sr-only">Delete Ehrenzweig, Jill</span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <span>Ehrenzweig, Jill</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-primary">XID</span> 23456789
+                                                </td>
+                                                <td>
+                                                    <span>jill_ehrenzweig@harvard.edu</span>
+                                                </td>
+                                                <td>
+                                                    <span>Teaching Assistant</span>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Role <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li class="disabled"><a href="#">Select Role</a></li>
+                                                        <li><a href="#">Guest</a></li>
+                                                        <li><a href="#">Designer</a></li>
+                                                        <li class="disabled"><a href="#">Teaching Assistant</a></li>
+                                                        <li><a href="#">Teaching Staff</a></li>
+                                                        <li><a href="#">Teacher</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Section <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a href="#">Select Section</a></li>
+                                                        <li><a href="#">Section 1</a></li>
+                                                        <li><a href="#">Section 2</a></li>
+                                                        <li><a href="#">Section 3</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">
+                                                    <label>
+                                                        <input type="checkbox" class="check_search"> <span class="sr-only">Delete Ehrenzweig, Jill</span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <span>Ehrenzweig, Jill</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-danger">HUID</span> 23456789
+                                                </td>
+                                                <td>
+                                                    <span>jill_ehrenzweig@harvard.edu</span>
+                                                </td>
+                                                <td>
+                                                    <span>Teacher</span>
+                                                </td>
+                                                <td>
+                                                    <!-- Single button -->
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Role <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li class="disabled"><a href="#">Select Role</a></li>
+                                                        <li><a href="#">Guest</a></li>
+                                                        <li><a href="#">Designer</a></li>
+                                                        <li><a href="#">Teaching Assistant</a></li>
+                                                        <li><a href="#">Teaching Staff</a></li>
+                                                        <li class="disabled"><a href="#">Teacher</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <!-- Single button -->
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Section <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a href="#">Select Section</a></li>
+                                                        <li><a href="#">Section 1</a></li>
+                                                        <li><a href="#">Section 2</a></li>
+                                                        <li><a href="#">Section 3</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="">
+                                                <td scope="row">
+                                                    <label>
+                                                        <input type="checkbox" class="check_search"> <span class="sr-only">Delete Brooke, Danny</span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <span>Brooke, Danny</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-danger">HUID</span> 234567890
+                                                </td>
+                                                <td>
+                                                    <span>danny_brooke@harvard.edu</span>
+                                                </td>
+                                                <td>
+                                                    <span>Teaching Staff</span>
+                                                </td>
+                                                <td>
+                                                    <!-- Single button -->
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Role <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li class="disabled"><a href="#">Select Role</a></li>
+                                                        <li><a href="#">Guest</a></li>
+                                                        <li><a href="#">Designer</a></li>
+                                                        <li><a href="#">Teaching Assistant</a></li>
+                                                        <li class="disabled"><a href="#">Teaching Staff</a></li>
+                                                        <li><a href="#">Teacher</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <!-- Single button -->
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Select Section <span class="caret"></span>
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a href="#">Select Section</a></li>
+                                                        <li><a href="#">Section 1</a></li>
+                                                        <li><a href="#">Section 2</a></li>
+                                                        <li><a href="#">Section 3</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-12 ">
+                                        <label>
+                                        <input class="btn btn-primary" type="submit" value="&#xf055; Add to Course" disabled>
+                                        </label>
+                                    </div>
+                                </form>
+                                <div class="col-md-8 col-md-offset-2" style="padding-top: 1em">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                          <span class="sr-only">Search in progress</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+
+                    <div class="container">
+                        <form method="post">
+                            <div class="form-group">
+                                <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                        <th>
+                                            <label>
+                                                <input type="checkbox" id="check_all" /> <span class="sr-only">Select all rows for deletion</span>
+                                            </label>
+                                        </th>
+                                        <th class="sorting" tabindex="0">Name</th>
+                                        <th class="sorting" tabindex="0">ID</th>
+                                        <th class="sorting" tabindex="0">Role</th>
+                                        <th class="sorting" tabindex="0">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row">
+                                                <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Mysore, Sapna</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span>Mysore, Sapna</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 12345678
+                                            </td>
+                                            <td>
+                                                <span>Teacher</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">
+                                                <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Parker, Eric P.</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span>Parker, Eric P.</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-primary">XID</span> 45678901
+                                            </td>
+                                            <td>
+                                                <span>Guest</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">
+                                                <!-- <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Chow, Hiu-Kei</span>
+                                                </label> -->
+                                            </td>
+                                            <td>
+                                                <span>Chow, Hiu-Kei</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 34567890
+                                            </td>
+                                            <td>
+                                                <span>Student</span>
+                                            </td>
+                                            <td>
+                                                <span>Registrar Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">
+                                                <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Chow, Hiu-Kei</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span>Chow, Hiu-Kei</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 34567890
+                                            </td>
+                                            <td>
+                                                <span>Teaching Assistant</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">
+                                                <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Yip, Josie</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span>Yip, Josie</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 56789012
+                                            </td>
+                                            <td>
+                                                <span>Teaching Assistant</span>
+                                            </td>
+                                            <td>
+                                                <span>Registrar Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">
+                                                <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Yip, Josie</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <span>Yip, Josie</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 56789012
+                                            </td>
+                                            <td>
+                                                <span>Teaching Staff</span>
+                                            </td>
+                                            <td>
+                                                <span>Registrar Added</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">
+                                                <!-- <label>
+                                                    <input type="checkbox" class="check"> <span class="sr-only">Delete Yip, Josie</span>
+                                                </label> -->
+                                            </td>
+                                            <td>
+                                                <span>Yip, Josie</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-danger">HUID</span> 56789012
+                                            </td>
+                                            <td>
+                                                <span>Guest</span>
+                                            </td>
+                                            <td>
+                                                <span>Manually Added</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <label>
+                            <input class="btn btn-warning" type="submit" value="&#xf1f8; Delete" disabled>
+                        </label>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="messages">
+                    <p>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                Other tab content
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">
+                    <p>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                Other tab content
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                            
+            </div>
+<!-- UI comment - Insert tabs - end -->
+
+        <main class="float-left col-60">
+          
+    <div id="user-removed-success" class="infoBlock-success alert-lti hidden">
+        <p>User '<span id="success_username"> </span>' successfully removed.</p>
+    </div>
+
+    <div id="user-removed-failed" class="infoBlock-error alert-lti hidden">
+        <p>
+            There was a problem removing '<span id="err_username"> </span>'. Please try again. If the problem persists,
+            please contact your <a href="http://tlt.harvard.edu/get-started" target="_blank">local support staff</a>.
+        </p>
+    </div>
+
+
+
+
+    <!-- <p>The list below only contains people who have been manually added to this course. <a href="https://canvas.harvard.edu/courses/2955/users" target="_blank">Go to the People page</a> to see the full class list, which includes enrollment provided by the Registrar.</p>
+
+    <div class="text-right">
+        <p><a href="/lti_tools/course_add_people/find_user?resource_link_id=462b4bde0f33e1d71e987d7e43ee9569158800ae" class="link-icon"><i class="fa fa-plus-circle"></i>Add People to course</a></p>
+    </div>
+
+    <div id="no-users-added" class="infoBlock infoBlock-empty hidden">
+        <h3>No one has been manually added</h3>
+    </div>
+
+
+
+    <div id="canvas_course_id">2955</div>
+
+    <ul id="people-added" class="list-with-floats">
+
+        <li class="header"><span>Name / ID type</span><span class="header-right">Role</span></li>
+        
+        <li id="user-index-1" class="rosterUser al-hover-container StudentEnrollment" data-enrollee="214523" data-sisID="60987327" data-role="TeacherEnrollment">
+
+            <a class="deleteMenu delete-icon" href="#"><i class="fa fa-trash"></i></a>
+            <span class="roster_user_name">Bucchieri, Vittorio</span>
+            <span class="label">HUID</span>
+            <span class="float-right text-strong">Teacher</span>
+        </li>
+        
+        <li id="user-index-2" class="rosterUser al-hover-container StudentEnrollment" data-enrollee="227441" data-sisID="aa01pu91" data-role="Guest">
+
+            <a class="deleteMenu delete-icon" href="#"><i class="fa fa-trash"></i></a>
+            <span class="roster_user_name">Ehrenzweig XID, Jill</span>
+            <span class="label">XID</span>
+            <span class="float-right text-strong">Guest</span>
+        </li>
+        
+        <li id="user-index-3" class="rosterUser al-hover-container StudentEnrollment" data-enrollee="303301" data-sisID="90585797" data-role="TeacherEnrollment">
+
+            <a class="deleteMenu delete-icon" href="#"><i class="fa fa-trash"></i></a>
+            <span class="roster_user_name">Ehrenzweig, Jill</span>
+            <span class="label">HUID</span>
+            <span class="float-right text-strong">Teacher</span>
+        </li>
+        
+        <li id="user-index-4" class="rosterUser al-hover-container StudentEnrollment" data-enrollee="227443" data-sisID="60804524" data-role="Guest">
+
+            <a class="deleteMenu delete-icon" href="#"><i class="fa fa-trash"></i></a>
+            <span class="roster_user_name">Morales, Roderick</span>
+            <span class="label">HUID</span>
+            <span class="float-right text-strong">Guest</span>
+        </li>
+        
+
+    </ul>
+
+    <div class="modal fade" id="confirm-remove-user" tabindex="-1" role="dialog" aria-labelledby="confirm-remove-user-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="confirm-remove-user-title">Confirm Remove User</h4>
+            </div>
+            <div class="modal-body">Are you sure you want to remove this user?</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-submit-primary" id="confirm-remove-user-button">Yes, Remove User</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </main>
+        <aside class="float-left col-40 clearfix">
+            <p>
+                The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both "directory information" (i.e. student's name) and "non-directory information" (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.
+            </p>
+        </aside> -->
+
+        
+
+        
+    
+            
+            <script src="/lti_tools/static/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+            <script src="/lti_tools/static/underscore-1.8.2/underscore.min.js"></script>
+            <script src="/lti_tools/static/bootstrap-3.0.3/dist/js/bootstrap.min.js"></script>
+            <script src="/lti_tools/static/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+            <script src="/lti_tools/static/listjs/list.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+        
+    <script>
+        var removeUserURL = "/lti_tools/course_add_people/remove_user?resource_link_id=462b4bde0f33e1d71e987d7e43ee9569158800ae";
+    </script>
+
+<!-- UI comment - Enable tabable tabs via JavaScript (each tab needs to be activated individually) -->
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.10.1.js'></script>
+    <script src="/lti_tools/static/course_add_people/js/user_form.js"></script>
+<script>
+    $('#myTabs a[href="#people"]').tab('show') // Select tab by name
+    $('#myTabs a:first').tab('show') // Select first tab
+    $('#myTabs a:last').tab('show') // Select last tab
+    $('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+
+    $("#checkAll").click(function () {
+    $(".check").prop('checked', $(this).prop('checked'));
+    } // Check all table rows in People table
+
+    $("#checkAll_search").click(function () {
+    $(".check_search").prop('checked', $(this).prop('checked'));
+    } // Check all table rows in People search results table
+</script>
+
+<!-- UI coment - script for table behavior -->
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$(function () {
+    //Add the style: 'even_row' for even rows
+    $('table tbody tr:even').addClass('even_row');
+
+    //On mouse hover, add the style: 'highlight_row'. When the mouse
+    //goes out, remove it
+
+// Check all for People table
+    $("#check_all").change(function () {
+        //First the checkbox statuses will be changed according to
+        //the status of the master checkbox
+        $('input:checkbox').prop('checked', this.checked);
+        //Then the change event defined below will be triggered. By
+        //doing this, the row color will be changed according to the
+        //checkbox status
+        $('tr').toggleClass("selected_row", this.checked)
+    });
+
+// Check all for People search results
+    $("#check_all_search").change(function () {
+        //First the checkbox statuses will be changed according to
+        //the status of the master checkbox
+        $('input:checkbox').prop('checked', this.checked);
+        //Then the change event defined below will be triggered. By
+        //doing this, the row color will be changed according to the
+        //checkbox status
+        $('tr').toggleClass("selected_row", this.checked)
+    });
+
+    //This changes the color of a row and the checkbox status
+    //whenever the user clicks on the row or the checkbox.
+    //In order to exclude the header row, it will be applied only to the
+    //tbody tr selector. The 'check_all' check box must be excluded as well
+    //in order to not change the color of the header row.
+    $('table tbody :checkbox').change(function (event) {
+        $(this).closest('tr').toggleClass("selected_row", this.checked);
+    });
+    $('table tbody tr').click(function(event) {
+        if (event.target.type !== 'checkbox') {
+            $(':checkbox', this).trigger('click');
+        }
+        $("input[type='checkbox']").not('#check_all').change(function(e) {
+            if($(this).is(":checked")){
+                $(this).closest('tr').addClass("selected_row");
+            }else{
+                $(this).closest('tr').removeClass("selected_row");
+            }
+        });
+    });
+
+    
+});
+});//]]> 
+
+
+
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(function(){
+var checkboxes = $("input[type='checkbox']"),
+    submitButt = $("input[type='submit']");
+
+checkboxes.click(function() {
+    submitButt.attr("disabled", !checkboxes.is(":checked"));
+});
+});//]]> 
+
+</script>
+
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+
+
+  </head>
+  <body>
+    
+
+    
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+  <script src="http://getbootstrap.com//dist/js/bootstrap.min.js"></script>
+
+
+
+  <script src="http://getbootstrap.com//assets/js/docs.min.js"></script>
+
+    
+</body>
+</html>
