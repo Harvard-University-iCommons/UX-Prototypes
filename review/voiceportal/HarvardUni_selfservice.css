@@ -285,6 +285,7 @@ input#username::-webkit-input-placeholder::after {
     visibility: visible;
     position: relative;
     margin-left: -120px;
+    content: "Email address";
 }
 
 /* Mozilla */
@@ -292,11 +293,13 @@ input#username::-moz-placeholder::after {
     visibility: visible;
     position: relative;
     margin-left: -125px;
+    content: "Email address";
 }
 input#username::-moz-placeholder:after {
     visibility: visible;
     position: relative;
     margin-left: -125px;
+    content: "Email address";
 }
 /*   Custom CSS and Overwrite CSS - Warren  */
 body,html {
@@ -309,7 +312,7 @@ body,html {
 }
 
 .login-bg {
-    background: url('Harvard_University_Voice_Portal_login.jpg') no-repeat top center fixed;
+    background: url('login/Harvard_University_Voice_Portal_login.jpg') no-repeat top center fixed;
     background-size: cover;
     background-repeat:no-repeat;
     /*background-position:center top;*/
@@ -365,19 +368,19 @@ body,html {
 }
 
 .login-box .form-control {
-    /*background: url('sidebar/bck.png') !important;*/
-    background: rgba(255,255,255);
+    /*background: url('sidebar/bck.png') !important;
+    background: rgba(0,0,0,0.65);*/
 }
 
 .login-box .alert-danger {
     padding: 5px 15px;
     margin-top: 0;
     margin-bottom: 5px;
-    text-align: left;
 }
 
 .login-box button.ss-btn-login {
     margin-top: 10px !important;
+    width: 168px;
 }
 
 .ss-sidebar-left.minified .sidebar-nav > ul > li > a {
@@ -398,7 +401,7 @@ body,html {
     width: 690px;
     height: 40px;
     display: block;
-    background: url('harvard-logo.png');
+    background: url('harvard-logo_new.png');
     background-position: 0% 0%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -489,7 +492,7 @@ body,html {
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
-    height: 480px !important;
+    height: 440px !important;
     width: 400px;
     margin: auto !important;
     background: rgba(255,255,254,0.92);
@@ -564,7 +567,7 @@ body,html {
     text-align: left;
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-transform: none;
-    font-weight: 400;
+/*    font-weight: 600;*/
     content: "Welcome to Harvard Phone Self-Service\A_____________________________________________\A\APlease login using your HarvardKey\A\A Login Name (in the form of an email address):";
     white-space: pre;
     line-height: 1em;
@@ -574,7 +577,7 @@ body,html {
 .login-box input[type="text"],
 .login-box input[type="password"] {
     border: 1px solid #999;
-    color: #cacaca;
+    color: #34383c;
 }
 
 .form-control[disabled],
@@ -593,10 +596,7 @@ fieldset[disabled] .form-control {
 }
 
 .login-box .input-group-addon {
-    border-color: #999 !important;
-    background: url('sidebar/bck.png') !important;
-    color: #cacaca !important;
-    width: 40px;
+    display: none; /* hide field icons*/
 }
 
 .login-box button {
@@ -633,6 +633,7 @@ and (max-device-width : 568px) {
 .login-box form.login input[type="text"],
 .login-box form.login input[type="password"] {
     border-right: 1px solid #999 !important;
+    border-radius: 2px;
 }
 
 .add-link {
@@ -687,7 +688,7 @@ h2.ss-activity-feed-header:before {
 
 .login-box .login fieldset > .form-group:nth-child(3):before {
     content: 'Password: ';
-    font-weight: 400;
+    /*font-weight: 600;*/
     margin-left: -15px;
 }
 
