@@ -68,8 +68,8 @@
       <div class="container-fluid">
 
         <nav class="ng-scope">
-          <h3><a href="#/">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a new course site</h3>
-          <h4>Step one: which course is this site for?</h4>
+          <h3><a href="#/">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a New Course</h3>
+          <h4>Step one: which course is this for?</h4>
         </nav>
         <div class="col-md-12" hidden>
           <div class="col-md-4">
@@ -244,19 +244,19 @@
 
       </div>
 
-        <div class="col-md-12" >
+       <div class="col-md-12" >
           <div class="col-md-4">
-              <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program">
+            <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program">
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" readonly="readonly" value="July-August 2015-2016">
             </div>
-            <div class="col-md-3">
-              <input type="text" class="form-control" readonly="readonly" value="July-August">
-              </div>
-            <div class="col-md-2">
-              <input type="text" class="form-control" readonly="readonly" value="2015">
-              </div>
-            <div class="col-md-3">
-              <input type="text" class="form-control" readonly="readonly" value="Sandbox">
-              </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" readonly="readonly" value="2015">
+            </div>
+          <div class="col-md-3" hidden>
+            <input type="text" class="form-control" readonly="readonly" value="Sandbox">
+          </div>
         </div>
         
         <div class="col-md-12" ><hr></div>
@@ -264,16 +264,10 @@
         <div class="col-md-12" hidden>
           <nav class="ng-scope">
             <h4>Step two: no course exists; create one?</h4>
-            <h5>The course code you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
+            <h5>The course record you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
             <div class="checkbox col-md-12">
               <label>
-                <input type="checkbox"> Create new course code under school "Harvard Business School Doctoral Program"
-              </label>
-            </div>
-            <h5>The term code you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
-            <div class="checkbox col-md-12">
-              <label>
-                <input type="checkbox"> Create new term code under school "Harvard Business School Doctoral Program"
+                <input type="checkbox"> Create new course record under school "Harvard Business School Doctoral Program"
               </label>
             </div>
           </nav>
@@ -311,29 +305,29 @@
         <div class="col-md-12" >
           <nav class="ng-scope">
             <h4>Step two: no course exists; create one?</h4>
-            <h5>The course code you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
+            <h5>The course record you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
             <div class="col-md-12 checkbox">
               <label>
-                <input type="checkbox" checked disabled> Create new course code under school "Harvard Business School Doctoral Program"
+                <input type="checkbox" checked disabled> Create new course record under school "Harvard Business School Doctoral Program"
               </label>
             </div>
           </nav>
 
 
           <div class="col-md-12">
-            <div class="btn-group col-md-4">
+            <div class="col-md-12">
               <input type="text" class="form-control" readonly="readonly" placeholder="A Profile in Ministry: Dietrich Bonhoeffer">
             </div>
 
-            <div class="btn-group col-md-3">
+            <div class="btn-group col-md-3 hidden">
               <input type="text" class="form-control" readonly="readonly" placeholder="Jane Doe and John Smith">
             </div>
 
-            <div class="btn-group col-md-3">
+            <div class="btn-group col-md-3 hidden">
               <input type="text" class="form-control" readonly="readonly" placeholder="Lecture Hall">
             </div>
 
-            <div class="btn-group col-md-2">
+            <div class="btn-group col-md-2 hidden">
               <input type="text" class="form-control" readonly="readonly" placeholder="10am - 12pm">
             </div>
           </div>
@@ -344,21 +338,21 @@
 
         <div class="col-md-12" >
           <nav class="ng-scope">
-            <h4>New course code under the school "Harvard Business School Doctoral Program".</h5>
+            <h4>New course record under the school "Harvard Business School Doctoral Program".</h5>
           </nav>
 
         <div ng-show="showDataTable" class="">
           <div id="courseInfoDT_wrapper" class="dataTables_wrapper form-inline no-footer"><div><div><table id="courseInfoDT" class="display dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="courseInfoDT_info" style="width: 100%;">
             <thead>
-              <tr role="row"><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="School&amp;nbsp;&amp;nbsp;" style="width: 54px;">School&nbsp;&nbsp;</th><th class="sorting_asc" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Details&amp;nbsp;&amp;nbsp;" style="width: 200px;">Course Details&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Year&amp;nbsp;&amp;nbsp;" style="width: 92px;">Academic Year&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Term&amp;nbsp;&amp;nbsp;" style="width: 94px;">Academic Term&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Code&amp;nbsp;&amp;nbsp;" style="width: 82px;">Course Code&nbsp;&nbsp;</th></tr></thead>
-            <tbody><tr role="row" class="odd"><td>HBSDP</td><td class="sorting_1"><a>A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>July-August</td><td>HDS 2895 (45078)</td></tr></tbody></table></div></div></div>
+              <tr role="row"><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="School&amp;nbsp;&amp;nbsp;" style="width: 54px;">School&nbsp;&nbsp;</th><th class="sorting_asc" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Details&amp;nbsp;&amp;nbsp;" style="width: 200px;">Course Details&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Year&amp;nbsp;&amp;nbsp;" style="width: 92px;">Academic Year&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Academic Term&amp;nbsp;&amp;nbsp;" style="width: 94px;">Academic Term&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Code&amp;nbsp;&amp;nbsp;" style="width: 82px;">Course Code&nbsp;&nbsp;</th><th class="sorting" tabindex="0" aria-controls="courseInfoDT" rowspan="1" colspan="1" aria-label="Course Instance ID&amp;nbsp;&amp;nbsp;" style="width: 58px;">SIS/Course Instance ID&nbsp;&nbsp;</th></tr></thead>
+            <tbody><tr role="row" class="odd"><td>HBSDP</td><td class="sorting_1"><a>A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>July-August</td><td>HDS 2895 (45078)</td><td>338296</td></tr></tbody></table></div></div></div>
         </div>
 
         </div>
 
           <div class="col-md-12">
             <a type="link" class="btn btn-primary pull-right" href="TLT-1157_11.html">
-              Create another a new course site
+              Create another course
             </a>
           </div>
 

@@ -68,8 +68,8 @@
       <div class="container-fluid">
 
         <nav class="ng-scope">
-          <h3><a href="#/">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a new course site</h3>
-          <h4>Step one: which course is this site for?</h4>
+          <h3><a href="#/">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a New Course</h3>
+          <h4>Step one: which course is this for?</h4>
         </nav>
         <div class="col-md-12" hidden>
           <div class="col-md-4">
@@ -248,13 +248,13 @@
           <div class="col-md-4">
               <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program">
             </div>
-            <div class="col-md-3">
-              <input type="text" class="form-control" readonly="readonly" value="July-August">
+            <div class="col-md-4">
+              <input type="text" class="form-control" readonly="readonly" value="July-August 2015-2016">
               </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
               <input type="text" class="form-control" readonly="readonly" value="2015">
               </div>
-            <div class="col-md-3">
+            <div class="col-md-3" hidden>
               <input type="text" class="form-control" readonly="readonly" value="Sandbox">
               </div>
         </div>
@@ -264,46 +264,29 @@
         <div class="col-md-12" >
           <nav class="ng-scope">
             <h4>Step two: no course exists; create one?</h4>
-            <h5>The course code you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
+            <h5>The course record you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
             <div class="checkbox col-md-12">
               <label>
-                <input type="checkbox"> Create new course code under school "Harvard Business School Doctoral Program"
-              </label>
-            </div>
-            <h5>The term code you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
-            <div class="checkbox col-md-12">
-              <label>
-                <input type="checkbox" checked> Create new term code under school "Harvard Business School Doctoral Program"
+                <input type="checkbox"> Create new course record under school "Harvard Business School Doctoral Program"
               </label>
             </div>
           </nav>
 
 
           <div class="col-md-12">
-            <div class="btn-group col-md-4">
+            <div class="col-md-12">
               <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Course Title">
             </div>
 
-            <div class="btn-group col-md-3">
-              <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Instructors (text for display only)">
+            <div class="col-md-12" >
+              <a type="link" class="btn btn-default" href="TLT-1157_admin_2.html">
+                Cancel
+              </a>
+              <a type="link" class="btn btn-primary pull-right" href="TLT-1157_31.html">
+                Create a new course instance
+              </a>
             </div>
 
-            <div class="btn-group col-md-3">
-              <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Location">
-            </div>
-
-            <div class="btn-group col-md-2">
-              <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Meeting Time">
-            </div>
-
-          <div class="col-md-12" >
-            <a type="link" class="btn btn-default" href="TLT-1157_admin_2.html">
-              Cancel
-            </a>
-            <a type="link" class="btn btn-primary pull-right" href="TLT-1157_31.html">
-              Create a new course record and continue
-            </a>
-          </div>
           </div>
 
         </div>
@@ -311,10 +294,10 @@
         <div class="col-md-12" hidden>
           <nav class="ng-scope">
             <h4>Step two: no course exists; create one?</h4>
-            <h5>The course code you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
+            <h5>The course record you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program".</h5>
             <div class="col-md-12 checkbox">
               <label>
-                <input type="checkbox" checked disabled> Create new course code under school "Harvard Business School Doctoral Program"
+                <input type="checkbox" checked disabled> Create new course record under school "Harvard Business School Doctoral Program"
               </label>
             </div>
           </nav>
