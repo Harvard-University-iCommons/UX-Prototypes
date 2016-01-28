@@ -1,0 +1,700 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Relative links start -->
+<link rel="stylesheet" href="../bootstrap/css/docs.min.css" media="screen"/>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+<link rel="stylesheet" href="../font-awesome-4.4.0/css/font-awesome.css" media="screen"/>
+<!-- Relative links end -->
+<link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+    <title>Cross Listings</title>
+</head>
+<body class="lti-tool" role="application">
+
+<div class="container-fluid">
+
+<!-- UI comment - modal window just for this demo - start -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Confirm Remove User</h4>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure you want to remove Patrick Haagenson from this course?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Yes, Remove User</button>
+    </div>
+  </div>
+  
+</div>
+</div>
+<!-- UI comment - modal window just for this demo - end -->
+
+            <div class="container">
+                <div class="col-md-12">
+                    <h3>
+                        Admin Console <small><i class="fa fa-chevron-right"></i></small> Cross Listings
+                    </h3>
+
+                    <div class="dropdown navbar-right" style="margin-top: -2em; margin-right:1em;">
+      
+      <!-- <button class="btn btn-default pull-right" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fa fa-dashboard"></i> Admin Console <span class="caret"></span>
+      </button>
+
+      <div class="collapse" id="collapseExample">
+        <div class="well container-fluid col-md-8 pull-right">
+          <div class="form-group-inline">
+            <div class="col-md-2">
+              <div class="form-group pull-right">
+                  <label class="sr-only" for="exampleInputEmail3">Enter Harvard University ID or email addresses</label>
+                  <input type="email" class="form-control" id="emailHUID" placeholder="Enter Harvard University ID or email addresses">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-th"></i>
+        Admin Console
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" style="width: 17em">
+        <li>
+
+            <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_Course_People.html" target="iframe2"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Find<br />Course Info</span></a>
+            </button>
+
+            <button type="button" class="btn btn-primary" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_conclusion.html" target="iframe2"><i class="fa fa-times-circle" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Course<br />Conclusion</span></a>
+            </button>
+
+          </li>
+
+          <li>
+
+            <button type="button" class="btn btn-info" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_create.html" target="iframe2"><i class="fa fa-university" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Create Non Fed<br />Courses</span></a>
+            </button>
+
+            <button type="button" class="btn btn-warning" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_reports.html" target="iframe2"><i class="fa fa-file-text" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Reports<br />&nbsp;</span></a>
+            </button>
+
+            <!-- <button type="button" class="btn btn-danger" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: .5em;">
+              <a href="streamline_menu_cross.html" target="iframe2"><i class="fa fa-link" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Cross Listings</span></a>
+            </button> -->
+
+        </li>
+      </ul>
+    </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane fade" id="find">
+
+<!-- ** Find Course - start -->
+<!-- UI comment - Inline style needed to add a margin above the forms so that they don't touch each others when they wrap-->
+<style>
+.btn-group {
+    margin-top: 1em;
+} 
+</style>
+
+<main class="float-left col-60 ng-scope">
+  <div class="btn-toolbar" role="toolbar" aria-label="...">
+    <div class="btn-group" role="group" aria-label="...">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.schools.text" id="dropdownMenuSchools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Divinity School <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuSchools">
+          <!-- ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Divinity School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Graduate School of Education</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">HILR</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">HKS Exec Ed</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">HLS Executive Education</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Business School Doctoral Program</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Business School MBA Program</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Chan School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard College Library</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard College/GSAS</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Design School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Extension School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Kennedy School (HKS)</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Law School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Medical School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard School of Dental Medicine</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Summer School</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">MIT</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+            <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Radcliffe</a>
+          </li><!-- end ngRepeat: opt in filterOptions.schools -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="...">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.years.text" id="dropdownMenuYear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2015 <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuYear">
+          <!-- ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">All years</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2016</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2015</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2014</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2013</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2012</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2011</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2010</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2009</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2008</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2007</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2006</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2005</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2004</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2003</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years --><li ng-repeat="opt in filterOptions.years" class="ng-scope">
+            <a href="#/" ng-click="filters.years=opt" class="ng-binding">2002</a>
+          </li><!-- end ngRepeat: opt in filterOptions.years -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="...">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.terms.text" id="dropdownMenuTerm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All terms <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuTerm">
+          <!-- ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">All terms</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Summer</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Full Year</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Winter</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">July and August</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">June and July</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring 2</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring 1</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall 2</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall 1</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">July</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">August</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">June</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall-Winter</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Winter-Spring</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring Saturday</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall Saturday</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+            <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Ongoing</a>
+          </li><!-- end ngRepeat: opt in filterOptions.terms -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="...">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.sites.text" id="dropdownMenuSites" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All courses <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuSites">
+          <!-- ngRepeat: opt in filterOptions.sites --><li ng-repeat="opt in filterOptions.sites" class="ng-scope">
+            <a href="#/" ng-click="filters.sites=opt" class="ng-binding">All courses</a>
+          </li><!-- end ngRepeat: opt in filterOptions.sites --><li ng-repeat="opt in filterOptions.sites" class="ng-scope">
+            <a href="#/" ng-click="filters.sites=opt" class="ng-binding">Only courses with sites</a>
+          </li><!-- end ngRepeat: opt in filterOptions.sites --><li ng-repeat="opt in filterOptions.sites" class="ng-scope">
+            <a href="#/" ng-click="filters.sites=opt" class="ng-binding">Only courses without sites</a>
+          </li><!-- end ngRepeat: opt in filterOptions.sites --><li ng-repeat="opt in filterOptions.sites" class="ng-scope">
+            <a href="#/" ng-click="filters.sites=opt" class="ng-binding">Courses being synced to Canvas</a>
+          </li><!-- end ngRepeat: opt in filterOptions.sites -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="input-group" style="margin-top: 1em; width: 50%">
+      <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Search by course code, SIS or Canvas course ID, course title">
+    </div>
+  </div>
+
+  <p></p>
+  <div class="row">
+      <div class="col-mid-2 btn-block center-block" style="width: 20%;">
+        <button type="button" class="btn btn-primary" ng-click="searchCourseInstances($event)" style="width: 15em;">
+          <i class="fa fa-search"></i>
+          Search
+        </button>
+      </div>
+    </div
+  <p></p>
+  <p class="panel">
+    <style>
+    #tdChild {
+    padding-left: 1.5em;
+    background-repeat: repeat;
+    background-image: url('https://wiki.harvard.edu/confluence/download/attachments/190318890/background_table_td_child.png');
+    height: 10px;
+    width: 10px;
+}
+    </style>
+    <script>
+        $(document).ready(function() {
+        $("#tdChild").bootstrapTable(
+            // Set the initial classes for the table
+            // This removes the bootstrap-table default inclusion of 'table-hover'
+            // to prevent rows from being highlighted on hover. Add 'table-hover' to the
+            // list if you want to re-enable this
+            classes: "td"
+        );
+    </script>
+    <table class="table">
+      <table class="table">
+      <thead>
+            <th class="sorting" tabindex="0">Department&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Course Details&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Academic Year&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Academic Term&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Course Site&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Course Code&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Course Instance ID&nbsp;&nbsp;</th>
+            <th class="sorting" tabindex="0">Cross Listing&nbsp;&nbsp;</th>
+         </thead>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline_crumb_detail.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
+        </tr>
+         <tr role="row">
+            <td>ECON</td>
+            <td><a href="streamline_crumb_detail.html">Administrative Law</td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/327">327</a></td>
+            <td>GSE E-182W (23949)</td>
+            <td>456789</td>
+            <td><span class=""></span></td>
+        </tr>
+         <tr role="row">
+            <td>HISTORY</td>
+            <td><a href="streamline_crumb_detail.html">Constitutional Law: First Amendment</a></td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1000 (24179)</td>
+            <td>567890</td>
+            <td><span class="label label-info">Secondary</span></td>
+        </tr>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline_crumb_detail.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
+        </tr>
+         <tr role="row">
+            <td>ECON</td>
+            <td><a href="streamline_crumb_detail.html">Administrative Law</td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/327">327</a></td>
+            <td>GSE E-182W (23949)</td>
+            <td>456789</td>
+            <td><span class=""></span></td>
+        </tr>
+         <tr role="row">
+            <td>HISTORY</td>
+            <td><a href="streamline_crumb_detail.html">Constitutional Law: First Amendment</a></td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1000 (24179)</td>
+            <td>567890</td>
+            <td><span class="label label-info">Secondary</span></td>
+        </tr>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline_crumb_detail.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
+        </tr>
+         <tr role="row">
+            <td>ECON</td>
+            <td><a href="streamline_crumb_detail.html">Administrative Law</td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/327">327</a></td>
+            <td>GSE E-182W (23949)</td>
+            <td>456789</td>
+            <td><span class=""></span></td>
+        </tr>
+         <tr role="row">
+            <td>HISTORY</td>
+            <td><a href="streamline_crumb_detail.html">Constitutional Law: First Amendment</a></td>
+            <td>2015</td>
+            <td>Fall</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1000 (24179)</td>
+            <td>567890</td>
+            <td><span class="label label-info">Secondary</span></td>
+        </tr>
+         <tr role="row"> 
+            <td>GEN ED</td>
+            <td><a href="streamline_crumb_detail.html">"Intractable" Conflicts: What Role for Negotiation?</a></td>
+            <td>2015-2016</td>
+            <td>Spring</td>
+            <td><a href="https://canvas.harvard.edu/courses/226">226</a></td>
+            <td>GSE E-1961 (23343)</td>
+            <td>123456</td>
+            <td><span class="label label-success">Primary</span></td>
+        </tr>
+         <tr role="row">
+            <td colspan="8"></td>
+        </tr>
+    </table>
+</p>
+
+<nav>
+    <div class="row">
+        <div class="col-md-6" style="margin-top:-0.5em;">
+            Showing 1 to 10 of 137 courses
+        </div>
+        <div class="col-md-6">
+            <ul class="pagination pull-right" style="margin-top:-1em;">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">14</a></li>
+            <li><a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a></li>
+          </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ** Find Course - end -->
+
+    </div>
+
+<!-- ** Cross Listing - start -->
+<p><div role="tabpanel" class="tab-pane fade in active" id="profile" style="margin-top:1em">
+
+
+    
+
+    
+
+    
+
+
+        <h4>Create a New Cross Listing Pair</h4>
+
+            <div class="row panel panel-default">
+                <div class="panel-body">
+                    <div class="col-md-3">
+                        <input type="text" name="primary" placeholder="Enter Primary Course Instance ID" class="form-control" id="primary">
+                    </div>
+
+                    <div class="col-md-3 col-md-offset-3">
+                        <input type="text" name="primary" placeholder="Enter Secondary Course Instance ID" class="form-control" id="secondary">
+                    </div>
+
+                    <div class="col-md-2 col-md-offset-1">
+                        <input class="btn btn-primary fa fa-chain" type="submit" name="Submit" value="&#xf0c1;&nbsp;&nbsp;Pair Courses" disabled>
+                    </div>
+                </div>
+            </div>
+<!-- Confirm paired courses, start -->
+            <div class="col-md-12 alert alert-success alert-dismissible hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>HDS 2134-Fall-2014-2015-123456</strong> and <strong>GSE A031-Fall-2014-2015-234567</strong> were just paired.</p>
+            </div>
+<!-- Confirm paired courses, end -->
+
+            <div class="row">
+                <div class="row col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>
+                                Primary
+                            </th>
+                            <th>
+                                Secondary
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus" data-rel="popover">HDS 2134-Fall-2014-2015-123456</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus" data-rel="popover">GSE A031-Fall-2014-2015-234567</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">GOV 3245-Fall-2014-2015-234567</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">HUM B142-Fall-2014-2015-345678</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">SCI 4356-Fall-2014-2015-345678</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">GEN ED B253-Fall-2014-2015-456789</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">HDS 2134-Fall-2014-2015-123456</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">GSE A031-Fall-2014-2015-234567</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">GOV 3245-Fall-2014-2015-234567</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">HUM B142-Fall-2014-2015-345678</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">SCI 4356-Fall-2014-2015-345678</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">GEN ED B253-Fall-2014-2015-456789</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">HDS 2134-Fall-2014-2015-123456</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">GSE A031-Fall-2014-2015-234567</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">GOV 3245-Fall-2014-2015-234567</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">HUM B142-Fall-2014-2015-345678</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">SCI 4356-Fall-2014-2015-345678</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">GEN ED B253-Fall-2014-2015-456789</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Intractable' Conflicts: What Role for Negotiation?" data-placement="right" data-content="Term Fall-2005, SIS ID: 123456" data-trigger="focus">GOV 3245-Fall-2014-2015-234567</a>
+                                </td>
+                                <td>
+                                    <a class="section-link" data-trigger="hover" title="'Constitutional Law: First Amendment" data-placement="right" data-content="Term Fall-2005, SIS ID: 234567" data-trigger="focus">HUM B142-Fall-2014-2015-345678</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <nav>
+                <div class="row">
+                    <div class="col-md-6" style="margin-top:-0.5em;">
+                        Showing 1 to 10 of 137 paired courses
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="pagination pull-right" style="margin-top:-1em;">
+                        <li class="disabled"><a href="#" aria-label="Fast backward"><span aria-hidden="true" class="glyphicon glyphicon-fast-backward" style="margin-bottom: 6px"></span></a></li><li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left" style="margin-bottom: 6px"></span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">14</a></li>
+                        <li><a href="#" aria-label="Next">
+                            <span aria-hidden="true" class="glyphicon glyphicon-chevron-right" style="margin-bottom: 6px"></span>
+                        </a></li>
+                        <li><a href="#" aria-label="Next">
+                            <span aria-hidden="true" class="glyphicon glyphicon-fast-forward" style="margin-bottom: 6px"></span>
+                        </a></li>
+                      </ul>
+                    </div>
+                </div>
+            </nav>
+
+<!-- Adding this  additional closing div to handle a rogue extra open div from icommons_ui/base.html-->
+</div></p>
+<!-- ** Cross Listing - end -->
+    </div>
+
+</div> <!-- Nested tabs - end -->
+
+</div>
+</div>
+
+
+    <script src="../bootstrap/js/list.min.js"></script>
+    <script src="../bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script src="../bootstrap/js/docs.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Tabs - start -->
+    <script>
+    $('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+    $('#myTabs a:first').tab('show') // Select first tab
+    $('#myTabs a:last').tab('show') // Select last tab
+    $('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+    </script>
+    <!-- Tabs - end -->
+
+    <script type='text/javascript'>//<![CDATA[
+
+        $('.section-link').each(function(){
+                $(this).popover({
+            trigger: "hover",
+            html : true, 
+            content: function() {
+              return $(this).children('div:first').html();
+            }
+            });
+        });
+
+        </script>
+
+        <!-- Keep Pair Course button disabled until text in primary and secondary input forms -->
+        <script type="text/javascript">
+        $(window).load(function(){
+        function validate() {
+            var inputvalue = $('input[type="text"]').filter(function (n) {
+                return this.value.length > 0;
+            })
+          
+            if (inputvalue.length == $('input[type="text"]').length) {
+                $("input[type=submit]").prop("disabled", false);
+            } else {
+
+                $("input[type=submit]").prop("disabled", true);
+            }
+        }
+
+        validate();
+        $('input[type="text"]').keyup(validate);
+
+
+        });//]]> 
+
+        </script>
+
+    
+</body>
+</html>

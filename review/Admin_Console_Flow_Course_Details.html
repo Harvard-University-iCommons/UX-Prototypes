@@ -1,0 +1,223 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UI delete start -->
+    <!-- <base href="https://icommons-lti-tools.tlt.harvard.edu" target="_blank"> -->
+    <!-- UI delete end -->
+        <link href="/lti_tools/static/favicon.ico" rel="icon" type="image/x-icon">
+        
+
+    <!-- UI comment - commenting manage-people.css since it causes conflicts with bootstrap.min.css -->
+        <!-- <link rel="stylesheet" type="text/css" href="/lti_tools/static/lti-css/manage-people.css" media="screen"/> --><link rel="stylesheet" type="text/css" href="../font-awesome-4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/jquery.dataTables.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/datatables.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/course_info/css/index.css">
+
+    
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+        
+       
+    <!-- UI comment - style for highlighting table end -->
+        <title>Course Details</title>
+    </head>
+    <body class="lti-tool" role="application">
+        <div class="container-fluid">
+            <header>
+                <h3 class="ng-binding">
+                        Admin Console
+                     <small><i class="fa fa-chevron-right"></i></small>
+                     <a href="Admin_Console_Flow_Find_Course.html" target="iframe1">
+                        Find Course Info
+                    </a>
+                    <small>
+                        <i class="fa fa-chevron-right"></i>
+                    </small>
+                    Course Details
+                </h3>
+            </header>
+
+            <div class="dropdown navbar-right" style="margin-top: -2em; margin-right:1em;">
+      
+      <!-- <button class="btn btn-default pull-right" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fa fa-dashboard"></i> Admin Console <span class="caret"></span>
+      </button>
+
+      <div class="collapse" id="collapseExample">
+        <div class="well container-fluid col-md-8 pull-right">
+          <div class="form-group-inline">
+            <div class="col-md-2">
+              <div class="form-group pull-right">
+                  <label class="sr-only" for="exampleInputEmail3">Enter Harvard University ID or email addresses</label>
+                  <input type="email" class="form-control" id="emailHUID" placeholder="Enter Harvard University ID or email addresses">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-th"></i>
+        Admin Console
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" style="width: 17em">
+        <li>
+
+          <!-- <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="streamline_menu.html" target="iframe2"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Find<br />Course Info</span></a>
+            </button> -->
+
+            <button type="button" class="btn btn-primary" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_conclusion.html" target="iframe2"><i class="fa fa-times-circle" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Course<br />Conclusion</span></a>
+            </button>
+
+            <button type="button" class="btn btn-info" style="width: 7em; margin-top: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_create.html" target="iframe2"><i class="fa fa-university" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Create Non Fed<br />Courses</span></a>
+            </button>
+
+          </li>
+
+          <li>
+
+            <button type="button" class="btn btn-warning" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_reports.html" target="iframe2"><i class="fa fa-file-text" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Reports</span></a>
+            </button>
+
+            <button type="button" class="btn btn-danger" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_cross.html" target="iframe2"><i class="fa fa-link" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Cross Listings</span></a>
+            </button>
+
+        </li>
+      </ul>
+    </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Short Title: </strong>
+                            </span>
+                            <span class="col-md-9">PORTUG C</span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Subtitle: </strong>
+                            </span>
+                            <span class="col-md-9">Active Learning in Museums</span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Description: </strong>
+                            </span>
+                            <span class="col-md-9">This course gives museum administrators and educators new tools for making museums agents of change in the world. Using the pre-texts model, an artist/educator training program that combines high-order literacy, innovation, and citizenship, the course encourages students to develop hands-on, art-making activities that turn museum collections into resources for exploring difficult texts. Art works are studied and used to create visual and performative interpretations of challenging written material that people would otherwise not access. In this way, museums play a central role in developing good readers and engaged viewers of art. Museum staff expand their role beyond traditional modes of providing outreach to engage their visitors with the texts through art and vice-versa, making for a deeper and more meaningful learning experience in the museum setting. In this active learning weekend, students hear lectures, make their own art, and experience the pre-texts that their museum visitors might use. They are challenged to step outside of the box to think creatively about how their museum or a museum might work with its community in new ways that develop an appreciation for art and citizenship.</span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Instructors (display): </strong>
+                            </span>
+                            <span class="col-md-9">Surname First, Surname First, Surname First</span>
+                           
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>People: </strong>
+                            </span>
+                            <span class="col-md-9"><a href="Admin_Console_Flow_Course_People.html">There are 35 people in this course</a></span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Location: </strong>
+                            </span>
+                            <span class="col-md-9">Gutman LaunchPad (3rd floor)</span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Meeting Time: </strong>
+                            </span>
+                            <span class="col-md-9">Monday, Tuesday, Wednesday, 10:00 - 10:59</span>
+                            
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Department: </strong>
+                            </span>
+                            <span class="col-md-9">Romance Languages and Literatures</span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Course Group: </strong>
+                            </span>
+                            <span class="col-md-9">Portuguese</span>
+                            
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Associated Official and Unofficial Site(s): </strong>
+                            </span>
+                            <span class="col-md-10">
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item" style="padding: 1.25em; padding-bottom: 2em;">
+                                    <div class="label label-primary col-md-1">Official</div>
+                                    <div class="col-md-11">PORTUG C - Canvas</div>
+                                    
+                                </a>
+                                  <a href="#" class="list-group-item" style="padding: 1.25em; padding-bottom: 2em;">
+                                    <div class="label label-default col-md-1">Unofficial</div>
+                                    <div class="col-md-11">PORTUG C - iSites</div>
+                                    </a>
+                                  <a href="#" class="list-group-item" style="padding: 1.25em; padding-bottom: 2em;">
+                                    <div class="label label-default col-md-1">Unofficial</div>
+                                    <div class="col-md-11">Word Press</div>
+                                    </a>
+                                </div>
+                            </span>
+                            
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+                            
+    </body>
+</html>

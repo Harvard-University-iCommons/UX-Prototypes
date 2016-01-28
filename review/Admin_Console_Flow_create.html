@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Relative links start -->
+  <link rel="stylesheet" href="../bootstrap/css/docs.min.css" media="screen"/>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+  <link rel="stylesheet" href="../font-awesome-4.4.0/css/font-awesome.css" media="screen"/>
+  <!-- Relative links end -->
+  <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+  <title>Course Conclusion</title>
+</head>
+
+<body class="lti-tool" role="application">
+  <div class="container">
+    <h3>Admin Console <small><i class="fa fa-chevron-right"></i></small> Course Conclusion </h3>
+    <div class="dropdown navbar-right" style="margin-top: -2em; margin-right:1em;">
+      
+      <!-- <button class="btn btn-default pull-right" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fa fa-dashboard"></i> Admin Console <span class="caret"></span>
+      </button>
+
+      <div class="collapse" id="collapseExample">
+        <div class="well container-fluid col-md-8 pull-right">
+          <div class="form-group-inline">
+            <div class="col-md-2">
+              <div class="form-group pull-right">
+                  <label class="sr-only" for="exampleInputEmail3">Enter Harvard University ID or email addresses</label>
+                  <input type="email" class="form-control" id="emailHUID" placeholder="Enter Harvard University ID or email addresses">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-th"></i>
+        Admin Console
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" style="width: 17em">
+        <li>
+
+          <!-- <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_Course_People.html" target="iframe2"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Find<br />Course Info</span></a>
+            </button> -->
+
+
+            <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_Course_People.html" target="iframe2"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Find<br />Course Info</span></a>
+            </button>
+
+            <!-- <button type="button" class="btn btn-primary" style="width: 7em; margin-top: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_conclusion.html" target="iframe2"><i class="fa fa-times-circle" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Course<br />Conclusion</span></a>
+            </button> -->
+
+            <button type="button" class="btn btn-info" style="width: 7em; margin-top: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_create.html" target="iframe2"><i class="fa fa-university" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Create Non Fed<br />Courses</span></a>
+            </button>
+
+          </li>
+
+          <li>
+
+            <button type="button" class="btn btn-warning" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_reports.html" target="iframe2"><i class="fa fa-file-text" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Reports</span></a>
+            </button>
+
+            <button type="button" class="btn btn-danger" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_cross.html" target="iframe2"><i class="fa fa-link" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Cross Listings</span></a>
+            </button>
+
+        </li>
+      </ul>
+    </div>
+
+
+<div class="container-fluid">
+  <h4>Step one: which course is this for?</h4>
+        <div class="col-md-12" >
+          <div class="col-md-5">
+            <div class="btn-group" role="group" aria-label="...">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.schools.text" id="dropdownMenuSchools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Harvard Business School Doctoral Program <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuSchools">
+                  <!-- ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Divinity School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Graduate School of Education</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">HILR</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">HKS Exec Ed</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">HLS Executive Education</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Business School Doctoral Program</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Business School MBA Program</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Chan School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard College Library</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard College/GSAS</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Design School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Extension School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Kennedy School (HKS)</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Law School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Medical School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard School of Dental Medicine</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Harvard Summer School</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">MIT</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools --><li ng-repeat="opt in filterOptions.schools" class="ng-scope">
+                    <a href="#/" ng-click="filters.schools=opt" class="ng-binding">Radcliffe</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.schools -->
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="btn-group" role="group" aria-label="...">
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle ng-binding" type="button" ng-bind-html="filters.terms.text" id="dropdownMenuTerm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">July and August 2015-2016<span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuTerm">
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Summer 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Full Year 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Winter 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">July and August 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">June and July 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring 2 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring 1 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall 2 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall 1 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">July 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">August 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">June 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall-Winter 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Winter-Spring 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Spring Saturday 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Fall Saturday 2015-2016</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms --><li ng-repeat="opt in filterOptions.terms" class="ng-scope">
+                    <a href="#/" ng-click="filters.terms=opt" class="ng-binding">Ongoing</a>
+                  </li><!-- end ngRepeat: opt in filterOptions.terms -->
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+        <div class="col-md-3">
+          <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="queryString" ng-keypress="searchCourseInstances($event)" placeholder="Course code">
+        </div>
+      </div>
+
+        <div class="col-md-12" style="margin-top:1em">
+          <div class="col-md-12">
+          <a type="link" class="btn btn-default">
+            Cancel
+          </a>
+          <a type="link" class="btn btn-primary pull-right">
+            Next Step
+          </a>
+        </div>
+        </div>
+</div>
+
+
+    <script src="../bootstrap/js/list.min.js"></script>
+    <script src="../bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script src="../bootstrap/js/docs.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Tabs - start -->
+    <script>
+    $('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+    $('#myTabs a:first').tab('show') // Select first tab
+    $('#myTabs a:last').tab('show') // Select last tab
+    $('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+    </script>
+    <!-- Tabs - end -->
+
+    
+</body>
+</html>

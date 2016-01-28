@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Relative links start -->
+  <link rel="stylesheet" href="../bootstrap/css/docs.min.css" media="screen"/>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+  <link rel="stylesheet" href="../font-awesome-4.4.0/css/font-awesome.css" media="screen"/>
+  <!-- Relative links end -->
+  <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+  <title>Course Conclusion</title>
+</head>
+
+<body class="lti-tool" role="application">
+  <div class="container">
+    <h3>Admin Console <small><i class="fa fa-chevron-right"></i></small> Course Conclusion </h3>
+    <div class="dropdown navbar-right" style="margin-top: -2em; margin-right:1em;">
+      
+      <!-- <button class="btn btn-default pull-right" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <i class="fa fa-dashboard"></i> Admin Console <span class="caret"></span>
+      </button>
+
+      <div class="collapse" id="collapseExample">
+        <div class="well container-fluid col-md-8 pull-right">
+          <div class="form-group-inline">
+            <div class="col-md-2">
+              <div class="form-group pull-right">
+                  <label class="sr-only" for="exampleInputEmail3">Enter Harvard University ID or email addresses</label>
+                  <input type="email" class="form-control" id="emailHUID" placeholder="Enter Harvard University ID or email addresses">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-th"></i>
+        Admin Console
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" style="width: 17em">
+        <li>
+
+          <!-- <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="streamline_menu.html"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Find<br />Course Info</span></a>
+            </button> -->
+
+
+            <button type="button" class="btn btn-success" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_Course_People.html" target="iframe2"><i class="fa fa-search" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Find<br />Course Info</span></a>
+            </button>
+
+            <!-- <button type="button" class="btn btn-primary" style="width: 7em; margin-top: 1em; margin-left: 1em;">
+              <a href="streamline_menu_conclusion.html" target="iframe2"><i class="fa fa-times-circle" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Course<br />Conclusion</span></a>
+            </button> -->
+
+            <button type="button" class="btn btn-info" style="width: 7em; margin-top: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_create.html" target="iframe2"><i class="fa fa-university" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Create Non Fed<br />Courses</span></a>
+            </button>
+
+          </li>
+
+          <li>
+
+            <button type="button" class="btn btn-warning" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: 1em;">
+              <a href="Admin_Console_Flow_reports.html" target="iframe2"><i class="fa fa-file-text" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Reports</span></a>
+            </button>
+
+            <button type="button" class="btn btn-danger" style="width: 7em; margin-top: 1em; margin-bottom: 1em; margin-left: .5em;">
+              <a href="Admin_Console_Flow_cross.html" target="iframe2"><i class="fa fa-link" style="font-size: 3em; color: white;"></i>
+              <br />
+              <span style="font-size: .75em; color: white;">Cross Listings</span></a>
+            </button>
+
+        </li>
+      </ul>
+    </div>
+
+
+<div ng-controller="CourseConclusionController as courseCtrl" class="ng-scope" style="margin-top:2em">
+
+<form novalidate="" class="form-horizontal ng-invalid ng-invalid-required ng-valid-pattern ng-dirty ng-valid-parse" name="courseConcludeForm" ng-submit="courseCtrl.submit(courseConcludeForm)">
+
+  <div class="col-sm-offset-2 col-sm-10">
+    <!-- ngRepeat: alert in courseCtrl.alerts -->
+  </div>
+
+  <div class="form-group">
+    <label for="school" class="col-sm-2 control-label">School</label>
+    <div class="col-sm-10">
+      <select class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" name="school" required="" ng-options="school.title_short for school in courseCtrl.schools" ng-model="courseCtrl.currentSchool" ng-change="courseCtrl.getTerms();courseCtrl.getConcludedCourses()" ng-disabled="courseCtrl.schools.length === 0"><option ng-show="courseCtrl.hasMultipleSchools()" value="" class="ng-hide" selected="selected">-- Choose A School --</option><option value="object:13" label="Divinity School" selected="selected">Divinity School</option></select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="term" class="col-sm-2 control-label">Term</label>
+    <div class="col-sm-10">
+<!-- UI comment - removed name="term" required="" ng-options="term.display_name for term in courseCtrl.terms" ng-model="courseCtrl.currentTerm" ng-change="courseCtrl.getCourses();courseCtrl.getConcludedCoursesBySchoolTerm()" ng-disabled="courseCtrl.terms.length === 0" from select tag below to view Fall 2015 selection -->
+      <select class="form-control ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" ><option value="" class="">-- Choose A Term --</option><option value="object:14" label="HDS Summer 2015">HDS Summer 2015</option><option value="object:15" label="Fall 2015" selected="selected">Fall 2015</option><option value="object:16" label="Fall 2014">Fall 2014</option><option value="object:17" label="Spring 2012">Spring 2012</option><option value="object:18" label="Summer 2011">Summer 2011</option><option value="object:19" label="Fall 2011">Fall 2011</option><option value="object:20" label="Spring 2011">Spring 2011</option><option value="object:21" label="Full Year 2011">Full Year 2011</option></select>
+    </div>
+    <div class="col-sm-10 col-sm-offset-2 text-muted ng-binding" ng-show="courseCtrl.currentTerm.conclude_date">
+      Term conclude date is 2015-12-25
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="course" class="col-sm-2 control-label">Course</label>
+    <div class="col-sm-10">
+      <select class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" name="course" required="" ng-options="course.course_instance_id + ' - ' + (course.title || 'No title') for (course_instance_id, course) in courseCtrl.courses" ng-model="courseCtrl.currentCourse" ng-disabled="courseCtrl.courses.length === 0" ng-change="courseCtrl.currentConcludeDate = courseCtrl.currentCourse.conclude_date"><option value="" class="" selected="selected">-- Choose A Course --</option><option value="object:190" label="339589 - Administration and Leadership">339589 - Administration and Leadership</option><option value="object:191" label="339590 - Administration and Leadership">339590 - Administration and Leadership</option><option value="object:192" label="339591 - Administration and Leadership">339591 - Administration and Leadership</option><option value="object:193" label="339433 - Advanced Greek: Writing History">339433 - Advanced Greek: Writing History</option><option value="object:194" label="339602 - Advanced Intermediate French Readings">339602 - Advanced Intermediate French Readings</option><option value="object:195" label="339465 - Advanced Intermediate German Readings">339465 - Advanced Intermediate German Readings</option><option value="object:196" label="339421 - Advanced Intermediate Spanish Readings">339421 - Advanced Intermediate Spanish Readings</option><option value="object:197" label="339593 - Advanced Modern Hebrew I">339593 - Advanced Modern Hebrew I</option><option value="object:198" label="339594 - Advanced Seminar in Modern Hebrew: Israeli Culture: Cinema &amp; Literature">339594 - Advanced Seminar in Modern Hebrew: Israeli Culture: Cinema &amp; Literature</option><option value="object:199" label="343573 - After Luther: Faith, the Will, the Law, and the Question of Goodness">343573 - After Luther: Faith, the Will, the Law, and the Question of Goodness</option><option value="object:200" label="343574 - After Luther: Faith, the Will, the Law, and the Question of Goodness">343574 - After Luther: Faith, the Will, the Law, and the Question of Goodness</option><option value="object:201" label="343577 - After Luther: Faith, the Will, the Law, and the Question of Goodness">343577 - After Luther: Faith, the Will, the Law, and the Question of Goodness</option><option value="object:202" label="343578 - After Luther: Faith, the Will, the Law, and the Question of Goodness">343578 - After Luther: Faith, the Will, the Law, and the Question of Goodness</option><option value="object:203" label="339411 - Alternative Spiritualities in the United States">339411 - Alternative Spiritualities in the United States</option><option value="object:204" label="339412 - Alternative Spiritualities in the United States">339412 - Alternative Spiritualities in the United States</option><option value="object:205" label="339409 - American Religious History to 1865">339409 - American Religious History to 1865</option><option value="object:206" label="339413 - American Religious History to 1865">339413 - American Religious History to 1865</option><option value="object:207" label="339414 - American Religious History to 1865">339414 - American Religious History to 1865</option><option value="object:208" label="339410 - American Revelations">339410 - American Revelations</option><option value="object:209" label="343562 - Ancient Greek Sanctuaries: Sacred Games">343562 - Ancient Greek Sanctuaries: Sacred Games</option><option value="object:210" label="339445 - Anthropology of &quot;the Religious&quot; Part I: Theory">339445 - Anthropology of "the Religious" Part I: Theory</option><option value="object:211" label="348907 - Arts of Contemplative Care">348907 - Arts of Contemplative Care</option><option value="object:212" label="348908 - Arts of Contemplative Care">348908 - Arts of Contemplative Care</option><option value="object:213" label="348909 - Arts of Contemplative Care">348909 - Arts of Contemplative Care</option><option value="object:214" label="339507 - Attention and Engagement in Contemporary American Poetry">339507 - Attention and Engagement in Contemporary American Poetry</option><option value="object:215" label="339508 - Attention and Engagement in Contemporary American Poetry">339508 - Attention and Engagement in Contemporary American Poetry</option><option value="object:216" label="339576 - Biblical Archaeology">339576 - Biblical Archaeology</option><option value="object:217" label="348905 - Buddhist Chaplaincy: Spiritual Foundations in Caregiving Practice">348905 - Buddhist Chaplaincy: Spiritual Foundations in Caregiving Practice</option><option value="object:218" label="348929 - Buddhist Chaplaincy: Spiritual Foundations in Caregiving Practice">348929 - Buddhist Chaplaincy: Spiritual Foundations in Caregiving Practice</option><option value="object:219" label="339454 - Catholicism in America">339454 - Catholicism in America</option><option value="object:220" label="339451 - Change, Adversity and Spiritual Resilience">339451 - Change, Adversity and Spiritual Resilience</option><option value="object:221" label="339452 - Change, Adversity and Spiritual Resilience">339452 - Change, Adversity and Spiritual Resilience</option><option value="object:222" label="339425 - Christian Ethics, Persuasion, and Power I">339425 - Christian Ethics, Persuasion, and Power I</option><option value="object:223" label="339505 - Christian Prayer: Seminar">339505 - Christian Prayer: Seminar</option><option value="object:224" label="339506 - Christian Prayer: Seminar">339506 - Christian Prayer: Seminar</option><option value="object:225" label="343547 - Classics in the Sociology of Religion">343547 - Classics in the Sociology of Religion</option><option value="object:226" label="348894 - Colloquium in American Religious History">348894 - Colloquium in American Religious History</option><option value="object:227" label="339418 - Communication Skills for Spanish Ministry">339418 - Communication Skills for Spanish Ministry</option><option value="object:228" label="339419 - Communication Skills for Spanish Ministry">339419 - Communication Skills for Spanish Ministry</option><option value="object:229" label="339420 - Communication Skills for Spanish Ministry">339420 - Communication Skills for Spanish Ministry</option><option value="object:230" label="339422 - Communication Skills for Spanish Ministry">339422 - Communication Skills for Spanish Ministry</option><option value="object:231" label="339423 - Communication Skills for Spanish Ministry">339423 - Communication Skills for Spanish Ministry</option><option value="object:232" label="339424 - Communication Skills for Spanish Ministry">339424 - Communication Skills for Spanish Ministry</option><option value="object:233" label="343575 - Critical Study of Midrash">343575 - Critical Study of Midrash</option><option value="object:234" label="339447 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean">339447 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean</option><option value="object:235" label="339448 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean">339448 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean</option><option value="object:236" label="339481 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean">339481 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean</option><option value="object:237" label="339482 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean">339482 - Crusades, Plagues and Hospitals: Medicine, Religion and Society in the Medieval Mediterranean</option><option value="object:238" label="339469 - Early Christian Thought 1: The Greek Tradition">339469 - Early Christian Thought 1: The Greek Tradition</option><option value="object:239" label="339470 - Early Christian Thought 1: The Greek Tradition">339470 - Early Christian Thought 1: The Greek Tradition</option><option value="object:240" label="339494 - Early Christian Thought 1: The Greek Tradition">339494 - Early Christian Thought 1: The Greek Tradition</option><option value="object:241" label="339495 - Early Christian Thought 1: The Greek Tradition">339495 - Early Christian Thought 1: The Greek Tradition</option><option value="object:242" label="339471 - Early Christianity in the Roman Empire">339471 - Early Christianity in the Roman Empire</option><option value="object:243" label="348912 - Elementary Arabic">348912 - Elementary Arabic</option><option value="object:244" label="348922 - Elementary Arabic">348922 - Elementary Arabic</option><option value="object:245" label="348923 - Elementary Arabic">348923 - Elementary Arabic</option><option value="object:246" label="348924 - Elementary Arabic">348924 - Elementary Arabic</option><option value="object:247" label="348896 - Elementary Classical Hebrew">348896 - Elementary Classical Hebrew</option><option value="object:248" label="339427 - Elementary Coptic I">339427 - Elementary Coptic I</option><option value="object:249" label="339597 - Elementary Greek I">339597 - Elementary Greek I</option><option value="object:250" label="348921 - Elementary Modern Hebrew">348921 - Elementary Modern Hebrew</option><option value="object:251" label="339595 - Elementary Pali I">339595 - Elementary Pali I</option><option value="object:252" label="339438 - Evangelical Conversion and Disenchantment Narratives">339438 - Evangelical Conversion and Disenchantment Narratives</option><option value="object:253" label="339606 - Existential - Phenomenological Anthropology">339606 - Existential - Phenomenological Anthropology</option><option value="object:254" label="339607 - Existential - Phenomenological Anthropology">339607 - Existential - Phenomenological Anthropology</option><option value="object:255" label="339608 - Existential - Phenomenological Anthropology">339608 - Existential - Phenomenological Anthropology</option><option value="object:256" label="339609 - Existential - Phenomenological Anthropology">339609 - Existential - Phenomenological Anthropology</option><option value="object:257" label="348927 - Field Education">348927 - Field Education</option><option value="object:258" label="343540 - Friendship from A to Z: Aristotle to Zuckerberg">343540 - Friendship from A to Z: Aristotle to Zuckerberg</option><option value="object:259" label="348898 - From Type to Self in the Middle Ages">348898 - From Type to Self in the Middle Ages</option><option value="object:260" label="339466 - German for Reading">339466 - German for Reading</option><option value="object:261" label="339581 - God and Money">339581 - God and Money</option><option value="object:262" label="348930 - Graeca - Reading of Greek Texts: Seminar">348930 - Graeca - Reading of Greek Texts: Seminar</option><option value="object:263" label="339491 - Greek Exegesis of John">339491 - Greek Exegesis of John</option><option value="object:264" label="339492 - Greek Exegesis of John">339492 - Greek Exegesis of John</option><option value="object:265" label="339493 - Greek Exegesis of John">339493 - Greek Exegesis of John</option><option value="object:266" label="348932 - HDS Reading and Research">348932 - HDS Reading and Research</option><option value="object:267" label="343541 - Hindu Worlds of Art and Culture">343541 - Hindu Worlds of Art and Culture</option><option value="object:268" label="343567 - Hindu Worlds of Art and Culture">343567 - Hindu Worlds of Art and Culture</option><option value="object:269" label="339577 - History of the Study of the Hebrew Bible: From the Renaissance to the Present: Seminar">339577 - History of the Study of the Hebrew Bible: From the Renaissance to the Present: Seminar</option><option value="object:270" label="339569 - Holy Ordinary: Religious Dimensions in Modern and Contemporary Fiction">339569 - Holy Ordinary: Religious Dimensions in Modern and Contemporary Fiction</option><option value="object:271" label="339587 - Human Migration &amp; US-Mexico Borderlands: Moral Dilemmas &amp; Sacred Bundles in Comparative Perspective">339587 - Human Migration &amp; US-Mexico Borderlands: Moral Dilemmas &amp; Sacred Bundles in Comparative Perspective</option><option value="object:272" label="339598 - Intermediate Arabic I">339598 - Intermediate Arabic I</option><option value="object:273" label="339599 - Intermediate Arabic I">339599 - Intermediate Arabic I</option><option value="object:274" label="339600 - Intermediate Arabic I">339600 - Intermediate Arabic I</option><option value="object:275" label="343548 - Intermediate Arabic I">343548 - Intermediate Arabic I</option><option value="object:276" label="343549 - Intermediate Arabic I">343549 - Intermediate Arabic I</option><option value="object:277" label="343550 - Intermediate Arabic I">343550 - Intermediate Arabic I</option><option value="object:278" label="339610 - Intermediate Classical Hebrew I">339610 - Intermediate Classical Hebrew I</option><option value="object:279" label="339437 - Intermediate Greek I">339437 - Intermediate Greek I</option><option value="object:280" label="339592 - Intermediate Modern Hebrew I">339592 - Intermediate Modern Hebrew I</option><option value="object:281" label="339436 - Intermediate Pali I">339436 - Intermediate Pali I</option><option value="object:282" label="348931 - Intermediate Readings in Christian Latin">348931 - Intermediate Readings in Christian Latin</option><option value="object:283" label="343569 - Intermediate Syriac I">343569 - Intermediate Syriac I</option><option value="object:284" label="339596 - Introduction to Ancient Aramaic">339596 - Introduction to Ancient Aramaic</option><option value="object:285" label="339497 - Introduction to Christian Preaching">339497 - Introduction to Christian Preaching</option><option value="object:286" label="339498 - Introduction to Christian Preaching">339498 - Introduction to Christian Preaching</option><option value="object:287" label="348913 - Introduction to Hermeneutics and Theology">348913 - Introduction to Hermeneutics and Theology</option><option value="object:288" label="348914 - Introduction to Hermeneutics and Theology">348914 - Introduction to Hermeneutics and Theology</option><option value="object:289" label="348915 - Introduction to Hermeneutics and Theology">348915 - Introduction to Hermeneutics and Theology</option><option value="object:290" label="339612 - Introduction to Ministry Studies">339612 - Introduction to Ministry Studies</option><option value="object:291" label="339574 - Introduction to Northwest Semitic Epigraphy">339574 - Introduction to Northwest Semitic Epigraphy</option><option value="object:292" label="339459 - Introduction to the Hebrew Bible/Old Testament 1: Pentateuch and Former Prophets">339459 - Introduction to the Hebrew Bible/Old Testament 1: Pentateuch and Former Prophets</option><option value="object:293" label="339460 - Introduction to the Hebrew Bible/Old Testament 1: Pentateuch and Former Prophets">339460 - Introduction to the Hebrew Bible/Old Testament 1: Pentateuch and Former Prophets</option><option value="object:294" label="348899 - Introduction to the Study of East Asian Religions">348899 - Introduction to the Study of East Asian Religions</option><option value="object:295" label="339441 - Islam in Modern West Africa">339441 - Islam in Modern West Africa</option><option value="object:296" label="339442 - Islam in Modern West Africa">339442 - Islam in Modern West Africa</option><option value="object:297" label="339588 - Islam, Modernity and Politics">339588 - Islam, Modernity and Politics</option><option value="object:298" label="339604 - Islam, Modernity and Politics">339604 - Islam, Modernity and Politics</option><option value="object:299" label="339476 - Islamic Modernism 3 (1970-2014)">339476 - Islamic Modernism 3 (1970-2014)</option><option value="object:300" label="339467 - Ismaili History and Thought">339467 - Ismaili History and Thought</option><option value="object:301" label="339449 - Issues in the Study of Native American Religion">339449 - Issues in the Study of Native American Religion</option><option value="object:302" label="339450 - Issues in the Study of Native American Religion">339450 - Issues in the Study of Native American Religion</option><option value="object:303" label="339446 - Journeys">339446 - Journeys</option><option value="object:304" label="339461 - Law in the World of the Bible">339461 - Law in the World of the Bible</option><option value="object:305" label="339489 - Law in the World of the Bible">339489 - Law in the World of the Bible</option><option value="object:306" label="339490 - Law in the World of the Bible">339490 - Law in the World of the Bible</option><option value="object:307" label="348928 - Leave of Absence">348928 - Leave of Absence</option><option value="object:308" label="348901 - Library &amp; Guidance">348901 - Library &amp; Guidance</option><option value="object:309" label="343565 - Life Before Death: God, the World's Order, and Suffering">343565 - Life Before Death: God, the World's Order, and Suffering</option><option value="object:310" label="343566 - Life Before Death: God, the World's Order, and Suffering">343566 - Life Before Death: God, the World's Order, and Suffering</option><option value="object:311" label="343576 - Life Before Death: God, the World's Order, and Suffering">343576 - Life Before Death: God, the World's Order, and Suffering</option><option value="object:312" label="339504 - Life in Theology and Philosophy">339504 - Life in Theology and Philosophy</option><option value="object:313" label="339462 - Literature of Israel: Seminar">339462 - Literature of Israel: Seminar</option><option value="object:314" label="348920 - Major Issues in the Study of Japanese Religions">348920 - Major Issues in the Study of Japanese Religions</option><option value="object:315" label="343560 - Marriage, Family and Community in the New*Testament and Today">343560 - Marriage, Family and Community in the New*Testament and Today</option><option value="object:316" label="343561 - Marriage, Family and Community in the New*Testament and Today">343561 - Marriage, Family and Community in the New*Testament and Today</option><option value="object:317" label="343563 - Marriage, Family and Community in the New*Testament and Today">343563 - Marriage, Family and Community in the New*Testament and Today</option><option value="object:318" label="343564 - Marriage, Family and Community in the New*Testament and Today">343564 - Marriage, Family and Community in the New*Testament and Today</option><option value="object:319" label="343568 - Marriage, Family and Community in the New*Testament and Today">343568 - Marriage, Family and Community in the New*Testament and Today</option><option value="object:320" label="339415 - Master of Divinity Senior Seminar">339415 - Master of Divinity Senior Seminar</option><option value="object:321" label="348933 - Meaning Making - Thinking Theologically about Ministry Experience">348933 - Meaning Making - Thinking Theologically about Ministry Experience</option><option value="object:322" label="339463 - Medieval Torah Commentary - A Practical Introduction: Seminar">339463 - Medieval Torah Commentary - A Practical Introduction: Seminar</option><option value="object:323" label="339439 - Migration and Religion in Comparative Perspective">339439 - Migration and Religion in Comparative Perspective</option><option value="object:324" label="339440 - Migration and Religion in Comparative Perspective">339440 - Migration and Religion in Comparative Perspective</option><option value="object:325" label="339613 - Moctezuma's Mexico: Then and Now">339613 - Moctezuma's Mexico: Then and Now</option><option value="object:326" label="339605 - Muslim Societies in South Asia: Religion, Culture, and Identity">339605 - Muslim Societies in South Asia: Religion, Culture, and Identity</option><option value="object:327" label="339580 - Narratives of American Religion: The Canon and Its Revisions">339580 - Narratives of American Religion: The Canon and Its Revisions</option><option value="object:328" label="339611 - Narratives of American Religion: The Canon and Its Revisions">339611 - Narratives of American Religion: The Canon and Its Revisions</option><option value="object:329" label="339578 - New Directions in American Religious History, 1865-2000">339578 - New Directions in American Religious History, 1865-2000</option><option value="object:330" label="348910 - New Studies in Tibetan Buddhism">348910 - New Studies in Tibetan Buddhism</option><option value="object:331" label="348918 - New Testament Seminar for Doctoral Dissertations">348918 - New Testament Seminar for Doctoral Dissertations</option><option value="object:332" label="339416 - Nineteenth-Century Religious Thought: Theology and the Critique of Religion">339416 - Nineteenth-Century Religious Thought: Theology and the Critique of Religion</option><option value="object:333" label="339502 - Political Concepts: Field Seminar">339502 - Political Concepts: Field Seminar</option><option value="object:334" label="339568 - Political Concepts: Field Seminar">339568 - Political Concepts: Field Seminar</option><option value="object:335" label="343570 - Political Violence in the Name of God: Holy War, Jihad and Religious Revolution">343570 - Political Violence in the Name of God: Holy War, Jihad and Religious Revolution</option><option value="object:336" label="343571 - Political Violence in the Name of God: Holy War, Jihad and Religious Revolution">343571 - Political Violence in the Name of God: Holy War, Jihad and Religious Revolution</option><option value="object:337" label="343572 - Political Violence in the Name of God: Holy War, Jihad and Religious Revolution">343572 - Political Violence in the Name of God: Holy War, Jihad and Religious Revolution</option><option value="object:338" label="339500 - Preaching in the Unitarian Universalist and Free Church Traditions: Seminar">339500 - Preaching in the Unitarian Universalist and Free Church Traditions: Seminar</option><option value="object:339" label="339501 - Preaching in the Unitarian Universalist and Free Church Traditions: Seminar">339501 - Preaching in the Unitarian Universalist and Free Church Traditions: Seminar</option><option value="object:340" label="339426 - Presbyterian Polity">339426 - Presbyterian Polity</option><option value="object:341" label="339428 - Presbyterian Polity">339428 - Presbyterian Polity</option><option value="object:342" label="348902 - Race, Class and the Making of American Religion">348902 - Race, Class and the Making of American Religion</option><option value="object:343" label="339475 - Rapid Reading: Classical Hebrew I">339475 - Rapid Reading: Classical Hebrew I</option><option value="object:344" label="343543 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians">343543 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians</option><option value="object:345" label="343545 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians">343545 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians</option><option value="object:346" label="343554 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians">343554 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians</option><option value="object:347" label="343555 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians">343555 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians</option><option value="object:348" label="343556 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians">343556 - Reading from Diverse Socio-Cultural-Religious Places: The Letter to the Ephesians</option><option value="object:349" label="339453 - Readings in Postmodern Theology">339453 - Readings in Postmodern Theology</option><option value="object:350" label="339417 - Readings in the Septuagint: Seminar">339417 - Readings in the Septuagint: Seminar</option><option value="object:351" label="348926 - Readings on Chinese Religions">348926 - Readings on Chinese Religions</option><option value="object:352" label="343551 - Religion and AIDS">343551 - Religion and AIDS</option><option value="object:353" label="343552 - Religion and AIDS">343552 - Religion and AIDS</option><option value="object:354" label="343553 - Religion and AIDS">343553 - Religion and AIDS</option><option value="object:355" label="339586 - Religion and Identity in Modern American History, 1865-2000">339586 - Religion and Identity in Modern American History, 1865-2000</option><option value="object:356" label="339487 - Religion and Political Violence in North Africa and the Sahel">339487 - Religion and Political Violence in North Africa and the Sahel</option><option value="object:357" label="339488 - Religion and Political Violence in North Africa and the Sahel">339488 - Religion and Political Violence in North Africa and the Sahel</option><option value="object:358" label="339499 - Religion and Politics: Defining the Actors and Debating the Issues">339499 - Religion and Politics: Defining the Actors and Debating the Issues</option><option value="object:359" label="339480 - Religion, Conflict, and Peace">339480 - Religion, Conflict, and Peace</option><option value="object:360" label="339509 - Religion, Conflict, and Peace">339509 - Religion, Conflict, and Peace</option><option value="object:361" label="339579 - Religion, Conflict, and Peace">339579 - Religion, Conflict, and Peace</option><option value="object:362" label="339483 - Religion, Gender, Identity in 21st Century Diasporic Muslim Fiction">339483 - Religion, Gender, Identity in 21st Century Diasporic Muslim Fiction</option><option value="object:363" label="343542 - Religious Diversity and The Age of Pluralism">343542 - Religious Diversity and The Age of Pluralism</option><option value="object:364" label="348916 - Sacred Music in History and Current Practice">348916 - Sacred Music in History and Current Practice</option><option value="object:365" label="348917 - Sacred Music in History and Current Practice">348917 - Sacred Music in History and Current Practice</option><option value="object:366" label="339228 - Science &amp; spirit">339228 - Science &amp; spirit</option><option value="object:367" label="339464 - Science and Religion: Debates, Approaches, and Controversies">339464 - Science and Religion: Debates, Approaches, and Controversies</option><option value="object:368" label="339484 - Science and Religion: Debates, Approaches, and Controversies">339484 - Science and Religion: Debates, Approaches, and Controversies</option><option value="object:369" label="339485 - Science and Religion: Debates, Approaches, and Controversies">339485 - Science and Religion: Debates, Approaches, and Controversies</option><option value="object:370" label="339486 - Science and Religion: Debates, Approaches, and Controversies">339486 - Science and Religion: Debates, Approaches, and Controversies</option><option value="object:371" label="348895 - Seminar for Advanced New Testament Students">348895 - Seminar for Advanced New Testament Students</option><option value="object:372" label="339477 - Sex, Gender, and Sexuality">339477 - Sex, Gender, and Sexuality</option><option value="object:373" label="339478 - Sex, Gender, and Sexuality">339478 - Sex, Gender, and Sexuality</option><option value="object:374" label="339479 - Sex, Gender, and Sexuality">339479 - Sex, Gender, and Sexuality</option><option value="object:375" label="348925 - Social Ethics Today">348925 - Social Ethics Today</option><option value="object:376" label="348900 - Social Ethics as Social Criticism">348900 - Social Ethics as Social Criticism</option><option value="object:377" label="339430 - Space and Place: Seminar">339430 - Space and Place: Seminar</option><option value="object:378" label="339431 - Space and Place: Seminar">339431 - Space and Place: Seminar</option><option value="object:379" label="339434 - Space and Place: Seminar">339434 - Space and Place: Seminar</option><option value="object:380" label="339458 - Space and Place: Seminar">339458 - Space and Place: Seminar</option><option value="object:381" label="343544 - Spiritual Care and Counseling">343544 - Spiritual Care and Counseling</option><option value="object:382" label="348911 - Talk About It: How Race Matters">348911 - Talk About It: How Race Matters</option><option value="object:383" label="348934 - Talk About It: How Race Matters">348934 - Talk About It: How Race Matters</option><option value="object:384" label="348935 - Talk About It: How Race Matters">348935 - Talk About It: How Race Matters</option><option value="object:385" label="348936 - Talk About It: How Race Matters">348936 - Talk About It: How Race Matters</option><option value="object:386" label="339472 - Teaching with Courage and Passion">339472 - Teaching with Courage and Passion</option><option value="object:387" label="339473 - Teaching with Courage and Passion">339473 - Teaching with Courage and Passion</option><option value="object:388" label="339474 - Teaching with Courage and Passion">339474 - Teaching with Courage and Passion</option><option value="object:389" label="339575 - The Book of Jeremiah: Composition and Reception">339575 - The Book of Jeremiah: Composition and Reception</option><option value="object:390" label="339408 - The Children of Abraham: An Introduction to Judaism, Christianity, and Islam">339408 - The Children of Abraham: An Introduction to Judaism, Christianity, and Islam</option><option value="object:391" label="339443 - The Construction of Gendered Spheres in Islamic Law: Ritual, Family, Kinship, Court Procedures">339443 - The Construction of Gendered Spheres in Islamic Law: Ritual, Family, Kinship, Court Procedures</option><option value="object:392" label="343558 - The Death of Jesus">343558 - The Death of Jesus</option><option value="object:393" label="343559 - The Death of Jesus">343559 - The Death of Jesus</option><option value="object:394" label="343579 - The Death of Jesus">343579 - The Death of Jesus</option><option value="object:395" label="339582 - The Empire Strikes Back: Science Fiction, Religion, and Society">339582 - The Empire Strikes Back: Science Fiction, Religion, and Society</option><option value="object:396" label="339583 - The Empire Strikes Back: Science Fiction, Religion, and Society">339583 - The Empire Strikes Back: Science Fiction, Religion, and Society</option><option value="object:397" label="339584 - The Empire Strikes Back: Science Fiction, Religion, and Society">339584 - The Empire Strikes Back: Science Fiction, Religion, and Society</option><option value="object:398" label="339585 - The Empire Strikes Back: Science Fiction, Religion, and Society">339585 - The Empire Strikes Back: Science Fiction, Religion, and Society</option><option value="object:399" label="339432 - The Politics of Storytelling">339432 - The Politics of Storytelling</option><option value="object:400" label="339455 - The Politics of Storytelling">339455 - The Politics of Storytelling</option><option value="object:401" label="339456 - The Politics of Storytelling">339456 - The Politics of Storytelling</option><option value="object:402" label="339457 - The Politics of Storytelling">339457 - The Politics of Storytelling</option><option value="object:403" label="339570 - The Psalms">339570 - The Psalms</option><option value="object:404" label="339571 - The Psalms">339571 - The Psalms</option><option value="object:405" label="339572 - The Psalms">339572 - The Psalms</option><option value="object:406" label="339573 - The Psalms">339573 - The Psalms</option><option value="object:407" label="343557 - The Veil in Christianity, Judaism, and Islam">343557 - The Veil in Christianity, Judaism, and Islam</option><option value="object:408" label="348903 - Theology and Power: Seminar">348903 - Theology and Power: Seminar</option><option value="object:409" label="348904 - Theology and Power: Seminar">348904 - Theology and Power: Seminar</option><option value="object:410" label="339444 - Theology in an Interreligious Perspective">339444 - Theology in an Interreligious Perspective</option><option value="object:411" label="339429 - Theories and Methods in the Study of Religion">339429 - Theories and Methods in the Study of Religion</option><option value="object:412" label="339603 - Theories and Methods in the Study of Religion">339603 - Theories and Methods in the Study of Religion</option><option value="object:413" label="339503 - Transnational Feminism">339503 - Transnational Feminism</option><option value="object:414" label="339435 - Unitarian Universalist Polity and Practices: Seminar">339435 - Unitarian Universalist Polity and Practices: Seminar</option><option value="object:415" label="339468 - Unitarian Universalist Polity and Practices: Seminar">339468 - Unitarian Universalist Polity and Practices: Seminar</option><option value="object:416" label="348897 - Unitarian Universalist Religious Education: Seminar">348897 - Unitarian Universalist Religious Education: Seminar</option><option value="object:417" label="348919 - Unitarian Universalist Religious Education: Seminar">348919 - Unitarian Universalist Religious Education: Seminar</option><option value="object:418" label="339601 - Upper-Level Classical Arabic I">339601 - Upper-Level Classical Arabic I</option><option value="object:419" label="339496 - Vocation, Ordination, and Ministry">339496 - Vocation, Ordination, and Ministry</option><option value="object:420" label="339510 - Vocation, Ordination, and Ministry">339510 - Vocation, Ordination, and Ministry</option><option value="object:421" label="348906 - What Is Enlightenment?: Science, Religion, and the Making of Modernity">348906 - What Is Enlightenment?: Science, Religion, and the Making of Modernity</option><option value="object:422" label="343546 - Women's Material Practices in Chinese Buddhism">343546 - Women's Material Practices in Chinese Buddhism</option></select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="course-conclusion-date" class="col-sm-2 control-label">
+      Course Conclude Date
+    </label>
+    <div class="col-sm-2">
+      <div class="input-group">
+          <input type="text" class="dateinput form-control ng-pristine ng-untouched ng-valid ng-valid-pattern ng-valid-required" name="courseConcludeDate" placeholder="YYYY-MM-DD" data-provide="datepicker" data-date-format="yyyy-mm-dd" ng-model="courseCtrl.currentConcludeDate" ng-disabled="!courseCtrl.currentCourse" ng-required="false" pattern="^\d{4}-\d{2}-\d{2}$" disabled="disabled">
+       </div>
+    </div>
+  </div>
+
+  <div class="col-sm-offset-2 col-sm-5">
+     <div class="form-group">
+       <input type="submit" class="btn btn-default" value="Save" ng-disabled="courseConcludeForm.$invalid" disabled="disabled">
+       <input type="button" class="btn btn-default" value="Reset" ng-click="courseCtrl.reset(courseConcludeForm)">
+     </div>
+   </div>
+   <!-- end inside the form so we can get the csrf token -->
+  <input type="hidden" name="csrfmiddlewaretoken" value="k4guljBwS09qQOln7Fq2GSAssN50hjae">
+</form>
+
+<!-- UI comment - removing ng-* info from th einput tag to display the search box - start -->
+    <div class="col-sm-5" >
+     <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" id="course-conclusion-date" placeholder="Search Course">
+    </div>
+
+
+    <div class="col-sm-offset-2 col-sm-10 text-muted ng-hide" ng-show="courseCtrl.hasMultipleSchools() &amp;&amp; !courseCtrl.currentSchool">
+        Please select a school from the list above to view the concluded courses for the selected school.
+    </div>
+
+    <div class="form-group col-sm-12">
+        <div class="col-sm-2">
+        <label for="course-conclusion-date" class="control-label">
+          Course Conclusion Dates
+        </label>
+        </div>
+        <div class="row col-sm-10">
+
+        <table class="table table-bordered table-condensed table-striped table-responsive" width="100%">
+            <tbody><tr>
+                <th class="thead">Term</th>
+                <th class="thead">SIS ID</th>
+                <th class="thead">Course</th>
+                <th class="thead">Course Conclusion Date</th>
+            </tr>
+<!-- UI comment - removing ng-repeat from each TR to show table - start -->
+            <!-- ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339590</td>
+                <td class="tbody ng-binding">Administration and Leadership</td>
+                <td class="tbody ng-binding">2015-09-27</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339591</td>
+                <td class="tbody ng-binding">Administration and Leadership</td>
+                <td class="tbody ng-binding">2015-09-24</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339589</td>
+                <td class="tbody ng-binding">Administration and Leadership</td>
+                <td class="tbody ng-binding">2016-01-01</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339433</td>
+                <td class="tbody ng-binding">Advanced Greek: Writing History</td>
+                <td class="tbody ng-binding">2015-09-30</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339410</td>
+                <td class="tbody ng-binding">American Revelations</td>
+                <td class="tbody ng-binding">2015-12-31</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339606</td>
+                <td class="tbody ng-binding">Existential - Phenomenological Anthropology</td>
+                <td class="tbody ng-binding">2015-07-01</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339608</td>
+                <td class="tbody ng-binding">Existential - Phenomenological Anthropology</td>
+                <td class="tbody ng-binding">2015-07-01</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339607</td>
+                <td class="tbody ng-binding">Existential - Phenomenological Anthropology</td>
+                <td class="tbody ng-binding">2015-07-01</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339609</td>
+                <td class="tbody ng-binding">Existential - Phenomenological Anthropology</td>
+                <td class="tbody ng-binding">2015-07-01</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse --><tr class="ng-scope">
+                <td class="tbody ng-binding">Fall 2015</td>
+                <td class="tbody ng-binding">339437</td>
+                <td class="tbody ng-binding">Intermediate Greek I</td>
+                <td class="tbody ng-binding">2016-01-31</td>
+            </tr><!-- end ngRepeat: c in courseCtrl.concluded_courses|filter:searchCourse -->
+        </tbody></table>
+<!-- UI comment - removing ng-repeat from each TR to show table - end -->
+        </div>
+    </div>
+
+
+</div> <!--closing div for  ng-controller div-->
+</div>
+
+
+    <script src="../bootstrap/js/list.min.js"></script>
+    <script src="../bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script src="../bootstrap/js/docs.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Tabs - start -->
+    <script>
+    $('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+    $('#myTabs a:first').tab('show') // Select first tab
+    $('#myTabs a:last').tab('show') // Select last tab
+    $('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+    </script>
+    <!-- Tabs - end -->
+
+    
+</body>
+</html>
