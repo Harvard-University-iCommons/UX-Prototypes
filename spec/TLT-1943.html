@@ -1,0 +1,661 @@
+<html lang="en" ng-app="mailingList" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- UI comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - start -->
+<base href="https://lti-emailer.qa.tlt.harvard.edu" target="_blank">
+<!-- UI comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - end -->
+
+    <link href="/static/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/lti-css/tooltipModal.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/font-awesome-4.2.0/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/harvard-bootstrap/css/harvard-bootstrap.css" media="screen">
+    
+    <script src="/static/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="/static/underscore-1.8.2/underscore.min.js"></script>
+    <script src="/static/bootstrap-3.0.3/dist/js/bootstrap.min.js"></script>
+    <script src="/static/angular-1.3.9/angular.min.js"></script>
+    <script src="/static/angular-1.3.9/angular-sanitize.min.js"></script>
+<!-- UI comment - deleting this script so that I can visualize the UI - /static/angular-1.3.9/angular-animate.min.js -->
+    <script src="/static/djangular/js/django-angular.js"></script>
+    
+
+<script>
+    window.globals = {
+        RESOURCE_LINK_ID: '0117d0b32e92014fcb66cc0c513ced3db9d28841'
+    };
+</script>
+<script src="/static/django_auth_lti/js/resource_link_id.js"></script>
+    <script src="/static/mailing_list/js/app.js"></script>
+    
+<script type="text/javascript">
+$(document).ready(function(){
+  //tooltip for buttons (done this way because of dynamically created icons)
+  $('body').tooltip({
+    selector: '[rel=tooltip]'
+  });
+  $('[rel=tooltip]').tooltip({
+    container: 'body'
+  });
+});
+</script>
+
+    <title>Course Emailer</title>
+</head>
+
+<body class="lti-tool ng-scope" role="application" ng-controller="MailingListController as ml" style="">
+
+<div class="container">
+  <header>
+    <div class="row lti-header">
+      <h1>
+        Course Emailer
+      </h1>
+    </div>
+  </header>
+  <div class="loading-indicator ng-hide" ng-show="ml.isLoading">
+    <img src="/static/images/ajax-loader-large.gif">
+  </div>
+  <main>
+    <div class="col-md-12">
+          <h2>Mailing Lists for Biomedical Engineering 91r: Supervised Reading and Research</h2>
+            <p class="caption">
+              This tool provides mailing lists that allow you to contact members
+              of your course using an email client (e.g. Outlook, Gmail, etc.)
+              as an alternative to the Canvas Inbox. You <b>must</b> send your
+              message from the email address that is set as your default in
+              Canvas or your message will not be delivered.
+                <a target="_blank" href="https://wiki.harvard.edu/confluence/display/canvas/Course+Emailer " class="lti-tooltip" rel="tooltip" data-toggle="tooltip" title="" data-original-title="More info about the Course Emailer">
+                    <i class="fa fa-question-circle"></i>
+                </a>
+            </p>
+    </div>
+    <!-- main list of meta list-->
+    <div class="col-md-12">
+
+      <!-- show combined mailing list or single primary list -->
+      <!-- if there is a combined mailing list show it -->
+      <h2 ng-show="ml.hasCourseEmailList()" class="">Email Entire Course</h2>
+      <p class="" caption="" ng-show="ml.hasCourseEmailList()">
+        Email all students, teaching staff, and guests enrolled in this course.
+      </p>
+      <!-- ngRepeat: list in ml.courseList --><div ng-repeat="list in ml.courseList" class="ng-scope">
+        
+
+<div class="col-md-12">
+    <hr width="98%">
+</div>
+
+
+<!-- 4 column row  -->
+<!-- column 1 -->
+<div class="col-md-3">
+  <p>
+      <span ng-show="ml.isNonEnrollmentSectionsList(list)" class="label label-success ng-hide">&nbsp;&nbsp;</span>
+      <span ng-show="ml.isManageSectionsList(list)" class="label label-primary ng-hide">&nbsp;&nbsp;</span>
+    <strong class="ng-binding">Course Mailing List</strong><br>(<a class="link-text lti-tooltip" rel="tooltip" title="" data-original-title="Members emails" data-toggle="tooltip" href="/angular/reverse/?djng_url_name=mailing_list%3Alist_members_no_id&amp;resource_link_id=0117d0b32e92014fcb66cc0c513ced3db9d28841"><ng-pluralize count="list.members_count" when="{'0': 'No members', 'one': '1 member', 'other': '{} members'}">3 members</ng-pluralize></a>)
+  </p>
+</div>
+
+<!-- column 2 -->
+<div class="col-md-3">
+  <p ng-class="list.access_level == 'readonly' ? 'caption-disabled' : ''" style="word-wrap:break-word;">
+    <a id="email-section-" target="_top" href="mailto:canvas-133@mg.qa.tlt.harvard.edu" ng-disabled="list.access_level == 'readonly'" class="ng-binding editSection lti-tooltip" rel="tooltip" data-toggle="tooltip" title="" data-original-title="Click this link to send an email">
+       <i class="fa fa-envelope"></i> canvas-133@mg.qa.tlt.harvard.edu
+    </a>
+  </p>
+</div>
+
+
+<!-- UI comment - changing col-md-3 to col-md-3 -->
+<!-- column 3 -->
+<div class="col-md-3">
+    <p>
+        <strong ng-bind="ml.accessLevelDisplayNameMap[list.access_level]['class']" class="ng-binding">Course Access:</strong> - <span ng-bind-html="ml.accessLevelDescriptionMap[list.access_level]['class']" class="ng-binding">all members of this course can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+    </p>
+</div>
+
+<!-- UI comment - inserting new UI -->
+<!-- column 4 -->
+<div class="col-md-2 checkbox" style="margin-top: 0em">
+    <label>
+      <input type="checkbox" checked> Copy all staff of the course when sending and replying to this mailing list
+    </label>
+  </div>
+
+<!-- column 5 -->
+<div class="col-md-1 editMenu">
+    
+    <a href="#" class="editSection lti-tooltip" rel="tooltip" data-toggle="modal" data-target="#permissions-modal-" ng-click="ml.updatedAccessLevel = list.access_level" title="Edit mailing list permission" data-original-title="Edit mailing list permission">
+        <i class="fa fa-gear"></i>
+    </a>
+    
+    <img src="/static/images/ajax-loader-small.gif" ng-show="list.isUpdating" class="ng-hide">
+    <span class="text-success feedback ng-hide" ng-show="list.updated">✓</span>
+    <span class="text-danger feedback ng-hide" ng-show="list.update_failed">✗</span>
+</div>
+
+
+<!-- Modal -->
+
+
+  <div id="permissions-modal-" class="modal fade">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="ng-pristine ng-valid">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+
+              <label for="permissions-input-" class="ic-Label">
+                Change Permissions
+              </label>
+            </h4>
+
+          </div>
+          <div class="modal-body">
+
+              <div id="permissions-input-">
+                  <!-- ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio--staff" ng-model="ml.updatedAccessLevel" value="staff" name="17">
+                      <label class="indented-radio-block-label" for="permissions-radio--staff">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">Staff Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">staff can email members of this course; students and guests <strong>cannot</strong> send or reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio--members" ng-model="ml.updatedAccessLevel" value="members" name="19">
+                      <label class="indented-radio-block-label" for="permissions-radio--members">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">Course Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">all members of this course can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio--everyone" ng-model="ml.updatedAccessLevel" value="everyone" name="21">
+                      <label class="indented-radio-block-label" for="permissions-radio--everyone">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">World Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">anyone can send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio--readonly" ng-model="ml.updatedAccessLevel" value="readonly" name="23">
+                      <label class="indented-radio-block-label" for="permissions-radio--readonly">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">Disabled:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">this mailing list is disabled.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels -->
+              </div>
+          </div>
+            <div class="modal-footer">
+                <div class="ic-Form-actions">
+                    <a href="#" data-dismiss="modal">Cancel</a>
+                    <button type="button" class="btn btn-primary btn-submit" data-dismiss="modal" ng-click="ml.updateAccessLevel(list)">
+                        Update Permissions
+                    </button>
+                </div>
+            </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+        <div class="col-md-12">
+          <hr width="98%">
+        </div>
+      </div><!-- end ngRepeat: list in ml.courseList -->
+
+      <!-- ngRepeat: list in ml.enrollmentSectionLists --><!-- ngIf: list.is_primary && !ml.hasCourseEmailList(list) --><!-- end ngRepeat: list in ml.enrollmentSectionLists -->
+    </div>
+    <div class="btn-group col-md-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default" ng-show="ml.hasNonEnrollmentSections()">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <ng-pluralize count="ml.nonEnrollmentSectionLists.length" when="{'0': 'No Sections', '1': 'Email Specific Section', 'other': 'Email Specific Sections'}">Email Specific Sections</ng-pluralize>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse in" role="tabpanel" aria-labelledby="headingTwo" style="height: auto;">
+              <div class="panel-body">
+                <div class="col-md-12">
+
+                  <div>
+                  These sections are created in one of two ways:<br>
+                    <ul style="list-style-type: none;">
+                    <li> <span class="label label-primary">&nbsp;&nbsp;</span> - using the Manage Sections tool (if installed in your course)</li>
+                    <li><span class="label label-success">&nbsp;&nbsp;</span> - using your student information system (e.g. my.harvard)</li>
+                  </ul>
+                  Any changes you make to those sections will be reflected within these lists.
+                  </div>
+
+                  <p class="caption">
+                    Any email sent to a section will be delivered to members of that section <b>and to all staff in the course</b>, unless this feature is checked off.
+                  </p>
+                </div>
+                <!-- ngRepeat: list in ml.nonEnrollmentSectionLists --><div class="content-section ng-scope" ng-repeat="list in ml.nonEnrollmentSectionLists">
+                  
+
+<div class="col-md-12">
+    <hr width="98%">
+</div>
+
+
+<!-- 4 column row  -->
+<!-- column 1 -->
+<div class="col-md-3">
+  <p>
+      <span ng-show="ml.isNonEnrollmentSectionsList(list)" class="label label-success ng-hide">&nbsp;&nbsp;</span>
+      <span ng-show="ml.isManageSectionsList(list)" class="label label-primary">&nbsp;&nbsp;</span>
+    <strong class="ng-binding">test section 2</strong><br>(<a class="link-text lti-tooltip" rel="tooltip" title="" data-original-title="Members emails" data-toggle="tooltip" href="/angular/reverse/?djng_url_name=mailing_list%3Alist_members&amp;djng_url_args=3162&amp;resource_link_id=0117d0b32e92014fcb66cc0c513ced3db9d28841"><ng-pluralize count="list.members_count" when="{'0': 'No members', 'one': '1 member', 'other': '{} members'}">1 member</ng-pluralize></a>)
+  </p>
+</div>
+
+<!-- column 2 -->
+<div class="col-md-3">
+  <p ng-class="list.access_level == 'readonly' ? 'caption-disabled' : ''" style="word-wrap:break-word;">
+    <a id="email-section-3162" target="_top" href="mailto:canvas-133-3162@mg.qa.tlt.harvard.edu" ng-disabled="list.access_level == 'readonly'" class="ng-binding editSection lti-tooltip" rel="tooltip" data-toggle="tooltip" title="" data-original-title="Click this link to send an email">
+       <i class="fa fa-envelope"></i> canvas-133-3162@mg.qa.tlt.harvard.edu
+    </a>
+  </p>
+</div>
+
+
+<!-- UI comment - changing col-md-3 to col-md-3 -->
+<!-- column 3 -->
+<div class="col-md-3">
+    <p>
+        <strong ng-bind="ml.accessLevelDisplayNameMap[list.access_level]['section']" class="ng-binding">Section Access:</strong> - <span ng-bind-html="ml.accessLevelDescriptionMap[list.access_level]['section']" class="ng-binding">all members of this section and all staff can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+    </p>
+</div>
+
+<!-- UI comment - inserting new UI -->
+<!-- column 4 -->
+<div class="col-md-2 checkbox" style="margin-top: 0em">
+    <label>
+      <input type="checkbox" checked> Copy all staff of the course when sending and replying to this mailing list
+    </label>
+  </div>
+
+<!-- column 4 -->
+<div class="col-md-1 editMenu">
+    
+    <a href="#" class="editSection lti-tooltip" rel="tooltip" data-toggle="modal" data-target="#permissions-modal-3162" ng-click="ml.updatedAccessLevel = list.access_level" title="Edit mailing list permission" data-original-title="Edit mailing list permission">
+        <i class="fa fa-gear"></i>
+    </a>
+    
+    <img src="/static/images/ajax-loader-small.gif" ng-show="list.isUpdating" class="ng-hide">
+    <span class="text-success feedback ng-hide" ng-show="list.updated">✓</span>
+    <span class="text-danger feedback ng-hide" ng-show="list.update_failed">✗</span>
+</div>
+
+
+<!-- Modal -->
+
+
+  <div id="permissions-modal-3162" class="modal fade">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="ng-pristine ng-valid">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+
+              <label for="permissions-input-3162" class="ic-Label">
+                Change Permissions
+              </label>
+            </h4>
+
+          </div>
+          <div class="modal-body">
+
+              <div id="permissions-input-3162">
+                  <!-- ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3162-staff" ng-model="ml.updatedAccessLevel" value="staff" name="25">
+                      <label class="indented-radio-block-label" for="permissions-radio-3162-staff">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">Staff Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">staff can email members of this course; students and guests <strong>cannot</strong> send or reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3162-members" ng-model="ml.updatedAccessLevel" value="members" name="27">
+                      <label class="indented-radio-block-label" for="permissions-radio-3162-members">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">Section Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">all members of this section and all staff can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3162-everyone" ng-model="ml.updatedAccessLevel" value="everyone" name="29">
+                      <label class="indented-radio-block-label" for="permissions-radio-3162-everyone">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">World Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">anyone can send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3162-readonly" ng-model="ml.updatedAccessLevel" value="readonly" name="31">
+                      <label class="indented-radio-block-label" for="permissions-radio-3162-readonly">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">Disabled:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">this mailing list is disabled.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels -->
+              </div>
+          </div>
+            <div class="modal-footer">
+                <div class="ic-Form-actions">
+                    <a href="#" data-dismiss="modal">Cancel</a>
+                    <button type="button" class="btn btn-primary btn-submit" data-dismiss="modal" ng-click="ml.updateAccessLevel(list)">
+                        Update Permissions
+                    </button>
+                </div>
+            </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+                </div><!-- end ngRepeat: list in ml.nonEnrollmentSectionLists --><div class="content-section ng-scope" ng-repeat="list in ml.nonEnrollmentSectionLists">
+                  
+
+<div class="col-md-12">
+    <hr width="98%">
+</div>
+
+
+<!-- 4 column row  -->
+<!-- column 1 -->
+<div class="col-md-3">
+  <p>
+      <span ng-show="ml.isNonEnrollmentSectionsList(list)" class="label label-success ng-hide">&nbsp;&nbsp;</span>
+      <span ng-show="ml.isManageSectionsList(list)" class="label label-primary">&nbsp;&nbsp;</span>
+    <strong class="ng-binding">test section</strong><br>(<a class="link-text lti-tooltip" rel="tooltip" title="" data-original-title="Members emails" data-toggle="tooltip" href="/angular/reverse/?djng_url_name=mailing_list%3Alist_members&amp;djng_url_args=3161&amp;resource_link_id=0117d0b32e92014fcb66cc0c513ced3db9d28841"><ng-pluralize count="list.members_count" when="{'0': 'No members', 'one': '1 member', 'other': '{} members'}">No members</ng-pluralize></a>)
+  </p>
+</div>
+
+<!-- column 2 -->
+<div class="col-md-3">
+  <p ng-class="list.access_level == 'readonly' ? 'caption-disabled' : ''" style="word-wrap:break-word;">
+    <a id="email-section-3161" target="_top" href="mailto:canvas-133-3161@mg.qa.tlt.harvard.edu" ng-disabled="list.access_level == 'readonly'" class="ng-binding editSection lti-tooltip" rel="tooltip" data-toggle="tooltip" title="" data-original-title="Click this link to send an email">
+       <i class="fa fa-envelope"></i> canvas-133-3161@mg.qa.tlt.harvard.edu
+    </a>
+  </p>
+</div>
+
+
+<!-- UI comment - changing col-md-3 to col-md-3 -->
+<!-- column 3 -->
+<div class="col-md-3">
+    <p>
+        <strong ng-bind="ml.accessLevelDisplayNameMap[list.access_level]['section']" class="ng-binding">Section Access:</strong> - <span ng-bind-html="ml.accessLevelDescriptionMap[list.access_level]['section']" class="ng-binding">all members of this section and all staff can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+    </p>
+</div>
+
+<!-- UI comment - inserting new UI -->
+<!-- column 4 -->
+<div class="col-md-2 checkbox" style="margin-top: 0em">
+    <label>
+      <input type="checkbox" checked> Copy all staff of the course when sending and replying to this mailing list
+    </label>
+  </div>
+
+<!-- column 4 -->
+<div class="col-md-1 editMenu">
+    
+    <a href="#" class="editSection lti-tooltip" rel="tooltip" data-toggle="modal" data-target="#permissions-modal-3161" ng-click="ml.updatedAccessLevel = list.access_level" title="Edit mailing list permission" data-original-title="Edit mailing list permission">
+        <i class="fa fa-gear"></i>
+    </a>
+    
+    <img src="/static/images/ajax-loader-small.gif" ng-show="list.isUpdating" class="ng-hide">
+    <span class="text-success feedback ng-hide" ng-show="list.updated">✓</span>
+    <span class="text-danger feedback ng-hide" ng-show="list.update_failed">✗</span>
+</div>
+
+
+<!-- Modal -->
+
+
+  <div id="permissions-modal-3161" class="modal fade">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="ng-pristine ng-valid">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+
+              <label for="permissions-input-3161" class="ic-Label">
+                Change Permissions
+              </label>
+            </h4>
+
+          </div>
+          <div class="modal-body">
+
+              <div id="permissions-input-3161">
+                  <!-- ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3161-staff" ng-model="ml.updatedAccessLevel" value="staff" name="33">
+                      <label class="indented-radio-block-label" for="permissions-radio-3161-staff">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">Staff Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">staff can email members of this course; students and guests <strong>cannot</strong> send or reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3161-members" ng-model="ml.updatedAccessLevel" value="members" name="35">
+                      <label class="indented-radio-block-label" for="permissions-radio-3161-members">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">Section Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">all members of this section and all staff can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3161-everyone" ng-model="ml.updatedAccessLevel" value="everyone" name="37">
+                      <label class="indented-radio-block-label" for="permissions-radio-3161-everyone">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">World Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">anyone can send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-3161-readonly" ng-model="ml.updatedAccessLevel" value="readonly" name="39">
+                      <label class="indented-radio-block-label" for="permissions-radio-3161-readonly">
+
+                          <span ng-bind="access_level.name['section']" class="ng-binding">Disabled:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['section']" class="ng-binding">this mailing list is disabled.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels -->
+              </div>
+          </div>
+            <div class="modal-footer">
+                <div class="ic-Form-actions">
+                    <a href="#" data-dismiss="modal">Cancel</a>
+                    <button type="button" class="btn btn-primary btn-submit" data-dismiss="modal" ng-click="ml.updateAccessLevel(list)">
+                        Update Permissions
+                    </button>
+                </div>
+            </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+                </div><!-- end ngRepeat: list in ml.nonEnrollmentSectionLists -->
+              </div>
+            </div>
+            </div>
+          <br>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default ng-hide" ng-show="ml.hasMultipleEnrollmentSections()">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <ng-pluralize count="ml.enrollmentSectionLists.length" when="{'0': 'No Sections', '1': 'Email Registrar Enrollment', 'other': 'Email Registrar Enrollments'}">Email Registrar Enrollment</ng-pluralize>
+                  </a>
+                </h4>
+              </div>
+
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <div class="col-md-12">
+                    <p class="caption" ng-show="ml.hasCourseEmailList()">
+                      This course site includes enrollment from two or more courses.
+                      <a target="_blank" href="https://wiki.harvard.edu/confluence/pages/viewpage.action?pageId=189597345" class="lti-tooltip" rel="tooltip" data-toggle="tooltip" title="" data-original-title="More info about cross listed courses">
+                        <i class="fa fa-question-circle"></i>
+                      </a>
+                    </p>
+                    <p class="caption">
+                      The lists below reflect enrollments from the Registrar’s office and will be updated automatically.
+                      Any email sent to a list will be delivered to members of that list <b>and to all staff in the course.</b>
+                    </p>
+                  </div>
+                  <!-- ngRepeat: list in ml.enrollmentSectionLists --><div ng-repeat="list in ml.enrollmentSectionLists" class="ng-scope">
+                    
+
+<div class="col-md-12">
+    <hr width="98%">
+</div>
+
+
+<!-- 4 column row  -->
+<!-- column 1 -->
+<div class="col-md-3">
+  <p>
+      <span ng-show="ml.isNonEnrollmentSectionsList(list)" class="label label-success ng-hide">&nbsp;&nbsp;</span>
+      <span ng-show="ml.isManageSectionsList(list)" class="label label-primary ng-hide">&nbsp;&nbsp;</span>
+    <strong class="ng-binding">COLGSAS BE 91r</strong><br>(<a class="link-text lti-tooltip" rel="tooltip" title="" data-original-title="Members emails" data-toggle="tooltip" href="/angular/reverse/?djng_url_name=mailing_list%3Alist_members&amp;djng_url_args=116&amp;resource_link_id=0117d0b32e92014fcb66cc0c513ced3db9d28841"><ng-pluralize count="list.members_count" when="{'0': 'No members', 'one': '1 member', 'other': '{} members'}">2 members</ng-pluralize></a>)
+  </p>
+</div>
+
+<!-- column 2 -->
+<div class="col-md-3">
+  <p ng-class="list.access_level == 'readonly' ? 'caption-disabled' : ''" style="word-wrap:break-word;">
+    <a id="email-section-116" target="_top" href="mailto:canvas-133-116@mg.qa.tlt.harvard.edu" ng-disabled="list.access_level == 'readonly'" class="ng-binding editSection lti-tooltip" rel="tooltip" data-toggle="tooltip" title="" data-original-title="Click this link to send an email">
+       <i class="fa fa-envelope"></i> canvas-133-116@mg.qa.tlt.harvard.edu
+    </a>
+  </p>
+</div>
+
+
+
+<!-- column 3 -->
+<div class="col-md-5">
+    <p>
+        <strong ng-bind="ml.accessLevelDisplayNameMap[list.access_level]['class']" class="ng-binding">Course Access:</strong> - <span ng-bind-html="ml.accessLevelDescriptionMap[list.access_level]['class']" class="ng-binding">all members of this course can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+    </p>
+</div>
+
+<!-- column 4 -->
+<div class="col-md-1 editMenu">
+    
+    <a href="#" class="editSection lti-tooltip" rel="tooltip" data-toggle="modal" data-target="#permissions-modal-116" ng-click="ml.updatedAccessLevel = list.access_level" title="Edit mailing list permission" data-original-title="Edit mailing list permission">
+        <i class="fa fa-gear"></i>
+    </a>
+    
+    <img src="/static/images/ajax-loader-small.gif" ng-show="list.isUpdating" class="ng-hide">
+    <span class="text-success feedback ng-hide" ng-show="list.updated">✓</span>
+    <span class="text-danger feedback ng-hide" ng-show="list.update_failed">✗</span>
+</div>
+
+
+<!-- Modal -->
+
+
+  <div id="permissions-modal-116" class="modal fade">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="ng-pristine ng-valid">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title">
+
+              <label for="permissions-input-116" class="ic-Label">
+                Change Permissions
+              </label>
+            </h4>
+
+          </div>
+          <div class="modal-body">
+
+              <div id="permissions-input-116">
+                  <!-- ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-116-staff" ng-model="ml.updatedAccessLevel" value="staff" name="41">
+                      <label class="indented-radio-block-label" for="permissions-radio-116-staff">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">Staff Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">staff can email members of this course; students and guests <strong>cannot</strong> send or reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-116-members" ng-model="ml.updatedAccessLevel" value="members" name="43">
+                      <label class="indented-radio-block-label" for="permissions-radio-116-members">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">Course Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">all members of this course can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-116-everyone" ng-model="ml.updatedAccessLevel" value="everyone" name="45">
+                      <label class="indented-radio-block-label" for="permissions-radio-116-everyone">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">World Access:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">anyone can send and reply to this mailing list.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels --><div class="indented-radio-block ng-scope" ng-repeat="access_level in ml.accessLevels">
+                      <input type="radio" class="indented-radio-block-input ng-pristine ng-untouched ng-valid" id="permissions-radio-116-readonly" ng-model="ml.updatedAccessLevel" value="readonly" name="47">
+                      <label class="indented-radio-block-label" for="permissions-radio-116-readonly">
+
+                          <span ng-bind="access_level.name['class']" class="ng-binding">Disabled:</span>
+                      </label>
+                      <span ng-bind-html="access_level.description['class']" class="ng-binding">this mailing list is disabled.</span>
+                      <br>
+                  </div><!-- end ngRepeat: access_level in ml.accessLevels -->
+              </div>
+          </div>
+            <div class="modal-footer">
+                <div class="ic-Form-actions">
+                    <a href="#" data-dismiss="modal">Cancel</a>
+                    <button type="button" class="btn btn-primary btn-submit" data-dismiss="modal" ng-click="ml.updateAccessLevel(list)">
+                        Update Permissions
+                    </button>
+                </div>
+            </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+                  </div><!-- end ngRepeat: list in ml.enrollmentSectionLists -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+</body></html>
