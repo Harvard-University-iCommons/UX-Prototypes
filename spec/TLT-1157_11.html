@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" href="../bootstrap/css/jquery.dataTables.min.css" media="screen"/>
+    <link rel="stylesheet" href="../bootstrap/css/jquery.dataTables.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../font-awesome-4.4.0/css/font-awesome.css">
+
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- UI comment - new style to add padding below each row class -->
+    <style>
+    .margin-bottom-md {margin-bottom: 1em}
+    </style>
+
+    <title>Create a New Course Site</title>
+
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <nav class="margin-bottom-md">
+        <h3><a href="TLT-1157_admin_2.html">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a New Course</h3>
+        <h4>Step one: which course is this for?</h4>
+      </nav>
+
+      <div class="row margin-bottom-md"> <!-- Open row -->
+
+<!-- UI comment - Drop downs are now basic Bootstrap form controls. select menus - http://getbootstrap.com/css/#selects -->
+        <div class="col-md-5  margin-bottom-md">
+          <select class="form-control">
+            <option>Divinity School</option>
+            <option>Graduate School of Education</option>
+            <option>HILR</option>
+            <option>HKS Exec Ed</option>
+            <option>HLS Executive Education</option>
+            <option>Harvard</option>
+            <option>Harvard Business School Doctoral Program</option>
+            <option>Harvard Business School MBA Program</option>
+            <option>Harvard Chan School</option>
+            <option>Harvard College Library</option>
+            <option>Harvard College/GSAS</option>
+            <option>Harvard Design School</option>
+            <option>Harvard Extension School</option>
+            <option>Harvard Kennedy School (HKS</option>
+            <option>Harvard Law School</option>
+            <option>Harvard Medical School</option>
+            <option>Harvard School of Dental Medicine</option>
+            <option>Harvard Summer School</option>
+            <option>MIT</option>
+            <option>Radcliffe</option>
+          </select>
+        </div>
+
+        <div class="col-md-4  margin-bottom-md">
+          <select class="form-control">
+            <option>July and August 2015-2016</option>
+            <option>Summer 2015-2016</option>
+            <option>Fall 2015-2016</option>
+            <option>Spring 2015-2016</option>
+            <option>Full Year 2015-2016</option>
+            <option>Winter 2015-2016</option>
+            <option>July and August 2015-2016</option>
+            <option>June and July 2015-2016</option>
+            <option>Spring 2 2015-2016</option>
+            <option>Spring 1 2015-2016</option>
+            <option>Fall 2 2015-2016</option>
+            <option>Fall 1 2015-2016</option>
+            <option>July 2015-2016</option>
+            <option>August 2015-2016</option>
+            <option>June 2015-2016</option>
+            <option>Fall-Winter 2015-2016</option>
+            <option>Winter-Spring 2015-2016</option>
+            <option>Spring Saturday 2015-2016</option>
+            <option>Fall Saturday 2015-2016</option>
+            <option>Ongoing/option>
+          </select>
+        </div>
+
+        <div class="col-md-3  margin-bottom-md">
+          <input type="text" class="form-control" placeholder="Course code">
+        </div>
+
+      </div> <!-- Close row -->
+
+      <div class="row margin-bottom-md"> <!-- Open row -->
+
+        <div class="col-md-12">
+            <a type="link" class="btn btn-default" href="TLT-1157_admin_2.html">
+              Cancel
+            </a>
+            <a type="link" class="btn btn-primary pull-right" href="TLT-1157_21.html">
+              Next Step
+            </a>
+          </div>
+
+      </div> <!-- Close row -->
+
+<!-- UI comment - Disabled row for step 2 process -->
+
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+
+        <div class="col-md-5 margin-bottom-md">
+          <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program">
+        </div>
+        <div class="col-md-4 margin-bottom-md">
+          <input type="text" class="form-control" readonly="readonly" value="July-August 2015-2016">
+        </div>
+        <div class="col-md-3 margin-bottom-md">
+          <input type="text" class="form-control" readonly="readonly" value="HDS 2895 (45078)">
+        </div>
+          
+      </div> <!-- Close row -->
+
+      <div class="row"><div class="col-md-12" hidden><hr></div></div>
+
+      <nav class="ng-scope" hidden>
+        <h4>Step two: no course exists; create one?</h4>
+      </nav>
+      <h5 hidden>The course record you entered doesn't exist in the system under the school "Harvard Business School Doctoral Program"</h5>
+
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+
+        <div class="checkbox col-md-12">
+          Create new course record under school "Harvard Business School Doctoral Program"
+        </div>
+        <div class="col-md-12">
+          <input type="text" class="form-control" placeholder="Course Title">
+        </div>
+
+      </div> <!-- Close row -->
+
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+
+        <div class="col-md-12" >
+          <a type="link" class="btn btn-default" href="TLT-1157_11.html">
+            Back
+          </a>
+          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_31.html">
+            Create a new course instance
+          </a>
+        </div>
+
+      </div> <!-- Close row -->
+
+<!-- UI comment - Disabled row for step 3 process -->
+
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+
+        <div class="col-md-12">
+          <input type="text" class="form-control" readonly="readonly" value="A Profile in Ministry: Dietrich Bonhoeffer">
+        </div>
+
+      </div> <!-- Close row -->
+        
+      <div class="row" hidden><div class="col-md-12" ><hr></div></div>
+
+      <nav class="ng-scope" hidden>
+        <h4>New course record under the school "Harvard Business School Doctoral Program"</h5>
+      </nav>
+
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+
+        <div class="col-md-12">
+          <table class="dataTable no-footer" cellspacing="0">
+            <thead>
+              <tr role="row">
+                <th>School</th>
+                <th>Course Details</th>
+                <th>Academic Year</th>
+                <th>Academic Term</th>
+                <th>Course Code</th>
+                <th>SIS/Course Instance ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row" class="odd">
+                <td>HBSDP</td><td class="sorting_1"><a>A Profile in Ministry: Dietrich Bonhoeffer</a></td><td>2015</td><td>July-August</td><td>HDS 2895 (45078)</td><td>338296</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div> <!-- Close row -->
+
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+
+        <div class="col-md-12">
+          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_11.html">
+            Create another course
+          </a>
+        </div>
+
+      </div> <!-- Close row -->
+
+    </div>
+
+  </body>
+</html>
