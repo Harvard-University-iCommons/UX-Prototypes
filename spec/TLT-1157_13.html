@@ -33,7 +33,7 @@
 
 <!-- UI comment - Drop downs are now basic Bootstrap form controls. select menus - http://getbootstrap.com/css/#selects -->
         <div class="col-md-5  margin-bottom-md">
-          <label for="schoolList">School</label>
+          <label for="schoolList">School <font color="red">*</font></label>
           <select class="form-control" id="schoolList">
             <option>Divinity School</option>
             <option>Graduate School of Education</option>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="col-md-4  margin-bottom-md">
-          <label for="termlList">Term</label>
+          <label for="termlList">Term <font color="red">*</font></label>
           <select class="form-control" id="termlList">
             <option>July and August 2015-2016</option>
             <option>Summer 2015-2016</option>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="col-md-3  margin-bottom-md">
-          <label for="courseCode">New Course Code</label>
+          <label for="courseCode">New Course Code <font color="red">*</font></label>
           <div class="input-group">
             <div class="input-group-addon">ILE</div>
             <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
@@ -99,8 +99,13 @@
         <div class="checkbox col-md-12 hidden" >
           Create new course record under school "Harvard Business School Doctoral Program"
         </div>
-        <div class="col-md-12">
-          <label for="courseTitle">New Course Title</label>
+        <div class="col-md-9">
+          <label for="courseTitle">New Course Title <font color="red">*</font></label>
+          <input type="text" class="form-control" id="courseTitle">
+        </div>
+
+        <div class="col-md-3  margin-bottom-md">
+          <label for="courseTitle">New Short Title</label>
           <input type="text" class="form-control" id="courseTitle">
         </div>
 
@@ -116,6 +121,19 @@
               Create a New Course Instance
             </a>
           </div>
+
+      </div> <!-- Close row -->
+
+      <div class="row margin-bottom-md"> <!-- Open row -->
+
+        <div class="col-md-12">
+          <font color="red">*</font> = Mandatory information
+          <br>
+          ILE = Informal Learning Experience
+          <br>
+          SB = Sandbox
+          </a>
+        </div>
 
       </div> <!-- Close row -->
 
