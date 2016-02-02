@@ -24,16 +24,17 @@
   <body>
 
     <div class="container-fluid">
-      <nav class="margin-bottom-md" >
+      <nav class="margin-bottom-md">
         <h3><a href="TLT-1157_admin_2.html">Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Create a New Course</h3>
-        <h4 hidden>Step one: which course is this for?</h4>
+        <h4>Step one: which course is this for?</h4>
       </nav>
 
-      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+      <div class="row margin-bottom-md"> <!-- Open row -->
 
 <!-- UI comment - Drop downs are now basic Bootstrap form controls. select menus - http://getbootstrap.com/css/#selects -->
-        <div class="col-md-5 margin-bottom-md">
-          <select class="form-control margin-bottom-md">
+        <div class="col-md-5  margin-bottom-md">
+          <label for="schoolList">School</label>
+          <select class="form-control" id="schoolList">
             <option>Divinity School</option>
             <option>Graduate School of Education</option>
             <option>HILR</option>
@@ -57,8 +58,9 @@
           </select>
         </div>
 
-        <div class="col-md-4 margin-bottom-md">
-          <select class="form-control margin-bottom-md">
+        <div class="col-md-4  margin-bottom-md">
+          <label for="termlList">Term</label>
+          <select class="form-control" id="termlList">
             <option>July and August 2015-2016</option>
             <option>Summer 2015-2016</option>
             <option>Fall 2015-2016</option>
@@ -82,44 +84,53 @@
           </select>
         </div>
 
-        <div class="col-md-3 margin-bottom-md">
-          <input type="text" class="form-control margin-bottom-md" placeholder="Course code">
+        <div class="col-md-3  margin-bottom-md">
+          <label for="courseCode">New Course Code</label>
+          <div class="input-group">
+            <div class="input-group-addon">ILE</div>
+            <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
+          </div>
         </div>
 
       </div> <!-- Close row -->
 
-      <div class="row margin-bottom-md" hidden> <!-- Open row -->
+      <div class="row margin-bottom-md" > <!-- Open row -->
+
+        <div class="checkbox col-md-12 hidden" >
+          Create new course record under school "Harvard Business School Doctoral Program"
+        </div>
+        <div class="col-md-12">
+          <label for="courseTitle">New Course Title</label>
+          <input type="text" class="form-control" id="courseTitle">
+        </div>
+
+      </div> <!-- Close row -->
+
+      <div class="row margin-bottom-md"> <!-- Open row -->
 
         <div class="col-md-12">
-            <a type="link" class="btn btn-default" href="TLT-1157_admin_2.html">
-              Cancel
-            </a>
-            <a type="link" class="btn btn-primary pull-right" href="TLT-1157_21.html">
-              Next Step
-            </a>
-          </div>
+          <a type="link" class="btn btn-default" href="TLT-1157_03.html">
+            Cancel
+          </a>
+          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_34.html">
+            Create a New Course Instance
+          </a>
+        </div>
 
       </div> <!-- Close row -->
 
 <!-- UI comment - Disabled row for step 2 process -->
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
 
+        <div class="col-md-5 margin-bottom-md">
+          <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program">
+        </div>
         <div class="col-md-4 margin-bottom-md">
-          <label for="schoolList">School</label>
-          <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program" id="schoolList">
-        </div>
-        <div class="col-md-2 margin-bottom-md">
-          <label for="termlList">Term</label>
-          <input type="text" class="form-control" readonly="readonly" value="July-August 2015-2016" id="termlList">
+          <input type="text" class="form-control" readonly="readonly" value="July-August 2015-2016">
         </div>
         <div class="col-md-3 margin-bottom-md">
-          <label for="courseCode">New Course Code</label>
-          <input type="text" class="form-control" readonly="readonly" value="ILE - HDS 2895 (45078)" id="courseCode">
-        </div>
-        <div class="col-md-3 margin-bottom-md">
-          <label for="sisID">SIS/Course Instance ID</label>
-          <input type="text" class="form-control" readonly="readonly" value="338296" id="sisID">
+          <input type="text" class="form-control" readonly="readonly" value="HDS 2895 (45078)">
         </div>
           
       </div> <!-- Close row -->
@@ -148,7 +159,7 @@
           <a type="link" class="btn btn-default" href="TLT-1157_11.html">
             Back
           </a>
-          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_31.html">
+          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_34.html">
             Create a new course instance
           </a>
         </div>
@@ -157,22 +168,21 @@
 
 <!-- UI comment - Disabled row for step 3 process -->
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
 
         <div class="col-md-12">
-          <label for="courseTitle">New Course Title</label>
-          <input type="text" class="form-control" readonly="readonly" value="A Profile in Ministry: Dietrich Bonhoeffer" id="courseTitle">
+          <input type="text" class="form-control" readonly="readonly" value="A Profile in Ministry: Dietrich Bonhoeffer">
         </div>
 
       </div> <!-- Close row -->
         
-      <div class="row" ><div class="col-md-12" ><hr></div></div>
+      <div class="row" hidden><div class="col-md-12" ><hr></div></div>
 
-      <nav class="ng-scope" >
+      <nav class="ng-scope" hidden>
         <h4>New course record under the school "Harvard Business School Doctoral Program"</h5>
       </nav>
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
 
         <div class="col-md-12">
           <table class="dataTable no-footer" cellspacing="0">
@@ -196,10 +206,10 @@
 
       </div> <!-- Close row -->
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
 
         <div class="col-md-12">
-          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_13.html">
+          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_11.html">
             Create another course
           </a>
         </div>

@@ -103,28 +103,28 @@
 
 <!-- UI comment - Disabled row for step 2 process -->
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
 
-        <div class="col-md-4 margin-bottom-md">
+        <div class="col-md-5 margin-bottom-md">
           <label for="schoolList">School</label>
           <input type="text" class="form-control" readonly="readonly" value="Harvard Business School Doctoral Program" id="schoolList">
         </div>
-        <div class="col-md-2 margin-bottom-md">
+        <div class="col-md-3 margin-bottom-md">
           <label for="termlList">Term</label>
           <input type="text" class="form-control" readonly="readonly" value="July-August 2015-2016" id="termlList">
         </div>
-        <div class="col-md-3 margin-bottom-md">
+        <div class="col-md-2 margin-bottom-md">
           <label for="courseCode">New Course Code</label>
-          <input type="text" class="form-control" readonly="readonly" value="ILE - HDS 2895 (45078)" id="courseCode">
+          <input type="text" class="form-control" readonly="readonly" value="HDS 2895 (45078)" id="courseCode">
         </div>
-        <div class="col-md-3 margin-bottom-md">
+        <div class="col-md-2 margin-bottom-md">
           <label for="sisID">SIS/Course Instance ID</label>
           <input type="text" class="form-control" readonly="readonly" value="338296" id="sisID">
         </div>
           
       </div> <!-- Close row -->
 
-      <div class="row"><div class="col-md-12" hidden><hr></div></div>
+      <div class="row" hidden><div class="col-md-12"><hr></div></div>
 
       <nav class="ng-scope" hidden>
         <h4>Step two: no course exists; create one?</h4>
@@ -157,7 +157,7 @@
 
 <!-- UI comment - Disabled row for step 3 process -->
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md" hidden> <!-- Open row -->
 
         <div class="col-md-12">
           <label for="courseTitle">New Course Title</label>
@@ -166,11 +166,9 @@
 
       </div> <!-- Close row -->
         
-      <div class="row" ><div class="col-md-12" ><hr></div></div>
+      <div class="row" hidden><div class="col-md-12" ><hr></div></div>
 
-      <nav class="ng-scope" >
-        <h4>New course record under the school "Harvard Business School Doctoral Program"</h5>
-      </nav>
+      <div class="alert alert-warning" role="alert">The course record you entered already exists in the system under the school "Harvard Business School Doctoral Program"</div>
 
       <div class="row margin-bottom-md" > <!-- Open row -->
 
@@ -196,11 +194,14 @@
 
       </div> <!-- Close row -->
 
-      <div class="row margin-bottom-md" > <!-- Open row -->
+      <div class="row margin-bottom-md"> <!-- Open row -->
 
         <div class="col-md-12">
-          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_13.html">
-            Create another course
+          <a type="link" class="btn btn-default" href="TLT-1157_04.html">
+            Cancel
+          </a>
+          <a type="link" class="btn btn-primary pull-right" href="TLT-1157_14.html">
+            Create a New Course Instance
           </a>
         </div>
 
