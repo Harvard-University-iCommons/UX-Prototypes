@@ -106,23 +106,14 @@ $(document).ready(function(){
 </div>
 
 
-<!-- UI comment - changing col-md-3 to col-md-3 -->
 <!-- column 3 -->
-<div class="col-md-3">
+<div class="col-md-5">
     <p>
         <strong ng-bind="ml.accessLevelDisplayNameMap[list.access_level]['class']" class="ng-binding">Course Access:</strong> - <span ng-bind-html="ml.accessLevelDescriptionMap[list.access_level]['class']" class="ng-binding">all members of this course can email each other; students and guests <strong>can</strong> send and reply to this mailing list.</span>
     </p>
 </div>
 
-<!-- UI comment - inserting new UI -->
 <!-- column 4 -->
-<div class="col-md-2 checkbox" style="margin-top: 0em">
-    <label>
-      <input type="checkbox" checked> Copy all staff of the course when sending and replying to this mailing list
-    </label>
-  </div>
-
-<!-- column 5 -->
 <div class="col-md-1 editMenu">
     
     <a href="#" class="editSection lti-tooltip" rel="tooltip" data-toggle="modal" data-target="#permissions-modal-" ng-click="ml.updatedAccessLevel = list.access_level" title="Edit mailing list permission" data-original-title="Edit mailing list permission">
