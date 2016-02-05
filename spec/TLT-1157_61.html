@@ -65,11 +65,11 @@
   </form>
 
           <div ng-show="showSummary()" class="">
-              <h2>
+              <h3>
                   <ng-pluralize count="courseInstanceModel.totalCourses" when="{'0': 'There are 0 courses in this term:',
                                        '1': 'There is 1 course in this term:',
                                        'other': 'There are {} courses in this term:'}">There are 3675 courses in this term:</ng-pluralize>
-              </h2>
+              </h3>
               <ul>
                   <li class="ng-binding">
                       <ng-pluralize count="courseInstanceModel.totalCoursesWithCanvasSite" when="{'0': '0 courses with Canvas sites ',
