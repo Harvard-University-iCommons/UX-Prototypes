@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" href="../bootstrap/css/jquery.dataTables.min.css" media="screen"/>
+    <link rel="stylesheet" href="../bootstrap/css/jquery.dataTables.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../font-awesome-4.4.0/css/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="../iCommons/bulkSiteCreator.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../iCommons/bulk_site_creation_app" media="screen"/>
+
+    <script src="../bootstrap/js/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+<!-- UI comment - new style to add padding below each row class -->
+    <title>Create a New Course Site</title>
+
+  </head>
+
+  <body>
+
+<!-- UI comment - replacing main container with Bootstrap framework -->
+    <!-- <main class="float-left col-60"> -->
+    <div class="continer-fluid"> <!-- Main Div container - start -->
+      <div class="col-md-12"> <!-- Outer Div to allow padding with left nav - start -->
+<!-- UI comment - moving the Header within the outer Div -->
+        <header>
+            <h1>Canvas Site Creator</h1>
+        </header>
+
+        <div class="container">
+          <!-- <div class="panel panel-default"> -->
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                      <div class="panel panel-default">
+                          <div class="panel-heading"><h4>Create a new course site for existing courses</h4></div>
+                          <div class="panel-body">
+<!-- UI comment - Canvas Site Creator interface - start-->
+                            <form ng-controller="CourseInstanceFilterController" class="ng-pristine ng-valid ng-scope">
+      <fieldset>
+          <label for="schoolSelect" class="block">School:</label>
+          <!-- ngIf: courseInstanceFilterModel.isFilterSelectable('school') -->
+          <!-- ngIf: !courseInstanceFilterModel.isFilterSelectable('school') --><span ng-if="!courseInstanceFilterModel.isFilterSelectable('school')" class="ng-binding ng-scope">Harvard College/GSAS</span><!-- end ngIf: !courseInstanceFilterModel.isFilterSelectable('school') -->
+      </fieldset>
+      <fieldset>
+          <div ng-show="showFilter('school', 'term')">
+              <label for="termSelect" class="block">Academic Term:</label>
+              <!-- ngIf: courseInstanceFilterModel.isFilterSelectable('term') --><select id="termSelect" ng-if="courseInstanceFilterModel.isFilterSelectable('term')" ng-model="courseInstanceFilterModel.filters.term" ng-options="t.id as t.name for t in courseInstanceFilterModel.filterOptions.term" ng-change="handleTermSelected()" class="ng-pristine ng-valid ng-scope ng-touched"><option value="0" selected="selected" label="Spring 2015">Spring 2015</option><option value="1" label="Fall 2015-2016">Fall 2015-2016</option><option value="2" label="Spring 2014-2015">Spring 2014-2015</option><option value="3" label="Full Year 2014">Full Year 2014</option><option value="4" label="Fall 2014">Fall 2014</option><option value="5" label="Spring 2012-2013">Spring 2012-2013</option><option value="6" label="Fall 2012-2013">Fall 2012-2013</option></select><!-- end ngIf: courseInstanceFilterModel.isFilterSelectable('term') -->
+              <!-- ngIf: !courseInstanceFilterModel.isFilterSelectable('term') -->
+          </div>
+      </fieldset>
+      <fieldset ng-show="showFilter('term', 'department')">
+          <label for="termSelect" class="block">Department:</label>
+          <select id="departmentSelect" ng-model="courseInstanceFilterModel.filters.department" ng-options="d.id as d.name for d in courseInstanceFilterModel.filterOptions.department" ng-change="handleDepartmentSelected()" ng-disabled="courseInstanceFilterModel.getSelectedFilterId('course_group')" class="ng-pristine ng-untouched ng-valid"><option value="0" selected="selected" label="All Departments">All Departments</option><option value="1" label="No Department">No Department</option></select>
+          <!-- ngIf: !courseInstanceFilterModel.isFilterSelectable('term') -->
+      </fieldset>
+      <fieldset ng-show="showFilter('term', 'course_group')">
+          <label for="courseGroupSelect" class="block">Course Group:</label>
+          <select id="courseGroupSelect" ng-model="courseInstanceFilterModel.filters.course_group" ng-options="cg.id as cg.name for cg in courseInstanceFilterModel.filterOptions.course_group" ng-change="handleCourseGroupSelected()" ng-disabled="courseInstanceFilterModel.getSelectedFilterId('department')" class="ng-pristine ng-untouched ng-valid"><option value="0" selected="selected" label="All Course Groups">All Course Groups</option><option value="1" label="AMSTUDIES">AMSTUDIES</option><option value="2" label="Adams">Adams</option><option value="3" label="Aesthetic and Interpretive Understanding">Aesthetic and Interpretive Understanding</option><option value="4" label="Aesthetic and Interpretive Understanding">Aesthetic and Interpretive Understanding</option><option value="5" label="African and African American Studies">African and African American Studies</option><option value="6" label="Afro-American Studies">Afro-American Studies</option><option value="7" label="Akkadian">Akkadian</option><option value="8" label="American Civilization">American Civilization</option><option value="9" label="American Studies">American Studies</option><option value="10" label="Ancient Near East">Ancient Near East</option><option value="11" label="Anthropology">Anthropology</option><option value="12" label="Applied Computation">Applied Computation</option><option value="13" label="Applied Mathematics">Applied Mathematics</option><option value="14" label="Applied Physics">Applied Physics</option><option value="15" label="Arabic">Arabic</option><option value="16" label="Aramaic">Aramaic</option><option value="17" label="Armenian">Armenian</option><option value="18" label="Armenian Studies">Armenian Studies</option><option value="19" label="Astronomy">Astronomy</option><option value="20" label="Biochemical Sciences">Biochemical Sciences</option><option value="21" label="Biological Chemistry and Molecular Pharmacology">Biological Chemistry and Molecular Pharmacology</option><option value="22" label="Biological Sciences">Biological Sciences</option><option value="23" label="Biological Sciences in Dental Medicine">Biological Sciences in Dental Medicine</option><option value="24" label="Biological Sciences in Public Health">Biological Sciences in Public Health</option><option value="25" label="Biological and Biomedical Sciences">Biological and Biomedical Sciences</option><option value="26" label="Biology">Biology</option><option value="27" label="Biomedical Engineering">Biomedical Engineering</option><option value="28" label="Biophysics">Biophysics</option><option value="29" label="Biostatistics">Biostatistics</option><option value="30" label="Bosnian, Croatian, and Serbian">Bosnian, Croatian, and Serbian</option><option value="31" label="Buddhist Studies">Buddhist Studies</option><option value="32" label="Business Studies">Business Studies</option><option value="33" label="Catalan">Catalan</option><option value="34" label="Cell Biology">Cell Biology</option><option value="35" label="Celtic">Celtic</option><option value="36" label="Chemical Biology">Chemical Biology</option><option value="37" label="Chemical and Physical Biology">Chemical and Physical Biology</option><option value="38" label="Chemistry">Chemistry</option><option value="39" label="Chinese">Chinese</option><option value="40" label="Chinese History">Chinese History</option><option value="41" label="Chinese Linguistics">Chinese Linguistics</option><option value="42" label="Chinese Literature">Chinese Literature</option><option value="43" label="Classical Archaeology">Classical Archaeology</option><option value="44" label="Classical Hebrew">Classical Hebrew</option><option value="45" label="Classical Philology">Classical Philology</option><option value="46" label="Classical Studies">Classical Studies</option><option value="47" label="Classical Studies">Classical Studies</option><option value="48" label="Classics">Classics</option><option value="49" label="Comparative Literature">Comparative Literature</option><option value="50" label="Comparative Literature">Comparative Literature</option><option value="51" label="Computer Science">Computer Science</option><option value="52" label="Concentration Elective">Concentration Elective</option><option value="53" label="Cross Registration - Harvard Business School">Cross Registration - Harvard Business School</option><option value="54" label="Cross Registration - Harvard JFK Government School">Cross Registration - Harvard JFK Government School</option><option value="55" label="Cross Registration - Harvard Law School">Cross Registration - Harvard Law School</option><option value="56" label="Cross Registration - Harvard School Public Health">Cross Registration - Harvard School Public Health</option><option value="57" label="Cross Registration - Harvard School of Design">Cross Registration - Harvard School of Design</option><option value="58" label="Cross Registration - Harvard School of Education">Cross Registration - Harvard School of Education</option><option value="59" label="Culture and Belief">Culture and Belief</option><option value="60" label="Culture and Belief">Culture and Belief</option><option value="61" label="Currier">Currier</option><option value="62" label="Czech">Czech</option><option value="63" label="Danish">Danish</option><option value="64" label="Design">Design</option><option value="65" label="Developmental and Regenerative Biology">Developmental and Regenerative Biology</option><option value="66" label="Dramatic Arts">Dramatic Arts</option><option value="67" label="Dunster">Dunster</option><option value="68" label="Dutch">Dutch</option><option value="69" label="Early Iranian Civilizations">Early Iranian Civilizations</option><option value="70" label="Earth and Planetary Sciences">Earth and Planetary Sciences</option><option value="71" label="East Asian Buddhist Studies">East Asian Buddhist Studies</option><option value="72" label="East Asian Film and Media Studies">East Asian Film and Media Studies</option><option value="73" label="East Asian Studies">East Asian Studies</option><option value="74" label="Economics">Economics</option><option value="75" label="Egyptian">Egyptian</option><option value="76" label="Elective">Elective</option><option value="77" label="Eliot">Eliot</option><option value="78" label="Empirical and Mathematical Reasoning">Empirical and Mathematical Reasoning</option><option value="79" label="Empirical and Mathematical Reasoning">Empirical and Mathematical Reasoning</option><option value="80" label="Engineering Sciences">Engineering Sciences</option><option value="81" label="English">English</option><option value="82" label="Environmental Science and Public Policy">Environmental Science and Public Policy</option><option value="83" label="Ethical Reasoning">Ethical Reasoning</option><option value="84" label="Ethical Reasoning">Ethical Reasoning</option><option value="85" label="Ethiopic">Ethiopic</option><option value="86" label="Ethnicity, Migration, Rights">Ethnicity, Migration, Rights</option><option value="87" label="Expository Writing">Expository Writing</option><option value="88" label="Extra-Departmental Courses">Extra-Departmental Courses</option><option value="89" label="Folklore and Mythology">Folklore and Mythology</option><option value="90" label="Foreign Cultures">Foreign Cultures</option><option value="91" label="French">French</option><option value="92" label="Freshman Seminar">Freshman Seminar</option><option value="93" label="General Education">General Education</option><option value="94" label="Generic">Generic</option><option value="95" label="Genetics">Genetics</option><option value="96" label="German">German</option><option value="97" label="Germanic Philology">Germanic Philology</option><option value="98" label="Germanic Studies">Germanic Studies</option><option value="99" label="Gikuyu">Gikuyu</option><option value="100" label="Global Health and Health Policy">Global Health and Health Policy</option><option value="101" label="Government">Government</option><option value="102" label="Graduate Audit">Graduate Audit</option><option value="103" label="Graduate Independent Study">Graduate Independent Study</option><option value="104" label="Graduate Research">Graduate Research</option><option value="105" label="Graduate Seminars in General Education">Graduate Seminars in General Education</option><option value="106" label="Graduate Teaching">Graduate Teaching</option><option value="107" label="Greek">Greek</option><option value="108" label="HINDI-URDU">HINDI-URDU</option><option value="109" label="HUM-STUDIO">HUM-STUDIO</option><option value="110" label="Health Policy">Health Policy</option><option value="111" label="Hebrew">Hebrew</option><option value="112" label="Hindi-Urdu">Hindi-Urdu</option><option value="113" label="Historical Study">Historical Study</option><option value="114" label="History">History</option><option value="115" label="History and Literature">History and Literature</option><option value="116" label="History of Art and Architecture">History of Art and Architecture</option><option value="117" label="History of Science">History of Science</option><option value="118" label="Human Biology and Translational Medicine">Human Biology and Translational Medicine</option><option value="119" label="Human Evolutionary Biology">Human Evolutionary Biology</option><option value="120" label="Humanities">Humanities</option><option value="121" label="Immunology">Immunology</option><option value="122" label="Immunology">Immunology</option><option value="123" label="Independent Study">Independent Study</option><option value="124" label="Independent Study">Independent Study</option><option value="125" label="Indian Studies">Indian Studies</option><option value="126" label="Iranian">Iranian</option><option value="127" label="Irish">Irish</option><option value="128" label="Islamic Civilizations">Islamic Civilizations</option><option value="129" label="Italian">Italian</option><option value="130" label="Japanese">Japanese</option><option value="131" label="Japanese History">Japanese History</option><option value="132" label="Japanese Literature">Japanese Literature</option><option value="133" label="Jewish Studies">Jewish Studies</option><option value="134" label="Korean">Korean</option><option value="135" label="Korean History">Korean History</option><option value="136" label="Korean Literature">Korean Literature</option><option value="137" label="Latin">Latin</option><option value="138" label="Latin American Studies">Latin American Studies</option><option value="139" label="Leave of Absence">Leave of Absence</option><option value="140" label="Leverett">Leverett</option><option value="141" label="Life Sciences">Life Sciences</option><option value="142" label="Life and Physical Sciences">Life and Physical Sciences</option><option value="143" label="Linguistics">Linguistics</option><option value="144" label="Literature">Literature</option><option value="145" label="Literature">Literature</option><option value="146" label="Literature and Arts">Literature and Arts</option><option value="147" label="Lowell">Lowell</option><option value="148" label="Manchu">Manchu</option><option value="149" label="Mathematics">Mathematics</option><option value="150" label="Mather">Mather</option><option value="151" label="Medical Sciences">Medical Sciences</option><option value="152" label="Medieval Greek">Medieval Greek</option><option value="153" label="Medieval Latin">Medieval Latin</option><option value="154" label="Medieval Studies">Medieval Studies</option><option value="155" label="Microbiology">Microbiology</option><option value="156" label="Middle Eastern Studies">Middle Eastern Studies</option><option value="157" label="Mind, Brain, and Behavior">Mind, Brain, and Behavior</option><option value="158" label="Modern Greek">Modern Greek</option><option value="159" label="Modern Hebrew">Modern Hebrew</option><option value="160" label="Modern Middle East">Modern Middle East</option><option value="161" label="Molecular and Cellular Biology">Molecular and Cellular Biology</option><option value="162" label="Mongolian">Mongolian</option><option value="163" label="Moral Reasoning">Moral Reasoning</option><option value="164" label="Music">Music</option><option value="165" label="Near Eastern Civilizations">Near Eastern Civilizations</option><option value="166" label="Nepali">Nepali</option><option value="167" label="Nepali">Nepali</option><option value="168" label="Neurobiology">Neurobiology</option><option value="169" label="Norwegian">Norwegian</option><option value="170" label="Organismic and Evolutionary Biology">Organismic and Evolutionary Biology</option><option value="171" label="Pali">Pali</option><option value="172" label="Pali">Pali</option><option value="173" label="Pathology">Pathology</option><option value="174" label="Persian">Persian</option><option value="175" label="Pforzheimer">Pforzheimer</option><option value="176" label="Philosophy">Philosophy</option><option value="177" label="Physical Sciences">Physical Sciences</option><option value="178" label="Physics">Physics</option><option value="179" label="Polish">Polish</option><option value="180" label="Portuguese">Portuguese</option><option value="181" label="Psychology">Psychology</option><option value="182" label="Quantitative Reasoning">Quantitative Reasoning</option><option value="183" label="Regional Studies - East Asia">Regional Studies - East Asia</option><option value="184" label="Religion">Religion</option><option value="185" label="Romance Languages">Romance Languages</option><option value="186" label="Romance Studies">Romance Studies</option><option value="187" label="Russia, Eastern Europe, and Central Asia">Russia, Eastern Europe, and Central Asia</option><option value="188" label="Russian">Russian</option><option value="189" label="SCTGALIC">SCTGALIC</option><option value="190" label="Sanskrit">Sanskrit</option><option value="191" label="Sanskrit">Sanskrit</option><option value="192" label="Scandinavian">Scandinavian</option><option value="193" label="Science">Science</option><option value="194" label="Science of Living Systems">Science of Living Systems</option><option value="195" label="Science of Living Systems">Science of Living Systems</option><option value="196" label="Science of the Physical Universe">Science of the Physical Universe</option><option value="197" label="Science of the Physical Universe">Science of the Physical Universe</option><option value="198" label="Scottish Gaelic">Scottish Gaelic</option><option value="199" label="Semitic Philology">Semitic Philology</option><option value="200" label="Slavic">Slavic</option><option value="201" label="Social Analysis">Social Analysis</option><option value="202" label="Social Policy">Social Policy</option><option value="203" label="Social Studies">Social Studies</option><option value="204" label="Societies of the World">Societies of the World</option><option value="205" label="Societies of the World">Societies of the World</option><option value="206" label="Sociology">Sociology</option><option value="207" label="South Asian Buddhist Studies">South Asian Buddhist Studies</option><option value="208" label="South Asian Languages, Literatures, and Cultures">South Asian Languages, Literatures, and Cultures</option><option value="209" label="South Asian Studies">South Asian Studies</option><option value="210" label="Spanish">Spanish</option><option value="211" label="Special Concentrations">Special Concentrations</option><option value="212" label="Speech and Hearing Sciences">Speech and Hearing Sciences</option><option value="213" label="Statistics">Statistics</option><option value="214" label="Stem Cell and Regenerative Biology">Stem Cell and Regenerative Biology</option><option value="215" label="Study Abroad">Study Abroad</option><option value="216" label="Sumerian">Sumerian</option><option value="217" label="Swahili">Swahili</option><option value="218" label="Swedish">Swedish</option><option value="219" label="Systems Biology">Systems Biology</option><option value="220" label="Tamil">Tamil</option><option value="221" label="Tamil">Tamil</option><option value="222" label="Thai">Thai</option><option value="223" label="Thai">Thai</option><option value="224" label="The Modern Middle East">The Modern Middle East</option><option value="225" label="Theater, Dance, and Media">Theater, Dance, and Media</option><option value="226" label="Tibetan">Tibetan</option><option value="227" label="Tibetan">Tibetan</option><option value="228" label="Tibetan History">Tibetan History</option><option value="229" label="Transfer Credits">Transfer Credits</option><option value="230" label="Turkish">Turkish</option><option value="231" label="Twi">Twi</option><option value="232" label="Ukrainian">Ukrainian</option><option value="233" label="Ukrainian Studies">Ukrainian Studies</option><option value="234" label="United States in the World">United States in the World</option><option value="235" label="Urdu">Urdu</option><option value="236" label="Urdu">Urdu</option><option value="237" label="Uyghur">Uyghur</option><option value="238" label="Vietnamese">Vietnamese</option><option value="239" label="Virology">Virology</option><option value="240" label="Visual and Environmental Studies">Visual and Environmental Studies</option><option value="241" label="Welsh">Welsh</option><option value="242" label="Winthrop">Winthrop</option><option value="243" label="Women's Studies">Women's Studies</option><option value="244" label="Women, Gender, and Sexuality">Women, Gender, and Sexuality</option><option value="245" label="Yiddish">Yiddish</option><option value="246" label="Yoruba">Yoruba</option></select>
+          <!-- ngIf: !courseInstanceFilterModel.isFilterSelectable('course_group') -->
+      </fieldset>
+  </form>
+
+          <div ng-show="showSummary()" class="">
+              <h2>
+                  <ng-pluralize count="courseInstanceModel.totalCourses" when="{'0': 'There are 0 courses in this term:',
+                                       '1': 'There is 1 course in this term:',
+                                       'other': 'There are {} courses in this term:'}">There are 3675 courses in this term:</ng-pluralize>
+              </h2>
+              <ul>
+                  <li class="ng-binding">
+                      <ng-pluralize count="courseInstanceModel.totalCoursesWithCanvasSite" when="{'0': '0 courses with Canvas sites ',
+                                       '1': '1 course with a Canvas site ',
+                                       'other': '{} courses with Canvas sites '}">10 courses with Canvas sites </ng-pluralize>
+                      (<ng-pluralize count="courseInstanceModel.totalCoursesWithCanvasSiteWithISite" when="{'0': '0 iSites, ',
+                                       '1': '1 iSites, ',
+                                       'other': '{} iSites, '}">5 iSites, </ng-pluralize>
+                      
+                      2 external)
+                      
+                  </li>
+                  <li class="ng-binding">
+                      <ng-pluralize count="courseInstanceModel.totalCoursesWithoutCanvasSite" when="{'0': '0 courses without Canvas sites ',
+                                       '1': '1 course without a Canvas site ',
+                                       'other': '{} courses without Canvas sites '}">3665 courses without Canvas sites </ng-pluralize>
+                      (<ng-pluralize count="courseInstanceModel.totalCoursesWithoutCanvasSiteWithISite" when="{'0': '0 iSites, ',
+                                       '1': '1 iSites, ',
+                                       'other': '{} iSites, '}">0 iSites, </ng-pluralize>
+                      
+                      1 external)
+                      
+                      <button type="button" class="btn btn-link pull-right" id="createSitesButton" ng-disabled="createDisabled()" ng-click="handleCreate($event)" data-href="/lti_tools/bulk_site_creation/course_selection?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">Continue</button>
+                                  </li>
+                  
+                                </ul>
+                            </div>
+                            
+                            <div class="infoBlock-help users-found">
+                                <p>Visit the <a href="/lti_tools/bulk_site_creation/audit?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">site creator audit log</a> to view previously created Canvas course sites.</p>
+                            </div>
+<!-- UI comment - Canvas Site Creator interface - end -->
+
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6">
+                      <div class="panel panel-default">
+                          <div class="panel-heading"><h4>Create a course site for a new course</h4></div>
+                          <div class="panel-body">
+                            <p>
+                              Ckick "continue" to create a new course and a new course site.
+                            </p>
+                            <p>
+                              <a class="pull-right" href="TLT-1157_52.html">Continue</a>
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <!-- </div> -->
+        </div>
+      
+    <!-- </main> -->
+      </div> <!-- Outer Div to allow padding with left nav - end -->
+    </div> <!-- Main Div container - end -->
+
+  </body>
+
+</html>
