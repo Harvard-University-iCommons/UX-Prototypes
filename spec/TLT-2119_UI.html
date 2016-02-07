@@ -67,7 +67,7 @@
   <div role="tabpanel" class="tab-pane active fade in active col-md-12" id="people">
     <br>
     <button id="addPeopleBtn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#addPeopleDialog" aria-expanded="false" aria-controls="addPeopleDialog">
-       Add People <span class="caret"></span>
+       <i class="fa fa-chevron-down"></i> Add People</span>
     </button>
     <div class="expand" id="addPeopleDialog">
       <div class="well container-fluid col-md-12">
@@ -76,8 +76,8 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="sr-only" for="emailHUID">Enter Harvard University ID or email addresses</label>
-                <input class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" placeholder="Enter Harvard University ID or email addresses" ng-model="searchTerm" ng-disabled="searchResults.length > 1">
+                <label class="sr-only" for="emailHUID">Enter Harvard University IDs or email addresses</label>
+                <input class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" placeholder="Enter Harvard University IDs or email addresses" ng-model="searchTerm" ng-disabled="searchResults.length > 1">
               </div>
             </div>
 
@@ -98,9 +98,29 @@
               </select>
             </div>
 
-            <div class="col-md-4" style="margin-top:.5em">
-              <a href="TLT-2119_UI_2.html"><i class="fa fa-user-plus"></i>  Add users in another role</a>
-            </div>
+<style>
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px;
+    text-align: left;
+}
+</style>
+
+
+          <div class="col-md-4 pull-right">
+            <a class="" data-toggle="tooltip" data-placement="bottom" title="The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both 'directory information' (i.e. student's name) and 'non-directory information' (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.">
+              <i class="fa fa-info-circle"></i></a> Privacy Disclaimer
+            
+          </div>
+
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+        </div>
 
           </div>
 
@@ -155,21 +175,6 @@
             <div class="progress">
               <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                 <span class="sr-only">Search in progress</span>
-              </div>
-            </div>
-          </div>
-        </dov>
-
-        <div class="row">
-          <div class="col-md-12" style="margin-top:1em">
-            <div class="col-md-12">
-              <a class="link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-              <i class="fa fa-info-circle"></i> Privacy Disclaimer
-              </a>
-              <div class="collapse" id="collapseExample">
-                <div class="well" style="margin-top:1em">
-                  The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both 'directory information' (i.e. student's name) and 'non-directory information' (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.
-                </div>
               </div>
             </div>
           </div>

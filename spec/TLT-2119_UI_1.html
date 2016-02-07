@@ -73,92 +73,72 @@
       <div class="well container-fluid col-md-12">
         <div class="form-group-inline">
 
-          <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
               <div class="form-group">
-                <label class="sr-only" for="emailHUID">Enter Harvard University IDs or email addresses</label>
-                <input class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" placeholder="Enter Harvard University IDs or email addresses" ng-model="searchTerm" ng-disabled="searchResults.length > 1">
+                <label class="sr-only" for="emailHUID">Enter Harvard University ID or email addresses</label>
+                <input class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" placeholder="Enter Harvard University ID or email addresses" ng-model="searchTerm" ng-disabled="searchResults.length > 1">
               </div>
             </div>
 
-          <div class="col-md-2">
-            <select class="form-control">Role
-              <option>Role</option>
-              <option>Student</option>
-              <option>Guest</option>
-              <option>Shopper</option>
-              <option>Teacher</option>
-              <option>Course Head</option>
-              <option>Faculty</option>
-              <option>Teaching Staff</option>
-              <option>Teaching Fellow</option>
-              <option>Course Support Staff</option>
-              <option>Designer</option>
-              <option>Observer</option>
-            </select>
-          </div>
-
-<style>
-.tooltip-inner {
-    max-width: 350px;
-    /* If max-width does not work, try using width instead */
-    width: 350px;
-    text-align: left;
-}
-</style>
-
-
-          <div class="col-md-4">
-            <a class="pull-right" data-toggle="tooltip" data-placement="bottom" title="The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both 'directory information' (i.e. student's name) and 'non-directory information' (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.">
-              <i class="fa fa-info-circle"></i> Privacy Disclaimer</span>
-            </a>
-          </div>
-        </div>
-
-    <script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
-</script>
-
-        <div class="col-md-12" id="directoryLink">
-          <a href="https://connections.harvard.edu" target="_blank">
-            Go to the Harvard Directory
-          </a>
-          to find someone's official email address.
-        </div>
-
-        <!-- begin add warning alerts -->
-        <!-- ngRepeat: warning in addWarnings -->
-        <!-- end add warning alerts -->
-
-        <!-- begin choose between multiple search hits -->
-        <div ng-show="searchResults.length > 1" class="ng-hide">
-          <div class="row col-md-12">
-            <h4>Some of the information you entered matches more than one record.</h4>
-          </div>
-          <form method="post" class="row col-md-12 ng-pristine ng-valid">
-            <div class="radio">
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>&nbsp;</th>
-                    <th>Name</th>
-                    <th>ID</th>
-                    <th>Email</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- ngRepeat: result in searchResults -->
-                </tbody>
-              </table>
+            <div class="col-md-2">
+              <select class="form-control" style="max-width:10em">Role
+                <option>Role</option>
+                <option>Student</option>
+                <option>Guest</option>
+                <option>Shopper</option>
+                <option>Teacher</option>
+                <option>Course Head</option>
+                <option>Faculty</option>
+                <option>Teaching Staff</option>
+                <option>Teaching Fellow</option>
+                <option>Course Support Staff</option>
+                <option>Designer</option>
+                <option>Observer</option>
+              </select>
             </div>
-          </form>
-        </div>
-        <!-- end choose between multiple search hits -->
 
-        <div class="col-md-12 row">
+            <div class="col-md-4" style="margin-top:.5em">
+              <a href="TLT-2119_UI_2.html"><i class="fa fa-user-plus"></i>  Add users in another role</a>
+            </div>
+
+          </div>
+
+        <div class="row" style="margin-top:.5em">
+          <div class="col-md-12" id="directoryLink">
+            <a href="https://connections.harvard.edu" target="_blank">
+              Go to the Harvard Directory
+            </a>
+            to find someone's official email address.
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div ng-show="searchResults.length > 1" class="ng-hide">
+            <div class="row col-md-12">
+              <h4>Some of the information you entered matches more than one record.</h4>
+            </div>
+            <form method="post" class="row col-md-12 ng-pristine ng-valid">
+              <div class="radio">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th>Name</th>
+                      <th>ID</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-2">
-            <a id="add-user-btn-id" class="btn btn-primary" type="button" ng-click="addUser(searchTerm)" ng-disabled="disableAddUserButton()" disabled="disabled" style="margin-top:1em">
+            <a id="add-user-btn-id" class="btn btn-primary" type="button" ng-click="addUser(searchTerm)" ng-disabled="disableAddUserButton()" style="margin-top:1em">
               <i class="fa fa-plus-circle"></i> Add to Course
             </a>
           </div>
@@ -170,35 +150,43 @@ $(document).ready(function(){
           </div>
         </div>
 
-        <div class="col-md-8 col-md-offset-2 hidden" id="progressBarOuterWrapper" ng-class="{'hidden': !searchInProgress}">
-          <div class="progress">
-            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="sr-only">Search in progress</span>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 hidden" id="progressBarOuterWrapper" ng-class="{'hidden': !searchInProgress}">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <span class="sr-only">Search in progress</span>
+              </div>
+            </div>
+          </div>
+        </dov>
+
+        <div class="row">
+          <div class="col-md-12" style="margin-top:1em">
+            <div class="col-md-12">
+              <a class="link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa fa-info-circle"></i> Privacy Disclaimer
+              </a>
+              <div class="collapse" id="collapseExample">
+                <div class="well" style="margin-top:1em">
+                  The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both 'directory information' (i.e. student's name) and 'non-directory information' (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-12" style="margin-top:1em">
-          <a class="link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          <i class="fa fa-info-circle"></i> Privacy Disclaimer
-          </a>
-          <div class="collapse" id="collapseExample">
-            <div class="well">
-              The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both 'directory information' (i.e. student's name) and 'non-directory information' (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.
-            </div>
-          </div>
-        </div>
-
-        <script>$(document).ready(function () {
-    $(".collapseExample a").click(function(event) {
-        $(".collapseExample").collapse('hide');
-    });
-});
+        <script>
+        $(document).ready(function () {
+        $(".collapseExample a").click(function(event) {
+            $(".collapseExample").collapse('hide');
+          });
+        });
         </script>
 
       </div>
     </div>
   </div>
+</div>
 
 
 
