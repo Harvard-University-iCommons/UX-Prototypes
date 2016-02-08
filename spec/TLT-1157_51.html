@@ -27,14 +27,14 @@
             <div class="col-md-12"> <!-- Outer Div - start -->
 
     <header>
-        <h1><a href="/lti_tools/bulk_site_creation/index?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">Canvas Site Creator</a></h1>
+        <h1><a>Canvas Site Creator</a></h1>
     </header>
 <!-- UI comment - hide alerts -->
     <span ng-controller="ErrorController" class="ng-scope hidden">
     <span class="infoBlock-error ng-hide" ng-show="errorModel.hasError">
         <i class="fa fa-exclamation-circle"></i>
         <strong>Oops!</strong> We were unable to process your request, please
-        <a href="/lti_tools/bulk_site_creation/index?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a" class="alert-link">try again</a>.
+        <a class="alert-link">try again</a>.
     </span>
 </span>
 
@@ -101,12 +101,12 @@
                     
                     1 external)
                     
-                    <button type="button" class="btn btn-link" id="createSitesButton" ng-disabled="createDisabled()" ng-click="handleCreate($event)" data-href="/lti_tools/bulk_site_creation/course_selection?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">Continue</button></li>
+                    <button type="button" class="btn btn-link" id="createSitesButton" ng-disabled="createDisabled()" ng-click="handleCreate($event)" >Continue</button></li>
                 
             </ul>
         </div>
         <div class="infoBlock-help users-found">
-            <p>Visit the <a href="/lti_tools/bulk_site_creation/audit?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">site creator audit log</a> to view previously created Canvas course sites.</p>
+            <p>Visit the <a>site creator audit log</a> to view previously created Canvas course sites.</p>
         </div>
 <!-- UI new code - Link to create a new course - start -->
         <div class="row">
