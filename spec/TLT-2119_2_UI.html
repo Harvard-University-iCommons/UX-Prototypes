@@ -1,0 +1,506 @@
+<html lang="en"><head><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- UI comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - start -->
+    <!-- <base href="https://canvas-account-admin-tools.qa.tlt.harvard.edu" target="_blank"> -->
+    <!-- UI comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - end -->
+    
+    <link href="https://canvas-account-admin-tools.qa.tlt.harvard.edu/static/favicon.ico" rel="icon" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/tooltipModal.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="../font-awesome-4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/jquery.dataTables.min.css" media="screen">
+
+
+    
+    
+    
+
+  <script src="../bootstrap/js/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+    
+
+
+    <title>People</title>
+  </head>
+
+  <body class="lti-tool ng-scope" role="application" ng-app="CourseInfo" style="">
+    <!-- ngView:  --><div ng-view="" class="ng-scope container-fluid">
+
+<nav class="ng-scope">
+  <h3>
+    </h3><h3 class="ng-binding"><a>Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> <a>Find Course Info</a>
+    
+    <small><i class="fa fa-chevron-right"></i></small>
+    People
+  </h3>
+</nav>
+
+
+<main class="float=left col=60 ng-scope">
+  <div class="container-fluid">
+
+    <div class="col-md-12">
+      <div class="container-fluid">
+          <div ng-show="showDataTable" class="">
+            <div id="courseInfoDT_wrapper" class="dataTables_wrapper form-inline no-footer">
+              <!-- UI comment - inline style for a table border until table-box makes it to Bootrsap 4 -->
+              <table id="courseInfoDT" class="display dataTable" cellspacing="0" role="grid" aria-describedby="courseInfoDT_info" style="width: 978px; border: solid 1px #ccc; margin-top: 1em;">
+                <tbody>
+                  <tr role="row" class="odd">
+                    <td>GSE</td>
+                    <td>Active Learning in Museums</td>
+                    <td>2015</td>
+                    <td>Winter 2015</td>
+                    <td>N/A</td>
+                    <td>S305 (13515)</td>
+                    <td>338296</td>
+                    <td>N/A</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  <div role="tabpanel" class="tab-pane active fade in active col-md-12" id="people">
+    <br>
+    <button id="addPeopleBtn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#addPeopleDialog" aria-expanded="false" aria-controls="addPeopleDialog">
+       <i class="fa fa-chevron-down"></i> Add People</span>
+    </button>
+    <div class="expand" id="addPeopleDialog">
+      <div class="well container-fluid col-md-12">
+        <div class="form-group-inline">
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label class="sr-only" for="emailHUID">Enter Harvard University IDs or email addresses</label>
+                <textarea class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" ng-model="searchTerm" ng-disabled="searchResults.length > 1" rows="3">crystal_alburger@harvard.edu, 12345678, terzo_quarto@harvard.edu, Secondo Terzo, Primo Ultimo, vitriol_bookyehree@harvard.edu, uinto_sesto@harvard.edu, Joan Smith, Grystal Flburger, Irystal_Hlburger, jean_smithy, vittohreeoh_bukyery@harvard.edu, settimo_ottavo@harvard.edu, irystal_jlburger@harvard.edu, Jrystal_Klburger@harvard.edu, veetttoureeou_bockyeeree@harvard.edu, Lrystal_Mlburger@harvard.edu, nono_decimo@harvard.edu, vittohreo_bookyehry@harvard.edu, John Smith, </textarea>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <select class="form-control" style="max-width:10em">Role
+                <option>Guest</option>
+                <option>Student</option>
+                <option>Guest</option>
+                <option>Shopper</option>
+                <option>Teacher</option>
+                <option>Course Head</option>
+                <option>Faculty</option>
+                <option>Teaching Staff</option>
+                <option>Teaching Fellow</option>
+                <option>Course Support Staff</option>
+                <option>Designer</option>
+                <option>Observer</option>
+              </select>
+            </div>
+
+<style>
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px;
+    text-align: left;
+}
+</style>
+
+
+          <div class="col-md-2 pull-right">
+            Privacy Disclaimer <a class="" data-toggle="tooltip" data-placement="bottom" title="The University has a legal responsibility to protect the privacy of students and the confidentiality of student records. Adding a member to the teaching staff of this course will allow them to view both 'directory information' (i.e. student's name) and 'non-directory information' (i.e. student's Harvard University ID#) for the students included in this course. The course list may include students who have asked that we not release any information about them, including the fact that they attend classes at Harvard. By adding a person to the teaching staff you are granting them access to view this information; others are not permitted to view these records. For these reasons, all members of the teaching staff should be reminded to keep this information confidential. If you have any questions, please contact the Office of the Registrar.">
+              <i class="fa fa-info-circle"></i></a>
+            
+          </div>
+
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+        </div>
+
+          </div>
+
+        <div class="row" style="margin-top:.5em">
+          <div class="col-md-12" id="directoryLink">
+            <a href="https://connections.harvard.edu" target="_blank">
+              Go to the Harvard Directory
+            </a>
+            to find someone's official email address.
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div ng-show="searchResults.length > 1" class="ng-hide">
+            <div class="row col-md-12">
+              <h4>Some of the information you entered matches more than one record.</h4>
+            </div>
+            <form method="post" class="row col-md-12 ng-pristine ng-valid">
+              <div class="radio">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th>Name</th>
+                      <th>ID</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            
+
+<!-- Warning if people and roles already in the course - start -->
+                      <div class="col-md-8 alert alert-success alert-dismissible " role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>The following people were found in this course</strong></p>
+                          <p>&nbsp;</p>
+                          <!-- <p><strong>crystal_alburger@harvard.edu</strong> was found in the course</p> -->
+                          <p>Alburger, Crystal has the following email/id and role associated with this course:</p>
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              crystal_alburger@harvard.edu
+                              <span class="label label-primary">XID</span> 34567890
+                              <strong>Enrolled as Guest</strong>
+                          </div>
+                          <p>&nbsp;</p>
+                          <!-- <p><strong>12345678</strong> was found in the course</p> -->
+                          <p>Blburger, Drystal  has the following email/id and role associated with this course:</p>
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              drystal_blburger@harvard.edu
+                              <span class="label label-primary">XID</span> 12345678
+                              <strong>Enrolled as Guest</strong>
+                          </div>
+                          <p>&nbsp;</p>
+                          <!-- <p><strong>Secondo Terzo</strong> was found in the course</p> -->
+                          <p>Terzo, Secondo  has the following email/id and role associated with this course:</p>
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              secondo_terzo@harvard.edu
+                              <span class="label label-primary">XID</span> 23456789
+                              <strong>Enrolled as Guest</strong>
+                          </div>
+                      </div>
+<!-- Warning if people and roles already in the course - end -->
+
+<!-- Server trouble alert, start -->
+                      <div class="col-md-8 alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <p><strong>The following people could not be found at this time</strong>. Please try again.</p>
+                        <p>&nbsp;</p>
+                        <p><strong>primo_ultimo@harvard.edu</strong></p>
+                        <p><strong>terzo_quarto@harvard.edu</strong></p>
+                        <p><strong>quinto_sesto@harvard.edu</strong></p>
+                        <p><strong>settimo_ottavo@harvard.edu</strong></p>
+                        <p><strong>nono_decimo@harvard.edu</strong></p>
+                      </div>
+<!-- Server trouble alert, end -->
+
+<!-- Warning on non valid email addrerss or ID, start -->
+                      <div class="col-md-8 alert alert-warning alert-dismissible " role="alert" id="msg-not-found" >
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>The following people could not be found</strong>. Please check the email or Harvard University ID and try again.</p>
+                        <p>&nbsp;</p>
+                        <p><strong>vitriol_bookyehree@harvard.edu</strong></p>
+                        <p><strong>vitriol_bookyehree@harvard.edu</strong></p>
+                        <p><strong>vittohreeoh_bukyery@harvard.edu</strong></p>
+                        <p><strong>veetttoureeou_bockyeeree@harvard.edu</strong></p>
+                        <p><strong>vittohreo_bookyehry@harvard.edu</strong></p>
+                      </div>
+<!-- Warning on non valid email addrerss or ID, end -->
+
+<!-- List of people and roles not in the course and with matching records, start -->
+            <!-- Bootsrap panel class - start-->
+                  <div class="col-md-12 panel panel-default ">
+                    <div class="panel-body">
+                      <div class="col-md-12 ">
+                      <h4>Some of the information you entered matches more than one record.</h4>
+                      </div>
+
+                      <form method="post">
+
+                    <div class="radio ">
+                      <table class="table table-striped">
+                          <thead>
+                              <tr>
+                                  <th>&nbsp;</th>
+                                  <th>Name</th>
+                                  <th>ID</th>
+                                  <th>Email</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr class="">
+                                  <td>
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records" id="add_person1"> <span class="sr-only">Smith, Joan</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Smith, Joan</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-primary">XID</span> 23456789
+                                  </td>
+                                  <td>
+                                      <span>joan_smith@harvard.edu</span>
+                                  </td>
+                              </tr>
+                              <tr class="">
+                                  <td>
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records" id="add_person2"> <span class="sr-only">Smith, Joan</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Smith, Joan</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-danger">HUID</span> 23456789
+                                  </td>
+                                  <td>
+                                      <span>joan_smith@harvard.edu</span>
+                                  </td>
+                              </tr>
+                              <tr class="">
+                                  <td>
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records2" id="add_person1"> <span class="sr-only">Smith, John</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Smith, John</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-danger">HUID</span> 334567890
+                                  </td>
+                                  <td>
+                                      <span>john_smith@harvard.edu</span>
+                                  </td>
+                              </tr>
+                              <tr class="">
+                                  <td>
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records2" id="add_person2"> <span class="sr-only">Smith, John</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Smith, John</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-primary">XID</span> 334567890
+                                  </td>
+                                  <td>
+                                      <span>john_smith@harvard.edu</span>
+                                  </td>
+                              </tr>
+                              <tr class="">
+                                  <td>
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records3" id="add_person1"> <span class="sr-only">Tesla, Nikola</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Tesla, Nikola</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-danger">HUID</span> 434567891
+                                  </td>
+                                  <td>
+                                      <span>nikola_tesla@harvard.edu</span>
+                                  </td>
+                              </tr>
+                              <tr class="">
+                                  <td>
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records3" id="add_person1"> <span class="sr-only">Tesla, Nikola</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Tesla, Nikola</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-primary">XID</span> 434567891
+                                  </td>
+                                  <td>
+                                      <span>nikola_tesla@harvard.edu</span>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+  <!-- List of people and roles not in the course and with matching records, end -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2">
+            <a href="TLT-2119_2_UI_2.html" id="add-user-btn-id" class="btn btn-primary" type="button" ng-click="addUser(searchTerm)" ng-disabled="disableAddUserButton()" style="margin-top:1em">
+              <i class="fa fa-plus-circle"></i> Add to Course
+            </a>
+          </div>
+
+          <div class="col-md-2">
+            <a id="cancel-add-user-btn-id" class="btn btn-default ng-hide" type="button" ng-click="clearSearchResults()" ng-show="searchResults.length > 1">
+              Cancel
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 hidden" id="progressBarOuterWrapper" ng-class="{'hidden': !searchInProgress}">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <span class="sr-only">Search in progress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        $(document).ready(function () {
+        $(".collapseExample a").click(function(event) {
+            $(".collapseExample").collapse('hide');
+          });
+        });
+        </script>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>joan_smith@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Smith, Joan
+            <span class="label label-danger">HUID</span> 80878454
+            <strong>Enrolled as Teaching Staff</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>grystal_Flburger@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Flburger, Grystal
+            <span class="label label-primary">XID</span> 23456789
+            <strong>Enrolled as Student</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>irystal_jlburger@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Jlburger, Irystal
+            <span class="label label-primary">XID</span> 23456789
+            <strong>Enrolled as Student</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>Jrystal_Klburger@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Klburger, Jrystal
+            <span class="label label-primary">XID</span> 23456789
+            <strong>Enrolled as Student</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>Lrystal_Mlburger@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Mlburger, Lrystal
+            <span class="label label-primary">XID</span> 23456789
+            <strong>Enrolled as Student</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Server trouble alert after adding person, start -->
+            <div class="col-md-8 alert alert-warning alert-dismissible hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>Irystal_Hlburger@harvard.edu</strong> could not be added at this time.</p>
+                <p>
+                  Please try again.
+                </p>
+            </div>
+<!-- Server trouble alert after adding person, end -->
+
+
+<!-- Server trouble alert after adding person, start -->
+            <div class="col-md-8 alert alert-warning alert-dismissible hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>jean_smithy@harvard.edu</strong> could not be added at this time.</p>
+                <p>
+                  Please try again.
+                </p>
+            </div>
+<!-- Server trouble alert after adding person, end -->
+
+
+<!-- AC 12, start -->
+            <div class="col-md-8 alert alert-warning alert-dismissible hidden" role="alert" hidden>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p>This user was added to Harvard's database but was not added to the Canvas site.</p>
+                <p>
+                   Error is: (display info about the error: user couldn't be added, Canvas section could not be found, etc.)
+                </p>
+            </div>
+<!-- AC 12, end -->
+</div>
+
+
+
+  <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline no-footer"><div class="row"><div class="col-sm-12"><div class="pull-right"></div><div class="pull-left"></div><div class="clearfix"></div></div></div><table datatable="" dt-options="dtOptions" dt-columns="dtColumns" dt-instance="dtInstance" class="table table-striped table-hover ng-isolate-scope dataTable no-footer" style="display: table; width: 978px;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+  <thead><tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 197px;">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" style="width: 260px;">ID</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 110px;">Role</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Source: activate to sort column ascending" style="width: 137px;">Source</th><th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Remove" style="width: 94px;">Remove</th></tr></thead><tbody><tr role="row" class="odd"><td class="ng-scope sorting_1">Aaberg, Crystal</td><td class="ng-scope"><badge role="CLASPART" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Student</td><td class="ng-scope">Manually Added</td><td class="ng-scope"><div class="text-center"><a href="" ng-click="confirmRemove(dtInstance.DataTable.data()[0])" data-sisid="40936130"><i class="fa fa-trash-o "></i></a></div></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Aagaard, Aisha</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Teacher</td><td class="ng-scope">Registrar Added</td><td class="ng-scope"><div class="text-center"><i class="fa fa-trash-o fa-trash-disabled"></i></div></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Baade, Hira</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Teacher</td><td class="ng-scope">Registrar Added</td><td class="ng-scope"><div class="text-center"><i class="fa fa-trash-o fa-trash-disabled"></i></div></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Baasch, Melissa</td><td class="ng-scope"><badge role="XIDHOLDER" class="ng-isolate-scope"><span class="label label-primary">XID</span></badge> 12345678</td><td class="ng-scope">Student</td><td class="ng-scope">Manually Added</td><td class="ng-scope"><div class="text-center"><a href="" ng-click="confirmRemove(dtInstance.DataTable.data()[3])" data-sisid="aa00aybu"><i class="fa fa-trash-o "></i></a></div></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Babbit, Tajay</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Teacher</td><td class="ng-scope">Manually Added</td><td class="ng-scope"><div class="text-center"><a href="" ng-click="confirmRemove(dtInstance.DataTable.data()[4])" data-sisid="20533064"><i class="fa fa-trash-o "></i></a></div></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Caamano, Emily</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Teacher</td><td class="ng-scope">Registrar Added</td><td class="ng-scope"><div class="text-center"><i class="fa fa-trash-o fa-trash-disabled"></i></div></td></tr><tr role="row" class="odd"><td class="ng-scope sorting_1">Caballero, Ryan</td><td class="ng-scope"><badge role="CLASPART" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Student</td><td class="ng-scope">Manually Added</td><td class="ng-scope"><div class="text-center"><a href="" ng-click="confirmRemove(dtInstance.DataTable.data()[6])" data-sisid="10753856"><i class="fa fa-trash-o "></i></a></div></td></tr><tr role="row" class="even"><td class="ng-scope sorting_1">Cabanas, Heike</td><td class="ng-scope"><badge role="EMPLOYEE" class="ng-isolate-scope"><span class="label label-danger">HUID</span></badge> 12345678</td><td class="ng-scope">Course Head</td><td class="ng-scope">Registrar Added</td><td class="ng-scope"><div class="text-center"><i class="fa fa-trash-o fa-trash-disabled"></i></div></td></tr></tbody></table><div class="row"><div class="col-sm-12"><div class="pull-left"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 8 of 8 people</div></div><div class="pull-right"><div class="dataTables_paginate paging_bs_normal" id="DataTables_Table_0_paginate"><ul class="pagination"><li class="prev disabled"><a href="#"><span class="fa fa-chevron-left"></span>&nbsp;</a></li><li class="active"><a>1</a></li><li class="next disabled"><a>&nbsp;<span class="fa fa-chevron-right"></span></a></li></ul></div></div><div class="clearfix"></div></div></div></div>
+  <!-- end course membership interface -->
+
+</div>
+
+
+</main>
+
+
+</div>
+
+
+
+  
+
+</body></html>
