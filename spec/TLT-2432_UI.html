@@ -1,0 +1,245 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- UI delete start -->
+        <base href="https://icommons-lti-tools.tlt.harvard.edu" target="_blank">
+        <!-- UI delete end -->
+        <link href="/lti_tools/static/favicon.ico" rel="icon" type="image/x-icon">
+
+        <!-- datatables.net css for the current pagination style -->
+        <link rel="stylesheet" type="text/css" href="https://datatables.net/media/css/site.css?_=63e2c6d94b6d3d84d41a319bfecf7b5c">
+
+        <!-- UI comment - Boostrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- Font Awesome for pagination icons -->
+        <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+        <title>Cross-List Courses</title>
+    </head>
+    <body class="lti-tool" role="application">
+
+
+<!-- UI comment - instyle below is only needed to make room for the above nav bar  -->
+        <div class="container">
+    
+            <header>
+                <h3><a>Admin Console</a> <small><i class="fa fa-chevron-right"></i></small> Cross-List Courses</h3>
+            </header>
+                
+            <div class="pull-left">
+                <div class="dataTables_length" id="DataTables_Table_0_length">
+                    <label>Show 
+                        <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="">
+                            <option value="10">
+                                10
+                            </option>
+                            <option value="25">
+                                25
+                            </option>
+                            <option value="50">
+                                50
+                            </option>
+                            <option value="100">
+                                100
+                            </option>
+                        </select> 
+                        Rows
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>
+                                Primary
+                            </th>
+                            <th>
+                                Secondary
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    HDS 2134-Fall-2014-2015-123456
+                                </td>
+                                <td>
+                                    GSE A031-Fall-2014-2015-234567
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    GOV 3245-Fall-2014-2015-234567
+                                </td>
+                                <td>
+                                    HUM B142-Fall-2014-2015-345678
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    SCI 4356-Fall-2014-2015-345678
+                                </td>
+                                <td>
+                                    GEN ED B253-Fall-2014-2015-456789
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HDS 2134-Fall-2014-2015-123456
+                                </td>
+                                <td>
+                                    GSE A031-Fall-2014-2015-234567
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    GOV 3245-Fall-2014-2015-234567
+                                </td>
+                                <td>
+                                    HUM B142-Fall-2014-2015-345678
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    SCI 4356-Fall-2014-2015-345678
+                                </td>
+                                <td>
+                                    GEN ED B253-Fall-2014-2015-456789
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HDS 2134-Fall-2014-2015-123456
+                                </td>
+                                <td>
+                                    GSE A031-Fall-2014-2015-234567
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    GOV 3245-Fall-2014-2015-234567
+                                </td>
+                                <td>
+                                    HUM B142-Fall-2014-2015-345678
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    SCI 4356-Fall-2014-2015-345678
+                                </td>
+                                <td>
+                                    GEN ED B253-Fall-2014-2015-456789
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    GOV 3245-Fall-2014-2015-234567
+                                </td>
+                                <td>
+                                    HUM B142-Fall-2014-2015-345678
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pagination from datatables.net - current - start -->
+            <div id="example_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 157 entries</div>
+                <div class="dataTables_paginate paging_full_numbers" id="example_paginate">
+                    <a class="paginate_button first disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_first" aria-label="First">
+                        <span aria-hidden="true"><i class="fa fa-fast-backward"></i></span>
+                    </a>
+                    <a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="1" tabindex="0" id="example_previous" aria-label="Previous">
+                        <span aria-hidden="true"><i class="fa fa-backward"></i></span>
+                    </a>
+                    <span>
+                        <a class="paginate_button current" aria-controls="example" data-dt-idx="2" tabindex="0">1</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="3" tabindex="0">2</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="4" tabindex="0">3</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="5" tabindex="0">4</a>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="6" tabindex="0">5</a>
+                        <!-- Vittorio's poetic license here, in case we have a great number of pages. Open for feedback, of course -->
+                        <span class=" " aria-controls="example" data-dt-idx="6" tabindex="0">...</span>
+                        <a class="paginate_button " aria-controls="example" data-dt-idx="16" tabindex="0">16</a>
+                    </span>
+                    <a class="paginate_button next" aria-controls="example" data-dt-idx="8" tabindex="0" id="example_next" aria-label="Next">
+                        <span aria-hidden="true"><i class="fa fa-forward"></i></span>
+                    </a>
+                    <a class="paginate_button last" aria-controls="example" data-dt-idx="9" tabindex="0" id="example_last">
+                        <span aria-hidden="true"><i class="fa fa-fast-forward"></i></span>
+                    </a>
+                </div>
+            </div>
+            <!-- Pagination from datatables.net - current - end -->
+            </nav>
+
+        </div> <!-- container-fluid end -->
+
+<!-- UI comment - modal upon Delete -->
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Confirm Un-Pairing</h4>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to un-pair these courses?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Yes, Un-Pair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+        <script src="/lti_tools/static/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+        <script src="/lti_tools/static/underscore-1.8.2/underscore.min.js"></script>
+        <script src="/lti_tools/static/bootstrap-3.0.3/dist/js/bootstrap.min.js"></script>
+        <script src="/lti_tools/static/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="/lti_tools/static/listjs/list.min.js"></script>
+            
+        <script>
+            var removeUserURL = "/lti_tools/course_add_people/remove_user?resource_link_id=462b4bde0f33e1d71e987d7e43ee9569158800ae";
+        </script>
+
+
+
+            <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://getbootstrap.com//dist/js/bootstrap.min.js"></script>
+        <script src="http://getbootstrap.com//assets/js/docs.min.js"></script>
+
+        <script type='text/javascript'>//<![CDATA[
+
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+
+        $('#myModal').on('shown.bs.modal', function () {
+          $('#myInput').focus()
+        })
+
+        </script>
+    
+    </body>
+</html>
