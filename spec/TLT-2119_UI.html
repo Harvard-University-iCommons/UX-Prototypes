@@ -77,13 +77,13 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label class="sr-only" for="emailHUID">Enter Harvard University IDs or email addresses</label>
-                <input class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" placeholder="Enter Harvard University IDs or email addresses" ng-model="searchTerm" ng-disabled="searchResults.length > 1">
+                <input class="form-control ng-pristine ng-untouched ng-valid" id="emailHUID" value="crystal_alburger@harvard.edu, 12345678, Primo Ultimo, vitriol_bookyehree@harvard.edu, Joan Smith, Grystal Flburger, Irystal_Hlburger, jean_smithy" ng-model="searchTerm" ng-disabled="searchResults.length > 1">
               </div>
             </div>
 
             <div class="col-md-2">
               <select class="form-control" style="max-width:10em">Role
-                <option>Role</option>
+                <option>Guest</option>
                 <option>Student</option>
                 <option>Guest</option>
                 <option>Shopper</option>
@@ -157,6 +157,113 @@ $(document).ready(function(){
         </div>
 
         <div class="row">
+          <div class="col-md-12">
+            
+
+<!-- Warning if people and roles already in the course, search by email address - start -->
+                      <div class="col-md-8 alert alert-warning alert-dismissible " role="alert" hidden>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>crystal_alburger@harvard.edu</strong> was found in the course:</p>
+                          <p>Alburger, Crystal  has the following email/id and role associated with this course:</p>
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              Alburger, Crystal
+                              <span class="label label-primary">XID</span> 80878454
+                              <strong>Enrolled as Guest</strong>
+                          </div>
+                      </div>
+<!-- Warning if people and roles already in the course, search by email address - end -->
+
+<!-- Warning if people and roles already in the course, search by ID - start -->
+                      <div class="col-md-8 alert alert-warning alert-dismissible " role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>12345678</strong> was found in the course:</p>
+                          <p>Blburger, Drystal  has the following email/id and role associated with this course:</p>
+                          <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+                              Blburger, Drystal
+                              <span class="label label-primary">XID</span> 12345678
+                              <strong>Enrolled as Guest</strong>
+                          </div>
+                      </div>
+<!-- Warning if people and roles already in the course, search by ID - end -->
+
+<!-- Server trouble alert, start -->
+                      <div class="col-md-8 alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <p><strong>primo_ultimo@harvard.edu</strong> could not be found at this time.</p>
+                        <p>
+                          Please try again.
+                        </p>
+                      </div>
+<!-- Server trouble alert, end -->
+
+<!-- Warning on non valid email addrerss or ID, start -->
+                      <div class="col-md-8 alert alert-warning alert-dismissible " role="alert" id="msg-not-found" >
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <p><strong>vitriol_bookyehree@harvard.edu</strong> was not found. Please check the email or Harvard University ID and try again.</p>
+                      </div>
+<!-- Warning on non valid email addrerss or ID, end -->
+
+<!-- List of people and roles not in the course and with matching records, start -->
+            <!-- Bootsrap panel class - start-->
+                  <div class="col-md-12 panel panel-default ">
+                    <div class="panel-body">
+                      <div class="col-md-12 ">
+                      <h4>Some of the information you entered matches more than one record.</h4>
+                      </div>
+
+                      <form method="post">
+
+                    <div class="radio ">
+                      <table class="table table-hover ">
+                          <thead>
+                              <tr>
+                                  <th>&nbsp;</th>
+                                  <th>Name</th>
+                                  <th>ID</th>
+                                  <th>Email</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr class="">
+                                  <td scope="row">
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records" id="add_person1"> <span class="sr-only">Smith, Joan</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Smith, Joan</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-primary">XID</span> 23456789
+                                  </td>
+                                  <td>
+                                      <span>joan_smith@harvard.edu</span>
+                                  </td>
+                              </tr>
+                              <tr class="">
+                                  <td scope="row">
+                                      <label>
+                                          <input type="radio" class="check_search" name="matching_records" id="add_person2"> <span class="sr-only">Smith, Joan</span>
+                                      </label>
+                                  </td>
+                                  <td>
+                                      <span>Smith, Joan</span>
+                                  </td>
+                                  <td>
+                                      <span class="label label-danger">HUID</span> 23456789
+                                  </td>
+                                  <td>
+                                      <span>joan_smith@harvard.edu</span>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+  <!-- List of people and roles not in the course and with matching records, end -->
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-2">
             <a id="add-user-btn-id" class="btn btn-primary" type="button" ng-click="addUser(searchTerm)" ng-disabled="disableAddUserButton()" style="margin-top:1em">
               <i class="fa fa-plus-circle"></i> Add to Course
@@ -191,6 +298,68 @@ $(document).ready(function(){
       </div>
     </div>
   </div>
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible hidden" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>joan_smith@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Smith, Joan
+            <span class="label label-danger">HUID</span> 80878454
+            <strong>Enrolled as Teaching Staff</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Confirm person added to the course, start -->
+    <div class="col-md-8 alert alert-success alert-dismissible " role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <p><strong>grystal_Flburger@harvard.edu</strong> was just added to this course:</p>
+        <!-- list of ids already in course -->
+
+        <div style="border-style: solid; border-width: 1px 0px 1px 0px; border-color: #ccc; padding:.5em; margin-top:1em;">
+            Flburger, Grystal
+            <span class="label label-primary">XID</span> 23456789
+            <strong>Enrolled as Student</strong>
+        </div>
+    </div>
+<!-- Confirm person added to the course, end -->
+
+<!-- Server trouble alert after adding person, start -->
+            <div class="col-md-8 alert alert-warning alert-dismissible " role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>Irystal_Hlburger@harvard.edu</strong> could not be added at this time.</p>
+                <p>
+                  Please try again.
+                </p>
+            </div>
+<!-- Server trouble alert after adding person, end -->
+
+
+<!-- Server trouble alert after adding person, start -->
+            <div class="col-md-8 alert alert-warning alert-dismissible " role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p><strong>jean_smithy@harvard.edu</strong> could not be added at this time.</p>
+                <p>
+                  Please try again.
+                </p>
+            </div>
+<!-- Server trouble alert after adding person, end -->
+
+
+<!-- AC 12, start -->
+            <div class="col-md-8 alert alert-warning alert-dismissible " role="alert" hidden>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p>This user was added to Harvard's database but was not added to the Canvas site.</p>
+                <p>
+                   Error is: (display info about the error: user couldn't be added, Canvas section could not be found, etc.)
+                </p>
+            </div>
+<!-- AC 12, end -->
 </div>
 
 
