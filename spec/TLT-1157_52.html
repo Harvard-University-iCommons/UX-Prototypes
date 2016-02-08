@@ -25,8 +25,6 @@
 
 <!-- UI New Code - modal - start -->
 
-<!-- Button trigger modal -->
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -35,11 +33,17 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Warning</h4>
       </div>
-      <div class="modal-body">
+<!-- UI comment - modal for AC 5.2 -->
+      <div class="modal-body hidden">
         A course instance with this course code already exists in this term. Would you like to create a new course instance?
       </div>
+<!-- UI comment - modal for AC 5.3 -->
+      <div class="modal-body">
+        A new course could not be created successfully. Please try again.
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+<!-- UI comment - modal for AC 5.3, hide Cancel button -->
+        <button type="button" class="btn btn-default pull-left hidden" data-dismiss="modal">Cancel</button>
         <a type="link" class="btn btn-primary pull-right" href="TLT-1157_53.html">OK</a>
       </div>
     </div>
@@ -131,7 +135,7 @@
             <a type="link" class="btn btn-default" href="TLT-1157_51.html">
               Cancel
             </a>
-            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">
+            <button type="button" class="btn btn-primary pull-right " data-toggle="modal" data-target="#myModal">
               Create a New Course
             </button>
             <a type="link" class="btn btn-primary pull-right hidden" href="TLT-1157_53.html">
@@ -146,9 +150,9 @@
         <div class="col-md-12">
           <font color="red">*</font> = Required information
           <br>
-          ILE = Informal Learning Experience
+          ILE = Informal Learning Experience sub account
           <br>
-          SB = Sandbox
+          SB = Sandbox sub account
           </a>
         </div>
 
