@@ -43,11 +43,45 @@
 
     <div class="col-md-12">
       <div class="container-fluid">
-          <div ng-show="showDataTable" class="">
-            <div id="courseInfoDT_wrapper" class="dataTables_wrapper form-inline no-footer">
-              <!-- UI comment - inline style for a table border until table-box makes it to Bootrsap 4 -->
-              <table id="courseInfoDT" class="display dataTable" cellspacing="0" role="grid" aria-describedby="courseInfoDT_info" style="width: 978px; border: solid 1px #ccc; margin-top: 1em;">
-                <tbody>
+          <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline no-footer">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="pull-right"></div>
+                <div class="pull-left"></div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <table datatable="" dt-options="dtOptions" dt-columns="dtColumns" dt-instance="dtInstance" class="table table-striped table-hover ng-isolate-scope dataTable no-footer" style="display: table; width: 978px;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+              <thead>
+                <tr role="row">
+                  <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 197px;">
+                  School
+                  </th>
+                  <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ID: activate to sort column ascending" style="width: 260px;">
+                    Course Details
+                  </th>
+                  <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 110px;">
+                    Academic Year
+                  </th>
+                  <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Source: activate to sort column ascending" style="width: 137px;">
+                    Academic Term
+                  </th>
+                  <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Remove" style="width: 94px;">
+                    Associated Site
+                  </th>
+                  <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Remove" style="width: 94px;">
+                    Course Code
+                  </th>
+                  <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Remove" style="width: 94px;">
+                    SIS/Course Instance ID
+                  </th>
+                  <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Remove" style="width: 94px;">
+                    Cross Listing
+                  </th>
+                </tr>
+              </thead>
+
+                <tbody style="border: solid 1px #ccc;">
                   <tr role="row" class="odd">
                     <td>GSE</td>
                     <td>Active Learning in Museums</td>
@@ -61,7 +95,8 @@
                 </tbody>
               </table>
             </div>
-          </div>
+
+          
         </div>
     </div>
   <div role="tabpanel" class="tab-pane active fade in active col-md-12" id="people">
