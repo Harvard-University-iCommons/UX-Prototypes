@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="../font-awesome-4.4.0/css/font-awesome.css">
+
+        <script src="../bootstrap/js/jquery.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+        <title>Course Details</title>
+
+<!-- UI comment - new style to add padding to list sub items -->
+        <style>
+        .list-group-sub-item {padding: 1.25em; padding-bottom: 2em;}
+        </style>
+
+    </head>
+
+    <body class="lti-tool" role="application">
+
+        <div class="container-fluid">
+
+            <header>
+                <h3 class="ng-binding">
+                    <a>
+                        Admin Console
+                    </a>
+                     <small>
+                        <i class="fa fa-chevron-right"></i>
+                    </small>
+                     <a target="iframe1">
+                        Find Course Info
+                    </a>
+                    <small>
+                        <i class="fa fa-chevron-right"></i>
+                    </small>
+                    Course Details
+                </h3>
+            </header>
+
+            <div class="panel-body">
+
+                <ul class="list-group">
+                    
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Course Status: </strong>
+                            </div>
+                            <div class="col-md-3">
+                                This course is unconcluded
+                            </div>
+                            <div class="col-md-3">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class='col-sm-3'>
+                                            <div class="form-group">
+                                                <div class='input-group date' id='datetimepicker1'>
+                                                    <input type='text' class="form-control" / value="02/08/2016 9:53 AM">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            $(function () {
+                                                $('#datetimepicker1').datetimepicker();
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn btn-default" href="TLT-2376_UI_2.html" role="button">
+                                    Conclude This Course
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Course Code: </strong>
+                            </div>
+                            <div class="col-md-9">colgsas Catalog # 121934</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Course Code"><i class="fa fa-pencil"></i><span class="sr-only">Edit Course Code</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+                    
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Term: </strong>
+                            </div>
+                            <div class="col-md-9">Fall 2015-2016</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Term"><i class="fa fa-pencil"></i><span class="sr-only">Edit Term</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+                    
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>SIS/Course Instance ID: </strong>
+                            </div>
+                            <div class="col-md-9">360146</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="SIS/Course Instance ID"><i class="fa fa-pencil"></i><span class="sr-only">Edit SIS/Course Instance ID</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+                    
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Course Title: </strong>
+                            </div>
+                            <div class="col-md-9">PORTUG C</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Course Title"><i class="fa fa-pencil"></i><span class="sr-only">Edit Course Title</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <span class="col-md-2">
+                                <strong>Short Title: </strong>
+                            </span>
+                            <span class="col-md-10">
+                              <div class="input-group">
+                                  <input type="text" class="form-control" aria-label="Edit Short Title" placeholder="PORTUG C">
+                                  <div class="input-group-btn">
+                                    <a href="TLT-2376_UI.html" class="btn btn-default" role="button">Cancel</a>
+                                    <a href="TLT-2376_UI.html" class="btn btn-primary" role="button">Save</a>
+                                  </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Subtitle: </strong>
+                            </div>
+                            <div class="col-md-9">Active Learning in Museums</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Subtitle"><i class="fa fa-pencil"></i><span class="sr-only">Edit Subtitle</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Description: </strong>
+                            </div>
+                            <div class="col-md-9">
+                                This course gives museum administrators and educators new tools for making museums agents of change in the world. Using the pre-texts model, an artist/educator training program that combines high-order literacy, innovation, and citizenship, the course encourages students to develop hands-on, art-making activities that turn museum collections into resources for exploring difficult texts. Art works are studied and used to create visual and performative interpretations of challenging written material that people would otherwise not access. In this way, museums play a central role in developing good readers and engaged viewers of art. Museum staff expand their role beyond traditional modes of providing outreach to engage their visitors with the texts through art and vice-versa, making for a deeper and more meaningful learning experience in the museum setting. In this active learning weekend, students hear lectures, make their own art, and experience the pre-texts that their museum visitors might use. They are challenged to step outside of the box to think creatively about how their museum or a museum might work with its community in new ways that develop an appreciation for art and citizenship.
+                            </div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Description"><i class="fa fa-pencil"></i><span class="sr-only">Edit Description</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Notes: </strong>
+                            </div>
+                            <div class="col-md-9">
+                                &nbsp;
+                            </div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Notes"><i class="fa fa-pencil"></i><span class="sr-only">Edit Notes</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Instructors (display): </strong>
+                            </div>
+                            <div class="col-md-9">Surname First, Surname First, Surname First</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Instructors"><i class="fa fa-pencil"></i><span class="sr-only">Edit Instructors</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>People: </strong>
+                            </div>
+                            <div class="col-md-9">
+                                <a href="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/spec/TLT-1983_People_UI.html" target="iframe1">
+                                    There are 35 people in this course
+                                </a>
+                            </div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="People"><i class="fa fa-pencil"></i><span class="sr-only">Edit People</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Location: </strong>
+                            </div>
+                            <div class="col-md-9">Gutman LaunchPad (3rd floor)</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Location"><i class="fa fa-pencil"></i><span class="sr-only">Edit Location</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Meeting Time: </strong>
+                            </div>
+                            <div class="col-md-9">Monday, Tuesday, Wednesday, 10:00 - 10:59</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Meeting Time"><i class="fa fa-pencil"></i><span class="sr-only">Edit Meeting Time</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Exam Group: </strong>
+                            </div>
+                            <div class="col-md-9">Portuguese</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Exam Group"><i class="fa fa-pencil"></i><span class="sr-only">Edit Exam Group</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Department: </strong>
+                            </div>
+                            <div class="col-md-9">Romance Languages and Literatures</div>
+                            <span class="col-md-1">
+                                <div class="pull-right">
+                                    <div class="tooltip-demo">
+                                        <div class="bs-example-tooltips">
+                                          <a data-toggle="tooltip" title="Department"><i class="fa fa-pencil"></i><span class="sr-only">Edit Department</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Course Group: </strong>
+                            </div>
+                            <div class="col-md-10">Portuguese</div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Associated Official and Unofficial Site(s): </strong>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="list-group">
+                                    <div class="list-group-item list-group-sub-item">
+                                        <div class="label label-primary col-md-1">Official</div>
+                                        <div class="col-md-10">PORTUG C - Canvas</div>
+                                        <span class="col-md-1">
+                                            <div class="pull-right">
+                                                <div class="tooltip-demo">
+                                                    <div class="bs-example-tooltips">
+                                                      <a data-toggle="tooltip" title="Associated Site"><i class="fa fa-pencil"></i><span class="sr-only">Edit Associated Site</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="list-group-item list-group-sub-item">
+                                        <div class="label label-default col-md-1">Unofficial</div>
+                                        <div class="col-md-10">PORTUG C - iSites</div>
+                                        <span class="col-md-1">
+                                            <div class="pull-right">
+                                                <div class="tooltip-demo">
+                                                    <div class="bs-example-tooltips">
+                                                      <a data-toggle="tooltip" title="Associated Site"><i class="fa fa-pencil"></i><span class="sr-only">Edit Associated Site</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="list-group-item list-group-sub-item">
+                                        <div class="label label-default col-md-1">Unofficial</div>
+                                        <div class="col-md-10">Word Press</div>
+                                        <span class="col-md-1">
+                                            <div class="pull-right">
+                                                <div class="tooltip-demo">
+                                                    <div class="bs-example-tooltips">
+                                                      <a data-toggle="tooltip" title="Associated Site"><i class="fa fa-pencil"></i><span class="sr-only">Edit Associated Site</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script src="../bootstrap/js/list.min.js"></script>
+        <script src="../bootstrap/js/jquery-1.11.3.min.js"></script>
+        <script src="../bootstrap/js/docs.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+                            
+    </body>
+</html>
