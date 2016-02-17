@@ -85,7 +85,7 @@
 
     <div class="col-lg-6 col-md-6 col-sm-6"> <!-- left panel - start -->
         <div class="panel panel-default">
-            <div class="panel-heading"><h4>Create a new course site for existing courses</h4></div>
+            <div class="panel-heading"><h4>Create Canvas sites for one or more existing courses.</h4></div>
             <div class="panel-body">
 <!-- UI comment - Canvas Site Creator interface - start-->
     <span ng-controller="ErrorController" class="ng-scope">
@@ -215,12 +215,24 @@
                       </div>
                   </div> <!-- left panel - end -->
 
+
+
+<style>
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 350px;
+    text-align: left;
+}
+</style>
+
                   <div class="col-lg-6 col-md-6 col-sm-6"> <!-- right panel - start -->
                       <div class="panel panel-default">
-                          <div class="panel-heading"><h4>Create a course site for a new course</h4></div>
+                          <div class="panel-heading"><h4>Create a new course.</h4></div>
                           <div class="panel-body">
                             <p>
-                              Ckick "continue" to create a new course and a new course site.
+                              Click continue to create a new course instance. Courses created via this method will then appear in the Canvas Site Creator to the left.
+                              <a class="" data-toggle="tooltip" data-placement="bottom" title="Create a Sandbox or Informal Learning Experience (ILE) site in Canvas. These sites are not attached to a course fed from the Registrar's office."><i class="fa fa-info-circle"></i></a>
                             </p>
                             <p>
                               <strong><a class="pull-right" href="TLT-2419_72.html" target="iframe7">Continue</a></strong>
@@ -232,6 +244,12 @@
               </div>
 <!-- UI comment - panels - end -->
 </div> <!-- content div container -->
+
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
 
 
 </body></html>
