@@ -170,8 +170,7 @@
         </div>
 <!-- UI comment - remove ng-show="showSummary()" from the following div to render the content below -->
         <div class="">
-<!-- UI comment - adding vertical space and changing header to h3 -->
-            <p>&nbsp;</p>
+<!-- UI comment - changing header to h3 -->
             <h3>
                 <ng-pluralize count="courseInstanceModel.totalCourses" when="{'0': 'There are 0 courses in this term:',
                                      '1': 'There is 1 course in this term:',
@@ -204,9 +203,11 @@
             </ul>
         </div>
 <!-- UI comment - placing this information on a Bootstrap information alert panel -->
-        <br><hr>
-        <div class="alert alert-info" role="alert">
-            <p>Visit the <a href="/lti_tools/bulk_site_creation/audit?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">site creator audit log</a> to view previously created Canvas course sites.</p>
+        <div class="col-md-12"><hr></div>
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                <p>Visit the <a href="/lti_tools/bulk_site_creation/audit?resource_link_id=ca122ea3b565b2faf8882c3e1da0ddf02973672a">site creator audit log</a> to view previously created Canvas course sites.</p>
+            </div>
         </div>
     </main>
 <!-- UI comment - Canvas Site Creator interface - end -->
@@ -215,23 +216,12 @@
                       </div>
                   </div> <!-- left panel - end -->
 
-
-
-<style>
-.tooltip-inner {
-    max-width: 350px;
-    /* If max-width does not work, try using width instead */
-    width: 350px;
-    text-align: left;
-}
-</style>
-
                   <div class="col-lg-6 col-md-6 col-sm-6"> <!-- right panel - start -->
                       <div class="panel panel-default">
                           <div class="panel-heading"><h4>Create a site for a new course</h4></div>
                           <div class="panel-body">
                             <p>
-                              Create a Sandbox or Informal Learning Experience (ILE) site in Canvas. This site will not be not attached to a course fed from the Registrar's office.
+                              Create a Sandbox or Informal Learning Experience (ILE) site in Canvas. This site will not be attached to a course fed from the Registrar's office.
                               <a class="hidden" data-toggle="tooltip" data-placement="bottom" title="Create a Sandbox or Informal Learning Experience (ILE) site in Canvas. These sites are not attached to a course fed from the Registrar's office."><i class="fa fa-info-circle"></i></a>
                             </p>
                             <p>
