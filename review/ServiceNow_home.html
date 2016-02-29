@@ -1,0 +1,995 @@
+<html class="ltr date-calendar compact tabbed" lang="en" dir="ltr" data-doctype="true"><head>
+<!-- Prototype comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - start -->
+<base href="https://harvardtest.service-now.com" target="_blank">
+<!-- Prototype comment - adding BASE tag to make CSS and JS links absolute, so that I can work locally on this UI  - end -->
+<title>Catalog Home</title><meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"><meta content="public" http-equiv="cache-control"><script type="text/javascript" data-description="globals population">
+	window.NOW = window.NOW || {};
+	var g_loadTime = new Date();
+	var lastActivity = new Date();
+	var g_lang = 'en';
+	var g_system_lang = 'en';
+	var g_enhanced_activated = 'true';
+	  var g_popup_timeout = parseInt(100);
+	var g_export_warn_threshold = parseInt(10000);
+	  var g_event_handler_ids = {};
+	var g_event_handlers = [];
+	var g_event_handlers_onLoad = [];
+	var g_event_handlers_onSubmit = [];
+	var g_event_handlers_onChange = [];
+	var g_event_handlers_onCellEdit = {};
+	var g_user_date_time_format = "yyyy-MM-dd HH:mm";
+	var g_user_date_format = "yyyy-MM-dd";
+	var g_user_decimal_separator = ".";
+	var g_user_grouping_separator = ",";
+	var g_glide_list_separator = ", ";
+	var g_tz_offset = -18000000;
+	  var g_tz_user_offset = true;
+	var g_first_day_of_week = parseInt(1, 10);
+	var g_date_picker_first_day_of_week = parseInt(1, 10);
+	  var g_full_calendar_edit = true;
+	var g_submitted = false;
+	var g_max_table_length = 80;
+	var g_fontSizePreference = "";
+	var g_fontSize = "10pt";
+	// use to be the sys_property glide.ui.js_error_notify, hard coded for PRB603998
+	var g_jsErrorNotify = "true";
+	var g_cancelPreviousTransaction = true;
+	var g_text_direction = "ltr";
+	var g_glide_list_filter_max_length =  parseInt("0", 10);
+	var g_accessibility = false;
+	var g_detail_row = false;
+	window.g_load_functions = [];
+	window.g_render_functions = [];
+	window.g_late_load_functions = [];
+
+	
+	var g_ck = 'c96460aaddb59600df5b8416cce83153281beabb5bdb69f7b4b8afb63b6ab4a6b7502efd';
+	
+
+	
+	var g_acWaitTime = parseInt(250);
+	
+
+	var g_autoRequest = '';
+	window.NOW.dateFormat = {shortDates: false, timeAgo: false, dateBoth: false};
+	window.NOW.listTableWrap = true;
+	window.NOW.compact = true;
+	window.NOW.tabbed = true;
+	window.NOW.useSimpleStorage = true;
+	window.NOW.simpleStorageSynch = "785f763dddbd5600df5b8416cce83174";
+	window.NOW.language =  'en';
+	window.NOW.listOpenInAppTab = false;
+	
+	window.NOW.user = {};
+	window.NOW.user.preferences = [];
+	window.NOW.user.roles = 'itil,project_user,template_editor,rest_service,report_group,rm_release_viewer';
+	window.NOW.user.id = '641464bb0f9f39002dfe5bd692050e8f';
+	window.NOW.user.departmentID = '160644a76f15a50097dd687f8e3ee434';
+	window.NOW.user.firstName = 'Vittorio';
+	window.NOW.user.lastName = 'Bucchieri';
+	window.NOW.user.name = '60987327';
+	</script><script data-comment="GlideUser initialization">(function() {
+		 g_render_functions.push(setGlideUser);
+		function setGlideUser() {
+			if (window.g_user || !window.GlideUser)
+		return;
+
+		window.g_user = new GlideUser(NOW.user.name,
+			  NOW.user.lastName,
+			  NOW.user.firstName,
+			  NOW.user.roles,
+			  NOW.user.userID,
+			  NOW.user.departmentID);
+		}
+	})();</script>
+<!-- UI comment - same shortcut icon as the home page -->
+	<!-- <link href="/scs/favicontest.ico" rel="shortcut icon"> -->
+	<link rel="shortcut icon" href="http://huit.harvard.edu/profiles/openscholar/themes/hwpi_classic/favicon.ico" type="image/vnd.microsoft.icon">
+	<script>// window.performance in Chrome, Firefox, and Internet Explorer 9+ (not Safari)
+				window.NOW.xperf = window.performance || {};
+				if (!NOW.xperf.now) {
+					NOW.xperf.now = function() { return new Date().getTime(); };
+				}
+				NOW.xperf.parseBegin = NOW.xperf.now(); 
+				NOW.xperf.cssBegin = NOW.xperf.now();</script><link type="text/css" href="/styles/css_includes_doctype.cssx?v=11-30-2015_1511&amp;c=2015-09-18_11:04_48acd42addb59600df5b8416cce8311f&amp;theme=e055c420eb0321001c13abf11206fe00" rel="stylesheet"><script>NOW.xperf.cssEnd = NOW.xperf.now();
+			NOW.xperf.scriptBegin = NOW.xperf.now();</script><script type="text/javascript" src="/scripts/doctype/js_includes_doctype.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><script type="text/javascript" src="/scripts/js_includes_customer.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><script>NOW.xperf.scriptEnd = NOW.xperf.now();
+				NOW.xperf.parseEnd = NOW.xperf.now();  
+				$j(function() {
+					var x = NOW.xperf;
+					var last = x.lastDoctypeEnd - x.lastDoctypeBegin;
+					if (window.console) {
+						console.log("+-- Parse times");
+						console.log("| CSS parse: " + (x.cssEnd - x.cssBegin));
+						console.log("| JS  doctype: " + (x.scriptEnd - x.scriptBegin));
+						console.log("| JS at end of page: " + last);
+						console.log("+-- All parsing: " + (x.parseEnd - x.parseBegin + last));	
+					}
+					
+					var ms = Math.round(x.parseEnd - x.parseBegin + last);
+					CustomEvent.fire('page_timing', { name: 'PARS', ms: ms, win: window });
+					
+					if (window.performance && performance.timing) {
+						NOW.xperf.z = new Date().getTime();
+						setTimeout(function () {
+						   var x = performance.timing.loadEventEnd - performance.timing.domContentLoadedEventStart;
+						   CustomEvent.fire('page_timing', { name: 'DOMC', ms: x, win: window });
+						   x = performance.timing.loadEventStart - NOW.xperf.z;
+						   CustomEvent.fire('page_timing', { name: 'PROC', ms: x, win: window });
+						}, 250);  // has to be done after the loadEvent ends
+					}
+				})</script><script type="text/javascript" src="/scripts/doctype/js_includes_legacy.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><script type="text/javascript" data-comment="navpage layout preferences, onfocus observation">/**
+	* Every window needs to observe these events.
+	*/
+	if (Prototype.Browser.IE && !isMSIE9) {
+		document.onfocusout = function() { CustomEvent.fireTop(GlideEvent.WINDOW_BLURRED, window); };
+		document.onfocusin = function() { CustomEvent.fireTop(GlideEvent.WINDOW_FOCUSED, window); };
+	} else {
+		Event.observe(window, 'blur', function() { CustomEvent.fireTop(GlideEvent.WINDOW_BLURRED, window); });
+		Event.observe(window, 'focus', function() { CustomEvent.fireTop(GlideEvent.WINDOW_FOCUSED, window); });
+	}</script><script type="text/javascript">g_swLoadTime = new StopWatch(g_loadTime);
+
+    if (window.CustomEvent){
+        CustomEvent.fireAll("ck_updated", "c96460aaddb59600df5b8416cce83153281beabb5bdb69f7b4b8afb63b6ab4a6b7502efd");
+	    CustomEvent.fireTop("navigation.complete", window);
+	}
+
+    addLoadEvent( function() {
+      if (typeof g_ck != 'undefined') {
+        CustomEvent.observe("ck_updated", function(ck) { g_ck = ck; });
+        CustomEvent.fireAll("ck_updated", "c96460aaddb59600df5b8416cce83153281beabb5bdb69f7b4b8afb63b6ab4a6b7502efd");CustomEvent.fireTop('user.impersonation', '');}try {
+              var helpico=getTopWindow().document.getElementById("help_ico");
+              if (helpico) {
+                var urlname=window.location.pathname.split("?");
+                var search_str = window.location.search;
+                
+                // if this is a form, extract the record's sys_id...
+                var sys_id_loc = search_str.search(/sys_id=[0-9a-f]{32}/i);
+                var sys_id_str = (sys_id_loc != -1) ? search_str.substr(sys_id_loc, 39) : null;
+                
+                // make the URL to our context help processor...
+                var url_search = "?sysparm_url=" + urlname[0];
+                if (sys_id_loc != -1)
+                   url_search += "&" + sys_id_str;
+                helpico.href="context_help.do" + url_search;
+              }
+            } catch (exception) {}synchCache();
+      pageLoaded();
+    });
+    
+    function synchCache() {
+      try {
+        var w = getTopWindow();
+        if (w.g_cache_message)
+          w.g_cache_message.stamp("785f763dddbd5600df5b8416cce83174");
+  
+        if (w.g_cache_td)
+          w.g_cache_td.stamp("14cd381eddf19600df5b8416cce831c9");
+      } catch(e) {}
+    }</script><link type="text/css" href="f5f40d756fdf7100a54fa981be3ee4b2.cssdbx?v=2015-09-18 18:37:22" rel="stylesheet"><link type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"><link type="text/css" rel="stylesheet" href="1d66730b6f3d7100a54fa981be3ee4bd.cssdbx?v=2015-01-28 22:46:14"><link type="text/css" rel="stylesheet" href="/cf_stylesheet.do?name=harvard_pegasus"><!--googleoff: all--><noscript>This site requires JavaScript to be enabled</noscript> <!--googleon: all--></head><body onclick="CustomEvent.fireAll('body_clicked', event);" class="chrome       non_standard_lists" ontouchend="CustomEvent.fireAll('body_clicked', event);" data-formname="view_content"><script type="text/javascript" src="/scripts/js_includes_catalog.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><link type="text/css" href="/styles/js_includes_catalog.cssx?v=11-30-2015_1511" rel="stylesheet"><script type="text/javascript" src="/scripts/GlideV2ChartingIncludes.jsx?v=11-30-2015_1511"></script><script type="text/javascript" src="/scripts/text_search.jsx?v=11-30-2015_1511"></script><script type="text/javascript" src="/scripts/cms_utils.jsx?v=11-30-2015_1511"></script><script type="text/javascript" src="/scripts/framebuster.jsx?v=11-30-2015_1511"></script><script type="text/javascript" src="/jquery.min.1.10.jsdbx?v=11-30-2015_1511"></script><script type="text/javascript" src="/bootstrap.min.3.1.jsdbx?v=11-30-2015_1511"></script><div class="cf_site_container cf_main_style"><div class="cf_header_container cf_header_style"><div id="dropzone0" class="cf_header" dropzone="true"><span style="display: none;">IE BUMPER</span>
+
+
+
+  <div class="cf_cms_login">
+<!-- UI comment - altering the height value of the class "cms_header_login" (harvard_pegasus) to allow the correct margin equal to the height of the shield, see bottom of page http://guidelines.hwp.harvard.edu/harvard-university-signature -->
+<style>
+.cms_header_login {
+	height: 90px; /*changing height from 45px to 90px to correct the margin equal to the height of the shield*/
+	margin: 0px auto 0px 66px; /*changing margin-right value to vertically align with the "Home" link below*/
+}
+</style>
+    
+		<div class="cms_header_login">
+			
+				
+				
+				
+				
+
+<!-- UI comment - altering the height value of the class "cms_header_login" (harvard_pegasus) to allow the correct margin equal to the height of the shield, see bottom of page http://guidelines.hwp.harvard.edu/harvard-university-signature -->
+<style>
+span.site_title_text {
+	float:left;
+	margin-left:253px; /*changing this value to allow a margin from the logo equivalent to the height of the shield*/
+    margin-top:17px; /*changing this value for alignment with logo type*/
+    font-size:16px; /*changing this value to match with the font size of the logo*/
+    font-family: 'Merriweather', Georgia, serif !important;
+    letter-spacing: 3px; /*adding letter-spacing for emphasis*/
+	color:#e9e9e9; /*toning down the white to match the logo font color*/
+}
+</style>
+<span class="site_title_text">IT SELF-SERVICE</span>
+<!-- UI comment - aligning the form with the header elements (harvard_pegasus) -->
+<style>
+form {
+    margin-top: 18px; /*changing this value to align this type with the one of "IT SELF-SERVICE"*/
+    border: none;
+}
+</style>
+					<form action="../logout.do" name="logoutPage"><input name="sysparm_ck" id="sysparm_ck" type="hidden" value="c96460aaddb59600df5b8416cce83153281beabb5bdb69f7b4b8afb63b6ab4a6b7502efd">
+						
+						
+						<input type="hidden" value="logout_redirect.do?sysparm_url=selfservice/" name="sysparm_goto_url">
+						<a class="cms_header_login_link" href="profile.do">Vittorio Bucchieri</a> | <a class="cms_header_login_link" onclick="logoutPage.submit()">Logout</a></form></div></div><span style="display: none;">IE BUMPER</span>
+
+   
+      
+      
+      
+         
+
+   
+   
+
+   <div id="cms_header" style="" class="cms_header">
+      <table cellpadding="0" class="cms_header_table" border="0" cellspacing="0" width="100%">
+      
+      
+	  	
+		<tbody><tr class="cms_header_top_menu_row">
+			<td class="cms_header_top_menu">
+			
+				
+					<div class="cms_header_search"></div>
+
+                
+				
+				
+					
+					
+						   <div class="cms_header_login"></div>
+			
+				
+				<div class="cms_header_top_menu"></div></td></tr>
+	 
+		   
+		
+		<tr class="cms_header_bottom_menu_row">
+			 <td class="cms_header_bottom_menu" colspan="3">
+			   
+     
+     
+        
+
+     
+        
+           
+   
+   
+
+   
+      <div id="menu_3c66730b6f3d7100a54fa981be3ee4b6" class="cms_menu_super_menu_bar" onmouseout="leftSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6')" onmouseover="enterSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6')">
+         
+         
+            
+               
+               <div id="tab_3c66730b6f3d7100a54fa981be3ee4b6_1" class="cms_menu_super_menu_bar_item" onmouseover="showSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6','1')">
+                  	
+                  
+   
+   
+     
+
+   
+   
+      
+         
+      
+      
+
+   
+      
+      
+      
+         
+                  
+                     
+                     
+                        <span class="menu_section"><a target="" href="http://huit.harvard.edu/new-huit-homepage-test-160112">Home</a></span></div>
+            
+               
+               <div id="tab_3c66730b6f3d7100a54fa981be3ee4b6_2" class="cms_menu_super_menu_bar_item" onmouseover="showSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6','2')">
+                  	
+                  
+   
+   
+     
+
+   
+   
+      
+      
+      	 
+      
+
+   
+      
+      
+      
+         
+                  
+                     
+                     
+                        <span class="menu_section"><a target="" href="../selfservice/catalog_home.do">Submit a Request</a></span></div>
+            
+               
+               <div id="tab_3c66730b6f3d7100a54fa981be3ee4b6_3" class="cms_menu_super_menu_bar_item" onmouseover="showSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6','3')">
+                  	
+                  
+   
+   
+     
+
+   
+   
+      
+      
+      	 
+      
+
+   
+      
+      
+      
+         
+                  
+                     
+                     
+                        <span class="menu_section"><a target="" href="../selfservice/kb_find.do">Find a Solution</a></span></div>
+            
+               
+               <div id="tab_3c66730b6f3d7100a54fa981be3ee4b6_4" class="cms_menu_super_menu_bar_item" onmouseover="showSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6','4')">
+                  	
+                  
+   
+   
+     
+
+   
+   
+      
+         
+      
+      
+
+   
+      
+      
+      
+         
+                  
+                     
+                     
+                        <span class="menu_section"><a target="" href="form.do?sysparm_document_key=sc_cat_item_producer,3f1dd0320a0a0b99000a53f7604a2ef9">Report an Issue</a></span></div>
+            
+               
+               <div id="tab_3c66730b6f3d7100a54fa981be3ee4b6_5" class="cms_menu_super_menu_bar_item" onmouseover="showSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6','5')">
+                  	
+                  
+   
+   
+     
+
+   
+   
+      
+      
+      	 
+      
+
+   
+      
+      
+      
+         
+                  
+                     
+                     
+                        <span class="menu_section"><a target="" href="../selfservice/my_tech.do">My Tickets</a></span></div>
+            
+               
+               <div id="tab_3c66730b6f3d7100a54fa981be3ee4b6_6" class="cms_menu_super_menu_bar_item" onmouseover="showSuperMenuBlock('3c66730b6f3d7100a54fa981be3ee4b6','6')">
+                  	
+                  
+   
+   
+     
+
+   
+   
+      
+         
+      
+      
+
+   
+      
+         
+      
+      
+                  
+                     
+                     
+                        <span class="menu_section"><a target="_blank" href="http://status.huit.harvard.edu/">Service Dashboard</a></span></div></div>
+      <div style="clear:both;"></div> 
+
+      
+      
+      
+      
+      
+         <div style="position:static"></div>
+      <div style="clear:both;"></div> 
+      <script>
+         var superMenuBlocks = new Array();
+         var superMenuBlocksShowing = new Array();
+         function showSuperMenuBlock(menuID, sectionID) {
+            if (superMenuBlocksShowing[menuID] != null)
+               hideSuperMenuBlock(menuID, true);
+            var id = menuID + "_" + sectionID;
+            var div = $("content_" + id);
+            superMenuBlocks[menuID] = "keep";
+            superMenuBlocksShowing[menuID] = sectionID;
+            var tab = gel("tab_" + id);
+            if (div) { // menu sections that are just links won't have a div
+               var align = div.getAttribute("alignWithTab");
+               if (align == "true") {
+                  var tabX = grabOffsetLeft(tab);
+                  div.style.left = tabX + "px";
+               }
+               showObject(div);
+            }
+            tab.className = "cms_menu_super_menu_bar_item_selected";
+            setTimeout("hideSuperMenuBlock('" + menuID + "')", 650);
+         }
+         function leftSuperMenuBlock(menuID) {
+            superMenuBlocks[menuID] = "keep";
+            superMenuBlocks[menuID] = "discard";
+            setTimeout("hideSuperMenuBlock('" + menuID + "')", 650);
+         }
+         function enterSuperMenuBlock(menuID, sectionID) {
+            superMenuBlocks[menuID] = "keep";
+         }
+         function hideSuperMenuBlock(menuID, override) {
+            if (typeof override == "undefined")
+               override = false;
+            if (override || superMenuBlocks[menuID] != "keep") {
+               superMenuBlocks[menuID] = "gone";
+               var showingID = superMenuBlocksShowing[menuID];
+               if (showingID == null)
+                  return;
+
+               var id = menuID + "_" + showingID;
+               var div = $("content_" + id);
+               superMenuBlocksShowing[menuID] = null;
+               if (div) { // menu sections that are just links won't have a div
+                  if (override)
+                     hideObject(div);
+                  else
+                     div.fadeOut("slow");
+               }
+               var tab = gel("tab_" + id);
+               tab.className = "cms_menu_super_menu_bar_item";
+            }
+         }
+      </script></td></tr></tbody></table></div><span style="display: none;">IE BUMPER</span>
+
+
+<div class="cf_subheader_background">
+    
+
+
+	
+<div class="cf_content_subheader">
+	<div class="cf_content_subheader_inner">
+		Service Catalog
+	</div></div></div></div><div id="dropzone1" class="cf_subheader" dropzone="true"></div></div><div id="dropzone15" class="cf_wide_body" dropzone="true"></div><div class="cf_layout_outer_container"><div id="dropzone10" class="cf_top_body" dropzone="true"></div><div class="cf_layout_container_2_column"><div id="dropzone101" class="cf_body_main" dropzone="true"><span style="display: none;">IE BUMPER</span>
+   <div class="cf_frame_list">
+       
+
+
+
+
+
+
+
+
+
+<script>
+	var catalog_timer_cf_sysparm_search;
+	var elm_cf_sysparm_search;
+	function cf_initialize_quick_search_cf_sysparm_search(){
+		elm_cf_sysparm_search = gel('cf_sysparm_search');
+		Event.observe(elm_cf_sysparm_search, 'keyup', function(event) {
+			// Check for invalid search strings
+			var searchStr = this.value;
+			searchStr = searchStr.trim();
+			if (searchStr!='' && searchStr!='%' && searchStr!='%%' && searchStr!='*' && searchStr!='**')  {
+				var waiter = '<div class="cf_center"><img src="loading_spinner.gifx"></img></div>';
+				catalog_displayResults_cf_sysparm_search(waiter);
+				clearTimeout(catalog_timer_cf_sysparm_search);
+				catalog_timer_cf_sysparm_search = setTimeout(function(){
+					cf_catalog_search_cf_sysparm_search(searchStr);
+					}, 400);
+			} else {
+				catalog_displayResults_cf_sysparm_search('');  
+			}
+		});
+	}
+	setTimeout(cf_initialize_quick_search_cf_sysparm_search, 300);
+	
+	/**
+	* Search function that sends the request off to the server
+	**/
+	function cf_catalog_search_cf_sysparm_search(query) {
+		catalog_debug_cf_sysparm_search('cf_catalog_search_cf_sysparm_search called: ' + query);
+		var ga = new GlideAjax('CrossfuzeSearch');
+		ga.addParam('sysparm_name', 'search');
+		ga.addParam('sysparm_search_query', query);
+		ga.addParam('sysparm_scope', 'catalog');
+		ga.getXMLAnswer(catalog_displayResults_cf_sysparm_search);
+		catalog_debug_cf_sysparm_search('Sent ajax request');
+		
+	}
+	
+	/**
+	* Display search results from the server
+	**/
+	function catalog_displayResults_cf_sysparm_search(answer){
+		catalog_debug_cf_sysparm_search('response received');
+		//$('dynamic_search_box_label').style.display = 'block';
+		if(elm_cf_sysparm_search.value != ""){
+			$('catalog_dynamic_search_results').innerHTML = answer;
+		} else {
+			$('catalog_dynamic_search_results').innerHTML = '';
+		}
+	}
+
+	/**
+	* Allows display search debug info on the page for the javascript here
+	**/
+	var catalog_logger_cf_sysparm_search = 1;
+	function catalog_debug_cf_sysparm_search(txt){
+		if(false){
+			var debug_div = gel('catalog_dynamic_search_debug');
+			debug_div.innerHTML += catalog_logger_cf_sysparm_search++ + ' - ' + txt + '<br></br>';
+		}
+	}
+</script>
+
+	<div id="catalog_dynamic_search_results"></div>
+	<div id="catalog_dynamic_search_debug"></div>
+   </div><span style="display: none;">IE BUMPER</span>
+   <div class="cf_border_radius">
+         
+    <div class="cf_content_list_container">
+	
+	<div class="cf_category_container">
+	    
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,e15706fc0a0a0aa7007fc21e1ab70c2f">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="f0dc65106f59da40a54fa981be3ee455.iix">
+		<h1>Get Help</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,39b49f1d6fc73100a54fa981be3ee438">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="dc09676d6f9f7100a54fa981be3ee498.iix">
+		<h1>Computers &amp; Software</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,d2c49f1d6fc73100a54fa981be3ee442">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="b349a76d6f9f7100a54fa981be3ee42c.iix">
+		<h1>Email &amp; Calendars</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,22e49f1d6fc73100a54fa981be3ee46f">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="995ea7fcddfd1600df5b8416cce83183.iix">
+		<h1>Phones &amp; Mobile</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,885720416fb11200a54fa981be3ee4f7">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="eeeee4c16fb11200a54fa981be3ee451.iix">
+		<h1>HarvardKey</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,948930f16f4b3100a54fa981be3ee44a">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="4e70b8656f484600a54fa981be3ee474.iix">
+		<h1>my.harvard</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,f4949f1d6fc73100a54fa981be3ee422">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="4828276d6f9f7100a54fa981be3ee434.iix">
+		<h1>Teaching &amp; Learning Technology</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,fc08644f6f280100a54fa981be3ee4c6">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="f1cb24656f484600a54fa981be3ee44f.iix">
+		<h1>IT Service Management</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,5ba493d96fc73100a54fa981be3ee464">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="7648276d6f9f7100a54fa981be3ee4cf.iix">
+		<h1>Chat, Video &amp; Collaboration</h1></div></a>
+	        
+
+
+
+	
+	
+	
+
+	
+	
+	
+<a href="../selfservice/category.do?sysparm_document_key=sc_category,67146afe05520600245ffd95d4dbde00">
+	<div class="cf_category_block_solid">	
+		
+			
+				<img src="60aeebbcddfd1600df5b8416cce831b9.iix">
+		<h1>HUIT Administration</h1></div></a>
+	    <div class="clearfix"></div></div></div>
+   </div></div><div id="dropzone100" class="cf_body_left" dropzone="true"><span style="display: none;">IE BUMPER</span>
+   <div class="cf_border_radius">
+       
+
+
+
+
+
+
+
+
+
+
+<div id="cf_search_widget" class="cf_search_widget">
+  <form id="kb_search" action="/harvard_pegasus/kb_find.do" method="get" name="kb_search">
+    <label id="cf_search_label" class="cf_search_label" style="display:none;" for="cf_sysparm_search">Search</label>
+    <div style="display:table;" id="cf_search_div" class="input-group cf_search_div">
+      <input id="cf_sysparm_search" title="Search" alt="Search" placeholder="Search" name="sysparm_search" value="" class="form-control cf_search_box" autocomplete="off" function="$('kb_search').submit()">
+      <a onclick="$('kb_search').submit()" class="input-group-addon search_icon" title="Search" alt="Search">
+        <i class="fa fa-search fa-2x"></i></a></div></form></div>
+   </div><span style="display: none;">IE BUMPER</span>
+   <div class="cf_frame_list cf_frame_list_complimentary">
+       
+
+
+
+
+
+
+
+<h1>Top Requests</h1>
+<ul>
+	
+		
+		
+			
+			
+			
+			
+				
+		
+		
+			
+			
+			
+				<li>
+					<a href="form.do?sysparm_document_key=sc_cat_item,2b40dd05d5b11100245f7c2a099c8508">Network Request</a></li>
+			
+		
+		
+			
+			
+			
+				<li>
+					<a href="form.do?sysparm_document_key=sc_cat_item,18f62bec6f4f9500a54fa981be3ee4a0">Standard Server Request</a></li>
+			
+		
+		
+			
+			
+			
+				<li>
+					<a href="form.do?sysparm_document_key=sc_cat_item,072a4cc36fc31900a54fa981be3ee4c1">Custom Server Request</a></li>
+			
+		
+		
+			
+			
+			
+			
+				
+		
+		
+			
+			
+			
+				<li>
+					<a href="form.do?sysparm_document_key=sc_cat_item,78c81c546fc4f100a54fa981be3ee443">Proxy Access</a></li>
+			
+		
+		
+			
+			
+			
+				<li>
+					<a href="form.do?sysparm_document_key=sc_cat_item,cef1cc596ff70100a54fa981be3ee4e1">Wireless Deployment</a></li>
+			</ul>
+   </div></div><div class="clearfix"></div></div></div><div class="cf_footer_container cf_footer_style"><div id="dropzone1000" class="cf_footer" dropzone="true"><span style="display: none;">IE BUMPER</span>
+
+
+
+
+<div style="background-color:#f3f3f1;background-image:url('footer-top-gradient.pngx');background-repeat:repeat-x;" class="blocks_wrapper">
+  <div class="blocks_inner_wrapper">
+    
+<div style="width:50%;float: left;" id="_1" class="block_wrapper">  
+  <div style="padding:10px 10px; color:#293352;" class="1z_1">
+    <p><span style="color: #1e1e1e;"><img title="" height="60" hspace="" style="align: baseline;" width="278" align="bottom" src="/huit_logo.pngx" border="" vspace=""></span></p>
+<p style="padding-left: 60px;"><span style="color: #1e1e1e;">Service Desk: 617 495-7777</span></p>
+<p style="padding-left: 60px;"><a href="mailto:ithelp@harvard.edu"><span style="color: #4e84c4;">ithelp@harvard.edu</span></a></p></div></div>
+<div style="width:50%;float: left;" id="_2" class="block_wrapper">  
+  <div style="padding:5px 10px;" class="1z_1">
+    
+<p><span style="color: #4e84c4;"><a href="http://huit.harvard.edu/pages/feedback"><span style="color: #4e84c4;">Site Feedback</span></a></span><a href="http://huit.harvard.edu/%23"><br><br></a><span style="color: #4e84c4;"><a href="http://huit.harvard.edu/information-technology-policies"><span style="color: #4e84c4;">IT Policies</span></a></span><br><br><span style="color: #4e84c4;"><a href="http://huit.harvard.edu/hours"><span style="color: #4e84c4;">Contact, Hours, and Support Locations</span></a></span><br><br><span style="color: #4e84c4;"><a href="http://huit.harvard.edu/pages/jobs-huit"><span style="color: #4e84c4;">Employment</span></a></span><a href="http://huit.harvard.edu/huit-privacy-policy"></a></p></div></div>
+ 
+    <div class="clearfix"></div></div></div><span style="display: none;">IE BUMPER</span><p style="text-align: center;"><span class="harvard-copyright">Copyright © 2016 The President and Fellows of Harvard College</span> | <a href="http://huit.harvard.edu/huit-privacy-policy">Privacy</a> | <a href="http://accessibility.harvard.edu/">Accessibility</a>&nbsp;| <a href="http://www.harvard.edu/reporting-copyright-infringements">Report Copyright Infringement</a></p></div></div></div><xml id="cms_type_map"><content_type page="" type="incident"></content_type><content_type page="" type="sc_cat_item"></content_type><content_type page="" type="kb_knowledge"></content_type><content_type page="" type="u_m2m_rel_kb"></content_type><content_type page="" type="u_m2m_kb_cat_item"></content_type><content_type page="" type="task"></content_type><content_type page="" type="sc_cat_item_content"></content_type><content_type page="" type="sysapproval_approver"></content_type><content_type page="" type="sc_category"></content_type><content_type page="" type="content_link"></content_type><content_type page="" type="sc_req_item"></content_type><content_type type="SITE_DEFAULT" page="detail_list"></content_type><content_type type="DEFAULT" page=""></content_type></xml><div style="border:none; visibility:hidden"><form action="slushbucket.do" method="GET" style="display:inline" name="sys_personalize"><input name="sysparm_ck" id="sysparm_ck" type="hidden" value="c96460aaddb59600df5b8416cce83153281beabb5bdb69f7b4b8afb63b6ab4a6b7502efd"><input type="hidden" value="view_content.do" name="sysparm_referring_url"><input type="hidden" value="" name="sysparm_view"></form></div><script>(function() {
+        addLateLoadEvent(throwFrameLoaded);
+        // find if padding is needed
+        var pad = (isMSIE6 || isMSIE7 || navigator.userAgent.indexOf('MSIE 8') != -1) ? 1 : 0;
+
+        function throwFrameLoaded() { 
+            try {
+                if (window.parent.CustomEvent) {
+                    // history suggests that if we don't size it down on page load,
+                    // when we check the height it will show the previous page's height
+                    window.parent.CustomEvent.fire('content_frame.loaded', self.name, 10);
+                    window.parent.CustomEvent.fire('content_frame.loaded', self.name, getPageHeight()); 
+                }
+            } catch (e) {}
+
+        }
+
+        function throwFrameSized() { 
+            try {
+                if (window.parent.CustomEvent) {
+                    // IE9/IE10: resize events will be continuously triggered when there is a difference between document.body.scrollHeight and window.frameElement.height
+                    // to solve this issue, we do not fire event if the height we are going to set is the same as the height obtained after the previous fired event
+                    var previousHeight = window["g_iframe_height"];
+                    var pageHeight = getPageHeight();
+                    if (previousHeight != pageHeight) {
+                        window.parent.CustomEvent.fire('content_frame.resized', self.name, pageHeight);
+                        // IE9/IE10: page height may be changed again after the above firing. So we have to call getPageHeight() to get the new height after the above event has been fired.
+                        window["g_iframe_height"] = getPageHeight();
+                    }
+                }
+            } catch (e) {}
+        }
+		function throwFrameSizedSmaller(){
+            try {
+                if (window.parent.CustomEvent) {
+                    window.parent.CustomEvent.fire('content_frame.loaded', self.name, getPageHeight(true)); 
+                }
+            } catch (e) {}
+        }
+
+        /**
+         *  Simply speaking, scrollHeight and offsetHeight work differently on different browsers
+         *  and in and out of quirks mode. IE9 has bugs that do not report them correctly even if
+         *  you pick the right one, so we've built some extra controls.
+         */
+        function getPageHeight(resizeSmall) {
+            var popupElement, popupHeight;
+            // first, look for popups
+			var popups = $$('body > div.popup, .modal.in > .modal-dialog');
+            if (popups.length > 0) {
+                popupElement = popups[0];
+                popupHeight = popupElement.scrollHeight + popupElement.offsetTop;
+                //padding is needed or else the bottom border of the popup will be missing
+                return (document.body.scrollHeight > popupHeight ? document.body.scrollHeight : popupHeight) + pad;
+            }
+
+            // then, look for form elements
+            // use more specific selector to reduce browser response time
+            if ($$('body > div.section_header_content_no_scroll').length > 0)
+                return $$('body > div.section_header_content_no_scroll')[0].scrollHeight;
+
+            // then, look for touch scroll elements *CALGARY and forward*
+            if ($$('body > .touch_scroll').length > 0)
+                return $$('body > .touch_scroll')[0].scrollHeight; 
+
+            // then, get the normal page height
+            if (document.body.scrollHeight || document.documentElement.scrollHeight) {
+				if (!resizeSmall){
+					if(document.body.scrollHeight > document.documentElement.scrollHeight)
+					   return document.body.scrollHeight;
+					else
+					   return document.documentElement.scrollHeight;
+				}
+				else{
+					if(document.documentElement.scrollHeight > document.body.scrollHeight)
+						return document.body.scrollHeight;
+					else
+						return document.documentElement.scrollHeight;
+				}
+            }
+            return document.body.offsetHeight;
+        }
+
+        // start observing only after page has been loaded to avoid handling large number of resize events especially on IE 7 and IE 8
+        addAfterPageLoadedEvent(function() {
+            CustomEvent.observe('frame.resized', throwFrameSized);
+			CustomEvent.observe('frame.resized.smaller', throwFrameSizedSmaller);
+            CustomEvent.observe('partial.page.reload', throwFrameLoaded); // specifically, reports and lists that cause the page to shrink
+            Event.observe(document.onresize ? document : window, "resize", throwFrameSized);
+            _frameChanged();
+        });
+    })();</script><span style="display:none" data-comments="contributions"></span><span style="display:none" data-comments="js_includes_last_doctype"></span><script>NOW.xperf.lastDoctypeBegin = NOW.xperf.now();</script><script type="text/javascript" src="/scripts/doctype/js_includes_last_doctype.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><script type="text/javascript" src="/scripts/js_includes_list_edit_doctype.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><span style="display:none" data-comments="requires"></span><script type="text/javascript" src="/scripts/js_includes_listv2.jsx?v=11-30-2015_1511&amp;lp=Tue_Nov_24_19_59_03_PST_2015&amp;c=12_164"></script><script>NOW.xperf.lastDoctypeEnd = NOW.xperf.now();</script><span style="display:none" data-comments="db_context_menu_script"></span><script>NOW.xperf.dbContextBegin = NOW.xperf.now();</script><script>NOW.xperf.dbContextEnd = NOW.xperf.now();</script><span style="display:none" data-comments="db_context_menu_script"></span><script id="glide:page_timing_div" type="application/xml"><i style="padding:5px 5px;" class="pointerhand icon-stop-watch btn-lg" title="Response time(ms): #{RESP}, Network: #{NETW}, server: #{SERV}, browser: #{REND}"></i><span style="display:none" class="timing_span">
+		  Response time(ms): #{RESP}, Network: #{NETW}, server: #{SERV},&nbsp;<a class="timing_span">browser: #{REND}</a><span style="position:relative; width: 1px;">&nbsp;<span style="position:absolute; bottom:0px; right:0px"><span id="page_timing_details"></span><a><div>&nbsp;</div></a></span></span><span class="timing_graph"><span class="timing_network" title="Network #{NETW}ms"></span><span class="timing_server" title="Server #{SERV}ms"></span><span class="timing_browser" title="Browser #{REND}ms"></span></span></span></script><script id="glide:page_timing_details" type="application/xml"><div class="timing_details">#{details}</div></script><script id="glide:page_timing_detail_line" type="application/xml"><div data-children="#{child_count}" class="timing_detail_line #{has_children}">#{HTML:name}: #{ms}
+         #{children}</div></script><script id="glide:page_timing_child_line" type="application/xml"><div class="timing_detail_line timing_detail_line_child">#{HTML:name}: #{ms}</div></script><script type="text/javascript">var g_serverTime = parseInt("512") + parseInt("0");
+            var g_logClientViewRoles = "";
+
+			// do not do this for the navigation menu
+            if (window.name != 'gsft_nav') {
+				 addAfterPageLoadedEvent(function() {
+					 if (window.performance)
+						setTimeGraph();
+					 else 
+						firePageTimer();
+				 });
+			 }
+			 
+			function setTimeGraph() {
+				if (window.performance.timing.loadEventEnd > 0)
+			 		firePageTimer();
+			 	else 
+			 		setTimeout(setTimeGraph, 300);
+			 }
+			 
+			function firePageTimer() {
+				 if (window.performance) {
+				 	var p = performance.timing; // it's just a shortcut Chris
+				 	CustomEvent.fire('page_timing', { name: 'SERV', ms: (p.responseEnd - p.requestStart)});
+				 	CustomEvent.fire('page_timing', { name: 'REND', ms: (p.loadEventEnd - p.responseEnd) });
+				 	CustomEvent.fire('page_timing_network', { name: 'NETW', ms: (p.responseEnd - p.navigationStart) });
+				 } else {
+				    CustomEvent.fire('page_timing', { name: 'SERV', ms: g_serverTime });
+					CustomEvent.fire('page_timing', { name: 'REND', startTime: g_loadTime });
+					CustomEvent.fire('page_timing_network', { name: 'NETW', loadTime: g_loadTime });
+				 }
+			 
+			 	CustomEvent.fire('page_timing_show', { show: 'false' });var o = {};
+	      o.types = {};
+	
+	      o.transaction_id = 'c59964aaddb59600df5b8416cce8315e';
+	      o.table_name = '';
+	      o.form_name = 'view_content';
+	      o.view_id = 'Default view';
+	      o.win = window;
+	      CustomEvent.fire('page_timing_client', o);
+	   }
+			 
+            // The following line is used to set the time when we start requesting a new page
+            Event.observe(window, 'beforeunload', function() {
+				new CookieJar().put('g_startTime', new Date().getTime());
+                CustomEvent.fireTop('request_start', document);
+            });
+
+            // simple pages fire this (stats.do, etc.)
+            CustomEvent.observe('simple_page.unload', function() {
+				new CookieJar().put('g_startTime', new Date().getTime());
+            }); 
+
+            // indicate we have completed the request (used by RequestManager.js for cancel widget)
+            addLoadEvent(function() {
+               CustomEvent.fireTop("request_complete", window.location);
+            });</script><script src="scripts/doctype/z_last_include.js"></script><script type="text/html" id="popup_template"><div style="" class="popup popup_form"><iframe style="" src="$src"></iframe></div></script><div id="page_timing_div" class="timingDiv"><i style="padding:5px 5px;" class="pointerhand icon-stop-watch btn-lg" title="Response time(ms): 1148, Network: 10, server: 588, browser: 550"></i><span style="display:none" class="timing_span">
+		  Response time(ms): 1148, Network: 10, server: 588,&nbsp;<a class="timing_span">browser: 550</a><span style="position:relative; width: 1px;">&nbsp;<span style="position:absolute; bottom:0px; right:0px"><span id="page_timing_details"></span><a><div>&nbsp;</div></a></span></span><span class="timing_graph"><span class="timing_network" title="Network 10ms" style="width: 1%;"></span><span class="timing_server" title="Server 588ms" style="width: 51%;"></span><span class="timing_browser" title="Browser 550ms" style="width: 48%;"></span></span></span></div></body></html>
