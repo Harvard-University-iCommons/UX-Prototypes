@@ -90,6 +90,10 @@
             <!-- <li class="active"><a href="#Overview">Overview <span class="sr-only">(current)</span></a></li> -->
             <li><a href="#Overview">Overview</a></li>
             <li><a href="#Familiar">Familiar Conventions and Patterns</a></li>
+            <li><a href="#FamiliarBrandingBreadcrumbs" style="padding-left: 3em; margin-top: -1em;">Branding and breadcrumbs</a></li>
+            <li><a href="#FamiliarLabelsLinksButtons" style="padding-left: 3em; margin-top: -1em;">Labels, links and buttons</a></li>
+            <li><a href="#FamiliarFunctions" style="padding-left: 3em; margin-top: -1em;">Functions</a></li>
+
             <li><a href="#EmployeeSelfService">Employee Self Service</a></li>
             <li><a href="#EmployeeSelfServiceFlow" style="padding-left: 3em; margin-top: -1em;">User flow</a></li>
             <li><a href="#EmployeeSelfServiceUI" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
@@ -125,7 +129,7 @@
             <h2 class="sub-header" id="Familiar" style="padding-top: 2.5em">Familiar Conventions and Patterns</h2>
           </div>
 
-          <div class="col-sm-12">
+          <div class="col-sm-12" id="FamiliarBrandingBreadcrumbs">
             Here are conventions that could be made familiar and therefore intuitive. 
           </div>
 
@@ -137,15 +141,21 @@
             <img src="convention_breadcrumbs_current.png" width="100%">
             <p class="text-muted">Current</p>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6" id="FamiliarLabelsLinksButtons">
             <img src="convention_breadcrumbs_proposed.png" width="100%">
             <p class="text-muted">Proposed layout with branding</p>
           </div>
 
           <div class="col-sm-12">
             <hr>
-            <h3>Links and buttons</h3>
+            <h3>Labels, links and buttons</h3>
           </div>
+
+          <div class="col-sm-12">
+            <br>
+            <h4>Avoid to use only icons. Make the function of buttons clear with text labels.</h4>
+          </div>
+
           <div class="col-sm-6">
             <img src="convention_buttons_current.png" width="100%">
             <p class="text-muted">Current buttons and links</p>
@@ -154,9 +164,17 @@
             <img src="convention_buttons_proposed.png" width="100%">
             <p class="text-muted">Proposed consistent buttons with clear labels and icons</p>
           </div>
+
           <div class="col-sm-12">
-            <p>&nbsp;</p>
+            <br>
+            <h4>Use primary buttons to help users to distinguish primary from secondary activities.
+              <br>
+              Define the position of buttons (beginning or end of the flow) based on common conventions and ideal user flow.</h4>
+              <p>
+                Ideal user flow, or "happy path", is the favorable and most direct outcome the interface is designed to provide in order to accomplish a task. In this case, users are expected to (1) review the available information (i.e.: home phone number), (2) decide what to do with it (edit or delete), (3) decide on alternative actions (add more information or move on.)
+              </p>
           </div>
+
           <div class="col-sm-6">
             <img src="convention_buttons_current2.png" width="100%">
             <p class="text-muted">Current buttons</p>
@@ -164,7 +182,31 @@
           <div class="col-sm-6">
             <img src="convention_buttons_proposed2.png" width="100%">
             <p class="text-muted">Proposed consistent buttons with clear labels and primary buttons</p>
+          </div>
+
+          <div class="col-sm-12">
+            <hr>            
+              <p>
+                Use the same "happy path" criterion with buttons on other interfaces, such as modals.
+                <br>
+                Add text to form labels to clearly define this information (such as "Phone Number") and clearly distinguish a drop down menu from a text entry form.
+                <br>
+                Use input form <code>placeholder</code> to provide hints on the format to use for entering information correctly (and therefore avoiding error messages).
+                <br>
+                Vary the height of modals based on the information they contain, to avoid extra white space and possible user's assumtion that information may be missing.
+              </p>
+          </div>
+
+          <div class="col-sm-6">
+            <img src="convention_buttons_current3.png" width="100%">
+            <p class="text-muted">Current modal</p>
+          </div>
+          <div class="col-sm-6">
+            <img src="convention_buttons_proposed3.png" width="100%">
+            <p class="text-muted">Proposed modal with consistent button position and clear form labels</p>
           </div><!-- / Links and buttons -->
+
+          <div class="col-sm-12" id="FamiliarFunctions">&nbsp;<br></div>
 
           <div class="col-sm-12">
             <hr>
