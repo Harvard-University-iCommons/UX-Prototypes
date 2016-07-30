@@ -10,7 +10,7 @@
     <title>PeopleSoft User Experience Review / Academic Technology Services</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -52,12 +52,6 @@
       <div class="container-fluid">
 
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
 
           <a class="navbar-brand" style="margin-bottom:.45em">
             <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
@@ -84,29 +78,26 @@
 <!-- Left Nav -->
     <div class="container-fluid">
       <div class="row">
-
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <!-- <li class="active"><a href="#Overview">Overview <span class="sr-only">(current)</span></a></li> -->
+          <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu" style="margin-left:-2em">
             <li><a href="#Overview">Overview</a></li>
-            <li><a href="#Familiar">Familiar Conventions and Patterns</a></li>
-            <li><a href="#FamiliarBrandingBreadcrumbs" style="padding-left: 3em; margin-top: -1em;">Branding and breadcrumbs</a></li>
-            <li><a href="#FamiliarLabelsLinksButtons" style="padding-left: 3em; margin-top: -1em;">Labels, links and buttons</a></li>
-            <li><a href="#FamiliarFunctions" style="padding-left: 3em; margin-top: -1em;">Functions</a></li>
-            <li><a href="#Submenus" style="padding-left: 3em; margin-top: -1em;">Sub-menus</a></li>
-
-            <li><a href="#EmployeeSelfService">Employee Self Service</a></li>
-            <li><a href="#EmployeeSelfServiceFlow" style="padding-left: 3em; margin-top: -1em;">User flow</a></li>
-            <li><a href="#EmployeeSelfServiceUI" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
-
+            <li>
+              <a href="#Familiar" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Familiar Conventions and Patterns&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item1" style="height: 0px;">
+                <li><a href="#FamiliarBrandingBreadcrumbs" style="padding-left: 3em; margin-top: -1em;">Branding and breadcrumbs</a></li>
+                <li><a href="#FamiliarLabelsLinksButtons" style="padding-left: 3em; margin-top: -1em;">Labels, links and buttons</a></li>
+                <li><a href="#FamiliarFunctions" style="padding-left: 3em; margin-top: -1em;">Functions</a></li>
+                <li><a href="#Submenus" style="padding-left: 3em; margin-top: -1em;">Sub-menus</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#EmployeeSelfService" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Employee Self Service&nbsp;<span class="caret arrow"></span></a>          
+              <ul class="nav nav-pills nav-stacked collapse" id="item2" style="height: 0px;">
+                <li><a href="#EmployeeSelfServiceFlow" style="padding-left: 3em; margin-top: -1em;">User flow</a></li>
+                <li><a href="#EmployeeSelfServiceUI" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
+              </ul>
+            </li>
             <li><a href="#ViewPaychecks">View Paychecks</a></li>
-          </ul>
-          <ul class="nav nav-sidebar" hidden>
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
           </ul>
         </div><!-- / col-sm-3 col-md-2 sidebar -->
 
@@ -475,22 +466,22 @@
                 </div>
               </div>
             </div><!-- / View Paychecks -->
-
-
         </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
       </div><!-- / row -->
-    </div>
+    </div><!-- / container-fluid -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
-    <script src="bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="ie10-viewport-bug-workaround.js"></script>
+
+    
+
+<!-- Bootstrap script for collapse side nav - start
+================================================== -->
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap script for collapse side nav - end
+================================================== -->
   
 
 <div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1552</span> x <span class="tooltipHeight" id="winHeight">369</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1552</span> x <span class="tooltipHeight" id="vpHeight">369</span></div></body></html>
