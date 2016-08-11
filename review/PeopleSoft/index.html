@@ -75,21 +75,28 @@
             <li><a href="#Overview">Overview</a></li>
             <li>
               <a href="#Familiar" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Familiar Conventions and Patterns&nbsp;<span class="caret arrow"></span></a>
-              <ul class="nav nav-stacked left-submenu collapse" id="item1" style="height: 0px;">
-                <li><a href="#FamiliarBrandingBreadcrumbs" style="padding-left: 3em; margin-top: -1em;">Branding and breadcrumbs</a></li>
-                <li><a href="#FamiliarLabelsLinksButtons" style="padding-left: 3em; margin-top: -1em;">Labels, links and buttons</a></li>
-                <li><a href="#FamiliarFunctions" style="padding-left: 3em; margin-top: -1em;">Functions</a></li>
-                <li><a href="#Submenus" style="padding-left: 3em; margin-top: -1em;">Sub-menus</a></li>
+              <ul class="nav nav-stacked left-submenu collapse" id="item1" style="height: 0px; padding-left: 1.8em;">
+                <li><a href="#FamiliarBrandingBreadcrumbs" style="margin-top: -1em;">Branding and breadcrumbs</a></li>
+                <li><a href="#FamiliarLabelsLinksButtons" style="margin-top: -1em;">Labels, links and buttons</a></li>
+                <li><a href="#FamiliarFunctions" style="margin-top: -1em;">Functions</a></li>
+                <li><a href="#Submenus" style="argin-top: -1em;">Sub-menus</a></li>
               </ul>
             </li>
             <li>
               <a href="#EmployeeSelfService" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Employee Self Service&nbsp;<span class="caret arrow"></span></a>          
-              <ul class="nav nav-pills nav-stacked collapse" id="item2" style="height: 0px;">
-                <li><a href="#EmployeeSelfServiceFlow" style="padding-left: 3em; margin-top: -1em;">User flow</a></li>
-                <li><a href="#EmployeeSelfServiceUI" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
+              <ul class="nav nav-pills nav-stacked collapse" id="item2" style="height: 0px; height: 0px; padding-left: 1.8em;">
+                <li><a href="#EmployeeSelfServiceFlow" style="margin-top: -1em;">User flow</a></li>
+                <li><a href="#EmployeeSelfServiceUI" style="margin-top: -1em;">Specifications</a></li>
               </ul>
             </li>
-            <li><a href="#PersonalizeNavBar">Personalize NavBar</a></li>
+            <li>
+              <a data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">NavBar Menu&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item3" style="height: 0px; padding-left: 1.8em;">
+                <li><a href="#PersonalizeNavBar" style="margin-top: -1em;">Personalize NavBar</a></li>
+            <li><a href="#NavBarNavigator" style="margin-top: -1em;">NavBar Navigator</a></li>
+            <li><a href="#NavBarMyFavorites" style="margin-top: -1em;">My Favorites NavBar</a></li>
+          </ul>
+        </li>
             <li><a href="#ViewPaychecks">View Paychecks</a></li>
           </ul>
         </div><!-- / col-sm-3 col-md-2 sidebar -->
@@ -448,7 +455,7 @@
             <p>
               The same icons shall not be used to represent different functions such as the upper nav menu "hamburger" icon, and the Personalize NavBar verical sorting icon.
               <br>
-              A vertically sorting function would be better represented with the equivalent to the Bootstrap <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">glyphicon icon glyphicon-option-vertical</a>
+              A vertically sorting function would be better represented with the equivalent to the Bootstrap <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">glyphicon icon glyphicon-option-vertical</a>.
             </p>
           </div>
           
@@ -460,6 +467,52 @@
             <img src="PersonalizeNavBar_proposed.png" width="100%" class="border">
             <p class="text-muted">Proposed Personalize NavBar interface, with new buttons layout and vertically sorting icons</p>
           </div><!-- / Personalize NavBar -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="NavBarNavigator" style="padding-top: 2.5em">NavBar Navigator</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              The first link of the NavBar navigator refers to the Employee Self Service home page as Fluid Home. This term is inconsistent with the nomenclature of this website.
+            </p>
+            <p>
+              The list of links in the NavBar Navigator doesn't seem consistent with the links shown on th left hand side of the screen, the Employee Self Service home page. The reason for this inconsistency is not clear.
+            </p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="NavBarNavigator_current.png" width="100%" class="border">
+            <p class="text-muted">Current NavBar Navigator interface</p>
+          </div>
+          <div class="col-sm-6">
+            <img src="NavBarNavigator_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed NavBar Navigator interface with items that match the current Employee Self Service links</p>
+          </div><!-- / NavBar Navigator -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="NavBarMyFavorites" style="padding-top: 2.5em">NavBar My Favorites</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              The link to Edit Favorites shall look like all the other links since it represents the very same function to access other interfaces.
+            </p>
+            <p>
+              For consistency of terms, either use the name "My Favorites" or "Favorites." The consistency of this term shall be reflected also on the "Edit Favorites" page accessed by this link.
+            </p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="NavBarMyFavorites_current.png" width="100%" class="border">
+            <p class="text-muted">Current NavBar My Favorites interface</p>
+          </div>
+          <div class="col-sm-6">
+            <img src="NavBarMyFavorites_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed NavBar My Favorites interface without the icon next to the Edit Favorites link</p>
+          </div><!-- / NavBar My Favorites -->
 
           <div class="col-sm-12">
             <hr>
