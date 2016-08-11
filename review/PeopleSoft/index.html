@@ -42,6 +42,9 @@
       h1, h2{
         color: #A51C30;
       }
+      img.border { 
+        border:1px solid #eee;
+      }
     </style>
 
   </head>
@@ -86,6 +89,7 @@
                 <li><a href="#EmployeeSelfServiceUI" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
               </ul>
             </li>
+            <li><a href="#PersonalizeNavBar">Personalize NavBar</a></li>
             <li><a href="#ViewPaychecks">View Paychecks</a></li>
           </ul>
         </div><!-- / col-sm-3 col-md-2 sidebar -->
@@ -434,12 +438,37 @@
 
           <div class="col-sm-12">
             <hr>
+            <h2 class="page-header" id="PersonalizeNavBar" style="padding-top: 2.5em">Personalize NavBar</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Personalize NavBar should preserve common conventions and patterns, such as placing at the bottom of the interface the buttons that address the completion of the primary task.
+            </p>
+            <p>
+              The same icons shall not be used to represent different functions such as the upper nav menu "hamburger" icon, and the Personalize NavBar verical sorting icon.
+              <br>
+              A vertically sorting function would be better represented with the equivalent to the Bootstrap <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">glyphicon icon glyphicon-option-vertical</a>
+            </p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="PersonalizeNavBar_current.png" width="100%" class="border">
+            <p class="text-muted">Current Personalize NavBar interface</p>
+          </div>
+          <div class="col-sm-6">
+            <img src="PersonalizeNavBar_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed Personalize NavBar interface, with new buttons layout and vertically sorting icons</p>
+          </div><!-- / Personalize NavBar -->
+
+          <div class="col-sm-12">
+            <hr>
             <h2 class="page-header" id="ViewPaychecks" style="padding-top: 2.5em">View Paychecks</h2>
           </div>
 
           <div class="col-sm-12">
             <p>
-              The Harvard logo should remain on all pages. The link back to the home page could be shown as a breadcrumb link, next to the page title.</a>
+              The Harvard logo should remain on all pages. The link back to the home page could be shown as a breadcrumb link, next to the page title.
             </p>
             <p>
               The user name and job title could be on the same line, to save on vertical space, and they should also be also emphasized, to allow users to validate critical identity information.
@@ -479,27 +508,30 @@
             </ol>
           </div><code></code>
             
-            <div class="container col-sm-9">
-              <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home2">Annotations on</a></li>
-                <li><a data-toggle="tab" href="#menu3">Annotations off</a></li>
-                <li><a data-toggle="tab" href="#menu4">Current interface</a></li>
-              </ul>
+          <div class="container col-sm-9">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home2">Annotations on</a></li>
+              <li><a data-toggle="tab" href="#menu3">Annotations off</a></li>
+              <li><a data-toggle="tab" href="#menu4">Current interface</a></li>
+            </ul>
 
-              <div class="tab-content">
-                <div id="home2" class="tab-pane fade in active">
-                  <img src="viewpaychecks_proposed_annotated.png" width="100%">
-                </div>
-                <div id="menu3" class="tab-pane fade">
-                  <img src="viewpaychecks_proposed.png" width="100%">
-                </div>
-                <div id="menu4" class="tab-pane fade">
-                  <img src="viewpaychecks_current.png" width="100%">
-                </div>
+            <div class="tab-content">
+              <div id="home2" class="tab-pane fade in active">
+                <img src="viewpaychecks_proposed_annotated.png" width="100%">
               </div>
-            </div><!-- / View Paychecks -->
+              <div id="menu3" class="tab-pane fade">
+                <img src="viewpaychecks_proposed.png" width="100%">
+              </div>
+              <div id="menu4" class="tab-pane fade">
+                <img src="viewpaychecks_current.png" width="100%">
+              </div>
+            </div>
+          </div><!-- / View Paychecks -->
+
         </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
+
       </div><!-- / row -->
+
     </div><!-- / container-fluid -->
 
 
