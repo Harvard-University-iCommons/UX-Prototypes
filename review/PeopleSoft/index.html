@@ -100,9 +100,10 @@
             <li><a href="#NavBarMyFavorites" style="margin-top: -1em;">My Favorites NavBar</a></li>
           </ul>
         </li>
-            <li><a href="#ViewPaychecks">View Paychecks</a></li>
-          </ul>
-        </div><!-- / col-sm-3 col-md-2 sidebar -->
+        <li><a href="#ViewPaychecks">View Paychecks</a></li>
+        <li><a href="#Accessibility">Accessibility</a></li>
+      </ul>
+    </div><!-- / col-sm-3 col-md-2 sidebar -->
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="Overview">
 
@@ -154,10 +155,12 @@
           </div>
           <div class="col-sm-6">
             <img src="convention_logo_1_proposed.png" width="100%">
-            <p class="text-muted">Proposed Harvard University branding with "PeopleSoft."</p>
+            <p class="text-muted">Proposed Harvard University branding with "PeopleSoft."
+              <br>
+              <a href="convention_logo_1_proposed.png" target="_blank"><i class="fa fa-external-link"></i> View full size image on another browser tab</a></p>
           </div>
           <div class="col-sm-12" style="margin-top:2em">
-            <p>Upon small displays, the navigation elements overlaps. Currently the upper navigation buttons (Home, Search, Menu and Navbar) are gradually "moved" within the menu drop down when space becomes narrower. The same shall happen with the Employee Self Service upper link, so that it won't overlap the Harvard logo.</p>
+            <p>Upon smaller displays, the navigation elements overlaps. Currently the upper navigation buttons (Home, Search, Menu and Navbar) are gradually "moved" within the menu drop down when space becomes narrower. The same shall happen with the Employee Self Service upper link (and similar headers on other pages), so that it won't overlap the Harvard logo.</p>
           </div>
           <div class="col-sm-6">
             <img src="convention_logo_3_proposed.png" width="100%">
@@ -236,7 +239,7 @@
                 <br>
                 Use input form <code>placeholder</code> to provide hints on the format to use for entering information correctly (and therefore avoiding error messages).
                 <br>
-                Vary the height of modals based on the information they contain, to avoid extra white space and possible user's assumtion that information may be missing.
+                Vary the height of modals based on the information they contain, to avoid extra white space and possible user's assumption that information may be missing.
               </p>
           </div>
 
@@ -465,7 +468,7 @@
               Personalize NavBar should preserve common conventions and patterns, such as placing at the bottom of the interface the buttons that address the completion of the primary task.
             </p>
             <p>
-              The same icons shall not be used to represent different functions such as the upper nav menu "hamburger" icon, and the Personalize NavBar verical sorting icon.
+              The same icons shall not be used to represent different functions such as the upper nav menu "hamburger" icon, and the Personalize NavBar vertical sorting icon.
               <br>
               A vertically sorting function would be better represented with the equivalent to the Bootstrap <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">glyphicon icon glyphicon-option-vertical</a>.
             </p>
@@ -556,7 +559,7 @@
                 Background colors (<code>background-image:linear-gradient(rgb(41,51,82), rgb(30,30,30))</code>)
               </li>
               <li>
-                Link to the home page as a bredacrumb link (<code>text-decoration: underline;</code>)
+                Link to the home page as a breadcrumb link (<code>text-decoration: underline;</code>)
               </li>
               <li>
                 Removed any additional headers that refer to viewing paychecks
@@ -592,6 +595,20 @@
               </div>
             </div>
           </div><!-- / View Paychecks -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="Accessibility" style="padding-top: 2.5em">Accessibility</h2>
+          </div>
+
+          <div class="col-sm-12" style="height:20em">
+            <p>
+              Refer to the <a href="http://accessibility.huit.harvard.edu/home" target="_blank">HUIT Online Accessibility website</a> for making content and navigation accessible to users of assistive devices.
+            </p>
+            <p>
+              To facilitate the access to accessibility content to users of screenreader software, consider placing <code>hidden</code> links on the home page. Although these links are invisible to most users, they are easily accessible by screenreaders. This approach is described in this article - <a href="http://webaim.org/techniques/css/invisiblecontent/#skipnavlinks" target="_blank">http://webaim.org/techniques/css/invisiblecontent/#skipnavlinks</a>. 
+            </p>
+          </div>
 
         </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
 
