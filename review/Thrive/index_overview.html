@@ -1,4 +1,5 @@
-<html lang="en"><head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,6 +83,13 @@
                 <li><a href="#Foundation_Navigation" style="padding-left: 3em; margin-top: -1em;">Navigation</a></li>
               </ul>
             </li><!-- / Foundation -->
+
+            <li>
+              <a href="#Components" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Components&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item3" style="height: 0px;">
+                <li><a href="#Components_Buttons" style="padding-left: 3em; margin-top: -1em;">Buttons</a></li>
+              </ul>
+            </li><!-- / Components -->
           </ul>
         </div><!-- / col-sm-3 col-md-2 sidebar -->
 
@@ -93,16 +101,16 @@
 
           <div class="col-sm-12">
             <p>
-              This release of Thrive@Harvard has been reviewed to address Harvard branding, to employ consistent and familiar conventions (such as buttons, breadcrumbs, etc.) and to offer an efficient user experience an intuitive interface.
+              This release of Thrive@Harvard has been reviewed to address Harvard branding, to employ consistent and familiar conventions (such as buttons, breadcrumbs, etc.) and to make recommendations for an efficient user experience an intuitive interface.
             </p>
             <p>
               A few of the following recommendations may have already be addressed by the time this document was published.  
             </p>
-            <p>
+            <!-- <p>
               The images of the proposed recommendations are not meant to represent specific visual specifications; they are just depictions of suggested alternatives.  
-            </p>
+            </p> -->
             <p class="text-muted">
-              Reference: <a href="httpshttps://play.google.com/store/apps/details?id=edu.harvard.thrive" target="_blank">Augut 19 2016 release</a>
+              Reference: <a href="httpshttps://play.google.com/store/apps/details?id=edu.harvard.thrive" target="_blank">August 19 2016 release</a>
             </p>
           </div>
 
@@ -123,12 +131,6 @@
           </div>
 
           <div class="col-sm-12">
-            <p>
-              Branding, clear information, recognizable and consistent navigation ensure an intuitive and unambiguous user experience.
-            </p>
-          </div>
-
-          <div class="col-sm-12">
             <h3 class="sub-header" id="Foundation_Branding">Branding</h3>
           </div>
 
@@ -137,42 +139,18 @@
               Without compromising the limited available space of mobile interfaces, any opportunity to introduce the Harvard branding and color palette should be considered to allow consistency with the <a href="http://guidelines.hwp.harvard.edu/home" target="_blank">Harvard guidelines.</a>
             </p>
           </div>
-
-          <div class="col-sm-12" id="Foundation_Branding_GooglePlay">
-            <h4>Google Play</h4>
-          </div>
-
-          <div class="col-sm-4">
-            <p>
-              As defined in the <a href="http://guidelines.hwp.harvard.edu/color-palette" target="_blank">Harvard color guidelines</a>, a background color such as <code>1E1E1E</code> would be a more appropriate backdrop for the Harvard Shield.
-            </p>
-          </div>
           <div class="col-sm-4">
             <img src="Screenshot_2016-08-19-07-44-33.png" width="100%">
-            <p class="text-muted">Current Google Play Thumbnail.</p>
-          </div>
-          <div class="col-sm-4">
-            <img src="proposed_branding_GooglePlay.png" width="100%">
-            <p class="text-muted">Proposed GooglePlay thumbnail with Harvard shield and color palette.</p>
-          </div><!-- / Foundation_Branding_GooglePlay -->
-
-          <div class="col-sm-12" id="Foundation_Branding_Interface">
-            <h4>Overall Interface</h4>
-          </div>
-
-          <div class="col-sm-4">
-            <p>
-              Harvard branding (shield and color palette) could be used throughout the interface.
-            </p>
+            <p class="text-muted">The Google Play thumbnail could show the Harvard shield.</p>
           </div>
           <div class="col-sm-4">
             <img src="Screenshot_2016-08-19-08-11-04.png" width="100%">
-            <p class="text-muted">Current interface.</p>
+            <p class="text-muted">Harvard branding (shield and color palette) could be used throughout the interface.</p>
           </div>
           <div class="col-sm-4">
-            <img src="proposed_proposed_branding_home.png" width="100%">
-            <p class="text-muted">Proposed interface with Harvard shield and Harvard color palette on upper and lover navigation.</p>
-          </div><!-- / Foundation_Branding_Interface -->
+            <img src="Screenshot_2016-08-19-07-47-01.png" width="100%">
+            <p class="text-muted">Harvard branding (shield and color palette) could be used throughout the interface.</p>
+          </div><!-- / Branding -->
 
           <div class="col-sm-12">
             <h3 class="sub-header" id="Foundation_Information">Information</h3>
@@ -180,7 +158,7 @@
 
           <div class="col-sm-12">
             <p>
-              Just a few concise paragraphs could provide the user unfamiliar with this product the needed context.
+              Just a few consise paragraphs could provide the user unfamiliar with this product the needed context.
               <hr>
             </p>
           </div>
@@ -195,37 +173,16 @@
           </div>
           <div class="col-sm-3">
             <img src="Screenshot_2016-08-19-08-11-04_1.png" width="100%">
-            <p class="text-muted">On the home page, the text label “HES Health & Wellness" is not readable because of the low contrast because of the light background. Allow for a visual treatment that doesn’t compromise the readability of the information, regardless of any background.</p>
+            <p class="text-muted">On the home page, the text label “HES Health and Fitness” is not readable because of the low contrast because of the light background. Allow for a visual treatment that doesn’t compromise the readability of the information, regardless of any background.</p>
           </div>
           <div class="col-sm-3">
             <img src="Screenshot_2016-08-19-08-11-04_2.png" width="100%">
             <p class="text-muted">On the home page, the date information “Welcome [date]” has the same visual treatment of the buttons below. If this s not meant to be a button, it should look like a label, such as the “Heath & Wellness” title below.</p>
-          </div>
-
-          <div class="col-sm-12">
-            <h4 class="sub-header" id="Foundation_Information_Example">Example</h4>
-          </div>
-
-          <div class="col-sm-4">
-            <p class="text-muted">Example of the home page with information about the product and a clear distinction between labels and buttons.</p>
-          </div>
-          <div class="col-sm-4">
-            <img src="proposed_Foundation_Information.png" width="100%">
-          </div>
-          <div class="col-sm-4">
-            &nbsp;
           </div><!-- / Information -->
 
           <div class="col-sm-12">
             <h3 class="sub-header" id="Foundation_Navigation">Navigation</h3>
           </div>
-
-          <div class="col-sm-12">
-            <p>
-              Consistency of navigation components avoids ambiguities and confusion.
-            </p>
-          </div>
-
           <div class="col-sm-3">
             <img src="Screenshot_2016-08-19-07-53-15.png" width="100%">
             <p class="text-muted">The “TOP OF PAGE” anchor link visible in the portrait view</p>
@@ -243,21 +200,28 @@
           <div class="col-sm-3">
             <img src="Screenshot_2016-08-19-08-28-37.png" width="100%">
             <p class="text-muted">Once on “Map”, going back to the home page is not possible via the “hamburger” icon on the upper left hand corner. Here all the bottom navigation icons are listed but “Home.” Provide navigation consistently at any opportunity.</p>
+          </div><!-- / Navigation -->
+
+          <div class="col-sm-12">
+            <h3 class="sub-header" id="Components">Components</h3>
           </div>
 
           <div class="col-sm-12">
-            <h4 class="sub-header" id="Foundation_Navigation_Example">Examples</h4>
-          </div>
-
-          <div class="col-sm-3">
-            <p class="text-muted">Example of the school selection page with clearly defined buttons.</p>
-          </div>
-          <div class="col-sm-6">
-            <img src="proposed_Foundation_Information_button.png" width="100%">
+            <h3 class="sub-header" id="Components_Buttons">Buttons</h3>
           </div>
           <div class="col-sm-3">
-            <img src="proposed_Foundation_Information_buttons_2.png" width="100%">
-          </div><!-- / Navigation -->
+            <p class="text-muted">The "Change affiliation" button on the bottom of the school selection doesn’t seem neither a button, nor an active link.</p>
+          </div>
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-19-07-53-15.png" width="100%">
+            <p class="text-muted">Use the same active button convention throughout the interface</p>
+          </div>
+          <div class="col-sm-3">
+            &nbsp;
+          </div>
+          <div class="col-sm-3">
+            &nbsp;
+          </div><!-- / Buttons -->
 
         </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
       </div><!-- / row -->
