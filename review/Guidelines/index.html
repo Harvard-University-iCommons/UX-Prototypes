@@ -1,0 +1,1001 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+    <title>Pattern Guidelines / Academic Technology</title>
+
+    <!-- Bootstrap core CSS to show glycons - start -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap core CSS to show glycons - end -->
+
+    <!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Fonts for this template -->
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-e-->
+    <!-- Harvard Branding -->
+    <style>
+      .nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #A51C30;
+      }
+      a {
+        color: #A51C30;
+        text-decoration: none;
+      }
+      h1, h2{
+        color: #A51C30;
+      }
+      img.border { 
+        border:1px solid #eee;
+      }
+      h4{
+        margin-top:1em;
+        margin-bottom:1em;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+
+          <a class="navbar-brand" style="margin-bottom:.45em">
+            <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
+            </a>
+           <a class="navbar-brand">
+            <strong>Pattern Guidelines</strong> / Academic Technology
+          </a>
+        </div><!-- / navbar-header -->
+
+      </div><!-- / container-fluid -->
+    </nav><!-- / navbar -->
+    <!-- Left Nav -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu" style="margin-left:-1.25em">
+
+            <li><a href="#Overview">Overview</a></li>
+            
+            <li>
+              <a href="#UserFlow">User Flow</span></a>
+            </li><!-- / User Flow -->
+
+            <li>
+              <a href="#Foundation" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Foundation&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item2" style="height: 0px;">
+                <li><a href="#FoundationColors" style="padding-left: 3em; margin-top: -1em;">Colors</a></li>
+                <li><a href="#FoundationGrid" style="padding-left: 3em; margin-top: -1em;">Grid</a></li>
+                <li><a href="#FoundationIcons" style="padding-left: 3em; margin-top: -1em;">Icons</a></li>
+                <li><a href="#FoundationLayouts" style="padding-left: 3em; margin-top: -1em;">Layouts</a></li>
+              </ul>
+            </li><!-- / Foundation -->
+
+            <li>
+              <a href="#Components" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Components&nbsp;<span class="caret arrow"></span></a>          
+              <ul class="nav nav-pills nav-stacked collapse" id="item3" style="height: 0px;">
+                <li><a href="#Components_Nomenclature" style="padding-left: 3em; margin-top: -1em;">Nomenclature</a></li>
+                <li><a href="#Components_Text_Links" style="padding-left: 3em; margin-top: -1em;">Text Links</a></li>
+                <li><a href="#Components_Buttons" style="padding-left: 3em; margin-top: -1em;">Buttons</a></li>
+                <li><a href="#Components_Input_Forms" style="padding-left: 3em; margin-top: -1em;">Input Forms</a></li>
+                <li><a href="#Components_Drop_downs" style="padding-left: 3em; margin-top: -1em;">Drop downs</a></li>
+                <li><a href="#Components_Tables" style="padding-left: 3em; margin-top: -1em;">Tables</a></li>
+                
+                <li>
+                  <a href="#Components_Alerts" data-target="#item31" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed" style="padding-left: 3em; margin-top: -1em;">Alerts&nbsp;<span class="caret arrow"></span></a>
+                  <ul class="nav nav-pills nav-stacked collapse" id="item31" style="height: 0px;">
+                    <li><a href="#Components_Alerts_Label" style="padding-left: 4em; margin-top: -1em;">Label Alerts</a></li>
+                    <li><a href="#Components_Alerts_Modal" style="padding-left: 4em; margin-top: -1em;">Modal Alerts</a></li>
+                  </ul>
+                </li><!-- /Alerts -->
+
+                <li><a href="#Components_Progress_Loading" style="padding-left: 3em; margin-top: -1em;">Progress and Loading</a></li>
+                <li><a href="#Components_Collapsible_Panels" style="padding-left: 3em; margin-top: -1em;">Collapsible Panels</a></li>
+              </ul>
+            </li><!-- / Components -->
+
+            <li><a href="#CommonElements">Reference</a></li>
+          </ul>
+        </div><!-- / col-sm-3 col-md-2 sidebar -->
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="Overview">
+
+          <div class="col-sm-12">
+            <h1 class="page-header" id="Overview">Overview</h1>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Patterns originated as an architectural concept by <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank">Christopher Alexander</a>. Patterns are ways to describe best practices, explain good designs, bot from a progframmatical and visual standpoint, and capture experience so that other people can reuse these solutions.
+            </p>
+            <p>
+              Interaction design patterns are a way to describe solutions to common usability or accessibility problems in a specific context. They document interaction models that make it easier for users to understand an interface and accomplish their tasks.
+            </p>
+            <p>
+              While guidelines are generally more useful for describing requirements whereas patterns are useful tools for those who need to translate requirements to specific software solutions.
+              <br>
+              Guidelines and patterns are not necessarily conflicting, and both can be used in conjunction to identify the problem and then create a valid solution.
+            </p>
+            <p>
+              <p>Benefits of using interaction design patterns include:</p>
+              <ul>
+                <li>Capturing collective wisdom across many uses and scenarios</li>
+                <li>Giving teams a common language, reducing misunderstandings that arise from different vocabulary</li>
+                <li>Reducing time and costs in the design and development lifecycle</li>
+                <li>Making usable designs the "<a href="https://en.wikipedia.org/wiki/Path_of_least_resistance" title="Path of least resistance" target="_blank">path of least resistance</a>"</li>
+                <li>Eliminate wasted time spent "reinventing the wheel"</li>
+                <li>Ensuring users have a consistent and predictable experience within an application or service</li>
+              </ul>
+            </p>
+            <p class="text-muted">
+              Reference (<i class="fa fa-info-circle"></i>): <a href="https://en.wikipedia.org/wiki/Interaction_design_pattern" target="_blank">Wikipedia</a>
+            </p>
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="sub-header" id="UserFlow">User Flow</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              The path of least resistance is used to describe certain human behaviors. In these cases, resistance is often used as a metaphor for personal effort or confrontation; a person taking the path of least resistance avoids these. (https://en.wikipedia.org/wiki/Principle_of_least_effort)
+            </p>
+            <p>
+              Ultimately, people want information/content provided to them as quickly and simply as possible. (<a href="http://ux.walkme.com/principle-least-effort-integral-part-ux/" target="_blank">http://ux.walkme.com/principle-least-effort-integral-part-ux/</a>)
+            </p>
+            <p>
+              In the context of software or information modeling, a happy path is a default scenario featuring no exceptional or error conditions, and comprises the sequence of activities executed if everything goes as expected.
+            </p>
+            <p>
+              There may be any number of additional alternate path scenarios which are all valid optional outcomes. If valid alternatives exist, the happy path is then identified as the default or most likely positive alternative. (<a href="https://en.wikipedia.org/wiki/Happy_path" target="_blank">https://en.wikipedia.org/wiki/Happy_path</a>) 
+            </p>
+          </div><!-- / UserFlow -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h3 class="sub-header">Examples</h3>
+          </div>
+
+          <div class="col-sm-4 col-md-4" id="UserFlow_ManageCourse">
+            <h4>Manage Course</h4>
+            <p>
+              Once a managing task was defined, the user had to find the tool among many other admnistrative and teaching choices.
+            </p>
+            <p>
+              Manage Course collects all administrative tools in one easy to find repsitory.
+            </p>
+          </div>
+            
+          <div class="container col-sm-4">
+            <img src="user_flow_Manage_Course_before.png" width="100%">
+            <p class="text-muted">Previous flow</p>
+          </div>
+            
+          <div class="container col-sm-4">
+            <img src="user_flow_Manage_Course_after.png" width="100%">
+            <p class="text-muted">New flow</p>
+          </div><!-- / Example - Manage Course -->
+
+          <div class="col-sm-4 col-md-4" id="UserFlow_CourseEmailer">
+            <h4>Course Emailer</h4>
+            <p>
+              Once an email was sent to a class section, the entire class faculty would receive a copy of that email. This feature became an inconvenience in very large classes. 
+            </p>
+            <p>
+              New functionaly allowed this feature to be turned on or off.
+            </p>
+          </div>
+            
+          <div class="container col-sm-4">
+            <img src="user_flow_Course_Emailer_before.png" width="100%">
+            <p class="text-muted">Previous flow with automatic email forwarding</p>
+          </div>
+            
+          <div class="container col-sm-4">
+            <img src="user_flow_Course_Emailer_after.png" width="100%">
+            <p class="text-muted">New flow with option for automatic forwarding</p>
+          </div><!-- / Example - Course Emailer -->
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-12">
+            <h2 class="sub-header" id="Foundation">Foundation</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Paragraph 1
+            </p>
+            <p>
+              Paragraph 2
+            </p>
+            <p>
+              Paragraph 3
+            </p>
+            <p>
+              Paragraph 4
+            </p>            
+          </div><!-- / Foundation -->
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-12" id="FoundationColors">
+            <h3>Colors</h3>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              Colors should be defined according to the <a href="http://guidelines.hwp.harvard.edu/color-palette" target="_blank">Harvard University styleguide</a>.
+            </p>
+            <p>
+              Colors should also be consistent with the convention of the employed framework, such as <a href="http://getbootstrap.com/css/#less-variables-colors" target="_blank">Bootstrap</a> for Canvas LTI tools.
+            </p>         
+          </div>
+          <div class="col-sm-12">
+            <h4>Examples</h4>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              The colors of the Harvard color palette are used to distinguish the cards in Manage Course.
+            </p>
+          </div>
+          <div class="col-sm-12">
+            <img src="foundation_colors_manage_course.png" width="100%">
+            <p class="text-muted">Manage Course cards</p>
+          </div>
+          <div class="col-sm-12" style="margin-top:2em">
+            <p>
+              The use of "primary" buttons guides the user to the expected outcome via the most direct path.
+            </p>
+          </div>
+          <div class="col-sm-12">
+            <img src="foundation_colors_media_manager.png" width="100%">
+            <p class="text-muted">Media Manager</p>
+          </div>
+          <div class="col-sm-12" style="margin-top:2em">
+            <p>
+              The use of alerts according to the <a href="http://getbootstrap.com/components/#alerts" target="_blank">Bootstrap</a> framework ensures consistency across all user interfaces.
+            </p>
+          </div>
+          <div class="col-sm-12">
+            <img src="foundation_colors_alerts.png" width="100%">
+            <p class="text-muted">Alerts in Search Courses</p>
+          </div><!-- / Colors -->
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-12" id="FoundationGrid">
+            <h3>Grid</h3>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              Paragraph 1
+            </p>
+            <p>
+              Paragraph 2
+            </p>
+            <p>
+              Paragraph 3
+            </p>
+            <p>
+              Paragraph 4
+            </p>            
+          </div>
+          <div class="col-sm-12">
+            <h4>Three image layout</h4>
+          </div>
+          <div class="col-sm-4">
+            <img src="convention_sub-menus2_current.png" width="100%">
+            <p class="text-muted">Current Benefits / Child Care Scholarship sub-menus</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="convention_sub-menus1_current.png" width="100%">
+            <p class="text-muted">Current Talent Profile / My Current Profile</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="convention_sub-menus_proposed.png" width="100%">
+            <p class="text-muted">Proposed Talent Profile / My Current Profile sub-menus</p>
+          </div><!-- / Grid -->
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-12" id="FoundationIcons">
+            <h3>Icons</h3>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              <a href="http://fontawesome.io/cheatsheet/" target="_blank">Font Awesome</a> is widely used in Canvas LTI tools.
+            </p>
+            <p>
+              <a href="https://canvas.harvard.edu/styleguide#icons" target="_blank">Rhe Canvas style guide character set</a> is used in native Canvas interfaces.
+            </p>
+            <p>
+              Use icons only to clarify what otherwise would be ambiguous.
+            </p>
+            <p>
+              When used as buttons, use icons only when
+              <ol>
+                <li>
+                  A button text label would not have enough available space
+                </li>
+                <li>
+                  A button text label would not clutter the user interface
+                </li>
+                <li>
+                  A button text label would need also an icon to clarify an unconventional button function
+                </li>
+              </ol>
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Examples of icons used as buttons or with button labels</h4>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="foundation_icons_search.png" width="100%" class="border">
+            <p class="text-muted">Example of unnecessary icon</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="foundation_icons_manage_people.png" width="100%" class="border">
+            <p class="text-muted">Example of icon buttons used when unavaible space</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="foundation_icons_add_people.png" width="100%" class="border">
+            <p class="text-muted">Example of unconventional button function</p>
+          </div><!-- / Examples of icons used with or as buttons -->
+
+          <div class="col-sm-12">
+            <h4>Examples of icons used with links</h4>
+          </div>
+
+          <div class="col-sm-12">
+            <img src="foundation_icons_link.png" width="100%" class="border">
+            <p class="text-muted">Example of icon used to indicate the functin of the text link</p>
+          </div><!-- / Examples of icon used with links -->
+
+          <div class="col-sm-12">
+            <h4>Icons used in Canvas LTI Tools</h4>
+          </div>
+          <div class="col-sm-4">
+
+            <table class="table">
+              <caption>Buttons icons</caption>
+              <thead>
+                <tr>
+                  <th>Function</th>
+                  <th>Icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Edit</td>
+                  <td><i class="fa fa-pencil"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Delete</td>
+                  <td><i class="fa fa-trash"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Settings</td>
+                  <td><i class="fa fa-gear"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Cancel/Close</td>
+                  <td><i class="fa fa-times"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Expand</td>
+                  <td><span class="caret"></span></td>
+                </tr>
+                <tr>
+                  <td scope="row">Add/Close</td>
+                  <td><i class="fa fa-plus-circle"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Information</td>
+                  <td><i class="fa fa-info-circle"></i></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="col-sm-4">
+
+            <table class="table">
+              <caption>Tool icons</caption>
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Search Courses</td>
+                  <td><i class="fa fa-search"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Search People</td>
+                  <td><i class="fa fa-users"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Cross-list Courses</td>
+                  <td><i class="fa fa-link"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Conclude Courses</td>
+                  <td><i class="fa fa-hand-stop-o"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Create Canvas Sites</td>
+                  <td><i class="fa fa-magic"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Canvas Whitelist</td>
+                  <td><i class="fa fa-thumbs-o-up"></i></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="col-sm-4">
+
+            <table class="table">
+              <caption>Link icons</caption>
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Course Emailer</td>
+                  <td><i class="fa fa-caret-down"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Breadcrumbs</td>
+                  <td><i class="fa fa-chevron-right"></i></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div><!-- / icons - Icons used in Canvas -->
+
+          <div class="col-sm-12">
+            <h4>Icons used in FAS Tools</h4>
+            <p>
+                FAS tools use Bootstrap fonts from <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Glyphicons</a>.
+                <br>
+                Mirador uses a few custom icons*.
+            </p>
+          </div>
+          <div class="col-sm-4">
+
+            <table class="table">
+              <caption>Media Manager</caption>
+              <thead>
+                <tr>
+                  <th>Interface,Function</th>
+                  <th>Icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Add Course Collections</td>
+                  <td><i class="fa fa-plus"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Course Collection sortable item handle</td>
+                  <td><i class="glyphicon glyphicon-menu-hamburger"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Course Collection Edit, Delete menu</td>
+                  <td><i class="glyphicon glyphicon-cog"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Manage Collection, image information</td>
+                  <td><i class="glyphicon glyphicon-info-sign"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Image Library, edit image</td>
+                  <td><i class="glyphicon glyphicon-pencil"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Image Library, add image to collection</td>
+                  <td><i class="glyphicon glyphicon-plus-sign"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">View Course Library Image, delete</td>
+                  <td><i class="glyphicon glyphicon-trash"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">View Course Library Image, submit edited information</td>
+                  <td><i class="glyphicon glyphicon-ok"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">View Course Library Image, cancel edited information</td>
+                  <td><i class="glyphicon glyphicon-remove"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">View Course Library Image, previous/next image (unicode icons)</td>
+                  <td>«, »</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="col-sm-4">
+
+            <table class="table">
+              <caption>Mirador</caption>
+              <thead>
+                <tr>
+                  <th>Function</th>
+                  <th>Icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Bookmark*</td>
+                  <td>
+                    <span style="background-position: -221px -41px; background-image: url('https://media-management-lti.tlt.harvard.edu/static/app/vendor/mirador/images/mirador-icons.png');cursor: pointer; display: inline-block; height: 20px; margin: 0 2px -7px 0; width: 20px;"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">Change layout*</td>
+                  <td>
+                    <span style="background-position: -261px -41px; background-image: url('https://media-management-lti.tlt.harvard.edu/static/app/vendor/mirador/images/mirador-icons.png');cursor: pointer; display: inline-block; height: 20px; margin: 0 2px -7px 0; width: 20px;"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">Channge layout menu</td>
+                  <td><i class="fa fa-table fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">New object</td>
+                  <td><i class="fa fa-plus-square fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Add slot right</td>
+                  <td><i class="fa fa-caret-square-o-right fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Add slot left</td>
+                  <td><i class="fa fa-caret-square-o-left fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Add slot above</td>
+                  <td><i class="fa fa-caret-square-o-up fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Add slot below</td>
+                  <td><i class="fa fa-caret-square-o-down fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Image view</td>
+                  <td><i class="fa fa-photo fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Book view</td>
+                  <td><i class="fa fa-columns fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Scroll view</td>
+                  <td><i class="fa fa-ellipsis-h fa-lg fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Grid view</td>
+                  <td><i class="fa fa-th fa-lg fa-rotate-90 fa-fw"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Image details and rights</td>
+                  <td><i class="fa fa-info-circle fa-lg fa-fw"></i></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="col-sm-4">
+
+            <table class="table">
+              <caption>Word Wrapper</caption>
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Icon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Align (link terms)</td>
+                  <td><i class="fa fa-link"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Clear (unlink terms)</td>
+                  <td><i class="fa fa-unlink"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Delete</td>
+                  <td><i class="fa fa-trash-o"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Index</td>
+                  <td><i class="fa fa-list"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Export</td>
+                  <td><i class="fa fa-download"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">Account</td>
+                  <td><i class="fa fa-user"></i></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div><!-- / icons - Icons used in FAS tools -->
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-12" id="FoundationLayouts">
+            <h3>Layouts</h3>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              Paragraph 1
+            </p>
+            <p>
+              Paragraph 2
+            </p>
+            <p>
+              Paragraph 3
+            </p>
+            <p>
+              Paragraph 4
+            </p>            
+          </div>
+          <div class="col-sm-12">
+            <h4>Three image layout</h4>
+          </div>
+          <div class="col-sm-4">
+            <img src="convention_sub-menus2_current.png" width="100%">
+            <p class="text-muted">Current Benefits / Child Care Scholarship sub-menus</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="convention_sub-menus1_current.png" width="100%">
+            <p class="text-muted">Current Talent Profile / My Current Profile</p>
+          </div>
+          <div class="col-sm-4">
+            
+            <style>
+
+              #rectangleBottom p {
+                  font-weight:bold;
+                  font-size:1em;
+                  padding:1em;
+              }
+
+              #rectangleBottom {
+                  width:100%;
+                  height:20em;
+                  background-color:#ccc;
+              }
+
+              #rectangleTop {
+                  width:90%;
+                  height:14em;
+                  border-radius:10px;
+                  background-color:#333333;
+                  z-index:10;
+                  margin-left:5%;
+                  margin-top:-16em;
+              }
+
+            </style>
+            <div id="rectangleBottom">
+              <p> Here is some text </p>
+            </div>
+
+            <div id="rectangleTop"></div><!-- / top Div must always come after what overlaps -->
+
+            <p class="text-muted" style="margin-top:2em"><!-- / add margin to caption or it will follow the top most div -->
+              Proposed Talent Profile / My Current Profile sub-menus
+            </p>
+
+          </div><!-- / Layouts -->
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-12" id="Components">
+            <h2>Components</h2>
+            <p>
+              (Description of components)
+            </p>
+          </div>
+
+          <div class="col-sm-12" id="Components_Alerts">
+            <h3>Alerts</h3>
+            <p>
+              Alerts provide feeback on a user activity, such as submitting a selection or activating a task (e.g.: delete a user.)
+            </p>
+            <p>
+              Alerts follow the <a href="http://getbootstrap.com/components/#alerts" target="_blank">Bootstrap alerts color convention</a> to indicate the different types of messages, such as success, warning, danger and information.
+            </p>
+            <p>
+              Alerts can be conveied via alert labels or alert modals.
+            </p>
+          </div>
+
+          <div class="col-sm-12" id="Components_Alerts_Label">
+            <h4>Alert Label</h4>
+          </div>
+
+          <div class="col-sm-12">
+            <h5>Definition</h5>
+            <ul>
+              <li>Alert label messages occur when 
+                <ul>
+                  <li>The user just needs an aknowledgment of the outcome of a task.</li>
+                  <li>An <a href="http://getbootstrap.com/components/#alerts" target="_blank">alert label</a> is sufficient to convey such information.</li>
+                </ul>
+              </li>
+            </ul>
+            <h5>Interaction</h5>
+            <ul>
+              <li>Alert labels could have a Close button when it is useful to remove from the interface.</li>
+              <li>Alert labels are either removed or replaced by the next alert.</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>References</h4>
+          </div>
+
+          <div class="col-sm-6">
+            <img src="components_alerts_label1.png" width="100%" class="border">
+            <p class="text-muted">Example of label alert with a close button</p>
+          </div>
+          <div class="col-sm-6">
+            <img src="components_alerts_label2.png" width="100%" class="border">
+            <p class="text-muted">Example of a "success" label alert</p>
+          </div><!-- / Alert label -->
+
+          <div class="col-sm-12" id="Components_Alerts_Modal">
+            <h4>Alert Modal</h4>
+          </div>
+
+          <div class="col-sm-12">
+            <h5>Definition</h5>
+            <ul>
+              <li>Alert modal messages occur when 
+                <ul>
+                  <li>The user must focus only on the task at hand, and should be prevented to make any other selection</li>
+                  <li>An <a href="http://getbootstrap.com/components/#alerts" target="_blank">alert label</a> would not be sufficient to convey such level of urgency.</li>
+                </ul>
+              </li>
+            </ul>
+            <h5>Interaction</h5>
+            <ul>
+              <li>Modal messages could have a Cancel and Submit (OK, etc.) buttons when the task can be dismissed or continued</li>
+              <li>Modal messages could have a single button when only acknowledgment is required</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>References</h4>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="components_alerts_modal1.png" width="100%" class="border">
+            <p class="text-muted">Example of modal alert with primary and secondary buttons</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="components_alerts_modal2.png" width="100%" class="border">
+            <p class="text-muted">Example of modal alert with additional tasks</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="components_alerts_modal1.png" width="100%" class="border">
+            <p class="text-muted">(Example of modal alert with an acknowledgment button)</p>
+          </div><!-- / Alert Modal -->
+
+          <div class="col-sm-12"><br></div>
+
+          <div class="col-sm-12">
+            <h4>Two image layout</h4>
+            <h5>Sub header</h5>
+            <p>
+              Paragraph 1
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="convention_sub-menus41_current.png" width="100%">
+            <p class="text-muted">Current Benefits landing page</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="convention_sub-menus42_current.png" width="100%">
+            <p class="text-muted">Current Benefits, Medical page</p>
+          </div><!-- / Two images layout -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="EmployeeSelfService" style="padding-top: 2.5em">Section Header</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Paragraph 1
+              <br>
+              <a href="http://guidelines.hwp.harvard.edu/color-palette" target="_blank">link</a>
+            </p>
+            <p>
+              Paragraph 2
+            </p>
+          </div><!-- / Section Header -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="ViewPaychecks" style="padding-top: 2.5em">Tabbed images</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Paragraph 1
+            </p>
+            <p>
+              Paragraph 2
+            </p>
+          </div>
+
+          <div class="col-sm-3 col-md-3">
+            <h4>Specifications</h4>
+            <ol>
+              <li>
+                <a href="https://raw.githubusercontent.com/Harvard-University-iCommons/UX-Prototypes/master/image/PTNUI_HARVARD_LOGO_1_long_1.png" target="_blank">Link</a>
+              </li>
+              <li>
+                Information (<code>code</code>)
+              </li>
+            </ol>
+          </div>
+            
+            <div class="container col-sm-9">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home2">Annotations on</a></li>
+                <li><a data-toggle="tab" href="#menu3">Annotations off</a></li>
+                <li><a data-toggle="tab" href="#menu4">Current interface</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div id="home2" class="tab-pane fade in active">
+                  <img src="viewpaychecks_proposed_annotated.png" width="100%">
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                  <img src="viewpaychecks_proposed.png" width="100%">
+                </div>
+                <div id="menu4" class="tab-pane fade">
+                  <img src="viewpaychecks_current.png" width="100%">
+                </div>
+              </div>
+            </div><!-- / Tabbed images -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="CommonElements" style="padding-top: 2.5em">Common Elements</h2>
+          </div>
+
+          <div class="col-sm-12" style="height:20em">
+            <h4>Definition</h4>
+            <h4>Interaction</h4>
+            <h4>References</h4>
+
+            <ul hidden>
+              <li><strong>Pattern Name:</strong> Choosing a clear and descriptive name helps people find the pattern and encourages clear communication between team members during design discussions.</li>
+              <li><strong>Pattern Description:</strong> Because short names like "one-window drilldown" are someicons not sufficient to describe the pattern, a few additional lines of explanation (or a canonical screenshot) will help explain how the pattern works.</li>
+              <li><strong>Problem Statement:</strong> Written in user-centered language, this communicates what the user wants to achieve or what the challenge is to the end-user.</li>
+              <li><strong>Use When:</strong> "Context of use" is a critical component of the design pattern. This element helps people understand situations when the design pattern applies (and when it does not.)</li>
+              <li><strong>Solution:</strong> The solution should explain "how" to solve the problem, and may include prescriptive checklists, screenshots, or even short videos demonstrating the pattern in action.</li>
+              <li><strong>Rationale:</strong> Providing reasons "why" the pattern works will reinforce the solution, though time-pressed developers may prefer to ignore this explanation.</li>
+              <li><strong>Examples:</strong> Each example shows how the pattern has been successfully applied This is often accompanied by a screenshotand and a short description.</li>
+              <li><strong>Comments:</strong> Including a place for team members to discuss the use of the pattern helps maintain an active resource and keeps the team engaged.</li>
+            </ul>
+          </div><!-- / Common Elements -->
+
+          <div class="col-sm-12" style="padding-top:3em">
+            <footer>
+            <hr>
+              <p>Copyright &copy; 2016 The President and Fellows of Harvard College    |   <!-- <a href="http://tlt.harvard.edu/" target="blank"> -->Academic Technology<!-- </a> -->    <!-- |   <a href="https://wiki.harvard.edu/confluence/pages/viewpage.action?title=TLT+User+Research&spaceKey=UIS" target="blank"><img src="https://www.pin1.harvard.edu/cas/keyassets/images/favicon.ico"> TLT UX Wiki</a> --></p>
+            </footer>
+          </div>
+
+        </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
+      </div><!-- / row -->
+    </div><!-- / container-fluid -->
+
+
+    
+
+<!-- Bootstrap script for collapse side nav - start
+================================================== -->
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js -->
+<script type="text/javascript" src="jquery.min.js"></script>
+<!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js -->
+<script type="text/javascript" src="bootstrap.min.js"></script>
+
+<!-- Bootstrap script for collapse side nav - end
+================================================== -->
+
+
+<!-- Script for smooth scroll - start
+================================================== -->
+    <script>
+      $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+
+            var target = $(this.hash);
+
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+              if (target.length) {
+
+                  $('html, body').animate({
+
+                      scrollTop: target.offset().top-70
+
+                  }, 1000);
+
+                  e.preventDefault();
+
+              }
+
+          }
+
+    });
+    </script>
+
+<!-- Script for smooth scroll - end
+================================================== -->
+  
+
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1552</span> x <span class="tooltipHeight" id="winHeight">369</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1552</span> x <span class="tooltipHeight" id="vpHeight">369</span></div></body></html>
