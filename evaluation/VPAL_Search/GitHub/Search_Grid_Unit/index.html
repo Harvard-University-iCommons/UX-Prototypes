@@ -1,23 +1,64 @@
-<div class="col-xs-12 col-md-3">
-    <div class="card">
-        <div class="card-block">
-            <img class="card-img-top img-responsive" src="https://d37djvu3ytnwxt.cloudfront.net/asset-v1:HarvardX+1368.1x+2T2016+type@thumbnail+block@Schoolhouse-375x200.jpg" alt="Card image cap">
-            <h5 class="card-title">Saving Schools Mini-Course 1: History and Politics of U.S. Education</h5>
-            <!-- <div class="card-block"> -->
-                
-            <!-- </div> -->
-            <div class="list-group">
-                <a class="list-group-item" href="#"><i class="fa fa-university fa-fw" aria-hidden="true"></i>&nbsp; HarvardX</a>
-                <!-- <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; </a> -->
-                <a class="list-group-item" href="#"><i class="fa fa-space-shuttle fa-fw" aria-hidden="true"></i>&nbsp; Oct. 1, 2015</a>
-                <a class="list-group-item" href="#"><i class="fa fa-university fa-fw" aria-hidden="true"></i>&nbsp; 1368.1x</a>
-                <a class="list-group-item" href="#"><i class="fa fa-search fa-fw" aria-hidden="true"></i>&nbsp; Resource count (can do this)</a>
-                <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; ...</a>
+<!-- UI comment - restoring the Bootstrap button properties -->
+<style>
+.btn-group-xs>.btn, .btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    }
+.btn-group-sm>.btn, .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+</style>
+
+<!-- Document image - top row - start -->
+
+    <div class="col-xs-12 col-md-3">
+        <div class="card">
+            <div class="card-block">
+                <img class="card-img-top img-responsive" src="https://d37djvu3ytnwxt.cloudfront.net/asset-v1:HarvardX+AmPoX.5+2T2015+type@thumbnail+block@ampox5thumbnail-375x200.jpg" alt="Card image cap">
+
+<!-- UI comment - changing properties of h5 -->
+                <h5 class="card-title" style="font-size: .85rem; line-height: 1.4; margin-top: .25em; margin-bottom: 0rem;">Saving Schools Mini-Course 1: History and Politics of U.S. Education</h5>
+                <!-- <div class="card-block"> -->
+                    
+                <!-- </div> -->
+
+                <div>
+<!-- UI comment - changing list-group to label label-info, removing icons -->
+                        <a class="btn btn-info btn-xs" href="#">HarvardX</a>
+                        <!-- <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; </a> -->
+                        <a class="btn btn-info btn-xs" href="#">Oct. 1, 2015</a>
+                        <a class="btn btn-info btn-xs" href="#">1368.1x</a>
+                        <a class="btn btn-warning btn-xs" href="#">Resource count</a>
+                    </div>
+
+    <!-- UI comment - Change p to panel, modify style -->
+                    <div class="panel panel-default"style="margin-top:.5em; margin-bottom:.5em;">
+                        <div class="panel-body"style="font-size: .75rem; line-height: 1; padding:.5em;">
+                            Course description should be limited to one paragraph since this nformation tends to be very large. Alternatively a scrolling div could be used here. 
+                        </div>
+                    </div>
+                <div>
+
+<!-- UI comment - moving Settings button here. Changing size of both buttons. -->
+                    <a href="#" role="link" class="btn btn-default btn-sm" target="_blank">Settings</a>
+
+                    <a href="https://www.edx.org/course/saving-schools-mini-course-1-history-harvardx-1368-1x" role="link" class="btn btn-primary btn-sm pull-right" target="_blank">edX</a>
+                </div>
             </div>
-            <p class="card-text">Course description (need Course API)</p>
-            <div>
-                <a href="https://www.edx.org/course/saving-schools-mini-course-1-history-harvardx-1368-1x" role="button" class="btn btn-primary btn-md" target="_blank">edX</a>
-            </div>
-        </div>
+        </div> 
     </div>
-</div>
