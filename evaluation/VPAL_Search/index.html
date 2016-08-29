@@ -1,0 +1,792 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+    <title>VPAL Search / Academic Technology</title>
+
+    <!-- SublimeText bookmarks:
+    Command + fn + F2 - add bookmark
+    fn + shift + F2 - go to next bookmark
+    fn + F2 - go to previous bookmark -->
+
+    <!-- Bootstrap core CSS -->
+    <!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts for this template -->
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-e-->
+
+    <!-- Harvard Branding -->
+    <style>
+      .nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #A51C30;
+      }
+      a {
+        color: #A51C30;
+        text-decoration: none;
+      }
+      h1, h2{
+        color: #A51C30;
+      }
+      img.border { 
+        border:1px solid #eee;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+
+          <a class="navbar-brand" style="margin-bottom:.45em">
+            <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
+            </a>
+           <a class="navbar-brand">
+            <strong>VPAL Search</strong> / Academic Technology
+          </a>
+        </div><!-- / navbar-header -->
+
+      </div><!-- / container-fluid -->
+    </nav><!-- / navbar -->
+    <!-- Left Nav -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu" style="margin-left:-1.25em">
+
+            <li><a href="#Overview">Overview</a></li>
+            <li><!-- / Overview -->
+
+              <a href="#UserFlow" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">User Flow&nbsp;<span class="caret arrow"></span></a>          
+              <ul class="nav nav-pills nav-stacked collapse" id="item1" style="height: 0px;">
+                <li><a href="#UserFlow_IA" style="padding-left: 3em; margin-top: -1em;">Information Architecture</a></li>
+              </ul>
+            </li><!-- / User Flow -->
+
+            <li>
+              <a href="#Foundation" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Foundation&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item2" style="height: 0px;">
+                <li><a href="#Foundation_Branding" style="padding-left: 3em; margin-top: -1em;">Branding</a></li>
+                <li><a href="#Foundation_Navigation" style="padding-left: 3em; margin-top: -1em;">Navigation</a></li>
+                <li><a href="#Foundation_Patterns" style="padding-left: 3em; margin-top: -1em;">Familiar Conventions and Patterns</a></li>
+              </ul>
+            </li><!-- / Foundation -->
+
+            <li><a href="#Home">Home page</a></li>
+
+            <li>
+              <a href="#Search" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Search Results Page&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item3" style="height: 0px;">
+                <li><a href="#Search_ContentType" style="padding-left: 3em; margin-top: -1em;">Content Type</a></li>
+                <li><a href="#Search_Elements" style="padding-left: 3em; margin-top: -1em;">Elements</a></li>
+                <li><a href="#Search_GridView" style="padding-left: 3em; margin-top: -1em;">Grid View</a></li>
+              </ul>
+            </li><!-- / Foundation -->
+
+            <!-- <li><a href="#CourseVisualization">Course Visualization</a></li> -->
+
+            <li><a style="color:#999999">Course Visualization</a></li>
+
+          </ul>
+        </div><!-- / col-sm-3 col-md-2 sidebar -->
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <div class="col-sm-12">
+            <h1 class="page-header" id="Overview">Overview</h1>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Patterns originated as an architectural concept by <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank">Christopher Alexander</a>. Patterns are ways to describe best practices, explain good designs, bot from a progframmatical and visual standpoint, and capture experience so that other people can reuse these solutions.
+            </p>
+            <p>
+              Interaction design patterns are a way to describe solutions to common usability or accessibility problems in a specific context. They document interaction models that make it easier for users to understand an interface and accomplish their tasks.
+            </p>
+            <p>
+              While guidelines are generally more useful for describing requirements whereas patterns are useful tools for those who need to translate requirements to specific software solutions.
+              <br>
+              Guidelines and patterns are not necessarily conflicting, and both can be used in conjunction to identify the problem and then create a valid solution.
+            </p>
+            <p>
+              <p>Benefits of using interaction design patterns include:</p>
+              <ul>
+                <li>Capturing collective wisdom across many uses and scenarios</li>
+                <li>Giving teams a common language, reducing misunderstandings that arise from different vocabulary</li>
+                <li>Reducing time and costs in the design and development lifecycle</li>
+                <li>Making usable designs the "<a href="https://en.wikipedia.org/wiki/Path_of_least_resistance" title="Path of least resistance" target="_blank">path of least resistance  <small><i class="fa fa-external-link"></i></small></a>"</li>
+                <li>Eliminate wasted time spent "reinventing the wheel"</li>
+                <li>Ensuring users have a consistent and predictable experience within an application or service</li>
+              </ul>
+            </p>
+            <p class="text-muted">
+              Reference (<i class="fa fa-info-circle"></i>): <a href="https://en.wikipedia.org/wiki/Interaction_design_pattern" target="_blank">Wikipedia  <small><i class="fa fa-external-link"></i></small></a>
+            </p>
+            <hr>
+            <p>
+              This release of VPAL Search has been reviewed to address Harvard branding, to employ consistent and familiar conventions (such as buttons, breadcrumbs, etc.) and to offer an efficient user experience an intuitive interface.
+            </p>
+            <p>
+              A few of the following recommendations may have already be addressed by the time this document was published.  
+            </p>
+            <p>
+              The images of the proposed recommendations are not meant to represent specific visual specifications; they are just depictions of suggested alternatives.  
+            </p>
+            <p class="text-muted">
+              Reference (<i class="fa fa-info-circle"></i>): <a href="httpshttps://play.google.com/store/apps/details?id=edu.harvard.thrive" target="_blank">August 19 2016 release</a>
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h2 class="page-header" id="UserFlow">User Flow</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              The path of least resistance is used to describe certain human behaviors. In these cases, resistance is often used as a metaphor for personal effort or confrontation; a person taking the path of least resistance avoids these <a href="https://en.wikipedia.org/wiki/Principle_of_least_effort" target="_blank"><i class="fa fa-info-circle"></i></a>.
+            </p>
+            <p>
+              Ultimately, people want information/content provided to them as quickly and simply as possible <a href="http://ux.walkme.com/principle-least-effort-integral-part-ux/" target="_blank"><i class="fa fa-info-circle"></i></a>.
+            </p>
+            <p>
+              In the context of software or information modeling, a happy path is a default scenario featuring no exceptional or error conditions, and comprises the sequence of activities executed if everything goes as expected.
+            </p>
+            <p>
+              There may be any number of additional alternate path scenarios which are all valid optional outcomes. If valid alternatives exist, the happy path is then identified as the default or most likely positive alternative <a href="https://en.wikipedia.org/wiki/Happy_path" target="_blank"><i class="fa fa-info-circle"></i></a>. 
+            </p>
+          </div>
+<!-- UserFlow_IA - start -->
+          <div class="col-sm-12 sub-header" id="UserFlow_IA">
+            <h3>Information Architecture</h3>
+            <p>
+              The purpose of your IA is to help users understand where they are, what they’ve found, what’s around, and what to expect <a href="https://prezi.com/aafmvya6bk7t/understanding-information-architecture/" target="_blank"><i class="fa fa-info-circle"></i></a>.
+            </p>
+            <p>
+              These flows help to clarify ways to improve the user interaction with the interface.
+            </p>
+            <p>
+              Although still work in progress, the current flow should allow efficient ways to perform tasks, and to access the different aspects of course information from any point.
+            </p>
+            <p>
+              For instance, no search should be initiated until there is a value in search the input form.
+            <br>
+              If course visualization and metadata is available for each course, a direct link to this information should be made available.
+            </p>
+            <p>
+              Avoiding redundant links would also eliminate confusion. If the home page offers a clear way to conduct a search, the additional search link below this interface and the one on the top navigation are not longer necessary.
+            </p>
+            <p>
+              The proposed flow shown below illustrates a few of these issues. More detailed recommendations are presented in the sections below.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_flow_current.jpg" width="100%" class="border">
+            <p class="text-muted">
+              Current information architecture as in August 26, 2016
+              <br>
+              <a href="VPAL_search_flow_current.jpg" target="_blank">View full size image on another browser tab <small><i class="fa fa-external-link"></i></small></a>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_flow_proposed.jpg" width="100%" class="border">
+            <p class="text-muted">
+              Proposed information architecture. Users should be able to access any other interface, especially if within the same contest. For instance, from course search results to Course Visualization, from the search result of a specific course, to its specific Course Visualization.
+              <br>
+              <a href="VPAL_search_flow_proposed.jpg" target="_blank">View full size image on another browser tab <small><i class="fa fa-external-link"></i></small></a>
+            </p>
+          </div><!-- / UserFlow -->
+
+<!-- h2 chapter - Foundation - start -->
+          <div class="col-sm-12">
+            <h2 class="sub-header" id="Foundation">Foundation</h2>
+          </div>
+
+<!-- h3 chapter - Foundation - Branding - start -->
+          <div class="col-sm-12">
+            <h3 class="sub-header" id="Foundation_Branding">Branding</h3>
+            <p>
+              Within this section, recommendations often refer to the interface of the VPAL web site. The interface is only chosen as an example. Alternatives can of course be considered, especially if offer a more efficient user experience.
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Harvard and HarvardX branding</h4>
+            <p>
+              Harvard and HarvardX branding should be present throughout the interface.
+            </p>
+            <p>
+              Consistency with the <a href="http://vpal.harvard.edu/" target="_blank">VPAL web site <small><i class="fa fa-external-link"></i></small></a>, as well as a prominent presence of its logo, should also be considered.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_logo_current.png" width="100%">
+            <p class="text-muted">Current landing page</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_logo_proposed.png" width="100%">
+            <p class="text-muted">Proposed landing page with Harvard, HarvardX and VPAL branding.</p>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Layout consistency</h4>
+            <p>
+              Consistency with the <a href="http://vpal.harvard.edu/" target="_blank">VPAL web site <small><i class="fa fa-external-link"></i></small></a>, would still allow flexibility and character, while promoting consistency.
+            </p>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_current.png" width="100%">
+            <p class="text-muted">Lower menu of current landing page</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_proposed.png" width="100%">
+            <p class="text-muted">Lower menu of proposed landing page with a layout similar to the VPAL website.</p>
+          </div><!-- / Harvard and HarvardX branding -->
+
+          <div class="col-sm-12">
+            <h4>Color from Harvard palette</h4>
+            <p>
+              It is always beneficial to refer to the color palette of the <a href="http://guidelines.hwp.harvard.edu/color-palette" target="_blank">Harvard Style Guidelines and Best Practices <small><i class="fa fa-external-link"></i></small></a>, since, together with the Harvard logo, helps to strengthen the Harvard branding by providing additional opportunities for consistency.
+            </p>
+            <p>
+              In the proposed landing page depicted below, colors where switched to match similar values listed in the Harvard style guide.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_color_1_current.png" width="100%">
+            <p class="text-muted">Current landing page</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_color_1_proposed.png" width="100%">
+            <p class="text-muted">Proposed landing page with suggestion of colors from the Harvard style guide. <code>8C8179</code> for the search box, <code>4E84C4</code> for the lower menu.</p>
+          </div><!-- / Color from Harvard palette -->
+
+          <div class="col-sm-12">
+            <h4>Elements consistency</h4>
+            <p>
+              Use the same footer as in most Harvard web sites and tools.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_footer_current.png" width="100%">
+            <p class="text-muted">Footer of current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_footer_proposed.png" width="100%">
+            <p class="text-muted">Footer of proposed interface, conistent with most Harvard sites and tools. It also takes less vertical space.</p>
+          </div><!-- / Elements consistency - footer -->
+
+          <div class="col-sm-12" style="margin-top:2em">
+            <p>
+              Use explicit buttons and same navigation elements throughout the interface.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_nav_current.png" class="border" width="100%">
+            <p class="text-muted">Upper navigation of current interface.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_branding_nav_proposed.png" class="border" width="100%">
+            <p class="text-muted">Upper navigation of proposed interface, with similar "Search" button as on the home page, and upper navigation and Harvard branding consistent troughout the interface.</p>
+          </div><!-- / Elements consistency - button -->
+
+<!-- h3 chapter - Foundation - Branding - end -->
+
+<!-- h3 chapter - Foundation - Navigation - start -->
+          <div class="col-sm-12">
+            <h3 class="sub-header" id="Foundation_Navigation">
+            <h3>Navigation</h3>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Upper Tabs</h4>
+            <p>
+              Use consistent upper tabs across the interface. Use them to both highlight the current interface and to allow navigation to any other interface. Tabs should not be hyperlinks when they highlight the current page.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_tabs_current.png" width="100%">
+            <p class="text-muted">Current home page, search results and Course Visualization.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_tabs_proposed.png" width="100%">
+            <p class="text-muted">Proposed consistent upper navigation throughout the interface.</p>
+          </div><!-- / Foundation - Navigation - Upper Tabs -->
+
+          <div class="col-sm-12">
+            <h4>Links to related content area</h4>
+            <p>
+              If there is  equivalent Course Visualization and Metadata content per course, provide links to that information so that users can look at all the information related to the objective of the search.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_link_current.png" class="border" width="100%">
+            <p class="text-muted">Current course with the alternatives to either preview or go to the course site.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_link_proposed.png" class="border" width="100%">
+            <p class="text-muted">Proposed course with Bootstrap class <code>btn-xs</code> links to the available related content.</p>
+            <p>Change the icon for the Preview button link from <code>fa-caret-down</code> to <code>fa-caret-up</code> and the class of the button link from <code>btn-default</code> to <code>btn-primary</code> when this button link is selected, to highlight this functionality in case the expaned preview content is below the scrolling area.</p>
+          </div><!-- / Foundation - Navigation - Links -->
+
+<!-- h3 chapter - Foundation - Navigation - end -->
+
+<!-- h3 chapter - Foundation - Familiar Conventions and Patterns - start -->
+          <div class="col-sm-12">
+            <h3 class="sub-header" id="Foundation_Patterns">
+            <h3>Familiar Conventions and Patterns</h3>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Search Button and Criteria</h4>
+            <p>
+              Avoid to take users to a search result page with 0 results by disabling the Search button until values are typed in input form.
+              <br>
+              Increase visibility of the disabled state by eliminating the transparency of the search <code>panel</code> with <code>opacity: 1</code>.
+              <br>
+              Add a <code>margin-top:1em</code> to the Search button to allow space between the button and the above input form.
+              <br>
+              Provide hints or specific search criteria to the <code>search_query</code> input form via a <code>placeholder</code> to avoid searches with unexpected results.
+              <br>
+              Similar to the enabled search button, allow for the keyboard Return key to submit a search.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_search_current.png" width="100%">
+            <p class="text-muted">Current home page serach interface interface.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_search_proposed.png" width="100%">
+            <p class="text-muted">Proposed home page serach interface interface, with disabled Search button until values are typed in input form, and search information.</p>
+          </div><!-- / Disable Search button upon text input -->
+
+          <div class="col-sm-12">
+            <h4>Consistency of Terms</h4>
+            <p>
+              Use natural language and non-technical terms as much as possible. Use terms referring to search results consistently throughout.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_term_current.png" width="100%">
+            <p class="text-muted">Current search result page with highlighted inconsistent terms.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_term_proposed.png" width="100%">
+            <p class="text-muted">Proposed search result page with consistent terminology.</p>
+          </div><!-- / "Filter Query Results" to "Filter Search Results"; consistency of terms. -->
+
+          <div class="col-sm-12">
+            <h4>Hidden functionality</h4>
+            <p>
+              Although the columns headers of the search result table allow for sorting, this functionality is not visible, even when the cursor hovers the table headers.
+            </p>
+            <p>
+              Clearly indicate the presence and functinality of active elements. 
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_sort_current_annotated.png" class="border" width="100%">
+            <p class="text-muted">Current table headers with text selection cursor.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_navigation_sort_proposed.png" class="border" width="100%">
+            <p class="text-muted">Proposed table headers as active areas (cursor changes into an hand) and sorting icon.</p>
+          </div><!-- / Hidden functionality -->
+
+<!-- **************************************************************** -->
+
+<!-- Recommendations once Chart Visualization can be accessed - start -->
+
+<!-- **************************************************************** -->
+
+          <!-- <div class="col-sm-12">
+            <h4>Outline chart display and navigation areas.</h4>
+            <p>
+              Paragraph
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for proposed interface</p>
+          </div> --><!-- / Outline chart display and navigation areas. -->
+
+          <!-- <div class="col-sm-12">
+            <h4>Drop down - delete "course-v1:HarvardX+" for easier search.</h4>
+            <p>
+              Paragraph
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for proposed interface</p>
+          </div> --><!-- / Drop down - delete "course-v1:HarvardX+" for easier search. -->
+
+          <!-- <div class="col-sm-12">
+            <h4>Drop down - group list in categories such as "HarvardX", "EdX", etc.</h4>
+            <p>
+              Paragraph
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for proposed interface</p>
+          </div> --><!-- / Drop down - group list in categories such as "HarvardX", "EdX", etc. -->
+
+          <!-- <div class="col-sm-12">
+            <h4>Add search interface for drop down list items.</h4>
+            <p>
+              Paragraph
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for proposed interface</p>
+          </div> --><!-- / Add search interface for drop down list items. -->
+
+<!-- **************************************************************** -->
+
+<!-- Recommendations once Chart Visualization can be accessed - start -->
+
+<!-- **************************************************************** -->
+
+<!-- h3 chapter - Foundation - Familiar Conventions and Patterns - end -->
+
+<!-- h2 chapter - Foundation - end -->
+
+<!-- h2 chapter - Home - start -->
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="header" id="Home">Home Page</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Technology Information</h4>
+            <p>
+              Clearly distinguish plain information from active links. Unless Technology is meant to be an content area similar to Search, Course Visualization and Metadata, place this information ner the contaext it is related to. 
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_home_technology_current.png" width="100%">
+            <p class="text-muted">Current home page with technology information next to links of content areas.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_home_technology_proposed.png" width="100%">
+            <p class="text-muted">Proposed location of technology information, where it complements the functionality of this search product.</p>
+          </div><!-- / Technology Information -->
+
+<!-- h2 chapter - Home Page - end -->
+
+<!-- h2 chapter - Search results page - start -->
+          <div class="col-sm-12">
+            <h2 class="header" id="Search">Search Results Page</h2>
+            <p>
+              The search result page is clearly the primary entry way into this interface. Ideally it would allow access to any other content related to search results, allowing the user to efficiently find the content of interest, define its context, and access any related information.
+            </p>
+            <p>
+              The proposed recommendations presented in this and the other sections address individual usability issues, although the goal is to combine all the appropriate and feasible improvements and enhancements.  
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h4 id="Search_ContentType">Content Type</h4>
+            <p>
+              Use consistent terminology. 
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_content_current_annotated.png" width="100%">
+            <p class="text-muted">Current table headers of search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_content_proposed.png" width="100%">
+            <p class="text-muted">Proposed table headers of search results, descriptive of content type.</p>
+          </div><!-- / Content Type -->
+
+          <div class="col-sm-12">
+            <h4 id="Search_Elements">Elements</h4>
+            <p>
+              Use the list display drop down and filter throughout the interface.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_dropdown_current_annotated.png" width="100%">
+            <p class="text-muted">Current use of drop down and filter only on Videos search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_dropdown_proposed.png" width="100%">
+            <p class="text-muted">Proposed use of drop down and filter on all search results.</p>
+          </div><!-- / Elements -->
+
+          <div class="col-sm-12">
+            <h4 id="Search_GridView">Grid View</h4>
+            <p>
+              Similar to <a href="VPAL_search_search_grid_example.png" target="_blank">Google Drive <small><i class="fa fa-external-link"></i></small></a> and other familiar interfaces, consider a grid view as an alternative to the list view for scanning search results. 
+            </p>
+            <p>
+              Make any link or button look like a link or a button on all instances.
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h5 id="Search_GridView_Nav">Consistent Navigation</h5>
+            <p>
+              If both list and grid view are available, retain the same interface as much as possible.
+            </p>
+          </div>
+
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_list_nav_current.png" class="border" width="100%">
+            <p class="text-muted">Current list view of search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_nav_proposed.png" class="border" width="100%">
+            <p class="text-muted">Proposed card view of search results</p>
+          </div><!--  / Search_GridView_Nav -->
+
+          <div class="col-sm-12">
+            <h5 id="Search_GridView_Streamline">Streamline Card Information</h5>
+            <p>
+              Employ the familiar Bootstrap conventions, such as <a href="http://getbootstrap.com/css/#buttons-options" target="_blank">classes for button states <small><i class="fa fa-external-link"></i></small></a>, to clearly convey both information and ways to access it (e.g.: an active link labelled as <code>info</code> to access HarvardX information, or a disabled link labelled as <code>warning</code> for an unavailable Resource count).
+            </p>
+          </div>
+
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_current.png" width="100%">
+            <p class="text-muted">Current card view of search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_proposed.png" width="100%">
+            <p class="text-muted">
+              Proposed card view of search results using a streamlined layout to allow the view of a greater number of cards prior of scrolling. Consider using Bootstrap class <a href="http://getbootstrap.com/components/#labels" target="_blank"><code>label</code> <small><i class="fa fa-external-link"></i></small></a> for a more concise display of information.
+              <br>
+              Refer to <a href="https://github.com/Harvard-University-iCommons/UX-Prototypes/commit/caa6106d11b8663b2bce2b8500635281fd737012#diff-6e2b9aee5a6aadf36b5d1d906490de41" target="_blank">this GitHub commit <small><i class="fa fa-external-link"></i></small></a> to compare current and proposed user interface code. Follow "UI Comment" comments.
+            </p>
+            <p>
+              Group every row of cards in a div with a <code>row</code> class to avoid the display of <a href="VPAL_search_search_grid_example3.png" target="_blank">rows with only one card <small><i class="fa fa-external-link"></i></small></a>.
+            </p>
+          </div><!--  / Search_GridView_Streamline -->
+
+          <div class="col-sm-12" style="margin-top:2em">
+            <h5 id="Search_GridView_Streamline_FilterViews">Filter and Change Views</h5>
+            <p>
+              Consistent to the list view, allow the user to filter this content, but also to switch between these two views, similar to the display options of <a href="VPAL_search_search_grid_example.png" target="_blank">Google Drive <small><i class="fa fa-external-link"></i></small></a>.
+            </p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_list_switch_current.png" width="100%">
+            <p class="text-muted">Current list view of search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_list_switch_proposed.png" width="100%">
+            <p class="text-muted">
+              Current list view of search results with a grid/list button to switch between grid and table view.
+            </p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_switch_current.png" width="100%">
+            <p class="text-muted">Current card view of search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_switch_proposed.png" width="100%">
+            <p class="text-muted">
+              Current card view of search results with a grid/list button to switch between grid and table view.
+            </p>
+          </div>
+
+          <div class="col-sm-12" style="margin-top:2em">
+            <h5 id="Search_GridView_Streamline_FilterViews">Navigation Options</h5>
+            <p>
+              Consider other means of navigating through large amount of information, similar to the navigation features of a <a href="VPAL_search_search_grid_example2.png" target="_blank">map <small><i class="fa fa-external-link"></i></small></a>, "zooming out" alllows to see more information, "zooming in" helps to focus on details.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_map_current.png" width="100%">
+            <p class="text-muted">Current card view of search results.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_search_grid_map_proposed.png" width="100%">
+            <p class="text-muted">
+              Proposed card view of search results using a zoom in/out interface similar to maps. This image shows the "medium" zoomed out view.
+            </p>
+
+            <img src="VPAL_search_search_grid_map_sm_proposed.png" width="100%">
+            <p class="text-muted">
+              Proposed card view of search results using a zoom in/out interface similar to maps. This image shows the "small" zoomed out view.
+            </p>
+          </div><!-- / Grid View -->
+
+<!-- h2 chapter - Search results page - end -->
+
+
+<!-- **************************************************************** -->
+
+<!-- Recommendations once Chart Visualization can be accessed - start -->
+
+<!-- **************************************************************** -->
+
+
+<!-- h2 chapter - Course Visualization - start -->
+          <!-- <div class="col-sm-12">
+            <h2 class="header" id="CourseVisualization">Course Visualization</h2>
+          </div>
+
+          <div class="col-sm-12">
+            <h4>Better use of white space, especially above page header "Course Visualization".</h4>
+            <p>
+              Paragraph
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for proposed interface</p>
+          </div> --><!-- / Better use of white space, especially above page header "Course Visualization". -->
+
+          <!-- <div class="col-sm-12">
+            <h4>Separate charted type on separate rows.</h4>
+            <p>
+              Paragraph
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for current interface</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="VPAL_search_placeholder.png" width="100%">
+            <p class="text-muted">Image placeholder for proposed interface</p>
+          </div> --><!-- / Separate charted type on separate rows. -->
+
+<!-- h2 chapter - Course Visualization - end -->
+
+<!-- **************************************************************** -->
+
+<!-- Recommendations once Chart Visualization can be accessed - end -->
+
+<!-- **************************************************************** -->
+
+        </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
+      </div><!-- / row -->
+    </div><!-- / container-fluid -->
+
+
+    
+
+<!-- Bootstrap script for collapse side nav - start
+================================================== -->
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js -->
+<script type="text/javascript" src="jquery.min.js"></script>
+<!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js -->
+<script type="text/javascript" src="bootstrap.min.js"></script>
+
+<!-- Bootstrap script for collapse side nav - end
+================================================== -->
+
+
+<!-- Script for smooth scroll - start
+================================================== -->
+    <script>
+      $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+
+            var target = $(this.hash);
+
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+              if (target.length) {
+
+                  $('html, body').animate({
+
+                      scrollTop: target.offset().top-70
+
+                  }, 1000);
+
+                  e.preventDefault();
+
+              }
+
+          }
+
+    });
+    </script>
+
+<!-- Script for smooth scroll - end
+================================================== -->
+  
+
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1552</span> x <span class="tooltipHeight" id="winHeight">369</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1552</span> x <span class="tooltipHeight" id="vpHeight">369</span></div></body></html>
