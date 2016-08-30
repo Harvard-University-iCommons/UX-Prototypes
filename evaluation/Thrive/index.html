@@ -20,6 +20,9 @@
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
 
+    <!-- Fonts for this template -->
+    <link href="font-awesome.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="ie-emulation-modes-warning.js"></script>
@@ -42,6 +45,9 @@
       }
       h1, h2{
         color: #A51C30;
+      }
+      img.border { 
+        border:1px solid #eee;
       }
     </style>
 
@@ -226,6 +232,10 @@
             </p>
           </div>
 
+          <div class="col-sm-12">
+            <h4 class="sub-header" id="Foundation_Navigation">Buttons and Links</h4>
+          </div>
+
           <div class="col-sm-3">
             <img src="Screenshot_2016-08-19-07-53-15.png" width="100%">
             <p class="text-muted">The “TOP OF PAGE” anchor link visible in the portrait view</p>
@@ -243,21 +253,86 @@
           <div class="col-sm-3">
             <img src="Screenshot_2016-08-19-08-28-37.png" width="100%">
             <p class="text-muted">Once on “Map”, going back to the home page is not possible via the “hamburger” icon on the upper left hand corner. Here all the bottom navigation icons are listed but “Home.” Provide navigation consistently at any opportunity.</p>
+          </div><!-- / Buttons and Links -->
+
+          <div class="col-sm-12" style="height:5em">
+            <i class="sub-header" id="Foundation_Navigation_Scroll">&nbsp;</i>
           </div>
 
-          <div class="col-sm-12">&nbsp;</div>
+          <div class="col-sm-12">
+            <h4 class="sub-header">Scrolling Area</h4>
+          </div>
 
           <div class="col-sm-3">
             <p class="text-muted">When in a landscape orientation, the area containing the scrolling content of the school shields is not defined. It is not possible to distinguish where to interact when to either refresh the content or scroll the area with the shields</p>
           </div>
           <div class="col-sm-6">
             <img src="Screenshot_2016-08-19-07-52-39.png" width="100%">
-            <p class="text-muted">Upon trying to scroll the area with the shields, and mistakenly interacting outside of it, the content of this interface is refershed (see spinning icon.)</p>
+            <p class="text-muted">Upon trying to scroll the area with the shields, and mistakenly interacting outside of it, the content of this interface is refreshed instead (see spinning icon.)</p>
           </div>
-          <div class="col-sm-3">&nbsp;</div>
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-19-17.png" width="100%">
+            <p class="text-muted">When the content of a page is lengthy and with several content areas, the only way to understand what is displayed is by scrolling through the entire page.</p></div><!-- / Scrolling Area -->
+
+          <div class="col-sm-12" style="height:5em">
+            <i class="sub-header" id="Foundation_Navigation_PDF">&nbsp;</i>
+          </div>
 
           <div class="col-sm-12">
-            <h4 class="sub-header" id="Foundation_Navigation_Example">Examples</h4>
+            <h4 class="sub-header">Accessing PDF Files</h4>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              Although iOS and Android access PDF files from links differently, a common convention could be employed so that the experience of the users of both devices is helpful.
+              While iOS opens PDF with the same display, Android needs to rely on additional approaches. Please consider <a href="http://stackoverflow.com/questions/14578530/how-to-open-display-documents-pdf-doc-without-external-app" target="_blank">this and similar articles</a> to address this issue.
+            </p>
+          </div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-14-48.png" width="100%">
+            <p class="text-muted">Current HMS flow - The link to a PDF file has been selected.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-14-04.png" width="100%">
+            <p class="text-muted">Current HMS flow - The PDF file is being downloaded.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-15-48.png" width="100%">
+            <p class="text-muted">Current HMS flow - The content area is empty but a download icon (<i class="fa fa-download"></i>) is now visible on the upper left hand corner of the mobile interface.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-18-11.png" width="100%">
+            <p class="text-muted">Current HMS flow - The PDF can now be accessed.</p></div>
+
+          <div class="col-sm-12">
+            <p>
+              The HSDM flow appears to be different, even though it accesses the same PDF file of the HMS interface. If this is the best that can be done, then adopt this flow for all the interfaces and follow the recommendations below for a possible solution.
+            </p>
+          </div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-30-11-10-20.png" width="100%">
+            <p class="text-muted">Current HSDM flow - The link to a PDF file has been selected.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-30-10-59-20.png" width="100%">
+            <p class="text-muted">Current HSDM flow - The PDF file is being downloaded.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-30-11-02-15.png" width="100%">
+            <p class="text-muted">Current HSDM flow - The content area hasn't changed but a download icon (<i class="fa fa-download"></i>) is now visible on the upper left hand corner of the mobile interface.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-18-11.png" width="100%">
+            <p class="text-muted">Current HMS flow - The PDF can now be accessed.</p></div><!-- / Accessing PDF Files -->
+
+          <div class="col-sm-12">
+            <h4 class="sub-header" id="Foundation_Navigation_Recommendations">Recommendations</h4>
+          </div>
+
+          <div class="col-sm-12">
+            <h5 class="sub-header" id="Foundation_Navigation_Recommendations_ButtonLink">Buttons and Links</h5>
           </div>
 
           <div class="col-sm-3">
@@ -270,16 +345,58 @@
             <img src="proposed_Foundation_Information_buttons_2.png" width="100%">
           </div>
 
-          <div class="col-sm-12">&nbsp;</div>
+          <div class="col-sm-12" style="height:5em">
+            <i class="sub-header" id="Foundation_Navigation_Recommendations_Scroll">&nbsp;</i>
+          </div>
+
+          <div class="col-sm-12">
+            <h5 class="sub-header">Scrolling Area</h5>
+          </div>
 
           <div class="col-sm-3">
             <p class="text-muted">Example of clearly defined content areas.</p>
           </div>
           <div class="col-sm-6">
             <img src="Screenshot_2016-08-19-07-52-39_1.png" width="100%">
-            <p class="text-muted">Outlines and scrollling user interface clearly defines static from dynamic areas of content.</p>
+            <p class="text-muted">Outlines and scrolling user interface clearly defines static from dynamic areas of content.</p>
           </div>
-          <div class="col-sm-3">&nbsp;</div><!-- / Navigation -->
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-20-00_mod.png" width="100%" class="border">
+            <p class="text-muted">The image of the library is not essential for the recognition of this content, since it is already defined twice, in the upper navigation and at the top of the content area.</p>
+            <p class="text-muted">List all the content topics in a table of content with anchor links so that the user can quickly scan the entire content of the page and then choose where to jump by selecting an item on this list.</p>
+          </div>
+
+          <div class="col-sm-12" style="height:5em">
+            <i class="sub-header" id="Foundation_Navigation_Recommendations_PDF">&nbsp;</i>
+          </div>
+
+          <div class="col-sm-12">
+            <h4 class="sub-header">Accessing PDF Files</h4>
+          </div>
+
+          <div class="col-sm-12">
+            <p>
+              The HSDM flow could be modified by adding a persistent alert message with a reference to the Download icon on the top of the screen.
+            </p>
+          </div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-30-11-10-20.png" width="100%">
+            <p class="text-muted">Current download flow - The link to a PDF file has been selected.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-30-10-59-20.png" width="100%">
+            <p class="text-muted">Current download flow - The PDF file is being downloaded.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-30-11-02-15_mod.png" width="100%">
+            <p class="text-muted">Proposed download flow - Rather than ajust  timed alert, a new persistent alert would follow. This message would refer to the download icon (<i class="fa fa-download"></i>) now visible on the upper left hand corner of the mobile interface.</p></div>
+
+          <div class="col-sm-3">
+            <img src="Screenshot_2016-08-27-16-18-11.png" width="100%">
+            <p class="text-muted">Current download flow - The PDF can now be accessed.</p></div><!-- / Accessing PDF Files --><!-- / Recommendations -->
+
+          <!-- / Navigation -->
 
           <div class="col-sm-12" style="padding-top:3em">
             <footer>
