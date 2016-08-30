@@ -64,6 +64,13 @@
         margin-top:1em;
         margin-bottom:1em;
       }
+      #disabled {
+        color:#999999; !important;
+        text-decoration: none; !important;
+        background-color: #f5f5f5; !important;
+        pointer-events: none; !important;
+        cursor: default; !important;
+      }
     </style>
 
   </head>
@@ -111,10 +118,10 @@
             <li>
               <a href="#Components" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Components&nbsp;<span class="caret arrow"></span></a>          
               <ul class="nav nav-pills nav-stacked collapse" id="item3" style="height: 0px;">
-                <li><a href="#Components_Nomenclature" style="padding-left: 3em; margin-top: -1em;">Nomenclature</a></li>
-                <li><a href="#Components_Text_Links" style="padding-left: 3em; margin-top: -1em;">Text Links</a></li>
-                <li><a href="#Components_Buttons" style="padding-left: 3em; margin-top: -1em;">Buttons</a></li>
-                <li><a href="#Components_Input_Forms" style="padding-left: 3em; margin-top: -1em;">Input Forms</a></li>
+                <li><a href="#Components_Nomenclature" style="padding-left: 3em; margin-top: -1em;" id="disabled">Nomenclature</a></li>
+                <li><a href="#Components_Text_Links" style="padding-left: 3em; margin-top: -1em;" id="disabled">Text Links</a></li>
+                <li><a href="#Components_Buttons" style="padding-left: 3em; margin-top: -1em;" id="disabled">Buttons</a></li>
+                <li><a href="#Components_Input_Forms" style="padding-left: 3em; margin-top: -1em;" id="disabled">Input Forms</a></li>
                 <li><a href="#Components_Drop_downs" style="padding-left: 3em; margin-top: -1em;">Drop downs</a></li>
                 <li><a href="#Components_Tables" style="padding-left: 3em; margin-top: -1em;">Tables</a></li>
                 
@@ -126,8 +133,8 @@
                   </ul>
                 </li><!-- /Alerts -->
 
-                <li><a href="#Components_Progress_Loading" style="padding-left: 3em; margin-top: -1em;">Progress and Loading</a></li>
-                <li><a href="#Components_Collapsible_Panels" style="padding-left: 3em; margin-top: -1em;">Collapsible Panels</a></li>
+                <li><a href="#Components_Progress_Loading" style="padding-left: 3em; margin-top: -1em;" id="disabled">Progress and Loading</a></li>
+                <li><a href="#Components_Collapsible_Panels" style="padding-left: 3em; margin-top: -1em;" id="disabled">Collapsible Panels</a></li>
               </ul>
             </li><!-- / Components -->
 
@@ -749,6 +756,61 @@
             <p>
               (Description of components)
             </p>
+          </div>
+
+          <div class="col-sm-12" id="Components_Drop_downs">
+            <h3>Drop Downs</h3>
+            <p>
+              When listing all the schools, the drop down shall follow this specific order:
+              <ol>
+                <li>
+                  Graduate School of Education
+                </li><li>
+                  Harvard
+                </li><li>
+                  Harvard Business School Doctoral Program
+                </li><li>
+                  Harvard Business School MBA Program
+                </li><li>
+                  Harvard College/GSAS
+                </li><li>
+                  Harvard Divinity School
+                </li><li>
+                  Harvard Extension School
+                </li><li>
+                  Harvard Graduate School of Design
+                </li><li>
+                  Harvard Kennedy School (HKS)
+                </li><li>
+                  Harvard Law School
+                </li><li>
+                  Harvard Library
+                </li><li>
+                  Harvard Medical School
+                </li><li>
+                  Harvard School of Dental Medicine
+                </li><li>
+                  Harvard Summer School
+                </li><li>
+                  Harvard T.H. Chan School of Public Health
+                </li><li>
+                  HarvardX
+                </li><li>
+                  HILR
+                </li><li>
+                  HKS Exec Ed
+                </li><li>
+                  HLS Executive Education
+                </li><li>
+                  HUIT AcTS
+                </li><li>
+                  MIT
+                </li><li>
+                  Radcliffe
+                </li>
+              </ol>
+            </p>
+            
           </div>
 
           <div class="col-sm-12" id="Components_Alerts">
