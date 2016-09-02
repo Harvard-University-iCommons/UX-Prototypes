@@ -74,7 +74,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu" style="margin-left:-2em">
+          <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu">
             <li><a href="#Overview">Overview</a></li>
             <li>
               <a href="#Familiar" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Familiar Conventions and Patterns&nbsp;<span class="caret arrow"></span></a>
@@ -101,6 +101,12 @@
           </ul>
         </li>
         <li><a href="#ViewPaychecks">View Paychecks</a></li>
+        <li>
+          <a href="#UAT" data-target="#item4" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">UAT Issues&nbsp;<span class="caret arrow"></span></a>
+          <ul class="nav nav-stacked left-submenu collapse" id="item4" style="height: 0px; padding-left: 1.8em;">
+            <li><a href="#UAT_20160823" style="margin-top: -1em;">August 23 '16</a></li>
+          </ul>
+        </li>
         <li><a href="#Accessibility">Accessibility</a></li>
       </ul>
     </div><!-- / col-sm-3 col-md-2 sidebar -->
@@ -108,7 +114,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="Overview">
 
           <div class="col-sm-12">
-            <h1 class="page-header" id="Overview" style="padding-top: 1.5em">Overview</h1>
+            <h1 class="page-header" id="Overview">Overview</h1>
           </div>
 
           <div class="col-sm-12">
@@ -122,16 +128,16 @@
 
           <div class="col-sm-12">
             <hr>
-            <h2 class="sub-header" id="Familiar" style="padding-top: 2.5em">Familiar Conventions and Patterns</h2>
+            <h2 class="sub-header" id="Familiar">Familiar Conventions and Patterns</h2>
           </div>
 
-          <div class="col-sm-12" id="FamiliarBrandingBreadcrumbs">
+          <div class="col-sm-12">
             Here are conventions that could be made familiar and therefore intuitive. 
           </div>
 
           <div class="col-sm-12">
             <hr>
-            <h3>Branding and breadcrumbs</h3>
+            <h3 id="FamiliarBrandingBreadcrumbs">Branding and breadcrumbs</h3>
           </div>
           <div class="col-sm-12">
             <h4>Branding</h4>
@@ -192,9 +198,9 @@
             </p>
           </div><!-- / Breadcrumbs -->
 
-          <div class="col-sm-12" id="FamiliarLabelsLinksButtons" style="padding-top: 2.5em">
+          <div class="col-sm-12">
             <hr>
-            <h3>Labels, links and buttons</h3>
+            <h3 id="FamiliarLabelsLinksButtons">Labels, links and buttons</h3>
           </div>
 
           <div class="col-sm-12">
@@ -277,11 +283,11 @@
             <p class="text-muted">Proposed Personal Details card with shortcut to Talent Profile information</p>
           </div><!-- / Links and buttons -->
 
-          <div class="col-sm-12" id="FamiliarFunctions">&nbsp;<br></div>
+          <div class="col-sm-12">&nbsp;<br></div>
 
           <div class="col-sm-12">
             <hr>
-            <h3>Functions</h3>
+            <h3 id="FamiliarFunctions">Functions</h3>
           </div>
           <div class="col-sm-6">
             <img src="convention_functions_current.png" width="50%">
@@ -292,11 +298,9 @@
             <p class="text-muted">Proposed table sorting function with highlighted sorting column and sorting direction</p>
           </div><!-- / Functions -->
 
-          <div class="col-sm-12" id="Submenus">&nbsp;<br></div>
-
           <div class="col-sm-12">
             <hr>
-            <h3>Sub-menus</h3>
+            <h3 id="Submenus">Sub-menus</h3>
           </div>
           <div class="col-sm-12">
             <h4>Use sub-menus consistently.</h4>
@@ -371,7 +375,7 @@
 
           <div class="col-sm-12">
             <hr>
-            <h2 class="page-header" id="EmployeeSelfService" style="padding-top: 2.5em">Employee Self Service</h2>
+            <h2 class="page-header" id="EmployeeSelfService">Employee Self Service</h2>
           </div>
 
           <div class="col-sm-12">
@@ -387,10 +391,10 @@
             </p>
           </div>
 
-          <div class="col-sm-12 col-md-12" id="EmployeeSelfServiceFlow" style="padding-top: 5em"></div>
+          <div class="col-sm-12 col-md-12"></div>
 
           <div class="col-sm-3 col-md-3">
-            <h4>User Flow</h4>
+            <h4 id="EmployeeSelfServiceFlow">User Flow</h4>
             <p>
               The order and position of the cards should be determined by the frequency of use.
               <br>
@@ -405,10 +409,10 @@
             <img src="PeopleSoft_flow.png" width="100%">
           </div><!-- / Employee Self Service - Flow -->
 
-          <div class="col-sm-12 col-md-12" id="EmployeeSelfServiceUI" style="padding-top: 5em"></div>
+          <div class="col-sm-12 col-md-12"></div>
 
           <div class="col-sm-3 col-md-3">
-            <h4>Specifications</h4>
+            <h4 id="EmployeeSelfServiceUI">Specifications</h4>
             <ol>
               <li>
                 <a href="https://raw.githubusercontent.com/Harvard-University-iCommons/UX-Prototypes/master/image/PTNUI_HARVARD_LOGO_1_long_1.png" target="_blank">Harvard SVG logo</a>
@@ -456,11 +460,11 @@
 
           <div class="col-sm-12">
             <hr>
-            <h2 class="page-header" id="NavBarMenu" style="padding-top: 2.5em">NavBar Menu</h2>
+            <h2 class="page-header" id="NavBarMenu">NavBar Menu</h2>
           </div>
 
           <div class="col-sm-12">
-            <h3 class="page-header" id="PersonalizeNavBar" style="padding-top: 2.5em">Personalize NavBar</h3>
+            <h3 class="page-header" id="PersonalizeNavBar">Personalize NavBar</h3>
           </div>
 
           <div class="col-sm-4">
@@ -485,7 +489,7 @@
 
           <div class="col-sm-12">
             <hr>
-            <h3 class="page-header" id="NavBarNavigator" style="padding-top: 2.5em">NavBar Navigator</h3>
+            <h3 class="page-header" id="NavBarNavigator">NavBar Navigator</h3>
           </div>
 
           <div class="col-sm-4">
@@ -508,7 +512,7 @@
 
           <div class="col-sm-12">
             <hr>
-            <h3 class="page-header" id="NavBarMyFavorites" style="padding-top: 2.5em">NavBar My Favorites</h3>
+            <h3 class="page-header" id="NavBarMyFavorites">NavBar My Favorites</h3>
           </div>
 
           <div class="col-sm-4">
@@ -531,7 +535,7 @@
 
           <div class="col-sm-12">
             <hr>
-            <h2 class="page-header" id="ViewPaychecks" style="padding-top: 2.5em">View Paychecks</h2>
+            <h2 class="page-header" id="ViewPaychecks">View Paychecks</h2>
           </div>
 
           <div class="col-sm-12">
@@ -596,19 +600,154 @@
             </div>
           </div><!-- / View Paychecks -->
 
+          <div class="row">
+          </div>
           <div class="col-sm-12">
             <hr>
-            <h2 class="page-header" id="Accessibility" style="padding-top: 2.5em">Accessibility</h2>
+            <h2 class="page-header" id="UAT">User Acceptance Tests</h2>
           </div>
 
-          <div class="col-sm-12" style="height:20em">
+          <div class="col-sm-12">
             <p>
-              Refer to the <a href="http://accessibility.huit.harvard.edu/home" target="_blank">HUIT Online Accessibility website</a> for making content and navigation accessible to users of assistive devices.
+              The primarily usability issues are documented here next to recommendations.
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h3 class="page-header" id="UAT_20160823">August 23 '16 User Acceptance Tests</h3>
+          </div>
+
+          <div class="col-sm-4">
+            <p>
+              <strong>User feedback</strong> - "Only one of seven users discovered the ability to personalize anything."
+            </p>
+            <p>
+              <strong>Recommendation #1</strong> - Change the <i class="fa fa-bars"></i> icon to another one that better relate to settings, such as <i class="fa fa-gear"></i>."
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="UAT_Preferences_current.png" width="100%" class="border">
+            <p class="text-muted">Current Action Lists icon.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="UAT_Preferences_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed Action Lists icon.</p>
+          </div>
+
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-4">
+            <p>
+              <strong>User feedback</strong> - "Only one of seven users discovered the ability to personalize anything."
+            </p>
+            <p>
+              <strong>Recommendation #2</strong> - Add a visual clue that cards could be arranged."
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="UAT_Cards_current.png" width="100%" class="border">
+            <p class="text-muted">Current Action Lists icon.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="UAT_Cards_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed Action Lists icon.</p>
+          </div>
+          
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-4">
+            <p>
+              <strong>User feedback</strong> - Navigation - "User would like a more clear list of what exists in each tile like quick links."
+            </p>
+            <p>
+              <strong>Recommendation</strong> - Provide a mean to acces the links of each card via a drop down."
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="UAT_Cards_info_current.png" width="100%" class="border">
+            <p class="text-muted">Current cards.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="UAT_Cards_info_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed cards with link dropdown.</p>
+          </div>
+          
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-4">
+            <p>
+              <strong>User feedback</strong> - Navigation - "Users unable to find logoff."
+            </p>
+            <p>
+              <strong>Recommendation</strong> - Provide an evident link to fulfill this function."
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="UAT_Logoff_current.png" width="100%" class="border">
+            <p class="text-muted">Current cards.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="UAT_Logoff_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed cards with link dropdown.</p>
+          </div>
+          
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-4">
+            <p>
+              <strong>User feedback</strong> - Navigation - "Users did not notice the ability to collapse the left menu.  They complained about the size of some of the pages, having to scroll to the right."
+            </p>
+            <p>
+              <strong>Recommendation</strong> - Provide an evident mean to collapse and expand the left nav."
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="UAT_LeftNav_current.png" width="100%" class="border">
+            <p class="text-muted">Current left nav.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="UAT_LeftNav_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed left nav with collapse/expand button.</p>
+          </div>
+          
+          <div class="col-sm-12"><hr></div>
+
+          <div class="col-sm-4">
+            <p>
+              <strong>User feedback</strong> - Navigation - "Users unable to find logoff."
+            </p>
+            <p>
+              <strong>Recommendation</strong> - Provide an evident link to fulfill this function."
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="UAT_Logoff_current.png" width="100%" class="border">
+            <p class="text-muted">Current cards.</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="UAT_Logoff_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed cards with link dropdown.</p>
+          </div><!-- / User Acceptance Tests -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h2 class="page-header" id="Accessibility">Accessibility</h2>
+          </div>
+
+          <div class="col-sm-12" style="height:30em">
+            <p>
+              Refer to the <a href="http://accessibility.huit.harvard.edu/developers" target="_blank">HUIT Online Accessibility website</a> for making content and navigation accessible to users of assistive devices.
             </p>
             <p>
               To facilitate the access to accessibility content to users of screenreader software, consider placing <code>hidden</code> links on the home page. Although these links are invisible to most users, they are easily accessible by screenreaders. This approach is described in this article - <a href="http://webaim.org/techniques/css/invisiblecontent/#skipnavlinks" target="_blank">http://webaim.org/techniques/css/invisiblecontent/#skipnavlinks</a>. 
             </p>
-          </div>
+          </div><!-- / Accessibility -->
 
         </div><!-- / col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main -->
 
@@ -629,6 +768,38 @@
 <script type="text/javascript" src="bootstrap.min.js"></script>
 
 <!-- Bootstrap script for collapse side nav - end
+================================================== -->
+
+
+<!-- Script for smooth scroll - start
+================================================== -->
+    <script>
+      $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+
+            var target = $(this.hash);
+
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+              if (target.length) {
+
+                  $('html, body').animate({
+
+                      scrollTop: target.offset().top-70
+
+                  }, 1000);
+
+                  e.preventDefault();
+
+              }
+
+          }
+
+    });
+    </script>
+
+<!-- Script for smooth scroll - end
 ================================================== -->
   
 
