@@ -50,8 +50,36 @@
       h1, h2{
         color: #A51C30;
       }
+      h2{
+        color: #A51C30;
+        border-top:1px solid #eee;
+        padding: 1em 0 0 0;
+      }
       img.border { 
         border:1px solid #eee;
+      }
+      .img-hover img {
+          -webkit-transition: all .3s ease; /* Safari and Chrome */
+          -moz-transition: all .3s ease; /* Firefox */
+          -o-transition: all .3s ease; /* IE 9 */
+          -ms-transition: all .3s ease; /* Opera */
+          transition: all .3s ease;
+      }
+      .img-hover img:hover {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transform:translateZ(0) scale(1.01); /* Safari and Chrome */
+          -moz-transform:scale(1.01); /* Firefox */
+          -ms-transform:scale(1.01); /* IE 9 */
+          -o-transform:translatZ(0) scale(1.01); /* Opera */
+          transform:translatZ(0) scale(1.01);
+          
+        border:1px solid #A51C30;
+      }
+      .grayscale {
+        -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
+        -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
+        filter: brightness(1.10) grayscale(100%); 
       }
     </style>
 
@@ -108,11 +136,21 @@
                 <li><a href="#Search_Elements" style="padding-left: 3em; margin-top: -1em;">Elements</a></li>
                 <li><a href="#Search_GridView" style="padding-left: 3em; margin-top: -1em;">Grid View</a></li>
               </ul>
-            </li><!-- / Foundation -->
+            </li><!-- / Search Results Page -->
 
             <!-- <li><a href="#CourseVisualization">Course Visualization</a></li> -->
 
             <li><a style="color:#999999">Course Visualization</a></li>
+
+            <li>
+              <a href="#DesignConcepts" data-target="#item4" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Design Concepts&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item4" style="height: 0px;">
+                <li><a href="#DesignConcepts_TopCardMatches" style="padding-left: 3em; margin-top: -1em;">Top Card Matches</a></li>
+                <li><a href="#DesignConcepts_SearchResults" style="padding-left: 3em; margin-top: -1em;">Search Results</a></li>
+              </ul>
+            </li><!-- / Design Concepts -->
+
+            <li><a href="#Glossary">Glossary</a></li>
 
           </ul>
         </div><!-- / col-sm-3 col-md-2 sidebar -->
@@ -125,7 +163,7 @@
 
           <div class="col-sm-12">
             <p>
-              Patterns originated as an architectural concept by <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank">Christopher Alexander</a>. Patterns are ways to describe best practices, explain good designs, bot from a progframmatical and visual standpoint, and capture experience so that other people can reuse these solutions.
+              Patterns originated as an architectural concept by <a href="https://en.wikipedia.org/wiki/Christopher_Alexander" target="_blank">Christopher Alexander</a>. Patterns are ways to describe best practices, explain good designs, both from a programmatic and visual standpoint, and capture experience so that other people can reuse these solutions.
             </p>
             <p>
               Interaction design patterns are a way to describe solutions to common usability or accessibility problems in a specific context. They document interaction models that make it easier for users to understand an interface and accomplish their tasks.
@@ -140,7 +178,7 @@
               <ul>
                 <li>Capturing collective wisdom across many uses and scenarios</li>
                 <li>Giving teams a common language, reducing misunderstandings that arise from different vocabulary</li>
-                <li>Reducing time and costs in the design and development lifecycle</li>
+                <li>Reducing time and costs in the design and development life cycle</li>
                 <li>Making usable designs the "<a href="https://en.wikipedia.org/wiki/Path_of_least_resistance" title="Path of least resistance" target="_blank">path of least resistance  <small><i class="fa fa-external-link"></i></small></a>"</li>
                 <li>Eliminate wasted time spent "reinventing the wheel"</li>
                 <li>Ensuring users have a consistent and predictable experience within an application or service</li>
@@ -308,7 +346,7 @@
           
           <div class="col-sm-6">
             <img src="VPAL_search_branding_footer_proposed.png" width="100%">
-            <p class="text-muted">Footer of proposed interface, conistent with most Harvard sites and tools. It also takes less vertical space.</p>
+            <p class="text-muted">Footer of proposed interface, consistent with most Harvard sites and tools. It also takes less vertical space.</p>
           </div><!-- / Elements consistency - footer -->
 
           <div class="col-sm-12" style="margin-top:2em">
@@ -323,7 +361,7 @@
           
           <div class="col-sm-6">
             <img src="VPAL_search_branding_nav_proposed.png" class="border" width="100%">
-            <p class="text-muted">Upper navigation of proposed interface, with similar "Search" button as on the home page, and upper navigation and Harvard branding consistent troughout the interface.</p>
+            <p class="text-muted">Upper navigation of proposed interface, with similar "Search" button as on the home page, and upper navigation and Harvard branding consistent throughout the interface.</p>
           </div><!-- / Elements consistency - button -->
 
 <!-- h3 chapter - Foundation - Branding - end -->
@@ -364,7 +402,7 @@
           <div class="col-sm-6">
             <img src="VPAL_search_navigation_link_proposed.png" class="border" width="100%">
             <p class="text-muted">Proposed course with Bootstrap class <code>btn-xs</code> links to the available related content.</p>
-            <p>Change the icon for the Preview button link from <code>fa-caret-down</code> to <code>fa-caret-up</code> and the class of the button link from <code>btn-default</code> to <code>btn-primary</code> when this button link is selected, to highlight this functionality in case the expaned preview content is below the scrolling area.</p>
+            <p>Change the icon for the Preview button link from <code>fa-caret-down</code> to <code>fa-caret-up</code> and the class of the button link from <code>btn-default</code> to <code>btn-primary</code> when this button link is selected, to highlight this functionality in case the expanded preview content is below the scrolling area.</p>
           </div><!-- / Foundation - Navigation - Links -->
 
 <!-- h3 chapter - Foundation - Navigation - end -->
@@ -391,12 +429,12 @@
           </div>
           <div class="col-sm-6">
             <img src="VPAL_search_navigation_search_current.png" width="100%">
-            <p class="text-muted">Current home page serach interface interface.</p>
+            <p class="text-muted">Current home page search interface interface.</p>
           </div>
           
           <div class="col-sm-6">
             <img src="VPAL_search_navigation_search_proposed.png" width="100%">
-            <p class="text-muted">Proposed home page serach interface interface, with disabled Search button until values are typed in input form, and search information.</p>
+            <p class="text-muted">Proposed home page search interface interface, with disabled Search button until values are typed in input form, and search information.</p>
           </div><!-- / Disable Search button upon text input -->
 
           <div class="col-sm-12">
@@ -421,7 +459,7 @@
               Although the columns headers of the search result table allow for sorting, this functionality is not visible, even when the cursor hovers the table headers.
             </p>
             <p>
-              Clearly indicate the presence and functinality of active elements. 
+              Clearly indicate the presence and functionality of active elements. 
             </p>
           </div>
           <div class="col-sm-6">
@@ -516,14 +554,13 @@
 
 <!-- h2 chapter - Home - start -->
           <div class="col-sm-12">
-            <hr>
             <h2 class="header" id="Home">Home Page</h2>
           </div>
 
           <div class="col-sm-12">
             <h4>Technology Information</h4>
             <p>
-              Clearly distinguish plain information from active links. Unless Technology is meant to be an content area similar to Search, Course Visualization and Metadata, place this information ner the contaext it is related to. 
+              Clearly distinguish plain information from active links. Unless Technology is meant to be an content area similar to Search, Course Visualization and Metadata, place this information near the context it is related to. 
             </p>
           </div>
           <div class="col-sm-6">
@@ -538,7 +575,8 @@
 
 <!-- h2 chapter - Home Page - end -->
 
-<!-- h2 chapter - Search results page - start -->
+<!-- **** Search results page - start **** -->
+
           <div class="col-sm-12">
             <h2 class="header" id="Search">Search Results Page</h2>
             <p>
@@ -611,7 +649,7 @@
           <div class="col-sm-12">
             <h5 id="Search_GridView_Streamline">Streamline Card Information</h5>
             <p>
-              Employ the familiar Bootstrap conventions, such as <a href="http://getbootstrap.com/css/#buttons-options" target="_blank">classes for button states <small><i class="fa fa-external-link"></i></small></a>, to clearly convey both information and ways to access it (e.g.: an active link labelled as <code>info</code> to access HarvardX information, or a disabled link labelled as <code>warning</code> for an unavailable Resource count).
+              Employ the familiar Bootstrap conventions, such as <a href="http://getbootstrap.com/css/#buttons-options" target="_blank">classes for button states <small><i class="fa fa-external-link"></i></small></a>, to clearly convey both information and ways to access it (e.g.: an active link labeled as <code>info</code> to access HarvardX information, or a disabled link labeled as <code>warning</code> for an unavailable Resource count).
             </p>
           </div>
 
@@ -666,7 +704,7 @@
           <div class="col-sm-12" style="margin-top:2em">
             <h4 class="header" id="Search_GridView_Streamline_Zoom">Navigation Options</h4>
             <p>
-              Consider other means of navigating through large amount of information, similar to the navigation features of a <a href="VPAL_search_search_grid_example2.png" target="_blank">map <small><i class="fa fa-external-link"></i></small></a>, "zooming out" alllows to see more information, "zooming in" helps to focus on details.
+              Consider other means of navigating through large amount of information, similar to the navigation features of a <a href="VPAL_search_search_grid_example2.png" target="_blank">map <small><i class="fa fa-external-link"></i></small></a>, "zooming out" allows to see more information, "zooming in" helps to focus on details.
             </p>
           </div>
           <div class="col-sm-6">
@@ -686,7 +724,212 @@
             </p>
           </div><!-- / Grid View -->
 
-<!-- h2 chapter - Search results page - end -->
+<!-- **** Design Concepts - start **** -->
+
+          <div class="col-sm-12">
+            <h2 class="header" id="DesignConcepts">Design Concepts</h2>
+            <p>
+              Let's use this section as a repository of ideas, concepts and the outcome of team brainstorming.
+            </p>
+            <p>
+              Most of the following depictions are constructed by manipulating the existing code, so hopefully they are not far from a realistic implementation.
+              <br>
+              Occasionally, GitHub commits with both before/after screen captures and UI code instances will be available.
+            </p>
+            <p>
+              The most unrealistic concepts are surely out of Vittorio's head, as he primarily focuses on the user experience and, by choice, design or lack of technical knowledge, disregards other aspects of the product.
+              Although seemingly unrealistic, this approach helps to find creative opportunities and optimal solutions.
+              <br>
+              Team involvement provides the greatest contribution, though, by helping with the assessment of realistic and long term implementations, distinguishing immediate from backlog ideas, and exploring the potential of long term solutions.
+            </p>
+            <p>
+              In most cases, although team consensus is important, user testing and validation will provide the most accurate confirmation of the usability of an interface.
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h3 id="DesignConcepts_TopCardMatches">Top Card Matches</h3>
+            <p>
+              Here is a concept aimed to allow the user to immediately learn how many matches are in a "top card", which category of matches (video, problem, HTML) and the number of matches per category.
+            </p>
+            <p>
+              <strong>This design is based on the assumption that a single course may contain several types of content, such as HTML pages, and video, and problems.</strong>
+            </p>
+            <p>
+              For design consistency, the top cards are depicted as similar to the cards in the search results card view, to ensure the user that both cards access the same type of information.
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h4 id="DesignConcepts_TopCardMatches_Banner">Top Card Banner</h4>
+            <p>
+              These three design alternatives allow the user to access course and search results information without leaving this page.
+            </p>
+            <p>
+              The focus of this design is in the color banner below the course image.
+            </p>
+            <p>
+              In all of these instances, each icon would link to the search result page with that category. Basically using the same link of the links below (e.g.: video (8) or problems (10), etc.)</p>
+            <p>
+              With the risk of overstating the obvious, users shall help us to define the most comprehensive icons and whether this functionality is useful.
+            </p>
+            <p>
+              For every link, for both the information icon (<i class="fa fa-info-circle"></i>) and the search category icons (<i class="fa fa-file"></i>, <i class="fa fa-video-camera"></i> and <i class="fa fa-question-circle"></i>) Bootstrap enhanced <a href="http://getbootstrap.com/javascript/#static-tooltip" target="_blank"><code>tooltip</code> <small><i class="fa fa-external-link"></i></small></a> will help first time users to understand and learn the function and the target of each link.
+            </p>
+            <p>
+              Here is the code for these examples: <a href="url" target="_blank">findability/ui_vittorio/UX_Design/Card_top_UI <small><i class="fa fa-external-link"></i></small></a>
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="VPAL_search_DesignConcepts1_proposed.png" width="100%">
+            <p class="text-muted">
+              This card design shows (1) an icon for viewing the course information via a Bootstrap <a href="http://getbootstrap.com/javascript/#static-popover" target="_blank"><code>popover</code> <small><i class="fa fa-external-link"></i></small></a>, (2) a summary of search matches for this course, and (3) icons that indicate which categories these searches belong to.
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="VPAL_search_DesignConcepts2_proposed.png" width="100%">
+            <p class="text-muted">
+              This card shows a scenario in which the search matches only belong to two of the three categories, so only these icons are shown. These icons could be links to the Video, Problems and HTML search results.
+            </p>
+            <p>
+              In this design the text with the total search matches (21 matches!) is a link that allows to view more details about these search matches via a Bootstrap <a href="http://getbootstrap.com/components/#dropdowns" target="_blank"><code>dropdown</code> <small><i class="fa fa-external-link"></i></small></a>.
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="VPAL_search_DesignConcepts3_proposed.png" width="100%">
+            <p class="text-muted">
+              This card illustrates a concept of "color temperature", in which each search category icon indicates by the opacity of its color the number of searches that fall in its category; full opacity (the brightest) for the category with the greatest number of search matches for this course, least opacity for the smallest number of search matches.
+            </p>
+          </div><!-- /Top Card Banner -->
+
+<!-- / DesignConcepts_SearchResults -->
+
+          <div class="col-sm-12">
+            <h3 id="DesignConcepts_SearchResults">Search Results</h3>
+            <p>
+              Examining the interface of <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=moon&tbm=vid" target="_blank">Google search results <small><i class="fa fa-external-link"></i></small></a> helps to appreciate the extensive user testing they have conducted to reach such a streamlined solution.
+            </p>
+            <p>
+              I documented here also Daniel’s most recent design considerations.
+            </p>
+            <p>
+              All these images are scaled to fit this page. Select an image to open in full scale on a new browser tab.
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h4 id="DesignConcepts_TopCardMatches_GoogleApproach">Google Interface and REACH Work in Progress</h4>
+          </div>
+          
+          <div class="col-sm-4 img-hover">
+            <a href="VPAL_search_research_Google_all_current.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_research_Google_all_current_cropped.png" width="100%" class="border img-responsive img-rounded"></a>
+            <p class="text-muted">
+              Goggle search results, All type of results.
+            </p>
+          </div>
+          
+          <div class="col-sm-4 img-hover">
+            <a href="VPAL_search_research_Google_video_current.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_research_Google_video_current_cropped.png" width="100%" class="border img-responsive img-rounded"></a>
+            <p class="text-muted">
+              Goggle search results, Video related results.
+            </p>
+          </div>
+          
+          <div class="col-sm-4 img-hover">
+            <a href="VPAL_search_research_REACH_all_current.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_research_REACH_all_current_cropped.png" width="100%" class="border img-responsive img-rounded"></a>
+            <p class="text-muted">
+              Daniel’s interim draft of HarvardX REACH search results.
+            </p>
+          </div><!-- / DesignConcepts_TopCardMatches_GoogleApproach -->
+
+          <div class="col-sm-12">
+            <h4 id="DesignConcepts_TopCardMatches_REACHapproach">Google-like Search Results in the Context of HarvardX REACH.</h4>
+            <p>
+              Here I just swapped and edited the text strings and links of the Google interface as I adapted this design to HarvardX REACH.
+            </p>
+            <p>
+              This intent is not to copy Google, rather to trigger ideas and to explore which interface elements are most usable and adoptable. 
+            </p>
+          </div>
+          
+          <div class="col-sm-4 img-hover">
+            <a href="VPAL_search_research_Google_all_proposed.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_research_Google_all_proposed_cropped.png" width="100%" class="border img-responsive img-rounded"></a>
+            <p class="text-muted">
+              Search results of All content types.
+            </p>
+          </div>
+          
+          <div class="col-sm-4 img-hover">
+            <a href="VPAL_search_research_Google_video_proposed.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_research_Google_video_proposed_cropped.png" width="100%" class="border img-responsive img-rounded"></a>
+            <p class="text-muted">
+              Search results of Video content.
+            </p>
+          </div>
+          
+          <div class="col-sm-4 img-hover">
+            <a href="VPAL_search_research_Google_html_proposed.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_research_Google_html_proposed_cropped.png" width="100%" class="border img-responsive img-rounded"></a>
+            <p class="text-muted">
+              Search results of HTML content.
+            </p>
+          </div><!-- / DesignConcepts_TopCardMatches_REACHapproach -->
+
+<!-- / DesignConcepts_SearchResults -->
+
+<!-- **** Design Concepts - end **** -->
+
+<!-- **** Glossary - start **** -->
+
+          <div class="col-sm-12">
+            <h2 class="header" id="Glossary">Glossary</h2>
+            <p>
+              Although not official (yet), and definitely not accurate, I'll start collecting here the general nomenclature of the features we are working on, for the primary purpose to avoid ambiguities and hopefully contribute to a clearer <a href="http://www.iainstitute.org/what-is-ia" target="_blank">information architecture <small><i class="fa fa-external-link"></i></small></a>.
+            </p>
+          </div>
+
+          <style>
+          #table_glossary_term {
+          font-weight: bold;
+          }
+          </style>
+
+          <div class="col-sm-12" style="margin-top:2em">
+            <table class="table table-striped">
+              <caption hidden>List of the general nomenclature of the features of HarvardX REACH</caption>
+              <thead> 
+                <tr> 
+                  <th scope="col">Term</th>
+                  <th scope="col">Interface</th> 
+                  <th scope="col">Explanation</th> 
+                </tr> 
+              </thead> 
+              <tbody> 
+                <tr> 
+                  <td scope="row" id="table_glossary_term">Top card</td> 
+                  <td>Search Results</td> 
+                  <td>The list of the 4 or less courses that match the higher number of search results.</td>
+                </tr> 
+                <tr> 
+                  <td scope="row" id="table_glossary_term">Top card features</td> 
+                  <td>Search Results</td> 
+                  <td>The links, drop down or icons that populate a top card.</td>
+                </tr> 
+                <tr> 
+                  <td scope="row" id="table_glossary_term">Top card banner</td> 
+                  <td>Search Results</td> 
+                  <td>(If this design flies) the color banner below the image of a top card</td>
+                </tr> 
+              </tbody> 
+            </table>
+
+          </div>
+
+<!-- **** Glossary - end **** -->
+
+
+          <div class="col-sm-12" style="margin-top:40em">&nbsp;</div><!-- This div is here only to allow for enough, blank vertical space so that if the last content scrolls to the top of the browser page when selected by an anchor link. -->
 
 
 <!-- **************************************************************** -->
