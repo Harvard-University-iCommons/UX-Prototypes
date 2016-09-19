@@ -138,6 +138,8 @@
               </ul>
             </li><!-- / Search Results Page -->
 
+            <li><a href="#TopSearchMatches">Top Search Matches</a></li>
+
             <!-- <li><a href="#CourseVisualization">Course Visualization</a></li> -->
 
             <li><a style="color:#999999">Course Visualization</a></li>
@@ -147,7 +149,7 @@
             <li>
               <a href="#DesignConcepts" data-target="#item4" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">Design Concepts&nbsp;<span class="caret arrow"></span></a>
               <ul class="nav nav-stacked left-submenu collapse" id="item4" style="height: 0px;">
-                <li><a href="#DesignConcepts_TopCardMatches" style="padding-left: 3em; margin-top: -1em;">Top Card Matches</a></li>
+                <li><a href="#DesignConcepts_TopSearchMatches" style="padding-left: 3em; margin-top: -1em;">Top Search Matches</a></li>
                 <li><a href="#DesignConcepts_SearchResults" style="padding-left: 3em; margin-top: -1em;">Search Results</a></li>
               </ul>
             </li><!-- / Design Concepts -->
@@ -728,6 +730,88 @@
 
 <!-- **** Search results page - end **** -->
 
+<!-- **** Top Search Matches - start **** -->
+
+          <div class="col-sm-12">
+            <h2 class="header" id="TopSearchMatches">Top Search Matches</h2>
+            <p>
+              The top search matches represent search items whose content has the highest number of instances matching  the submitted search term.
+            </p>
+          </div>
+
+          <div class="col-sm-4">
+            <p class="text-muted">
+              <strong>Placement and content</strong>
+            </p>  
+            <p class="text-muted">
+              (This diagram is not a representation of the interface design.)
+            </p>  
+            <p class="text-muted">
+              Each of these top search matches, should display
+              <ol class="text-muted">
+                <li>
+                  the item image
+                </li>
+                <li>
+                  the item name
+                </li>
+                <li>
+                  type (video, problem or HTML page)
+                </li>
+                <li>
+                  a link to view course description
+                </li>
+                <li>
+                  a link to preview this content
+                </li>
+                <li>a link to add this content to the currently logged in Canvas course.
+                </li>
+              </ol>
+            </p>
+          </div>
+          
+          <div class="col-sm-8">
+            <img src="VPAL_Search_Top_Search_Matches.png" width="100%" class="border">
+            <p class="text-muted">Image of this <a href="https://docs.google.com/a/harvard.edu/drawings/d/1D2csWB5GPq3AZ7c_jSVzo47P71hbfzcqQkCKoBpHXlo/edit?usp=sharing" target="_blank" title="Diagram of top cards layout and details">Google Draw <small><i class="fa fa-external-link"></i></small></a> document.</p>
+          </div><!-- / Top Search Matches -->
+
+          <div class="col-sm-12" style="margin-top:2em"></div>
+
+          <div class="col-sm-4">
+            <p class="text-muted">
+              <strong>Display criteria</strong>
+            </p>
+            <p class="text-muted">
+              (This diagram is not a representation of the interface design.)
+            </p>  
+            <p class="text-muted">
+              <ol class="text-muted">
+                <li>
+                  All top items could represent course material of the very same course.
+                </li>
+                <li>
+                  All top items could be of the same type (all videos).
+                </li>
+                <li>
+                  4 top items will be displayed when the search result yields 4 or more search items.
+                </li>
+                <li>
+                  If only 4 or less search items can be produced as a search result, there will be 4 or less top cards and 4 or less search items below.
+                </li>
+                <li>
+                  4 top items will be displayed independently from the filter selection of the search results.
+                </li>
+              </ol>
+            </p>
+          </div>
+          
+          <div class="col-sm-8">
+            <img src="VPAL_Search_Top_Search_Matches_Display.png" width="100%" class="border">
+            <p class="text-muted">Image of this <a href="https://docs.google.com/a/harvard.edu/drawings/d/13aEYWlB177MJgkS5W0b7YFMvpjImf7tW8ewu7UvD168/edit?usp=sharing" target="_blank" title="Diagram of top cards display criteria">Google Draw <small><i class="fa fa-external-link"></i></small></a> document.</p>
+          </div><!-- / Top Search Matches Display -->
+
+<!-- **** Top Cards - end **** -->
+
 <!-- **** Add to Canvas - start **** -->
 
           <div class="col-sm-12">
@@ -749,7 +833,7 @@
           
           <div class="col-sm-9">
             <img src="VPAL_search_Add_to_Canvas.png" width="100%" class="border">
-            <p class="text-muted">Image of the <a href="https://docs.google.com/drawings/d/1D2yobmFtujzQu_riwAKKz3iYsbwlFF0KdJ6s7BQQnyA/edit" target="_blank">Google Draw <small><i class="fa fa-external-link"></i></small></a> document.</p>
+            <p class="text-muted">Image of this <a href="https://docs.google.com/drawings/d/1D2yobmFtujzQu_riwAKKz3iYsbwlFF0KdJ6s7BQQnyA/edit" target="_blank">Google Draw <small><i class="fa fa-external-link"></i></small></a> document.</p>
           </div><!-- / Content Type -->
 
 <!-- **** Add to Canvas - end **** -->
@@ -778,7 +862,7 @@
           </div>
 
           <div class="col-sm-12">
-            <h3 id="DesignConcepts_TopCardMatches">Top Card Matches</h3>
+            <h3 id="DesignConcepts_TopSearchMatches">Top Search Matches</h3>
             <p>
               Here is a concept aimed to allow the user to immediately learn how many matches are in a "top card", which category of matches (video, problem, HTML) and the number of matches per category.
             </p>
@@ -791,7 +875,7 @@
           </div>
 
           <div class="col-sm-12">
-            <h4 id="DesignConcepts_TopCardMatches_Banner">Top Card Banner</h4>
+            <h4 id="DesignConcepts_TopSearchMatches_Banner">Top Search Banner</h4>
             <p>
               These three design alternatives allow the user to access course and search results information without leaving this page.
             </p>
@@ -833,7 +917,7 @@
             <p class="text-muted">
               This card illustrates a concept of "color temperature", in which each search category icon indicates by the opacity of its color the number of searches that fall in its category; full opacity (the brightest) for the category with the greatest number of search matches for this course, least opacity for the smallest number of search matches.
             </p>
-          </div><!-- /Top Card Banner -->
+          </div><!-- /Top Search Banner -->
 
 <!-- / DesignConcepts_SearchResults -->
 
@@ -993,19 +1077,19 @@
               </thead> 
               <tbody> 
                 <tr> 
-                  <td scope="row" id="table_glossary_term">Top card</td> 
+                  <td scope="row" id="table_glossary_term">Top search matches</td> 
                   <td>Search Results</td> 
                   <td>The list of the 4 or less courses that match the higher number of search results.</td>
                 </tr> 
                 <tr> 
-                  <td scope="row" id="table_glossary_term">Top card features</td> 
+                  <td scope="row" id="table_glossary_term">Top search features</td> 
                   <td>Search Results</td> 
-                  <td>The links, drop down or icons that populate a top card.</td>
+                  <td>The links, drop down or icons that populate a top search match.</td>
                 </tr> 
                 <tr> 
-                  <td scope="row" id="table_glossary_term">Top card banner</td> 
+                  <td scope="row" id="table_glossary_term">Top Search Banner</td> 
                   <td>Search Results</td> 
-                  <td>(If this design flies) the color banner below the image of a top card</td>
+                  <td>(If this design flies) the color banner below the image of a top search match</td>
                 </tr> 
                 <tr> 
                   <td scope="row" id="table_glossary_term">Card thumbnail</td> 
