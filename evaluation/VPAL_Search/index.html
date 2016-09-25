@@ -81,6 +81,10 @@
         -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
         filter: brightness(1.10) grayscale(100%); 
       }
+      .text-muted-description { /*component descendent to indent description*/
+        color: #777;
+        padding-left:1em;
+      }
     </style>
 
   </head>
@@ -154,7 +158,16 @@
               </ul>
             </li><!-- / Design Concepts -->
 
+            <li>
+              <a href="#CSS_Structure" data-target="#item5" data-toggle="collapse" data-parent="#stacked-menu" class="collapsed">CSS Structure&nbsp;<span class="caret arrow"></span></a>
+              <ul class="nav nav-stacked left-submenu collapse" id="item5" style="height: 0px;">
+                <li><a href="#CSS_Structure_Home" style="padding-left: 3em; margin-top: -1em;">Home Page</a></li>
+              </ul>
+            </li><!-- / CSS Structure -->
+
             <li><a href="#Glossary">Glossary</a></li>
+
+            <li><a href="#ContextualStyling">Contextual styling</a></li>
 
           </ul>
         </div><!-- / col-sm-3 col-md-2 sidebar -->
@@ -1050,6 +1063,91 @@
 
 <!-- **** Design Concepts - end **** -->
 
+          <div class="col-sm-12">
+            <h2 class="header" id="CSS_Structure">
+              CSS Structure
+            </h2>
+          </div>
+
+          <div class="col-sm-12">
+            <h3 class="header" id="CSS_Structure_Home">
+              Home Page
+            </h3>
+          </div>
+
+          <div class="col-sm-4">
+            <p class="text-muted">
+              <ul>
+                <li>
+                  Background image - <code>body</code>
+                </li>
+                <li>
+                  Upper nav - Bootstrap
+                  <ul>
+                    <li>
+                      HarvardDART logo - <code>#NavLogoBlack</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Spacing - <code>.u-margin-lg</code>
+                </li>
+                <li>
+                  HarvardDART sizing - <code>.HomeLogo</code>
+                </li>
+                <li>
+                  Spacing - <code>.u-margin-md</code>
+                </li>
+                <li>
+                  Search form - <code>.HomeSearch</code>
+                </li>
+                <li>
+                  Spacing - <code>.u-margin-md</code>
+                </li>
+                <li>
+                  Credits panel - <code>.HomeCreditsPanel</code>
+                  <ul>
+                    <li>
+                      Credits - <code>.HomeCredits</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Footer
+                  <ul>
+                    <li>
+                      <code>html</code>
+                      <ul>
+                        <li>
+                          <code>body</code>
+                          <ul>
+                            <li>
+                              <code>.footer</code>
+                              <ul>
+                                <li>
+                                  <code>.container</code>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </p>
+            <p class="text-muted">
+              This CSS structure was used on <a href="https://github.com/harvard-vpal/findability/commit/b40ebce27ba4178ea7c741886826cbed0f372a5e#diff-5491f62c3d68aeab4c5d35c8d170630f" target="_blank">this commit <small><i class="fa fa-external-link"></i></small></a>.
+            </p>
+          </div>
+
+          <div class="col-sm-8 img-hover">
+            <a href="VPAL_search_style_Home_7_UI.png" target="_blank" title="Select to open full size image in a new tab"><img src="VPAL_search_style_Home_7_UI.png" width="100%" class="border img-responsive img-rounded"></a>
+          </div><!-- / CSS_Structure_Home -->
+
+<!-- **** CSS_Structure - end **** -->
+
 <!-- **** Glossary - start **** -->
 
           <div class="col-sm-12">
@@ -1096,6 +1194,11 @@
                   <td>Search Results</td> 
                   <td>Image of either video, problem or HTML page, that is displayed in a list view of a search result page</td>
                 </tr> 
+                <tr> 
+                  <td scope="row" id="table_glossary_term">CSS Components</td> 
+                  <td>CSS styles</td> 
+                  <td>The small building blocks that get used to assemble a website or app. Like buttons, inputs, navs, headers etc.</td>
+                </tr> 
               </tbody> 
             </table>
 
@@ -1103,6 +1206,112 @@
 
 <!-- **** Glossary - end **** -->
 
+<!-- **** ContextualStyling - start **** -->
+
+          <div class="col-sm-12">
+            <h2 class="header" id="ContextualStyling">Contextual Styling</h2>
+            <p>
+              Similar to the importance of a well defined architecture...
+            </p>
+            <p>
+              Employing the very same coding principles ensure more efficient
+              team work and communication. I found this article very
+              beneficial: 
+              <a href="http://www.iainstitute.org/what-is-ia" target="_blank">
+                HTML/CSS code style best practices
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by Richard Hallows
+            </p>
+          </div>
+
+          <div class="col-sm-12">
+            <h3 class="header" id="ContextualStyling_References">
+              References
+            </h3>
+          </div>
+
+          <div class="col-sm-4">
+            <h4>Nomenclature and style structure</h4>
+
+            <p>
+              <a href="http://www.iainstitute.org/what-is-ia" target="_blank">
+                Contextual Styling
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by simurai
+            </p>
+            <p class="text-muted-description">
+              Various strategies for contextual styling in CSS.
+            </p>
+            <hr>
+
+            <p>
+              <a href="https://philipwalton.com/articles/extending-styles/" target="_blank">
+                Extending Styles
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by Philip Walton
+            </p>
+            <p class="text-muted-description">
+              Modifying a component means you change its style definition —
+              its properties and values. 
+              Extending a component, by contrast, means you take an existing 
+              component and build on top of it. You do not change the definition of the existing component; instead, 
+              you create a new component that includes the original styles and 
+              adds new styles (or overrides) on top of them.
+            </p>
+            <hr>
+
+            <p>
+              <a href="https://philipwalton.com/articles/side-effects-in-css/" target="_blank">
+                Side Effects in CSS
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by Philip Walton
+            </p>
+            <p class="text-muted-description">
+              There are two types of problems in CSS: cosmetic problems and architectural problems.
+            </p>
+            <hr>
+
+          </div>
+
+          <div class="col-sm-4">
+            <h4>Conventions</h4>
+            <p>
+              <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target="_blank">
+                SUIT CSS naming conventions
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by Ben Zörb
+            </p>
+            <p class="text-muted-description">
+              SUIT CSS relies on structured class names and meaningful hyphens.
+            </p>
+            <hr>
+            <p>
+              <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target="_blank">
+                BEM
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by Robin Rendle
+            </p>
+            <p class="text-muted-description">
+              The Block, Element, Modifier methodology (commonly referred to as BEM) is a popular naming convention for classes in HTML and CSS.
+            </p>
+            <hr>
+          </div>
+
+          <div class="col-sm-4">
+            <h4>Examples</h4>
+            <p>
+              <a href="URL" target="_blank">
+                Example
+                <small><i class="fa fa-external-link"></i></small>
+              </a> by author
+            </p>
+            <p class="text-muted-description">
+              Description.
+            </p>
+            <hr>
+          </div><!-- / ContextualStyling_References -->
+
+<!-- **** ContextualStyling - end **** -->
 
           <div class="col-sm-12" style="margin-top:40em">&nbsp;</div><!-- This div is here only to allow for enough, blank vertical space so that if the last content scrolls to the top of the browser page when selected by an anchor link. -->
 
