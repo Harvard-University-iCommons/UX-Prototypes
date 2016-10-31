@@ -14,7 +14,7 @@
     <link href="bootstrap.min.css" rel="stylesheet">
 
 
-    <link href="font-awesome.css" rel="stylesheet">
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -83,6 +83,7 @@
                 <li><a href="#FamiliarLabelsLinksButtons" style="margin-top: -1em;">Labels, links and buttons</a></li>
                 <li><a href="#FamiliarFunctions" style="margin-top: -1em;">Functions</a></li>
                 <li><a href="#Submenus" style="argin-top: -1em;">Sub-menus</a></li>
+                <li><a href="#HelpLink" style="argin-top: -1em;">Help link</a></li>
               </ul>
             </li>
             <li>
@@ -98,6 +99,7 @@
                 <li><a href="#PersonalizeNavBar" style="margin-top: -1em;">Personalize NavBar</a></li>
             <li><a href="#NavBarNavigator" style="margin-top: -1em;">NavBar Navigator</a></li>
             <li><a href="#NavBarMyFavorites" style="margin-top: -1em;">My Favorites NavBar</a></li>
+            <li><a href="#NavBarIcons" style="margin-top: -1em;">NavBar icons</a></li>
           </ul>
         </li>
         <li><a href="#ViewPaychecks">View Paychecks</a></li>
@@ -370,7 +372,44 @@
           <div class="col-sm-6">
             <img src="convention_sub-menus42_proposed.png" width="100%">
             <p class="text-muted">Proposed Benefits, Medical page</p>
-          </div><!-- / Sub-menus -->
+          </div>
+
+          <div class="col-sm-12">
+            <hr>
+            <h3 id="HelpLink">HelpLink</h3>
+          </div>
+          <div class="col-sm-12">
+            <h4>Make the Help link more evident.</h4>
+          </div>
+          <div class="col-sm-8">
+            <p>
+              Move the div with the class <code>ps-htmlarea</code> 
+              under the div with the class <code>ps_box-group
+              psc_layout ps_apps_content</code>
+            </p>
+            <p>
+              Add to the Help link div (<code>ps-htmlarea</code>) the class <code>psc_halign-right</code>
+            </p>
+            <p>
+              Add a space after the text “Help” so that this link it is not too close to the “?” icon
+            </p>
+            <p>
+              Delete the inline style and instead wrap the Help link with a <code>h1 class="ps_grid-title”</code>
+            </p>
+            <p>
+              Add to the “?” icon this inline style: <code>style="width:1em</code>
+            </p>
+          </div>
+          <div class="col-sm-2">
+            <img src="UAT_20160914_helpLink_current.png" width="100%">
+            <p class="text-muted">Current style for Help link</p>
+          </div>
+          <div class="col-sm-2">
+            <img src="UAT_20160914_helpLink_proposed.png" width="100%">
+            <p class="text-muted">Proposed style for Help link</p>
+          </div>
+
+          <div class="col-sm-12">&nbsp;<br></div><!-- / Sub-menus -->
 
           <!-- / Familiar Conventions and Patterns -->
 
@@ -419,8 +458,23 @@
                 <a href="https://raw.githubusercontent.com/Harvard-University-iCommons/UX-Prototypes/master/image/PTNUI_HARVARD_LOGO_1_long_1.png" target="_blank">Harvard SVG logo</a>
               </li>
               <li>
-                Background colors (<code>background-image:linear-gradient(rgb(41,51,82), rgb(30,30,30))</code>)
+                Change the home page background color on the <code>PTNUI_LANDING_CSS_1.css</code> 
+                <br>
+                from <code>2f5370</code> 
+                <br>
+                to <code>293352</code>, 
+                <br>
+                which is a dark blue Harvard Palette color. 
+                <br>
+                Also under <code>PSSTYLEDEF_FMODE_1.css</code> change the values of <code>.ps_header-banner</code>, and <code>.ps_header_bar</code> 
+                <br>
+                from "<code>background-image:linear-gradient<br>(rgb(57,106,144),<br>rgb(23,54,81));</code>” 
+                <br>
+                to "<code>background-image:linear-gradient<br>(rgb(41,51,82),<br>rgb(62,72,104));</code>”
               </li>
+              <!-- <li>
+                Background colors (<code>background-image:linear-gradient(rgb(41,51,82), rgb(30,30,30))</code>)
+              </li> -->
               <li>
                 Smaller cards (<code>width:13em; height:12em;</code>)
               </li>
@@ -533,6 +587,41 @@
             <img src="NavBarMyFavorites_proposed.png" width="100%" class="border">
             <p class="text-muted">Proposed NavBar My Favorites interface without the icon next to the Edit Favorites link</p>
           </div><!-- / NavBar My Favorites -->
+
+          <div class="col-sm-12">
+            <hr>
+            <h3 class="page-header" id="NavBarIcons">NavBar Icons</h3>
+          </div>
+
+          <div class="col-sm-4"
+            <p>
+              Here are recommendations for NavBar icons:
+            </p>
+            <p>
+              Signed out: <i class="fa fa-user-times fa-2x" style="color: red"></i>
+            </p>
+            <p>
+              Signed in: <i class="fa fa-user-plus fa-2x" style="color: #C3D7A4"></i>
+            </p>
+            <p>
+              Signed in option 2: Image of user from <a href="https://connections.harvard.edu/" targetr="_blank">Harvard Directory</a>
+            </p>
+            <p>
+              Personalize home page: <i class="fa fa-arrows fa-2x"></i>
+            </p>
+            <p>
+              My preferences: <i class="fa fa-fw fa-2x" aria-hidden="true" title="Copy to use user-circle"></i></i>
+            </p>
+          </div>
+          
+          <div class="col-sm-4">
+            <img src="NavBarIcons_current.png" width="100%" class="border">
+            <p class="text-muted">Current NavBar drop down</p>
+          </div>
+          <div class="col-sm-4">
+            <img src="NavBarIcons_proposed.png" width="100%" class="border">
+            <p class="text-muted">Proposed NavBar icons</p>
+          </div><!-- / NavBar Icons -->
 
           <div class="col-sm-12">
             <hr>
