@@ -1,13 +1,15 @@
+<!-- All the proposed colors where tested on 
+	   http://webaim.org/resources/contrastchecker/ 
+	   to ensure sufficient contrast -->
 
-
-
-
-
+<!-- 5 UI comments were added to this code -->
 
 <div id="whats-in-container row">
     <h3>What's in this Repository? </h3>
     <div>
       <ul class="list-inline">
+
+<!-- UI comment #1 - change color of "resource" class from e01919 to A51C30 -->
 	<li class="large-badge align-center resource">
 	  <form id="coll_sub" action="/repositories/12/resources" method="post">
 	    <input type="hidden" name="repo" id="repo_res" value="American Academy in Rome">
@@ -17,6 +19,8 @@
 	    </button>
 	  </form>
 	</li>
+
+<!-- UI comment #2 - change color of "record" class from 14af26 to 457141 -->
 	<li class="large-badge align-center record">
 	  <form id="arch_sub" action="/repositories/12/objects" method="post">
 	    <input type="hidden" name="repo" id="repo_obj" value="American Academy in Rome">
@@ -26,6 +30,9 @@
 	    </button>
 	  </form>
 	</li>
+
+<!-- UI comment #3 - change color of "button.subject" class from fe8534 
+	   to b45203 -->
 	<li class="large-badge align-center subject">
 	  <form id="subj_sub" action="/repositories/12/subjects" method="post">
 	    <input type="hidden" name="repo" id="repo_subj" value="American Academy in Rome">
@@ -36,6 +43,8 @@
 	    </button>
 	  </form>
  	</li>
+
+<!-- UI comment #4 - change color of "agent" class from 3b52ff to 3d74b7 -->
 	<li class="large-badge align-center agent">
 	  <form id="ag_sub" action="/repositories/12/agents" method="post">
 	    <input type="hidden" name="repo" id="repo_ag" value="American Academy in Rome">
@@ -49,6 +58,9 @@
 	    </button>
 	  </form>
 	</li>
+
+<!-- UI comment #5 - change color of "classification" class from 7608b5 
+	   to 8000c1 -->
         <li class="large-badge align-center classification">
           <form id="group_sub" action="/repositories/12/groups" method="post">
             <input type="hidden" name="repo" id="repo_group" value="American Academy in Rome">
@@ -64,4 +76,3 @@
     </div>
     
   </div>
-  
