@@ -154,16 +154,19 @@
               a person's perceptions and responses that result from the use and/or anticipated use of a product,
               system or service.
             </p>
-            <h3>Summary</h3>
+            <h3>Summary of the Review</h3>
             <ul>
               <li><strong>Usability</strong> -
-                Adjust the layout for a better use of the vertical space.
-                Avoid scrolling to view information of primary importance.</li>
+                Adjust the layout of the content for a better use of vertical space.
+                Avoid to rely on scrolling to view information of primary importance.</li>
               <li><strong>Accessibility</strong> -
-                Ensure that each link contains contextual information (not just "here").
-                Use <code>title</code> tags to provide additional contextual information for each link.</li>
+                Ensure that each link contains contextual information (not just "here",
+                rather "Instructions on how to connect to Harvard Secure".)
+                Use <code>title</code> tags to provide additional contextual information for links of
+                unfamiliar terminology, like "Harvard Secure" and "eduroam".</li>
               <li><strong>Responsive Design</strong> -
-                Use scalable fonts and vertical spacing to display more information on mobile displays.</li>
+                Use scalable fonts and vertical spacing to display more information on mobile displays.
+                Employ a responsive framework like Bootstrap, which has been used in several Harvard products.</li>
               <li><strong>User Experience</strong> -
               Enhance the information hierarchy and facilitate the user's understanding of the available choices
               via alternatives to the content layout.</li>
@@ -194,7 +197,8 @@
             <h4>
               Usability Recommendations
             </h4>
-            <p>Display the entire primary content within the view of a standard display.</p>
+            <p>Display the entire primary content within the view of a standard display
+              by adjusting the use of vertical space and font size.</p>
             <p>
               <strong>1</strong> - Change <code>.header-base--has-photo {min-height: 380px;}</code>
               <br>to <code>{min-height: 250px;}</code>
@@ -239,16 +243,19 @@
             <h4>
               Accessibility Recommendations
             </h4>
-            <p>Provide a description to links via the <code>title</code> tag.
+            <p>
+              Ensure that each link contains contextual information (not just "here",
+                rather "Instructions on how to connect to Harvard Secure".)
+              <br>
+                Use <code>title</code> tags to provide additional contextual information for links to content of
+                unfamiliar terminology, like "Harvard Secure" and "eduroam".
               <br>
               When screen readers scan the content of an interface for links,
               they are programmed by the user to filter all the links, without the textual information around them.
               <br>
-              Without <code>title</code> tags on each link, the links on this page would be presented as a series of
-              6 "here" links, which don't provide any cotextual information.
-              <br>
-              Either include descriptive information within <code>&lt;a&gt;&lt;/a&gt;</code> tags,
-              or add that information to  <code>title</code> tags.
+              Without contextual information, the links on this page would be presented as a series of
+              6 "here" links, which require the user of assistive technology to invest additional time
+              to scan the page content line by line.
             </p>
           </div>
           <div class="col-sm-8">
@@ -266,13 +273,16 @@
           </div>
 
           <div class="col-sm-12">
-            <p>The Harvard's Network website is responsive on typical mobile displays.</p>
+            <p>The Harvard's Network website is visible on typical mobile displays.</p>
             <p>Consider scalable, responsive font sizes, as recommended in this article -
               "<a href="https://varvy.com/mobile/legible-font-size.html" target="_blank">Use legible font sizes</a>"</p>
             <p>Avoid to use <code>br</code> or empty <code>p</code> elements to control vertical space.
             Use proportional increments defined by CSS instead.</p>
             <p>Follow the above usability recommendations to ensure more visibility of the primary
             content and minimize the need of scrolling to access the information not into view.</p>
+            <p>
+              Employ a responsive framework like Bootstrap, which has also been used in several Harvard products.
+            </p>
             <p class="text-muted">(Please note that all the images below are emulations of the Chrome extension Mobile Browser Emulator
               except for the 360 × 640, Galaxy S3 and the 375 × 667, iPhone 6.)</p>
           </div>
