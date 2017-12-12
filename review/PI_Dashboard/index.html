@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+    <title>Financial Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="dashboard.css" rel="stylesheet">-->
+
+    <!-- Fonts for this template -->
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-e-->
+
+    <!-- Harvard Branding -->
+    <style>
+      .nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #A51C30;
+      }
+      a {
+        color: #A51C30;
+        text-decoration: none;
+      }
+      h1, h2{
+        color: #A51C30;
+      }
+
+      /* styles for scrolling left and right columns */
+
+      body, html {
+        margin: 0;
+        height:100%;
+      }
+      body{
+        overflow: hidden;
+      }
+      .container-fluid, .parent{
+        height: 100%;
+      }
+      #left, #right{
+        position: relative;
+        float: left;
+        height:100%;
+        overflow-y: auto;
+      }
+      #left {
+          background-color: #eee;
+      }
+      #right {
+          background-color: #d9edf7;
+      }
+
+      @media (max-width: 768px){
+      body{
+        overflow: scroll;
+      }
+      #left {
+        position: relative;
+        overflow-y: scroll;
+      }
+      #right {
+        position: relative;
+        overflow-y: scroll;
+      }
+    }
+
+    /* always show scrollbar */
+
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+    </style>
+
+  </head><!-- / head -->
+
+  <body>
+    <div class="container-fluid">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              </i>
+                <a class="navbar-brand">
+                  Financial Dashboard
+                </a>
+              <li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Admin Area</a></li>
+              <li><a href="#"><i class="fa fa-book"></i> Documentation</a></li>
+              <li><a href="#"><i class="fa fa-paperclip"></i> Cheat Sheet</a></li>
+              <li><a href="#"><i class="fa fa-download"></i> Admin Report</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">User Name <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav><!-- / upper nav -->
+
+      <div class="row" style="margin-top: 4.5em;"><!-- left and right columns with filters and account details header-->
+        <div class="col-md-6"><!-- left column with filters-->
+          <div class="well" style="margin-top: 1em;">
+            <a href="#">
+              <i class="fa fa-arrow-left"></i>
+              PI List
+            </a>
+            <a href="#" class="pull-right">
+              <h4>
+                Fogg, Philaes
+              </h4>
+            </a>
+            <hr>
+            <form class="form-inline" style="font-size: .85em">
+              <div class="form-group">
+                <label for="exampleInputName1">Account Type:</label>
+                <select class="form-control" id="exampleInputName1" style="font-size: 1em">
+                  <option>Sponsored (Funds 1000000 - 2999999)</option>
+                  <option>Advanced Search</option>
+                </select>
+              </div>
+              <div class="form-group pull-right" >
+                <label for="exampleInputName2">Sort By:</label>
+                <select class="form-control" id="exampleInputName2" style="font-size: 1em">
+                  <option>Account Number</option>
+                  <option>Title</option>
+                  <option>Sponsor</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="input-group" style="margin-top: 1.85em">
+              <input type="text" class="form-control" aria-label="..." placeholder="Filter by the name of the fund">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-gear fa-lg"></i> <span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="#">Expand all accounts</a></li>
+                  <li><a href="#">Collapse all accounts</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Show actual balance</a></li>
+                  <li><a href="#">Show projected balance</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /input-group -->
+          </div><!-- / well with filters -->
+        </div><!-- /left column with filters-->
+
+        <div class="col-md-6" style="background-color: #E3F7FF; padding-right: 2.5em;"><!-- right column with account header header-->
+
+          <div class="panel panel-primary" style="margin-top: 1em">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Account details of Longitudinal Study on Ebola
+                <a class="btn btn-default btn-xs pull-right" href="#" role="button" style="color: #000">
+                  <i class="fa fa-close"></i>
+                  Close Account Details
+                </a>
+              </h3>
+            </div>
+
+            <div class="panel-body">
+              <ul class="nav nav-tabs nav-justified">
+                <li role="presentation" class="active"><a href="#"><i class="fa fa-dollar"></i><br>Spending Details</a></li>
+                <li role="presentation"><a href="#"><i class="fa fa-file-text"></i><br>Notes</a></li>
+                <li role="presentation"><a href="#"><i class="fa fa-folder"></i><br>Documents</a></li>
+              </ul>
+            </div>
+
+            <div class="alert alert-info" role="alert" style="margin: 0 .75em .75em .75em">
+              The transactions for this account was last updated on <strong>12/1/2017</strong>
+            </div>
+
+          </div>
+        </div><!-- /right column with account header-->
+      </div><!-- /left and right columns with filters and account details header-->
+
+      <div class="parent"><!-- left and right columns with fund cards and account details of selected fund-->
+
+        <div class="col-xs-12 col-md-6" id="left"><!-- left column with fund cards-->
+
+          <div class="panel panel-primary" style="margin-top: 1em"><!-- fund card - Longitudinal Study on Ebola -->
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Longitudinal Study on Ebola<a role="button" class="pull-right">Close account details <i class="fa fa-arrow-circle-left"></i></a></h3>
+            </div>
+
+            <div class="panel-body">
+              <div class="col-md-6"><strong>Description</strong>: Affiliata YR2</div>
+              <div class="col-md-6"><strong>Award Number</strong>: 3R01123456</div>
+              <div class="col-md-6"><strong>Account String</strong>: 275-99999-199994-0101-99998</div>
+              <div class="col-md-6"><strong>Sponsor</strong>: Ocean Liner of the Atlantic</div>
+            </div><!-- /fund card - top information -->
+
+             <div class="panel-body">
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+                          <table class="table table-condensed">
+                            <tr>
+                              <td>
+                                <strong>Account Start Date</strong>: 11/1/2016
+                              </td>
+                              <td class="danger">
+                                <strong>Account End Date</strong>: 10/31/2017
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>Project Start Date</strong>: 11/1/2016
+                              </td>
+                              <td>
+                                <strong>Project End Date</strong>: 10/31/2018
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div><!-- /table - account and project dates -->
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+
+                          <table class="table table-condensed" style="border-collapse:collapse;">
+                            <tbody>
+                              <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle collapsed">
+                                  <td>Obligated Amount:</td>
+                                  <td><span class="pull-right">$36,576.00</span></td>
+                                  <td><a role="button" class="pull-right"><i class="fa fa-arrow-circle-down fa-lg"></i></a></td>
+                              </tr>
+                              <tr class="accordian-body collapse" id="demo1" style="height: 0px;">
+                                <td colspan="3" class="hiddenRow" style="border-top: 1px solid #fff;">
+
+                                  <table class="table table-condensed" style="margin-bottom: -.5em">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          Total Actual Expenses (Incl. IDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $39,611.72</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Account Balance (TC):</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Estimated Overhead at 0% (MTDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Personal Encumbrances:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Committed Funds:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Personal Available Direct Costs:</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                                </td>
+                              </tr><!-- /table - expanded detail -->
+                            </tbody>
+                          </table>
+
+                        </div>
+
+                      </div><!-- /tables -->
+
+                      <div class="col-md-12 text-muted">
+                        Place the cursor over the bar below for fund information
+                      </div>
+                      <div class="col-md-10">
+
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-primary" style="width: 90%" data-toggle="tooltip" data-placement="top" title="Transaction to date: $36,576.00">
+                            <span class="sr-only">Transaction to Date: $36,576.00</span>
+                          </div>
+                          <div class="progress-bar progress-bar-danger" style="width: 10%" data-toggle="tooltip" data-placement="top" title="Overspent: 3,035.72">
+                            <span class="sr-only">Overspent: 3,035.72</span>
+                          </div>
+                        </div>
+                      </div><!-- /progress bar -->
+
+                      <div class="col-md-2">
+                        <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                      </div><!-- /progress bar amount-->
+
+                    </div>
+                </div><!-- /tables and progress bar -->
+
+          </div><!-- /fund card - Longitudinal Study on Ebola -->
+
+          <div class="panel panel-default"><!-- fund card - Economic Benefits of Better Bug Spray 1 -->
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Economic Benefits of Better Bug Spray<a role="button" class="pull-right">View account details <i class="fa fa-arrow-circle-right"></i></a></h3>
+            </div>
+
+            <div class="panel-body">
+              <div class="col-md-6"><strong>Description</strong>: Affiliata YR2</div>
+              <div class="col-md-6"><strong>Award Number</strong>: 3R01123456</div>
+              <div class="col-md-6"><strong>Account String</strong>: 275-99999-199994-0101-99998</div>
+              <div class="col-md-6"><strong>Sponsor</strong>: Ocean Liner of the Atlantic</div>
+            </div><!-- /fund card - top information -->
+
+             <div class="panel-body">
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+                          <table class="table table-condensed">
+                            <tr>
+                              <td>
+                                <strong>Account Start Date</strong>: 11/1/2016
+                              </td>
+                              <td class="danger">
+                                <strong>Account End Date</strong>: 10/31/2017
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>Project Start Date</strong>: 11/1/2016
+                              </td>
+                              <td>
+                                <strong>Project End Date</strong>: 10/31/2018
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div><!-- /table - account and project dates -->
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+
+                          <table class="table table-condensed" style="border-collapse:collapse;">
+                            <tbody>
+                              <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle collapsed">
+                                  <td>Obligated Amount:</td>
+                                  <td><span class="pull-right">$36,576.00</span></td>
+                                  <td><a role="button" class="pull-right"><i class="fa fa-arrow-circle-down fa-lg"></i></a></td>
+                              </tr>
+                              <tr class="accordian-body collapse" id="demo2" style="height: 0px;">
+                                <td colspan="3" class="hiddenRow" style="border-top: 1px solid #fff;">
+
+                                  <table class="table table-condensed" style="margin-bottom: -.5em">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          Total Actual Expenses (Incl. IDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $39,611.72</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Account Balance (TC):</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Estimated Overhead at 0% (MTDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Personal Encumbrances:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Committed Funds:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Personal Available Direct Costs:</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                                </td>
+                              </tr><!-- /table - expanded detail -->
+                            </tbody>
+                          </table>
+
+                        </div><!-- /panel-body -->
+
+                      </div><!-- /panel -->
+
+                      <div class="col-md-12 text-muted">
+                        Place the cursor over the bar below for fund information
+                      </div>
+                      <div class="col-md-10">
+
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-primary" style="width: 90%" data-toggle="tooltip" data-placement="top" title="Transaction to date: $36,576.00">
+                            <span class="sr-only">Transaction to date: $36,576.00</span>
+                          </div>
+                          <div class="progress-bar progress-bar-success" style="width: 3%; border-left: 1px solid #fff; border-right: 1px solid #fff;" data-toggle="tooltip" data-placement="top" title="Open commitments: $7,467.00">
+                            <span class="sr-only">Open commitments: $7,467.00</span>
+                          </div>
+                          <div class="progress-bar progress-bar-success" style="width: 7%" data-toggle="tooltip" data-placement="top" title="Estimated Remaining: 3,035.72">
+                            <span class="sr-only">Estimated Remaining: 3,035.72</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <span class="pull-right text-success"><strong>(3,035.72)</strong></span>
+                      </div>
+
+                    </div><!-- /table - obligated amount table dates -->
+                </div><!-- /fund card - tables -->
+
+          </div><!-- /fund card - Economic Benefits of Better Bug Spray 1 -->
+
+          <div class="panel panel-default"><!-- fund card - Economic Benefits of Better Bug Spray 2 -->
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Economic Benefits of Better Bug Spray<a role="button" class="pull-right">View account details <i class="fa fa-arrow-circle-right"></i></a></h3>
+            </div>
+
+            <div class="panel-body">
+              <div class="col-md-6"><strong>Description</strong>: Affiliata YR2</div>
+              <div class="col-md-6"><strong>Award Number</strong>: 3R01123456</div>
+              <div class="col-md-6"><strong>Account String</strong>: 275-99999-199994-0101-99998</div>
+              <div class="col-md-6"><strong>Sponsor</strong>: Ocean Liner of the Atlantic</div>
+            </div><!-- /fund card - top information -->
+
+             <div class="panel-body">
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+                          <table class="table table-condensed">
+                            <tr>
+                              <td>
+                                <strong>Account Start Date</strong>: 11/1/2016
+                              </td>
+                              <td class="danger">
+                                <strong>Account End Date</strong>: 10/31/2017
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>Project Start Date</strong>: 11/1/2016
+                              </td>
+                              <td>
+                                <strong>Project End Date</strong>: 10/31/2018
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div><!-- /table - account and project dates -->
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+
+                          <table class="table table-condensed" style="border-collapse:collapse;">
+                            <tbody>
+                              <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle collapsed">
+                                  <td>Obligated Amount:</td>
+                                  <td><span class="pull-right">$36,576.00</span></td>
+                                  <td><a role="button" class="pull-right"><i class="fa fa-arrow-circle-down fa-lg"></i></a></td>
+                              </tr>
+                              <tr class="accordian-body collapse" id="demo3" style="height: 0px;">
+                                <td colspan="3" class="hiddenRow" style="border-top: 1px solid #fff;">
+
+                                  <table class="table table-condensed" style="margin-bottom: -.5em">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          Total Actual Expenses (Incl. IDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $39,611.72</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Account Balance (TC):</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Estimated Overhead at 0% (MTDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Personal Encumbrances:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Committed Funds:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Personal Available Direct Costs:</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                                </td>
+                              </tr><!-- /table - expanded detail -->
+                            </tbody>
+                          </table>
+
+                        </div>
+
+                      </div><!-- /tables -->
+
+                      <div class="col-md-10">
+
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-primary" style="width: 90%" data-toggle="tooltip" data-placement="top" title="Transaction to date: $36,576.00">
+                            <span class="sr-only">Transaction to Date: $36,576.00</span>
+                          </div>
+                          <div class="progress-bar progress-bar-danger" style="width: 10%" data-toggle="tooltip" data-placement="top" title="Overspent: 3,035.72">
+                            <span class="sr-only">Overspent: 3,035.72</span>
+                          </div>
+                        </div>
+                      </div><!-- /progress bar -->
+
+                      <div class="col-md-2">
+                        <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                      </div><!-- /progress bar amount-->
+
+                    </div>
+                </div><!-- /tables and progress bar -->
+
+          </div><!-- /fund card - Economic Benefits of Better Bug Spray 2 -->
+
+          <div class="panel panel-default" style="margin-bottom: 20em"><!-- fund card - Economic Benefits of Better Bug Spray 2 -->
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Economic Benefits of Better Bug Spray<a role="button" class="pull-right">View account details <i class="fa fa-arrow-circle-right"></i></a></h3>
+            </div>
+
+            <div class="panel-body">
+              <div class="col-md-6"><strong>Description</strong>: Affiliata YR2</div>
+              <div class="col-md-6"><strong>Award Number</strong>: 3R01123456</div>
+              <div class="col-md-6"><strong>Account String</strong>: 275-99999-199994-0101-99998</div>
+              <div class="col-md-6"><strong>Sponsor</strong>: Ocean Liner of the Atlantic</div>
+            </div><!-- /fund card - top information -->
+
+             <div class="panel-body">
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+                          <table class="table table-condensed">
+                            <tr>
+                              <td>
+                                <strong>Account Start Date</strong>: 11/1/2016
+                              </td>
+                              <td class="danger">
+                                <strong>Account End Date</strong>: 10/31/2017
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>Project Start Date</strong>: 11/1/2016
+                              </td>
+                              <td>
+                                <strong>Project End Date</strong>: 10/31/2018
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div><!-- /table - account and project dates -->
+
+                    <div class="col-md-12">
+
+                      <div class="panel panel-default">
+                        <div class="panel-body" style="margin-bottom: -2em">
+
+                          <table class="table table-condensed" style="border-collapse:collapse;">
+                            <tbody>
+                              <tr data-toggle="collapse" data-target="#demo4" class="accordion-toggle collapsed">
+                                  <td>Obligated Amount:</td>
+                                  <td><span class="pull-right">$36,576.00</span></td>
+                                  <td><a role="button" class="pull-right"><i class="fa fa-arrow-circle-down fa-lg"></i></a></td>
+                              </tr>
+                              <tr class="accordian-body collapse" id="demo4" style="height: 0px;">
+                                <td colspan="3" class="hiddenRow" style="border-top: 1px solid #fff;">
+
+                                  <table class="table table-condensed" style="margin-bottom: -.5em">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          Total Actual Expenses (Incl. IDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $39,611.72</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Account Balance (TC):</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Estimated Overhead at 0% (MTDC):
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Personal Encumbrances:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          Committed Funds:
+                                        </td>
+                                        <td>
+                                          <span class="pull-right">- $0.00</span>
+                                        </td>
+                                        <td style="width: 4.5em">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-top: 1px solid #000;">
+                                          <strong>Personal Available Direct Costs:</strong>
+                                        </td>
+                                        <td class="danger" style="border-top: 1px solid #000;">
+                                          <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                                        </td>
+                                        <td style="width: 4.5em; border-top: 1px solid #000;">&nbsp;</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+
+                                </td>
+                              </tr><!-- /table - expanded detail -->
+                            </tbody>
+                          </table>
+
+                        </div>
+
+                      </div><!-- /tables -->
+
+                      <div class="col-md-10">
+
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-primary" style="width: 90%" data-toggle="tooltip" data-placement="top" title="Transaction to date: $36,576.00">
+                            <span class="sr-only">Transaction to Date: $36,576.00</span>
+                          </div>
+                          <div class="progress-bar progress-bar-danger" style="width: 10%" data-toggle="tooltip" data-placement="top" title="Overspent: 3,035.72">
+                            <span class="sr-only">Overspent: 3,035.72</span>
+                          </div>
+                        </div>
+                      </div><!-- /progress bar -->
+
+                      <div class="col-md-2">
+                        <span class="pull-right text-danger"><strong>(3,035.72)</strong></span>
+                      </div><!-- /progress bar amount-->
+
+                    </div>
+                </div><!-- /tables and progress bar -->
+
+          </div><!-- /last card - Economic Benefits of Better Bug Spray 3 -->
+
+        </div><!-- /left column with fund cards-->
+
+        <div class="col-xs-12 col-md-6" id="right"><!-- right column with fund details-->
+
+          <div class="panel panel-primary" style="margin-top: 1em">
+
+            <div class="panel-body">
+              <div class="panel panel-default"><!-- Spending by Week chart -->
+                <div class="panel-heading">
+                  <h4>Spending by Week</h4>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Show Fiscal Years
+                        </label>
+                      </div>
+                      <div class="checkbox" style="margin-left: 1em">
+                        <label>
+                          <input type="checkbox"> Show Budget Periods
+                        </label>
+                      </div>
+                      <div class="checkbox pull-right" style="margin-left: 1em">
+                        <a class="btn btn-default btn-xs pull-right" href="#" role="button" style="color: #000">
+                          <i class="fa fa-download"></i>
+                          Download Chart Data
+                        </a>
+                      </div>
+                    </form>
+                    <img src="lineChart.png" style="width: 100%; padding: 1em 0">
+                  </div>
+                </div><!-- /Spending by Week chart -->
+
+              <div class="panel panel-default"><!-- Expenditure v/s Grant -->
+                  <div class="panel-heading">
+                    <h4>Expenditure v/s Grant</h4>
+                  </div>
+                  <div class="panel-body">
+                    <table class="table table-condensed">
+                      <tr>
+                        <th>
+                          Percentage Spent
+                        </th>
+                        <td>
+                          72.89%
+                        </td>
+                        <td>
+                          <small class="text-muted">
+                            ($741,777.87)
+                          </small>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          Avg Monthly Total Cost Burn Rate
+                          <br>
+                          <small class="text-muted">
+                            (Actual Expenses / Number of Months)
+                          </small>
+                        </th>
+                        <td>
+                          $37,157.46
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>
+                          Estimated Fund Depletion Date at Current Spending
+                        </th>
+                        <td>
+                          7/30/2018
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div><!-- /Expenditure v/s Grant -->
+
+              <div class="panel panel-default" style="margin-bottom: 20em"><!-- Spending by Category -->
+                <div class="panel-heading">
+                  <h4>Spending by Category</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="text-muted">
+                      Select the pie chart spending categories to filter the transactions table below.
+                    </p>
+                    <img src="pieChart.png" style="width: 100%; padding: .5em 0 1em 0;">
+                    <div class="alert alert-danger" role="alert">
+                      This account has <a href="#unmatchedTransaction" style="text-decoration: underline">2 transactions</a> that do not match the account string on the Org and/or Root.
+                      The transactions with unmatched Org and/or Root are highlighted in red in the table below.
+                    </div>
+                    <h4>Transactions</h4>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" value="">
+                        Show only unmatched Org/Root transactions
+                      </label>
+                      <form class="form-inline">
+                        <div class="form-group form-group-sm">
+                          <label class="sr-only">Sort by Date, Object Code or Amount</label>
+                          <p class="form-control-static">Sort by:</p>
+                        </div>
+                        <div class="form-group form-group-sm">
+                          <select class="form-control input-sm">
+                            <option>Date</option>
+                            <option>Object code</option>
+                            <option>Amount</option>
+                          </select>
+                        </div>
+                        <div class="form-group form-group-sm">
+                          <label class="sr-only">Sort by All, Direct Cost or Indirect Cost</label>
+                          <p class="form-control-static">Category:</p>
+                        </div>
+                        <div class="form-group form-group-sm">
+                          <select class="form-control input-sm">
+                            <option>All</option>
+                            <option>Direct Cost</option>
+                            <option>Indirect Cost</option>
+                          </select>
+                        </div>
+                        <div class="form-group form-group-sm pull-right">
+                          <div class="btn-group" role="group" aria-label="...">
+                            <button class="btn btn-default btn-sm" type="submit">Expand All</button>
+                            <button class="btn btn-default btn-sm" type="submit">Collapse All</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <table class="table table-condensed" cellspacing="0" style="font-size: .75em">
+                      <tr>
+                        <th>
+                          <div class="text-center">Date</div>
+                          <div>
+                            <form class="form-inline" style="width: 12em">
+                              <div class="form-group form-group-sm">
+                                <label class="sr-only" for="exampleInputEmail3">Start date - dd/mm/yyyy</label>
+                                <input type="text" class="form-control" id="exampleInputEmail3" placeholder="From" style="width: 5em">
+                              </div>
+                              <div class="form-group form-group-sm">
+                                <label class="sr-only" for="exampleInputPassword3">Date to - dd/mm/yyyy</label>
+                                <input type="text" class="form-control" id="exampleInputPassword3" placeholder="To" style="width: 5em">
+                              </div>
+                            </form>
+                          </div>
+                        </th>
+                        <th class="transactions-table__head-col">
+                          <div class="text-center">Object Code / Desc</div>
+                          <div>
+                            <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                              <label class="sr-only" for="exampleInputPassword3">Filter column Object Code / Desc</label>
+                              <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Filter">
+                            </div>
+                            </form>
+                          </div>
+                        </th>
+                        <th class="transactions-table__head-col">
+                          <div class="text-center">Payee</div>
+                          <div>
+                            <form class="form-inline">
+                            <div class="form-group form-group-sm">
+                              <label class="sr-only" for="exampleInputPassword3">Filter column Payee</label>
+                              <input type="text" class="form-control" id="exampleInputPassword3" placeholder="Filter">
+                            </div>
+                            </form>
+                          </div>
+                        </th>
+                        <th class="transactions-table__head-col">
+                          <div class="transactions-table__col-label">Amount</div>
+                          <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" aria-label="...">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&lt;</button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">&lt;</a></li>
+                                <li><a href="#">&gt;</a></li>
+                                <li><a href="#">=</a></li>
+                              </ul>
+                            </div><!-- /btn-group -->
+                          </div><!-- /input-group -->
+                        </th>
+                      </tr>
+                      <tbody>
+                      <tr>
+                        <td>11/04/2017</td>
+                        <td><!-- react-text: 8169 -->6430<!-- /react-text -->
+                          <!-- react-text: 8170 --> - <!-- /react-text --><!-- react-text: 8171 -->Grad Tuition+Fee Grants
+                          <!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$4,107.85</td>
+                      </tr>
+                      <tr>
+                        <td>10/31/2017</td>
+                        <td><!-- react-text: 8177 -->7675<!-- /react-text -->
+                          <!-- react-text: 8178 --> - <!-- /react-text --><!-- react-text: 8179 -->Business Meals^Foreign
+                          Travel<!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($40.00)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10/31/2017</td>
+                        <td><!-- react-text: 8185 -->6440<!-- /react-text -->
+                          <!-- react-text: 8186 --> - <!-- /react-text --><!-- react-text: 8187 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>10/12/2017</td>
+                        <td><!-- react-text: 8193 -->7654<!-- /react-text -->
+                          <!-- react-text: 8194 --> - <!-- /react-text --><!-- react-text: 8195 -->
+                          Meals+Incidentals^Domestic Travel<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$26.75</td>
+                      </tr>
+                      <tr>
+                        <td>10/12/2017</td>
+                        <td><!-- react-text: 8201 -->7672<!-- /react-text -->
+                          <!-- react-text: 8202 --> - <!-- /react-text --><!-- react-text: 8203 -->Lodging^Foreign Travel
+                          <!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$211.00</td>
+                      </tr>
+                      <tr>
+                        <td>10/12/2017</td>
+                        <td><!-- react-text: 8209 -->7673<!-- /react-text -->
+                          <!-- react-text: 8210 --> - <!-- /react-text --><!-- react-text: 8211 -->Ground
+                          Transportation^Foreign Travel<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$18.71</td>
+                      </tr>
+                      <tr>
+                        <td>10/12/2017</td>
+                        <td><!-- react-text: 8217 -->7674<!-- /react-text -->
+                          <!-- react-text: 8218 --> - <!-- /react-text --><!-- react-text: 8219 -->
+                          Meals+Incidentals^Foreign Travel<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$39.20</td>
+                      </tr>
+                      <tr>
+                        <td>10/12/2017</td>
+                        <td><!-- react-text: 8225 -->7675<!-- /react-text -->
+                          <!-- react-text: 8226 --> - <!-- /react-text --><!-- react-text: 8227 -->Business Meals^Foreign
+                          Travel<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$127.54</td>
+                      </tr>
+                      <tr>
+                        <td>09/01/2017</td>
+                        <td><!-- react-text: 8233 -->6440<!-- /react-text -->
+                          <!-- react-text: 8234 --> - <!-- /react-text --><!-- react-text: 8235 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>08/10/2017</td>
+                        <td><!-- react-text: 8241 -->8550<!-- /react-text -->
+                          <!-- react-text: 8242 --> - <!-- /react-text --><!-- react-text: 8243 -->Printing+Publishing,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$88.26</td>
+                      </tr>
+                      <tr>
+                        <td>08/01/2017</td>
+                        <td><!-- react-text: 8249 -->6440<!-- /react-text -->
+                          <!-- react-text: 8250 --> - <!-- /react-text --><!-- react-text: 8251 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>07/01/2017</td>
+                        <td><!-- react-text: 8257 -->6440<!-- /react-text -->
+                          <!-- react-text: 8258 --> - <!-- /react-text --><!-- react-text: 8259 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>06/30/2017</td>
+                        <td><!-- react-text: 8265 -->6750<!-- /react-text -->
+                          <!-- react-text: 8266 --> - <!-- /react-text --><!-- react-text: 8267 -->Computer Hardware &lt;$5000,
+                          GENERAL<!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($2,106.60)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>06/30/2017</td>
+                        <td><!-- react-text: 8273 -->7671<!-- /react-text -->
+                          <!-- react-text: 8274 --> - <!-- /react-text --><!-- react-text: 8275 -->Airfare^Foreign Travel
+                          <!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($2,589.36)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>06/29/2017</td>
+                        <td><!-- react-text: 8281 -->7671<!-- /react-text -->
+                          <!-- react-text: 8282 --> - <!-- /react-text --><!-- react-text: 8283 -->Airfare^Foreign Travel
+                          <!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$2,589.36</td>
+                      </tr>
+                      <tr>
+                        <td>06/01/2017</td>
+                        <td><!-- react-text: 8289 -->6440<!-- /react-text -->
+                          <!-- react-text: 8290 --> - <!-- /react-text --><!-- react-text: 8291 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>05/04/2017</td>
+                        <td><!-- react-text: 8297 -->6750<!-- /react-text -->
+                          <!-- react-text: 8298 --> - <!-- /react-text --><!-- react-text: 8299 -->Computer Hardware &lt;$5000,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$2,106.60</td>
+                      </tr>
+                      <tr>
+                        <td>05/01/2017</td>
+                        <td><!-- react-text: 8305 -->6440<!-- /react-text -->
+                          <!-- react-text: 8306 --> - <!-- /react-text --><!-- react-text: 8307 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>04/11/2017</td>
+                        <td><!-- react-text: 8313 -->6430<!-- /react-text -->
+                          <!-- react-text: 8314 --> - <!-- /react-text --><!-- react-text: 8315 -->Grad Tuition+Fee Grants
+                          <!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$7,217.97</td>
+                      </tr>
+                      <tr>
+                        <td>04/01/2017</td>
+                        <td><!-- react-text: 8321 -->6440<!-- /react-text -->
+                          <!-- react-text: 8322 --> - <!-- /react-text --><!-- react-text: 8323 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>03/01/2017</td>
+                        <td><!-- react-text: 8329 -->6440<!-- /react-text -->
+                          <!-- react-text: 8330 --> - <!-- /react-text --><!-- react-text: 8331 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>02/01/2017</td>
+                        <td><!-- react-text: 8337 -->6440<!-- /react-text -->
+                          <!-- react-text: 8338 --> - <!-- /react-text --><!-- react-text: 8339 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>01/01/2017</td>
+                        <td><!-- react-text: 8345 -->6440<!-- /react-text -->
+                          <!-- react-text: 8346 --> - <!-- /react-text --><!-- react-text: 8347 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>12/01/2016</td>
+                        <td><!-- react-text: 8353 -->6440<!-- /react-text -->
+                          <!-- react-text: 8354 --> - <!-- /react-text --><!-- react-text: 8355 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>11/23/2016</td>
+                        <td><!-- react-text: 8361 -->6430<!-- /react-text -->
+                          <!-- react-text: 8362 --> - <!-- /react-text --><!-- react-text: 8363 -->Grad Tuition+Fee Grants
+                          <!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$7,217.97</td>
+                      </tr>
+                      <tr>
+                        <td>11/01/2016</td>
+                        <td><!-- react-text: 8369 -->6440<!-- /react-text -->
+                          <!-- react-text: 8370 --> - <!-- /react-text --><!-- react-text: 8371 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>10/18/2016</td>
+                        <td><!-- react-text: 8377 -->8631<!-- /react-text -->
+                          <!-- react-text: 8378 --> - <!-- /react-text --><!-- react-text: 8379 -->Conference
+                          Fees^Professional Development<!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($190.00)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10/14/2016</td>
+                        <td><!-- react-text: 8385 -->8631<!-- /react-text -->
+                          <!-- react-text: 8386 --> - <!-- /react-text --><!-- react-text: 8387 -->Conference
+                          Fees^Professional Development<!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($75.00)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10/14/2016</td>
+                        <td><!-- react-text: 8393 -->7651<!-- /react-text -->
+                          <!-- react-text: 8394 --> - <!-- /react-text --><!-- react-text: 8395 -->Airfare^Domestic Travel
+                          <!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($197.95)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10/14/2016</td>
+                        <td><!-- react-text: 8401 -->7652<!-- /react-text -->
+                          <!-- react-text: 8402 --> - <!-- /react-text --><!-- react-text: 8403 -->Lodging^Domestic Travel
+                          <!-- /react-text --></td>
+                        <td></td>
+                        <td class="text-danger"
+                            width="20%">($664.96)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10/13/2016</td>
+                        <td><!-- react-text: 8409 -->8631<!-- /react-text -->
+                          <!-- react-text: 8410 --> - <!-- /react-text --><!-- react-text: 8411 -->Conference
+                          Fees^Professional Development<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$169.74</td>
+                      </tr>
+                      <tr>
+                        <td>10/12/2016</td>
+                        <td><!-- react-text: 8417 -->6440<!-- /react-text -->
+                          <!-- react-text: 8418 --> - <!-- /react-text --><!-- react-text: 8419 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td class="text-danger"
+                            width="20%">($4,422.27)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10/01/2016</td>
+                        <td><!-- react-text: 8425 -->6440<!-- /react-text -->
+                          <!-- react-text: 8426 --> - <!-- /react-text --><!-- react-text: 8427 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      <tr>
+                        <td>09/30/2016</td>
+                        <td><!-- react-text: 8433 -->7652<!-- /react-text -->
+                          <!-- react-text: 8434 --> - <!-- /react-text --><!-- react-text: 8435 -->Lodging^Domestic Travel
+                          <!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$664.96</td>
+                      </tr>
+                      <tr class="danger">
+                        <td><a name="unmatchedTransaction">09/16/2016</a></td>
+                        <td><!-- react-text: 8441 -->7651<!-- /react-text -->
+                          <!-- react-text: 8442 --> - <!-- /react-text --><!-- react-text: 8443 -->Airfare^Domestic Travel
+                          <!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$197.95</td>
+                      </tr>
+                      <tr>
+                        <td>09/15/2016</td>
+                        <td><!-- react-text: 8449 -->8631<!-- /react-text -->
+                          <!-- react-text: 8450 --> - <!-- /react-text --><!-- react-text: 8451 -->Conference
+                          Fees^Professional Development<!-- /react-text --></td>
+                        <td>Vendor Name</td>
+                        <td>$67.00</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>09/01/2016</td>
+                        <td><!-- react-text: 8457 -->6440<!-- /react-text -->
+                          <!-- react-text: 8458 --> - <!-- /react-text --><!-- react-text: 8459 -->Grad Stipend Grants,
+                          GENERAL<!-- /react-text --></td>
+                        <td>Stratos Salant</td>
+                        <td>$2,211.14</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div><!-- /Spending by Category -->
+            </div>
+
+          </div>
+
+        </div><!-- /right column with fund details-->
+
+      </div><!-- /left and right columns with fund cards and account details of selected fund-->
+
+    </div><!-- /container-fluid parent -->
+
+    <div id="window-resizer-tooltip" style="display: none;">
+      <a href="#" title="Edit settings"></a>
+      <span class="tooltipTitle">Window size: </span>
+      <span class="tooltipWidth" id="winWidth">1552</span> x <span class="tooltipHeight" id="winHeight">369</span>
+      <br>
+      <span class="tooltipTitle">Viewport size: </span>
+      <span class="tooltipWidth" id="vpWidth">1552</span> x <span class="tooltipHeight" id="vpHeight">369</span>
+    </div> <!-- / window-resizer-tooltip -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/docs.min.js"></script>
+
+     <!-- / initialize tooltip -->
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+
+
+  </body>
+</html>
