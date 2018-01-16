@@ -1,0 +1,2055 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon"
+          href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+    <title>Harvard Law School / Ethics 101 for Student Attorneys</title>
+
+    <!-- SublimeText bookmarks:
+    Command + fn + F2 - add bookmark
+    fn + shift + F2 - go to next bookmark
+    fn + F2 - go to previous bookmark -->
+
+    <!-- Bootstrap core CSS -->
+    <!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts for this template -->
+    <link href="font-awesome.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-e-->
+
+    <!-- Harvard Branding -->
+    <style>
+      .nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #A51C30;
+      }
+      a {
+        color: #A51C30;
+        text-decoration: none;
+      }
+      h1, h2{
+        color: #A51C30;
+      }
+      h2{
+        color: #A51C30;
+        border-top:1px solid #eee;
+        padding: 1em 0 0 0;
+      }
+      img.border { 
+        border:1px solid #eee;
+      }
+      .img-hover img {
+          -webkit-transition: all .3s ease; /* Safari and Chrome */
+          -moz-transition: all .3s ease; /* Firefox */
+          -o-transition: all .3s ease; /* IE 9 */
+          -ms-transition: all .3s ease; /* Opera */
+          transition: all .3s ease;
+      }
+      .img-hover img:hover {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transform:translateZ(0) scale(1.01); /* Safari and Chrome */
+          -moz-transform:scale(1.01); /* Firefox */
+          -ms-transform:scale(1.01); /* IE 9 */
+          -o-transform:translatZ(0) scale(1.01); /* Opera */
+          transform:translatZ(0) scale(1.01);
+          
+        border:1px solid #A51C30;
+      }
+      .grayscale {
+        -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
+        -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
+        filter: brightness(1.10) grayscale(100%); 
+      }
+      .text-muted-description { /*component descendent to indent description*/
+        color: #777;
+        padding-left:1em;
+      }
+      .table {
+       font-size: 1em;
+       }
+
+    </style><!-- /Harvard Branding -->
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+
+            <a class="navbar-brand" style="margin-bottom:.45em">
+                <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
+            </a>
+            <a class="navbar-brand">
+                <strong>HLS Ethics 101 for Student Attorneys</strong> / Academic Technology
+            </a>
+        </div><!-- / navbar-header -->
+
+    </div><!-- / container-fluid -->
+</nav><!-- / navbar -->
+
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Left Nav -->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu" style="margin-left:-1.25em">
+
+                <li><a href="#Overview">Overview</a></li>
+                <li><!-- / Accessibility -->
+
+                    <a href="#Accessibility" data-target="#item1" data-toggle="collapse" data-parent="#stacked-menu"
+                       class="collapsed">Accessibility&nbsp;<span class="caret arrow"></span></a>
+
+                    <ul class="nav nav-pills nav-stacked collapse" id="item1" style="height: 0px;">
+                        <li><a href="#Accessibility" style="padding-left: 3em; margin-top: -1em;">Introduction</a></li>
+                        <li><a href="#Accessibility_ALTinformation" style="padding-left: 3em; margin-top: -1em;">ALT information</a></li>
+                        <li><a href="#Accessibility_TextContent" style="padding-left: 3em; margin-top: -1em;">Text content</a></li>
+                        <li><a href="#Accessibility_Navigation" style="padding-left: 3em; margin-top: -1em;">Navigation</a></li>
+                        <li><a href="#Accessibility_ColorContrast" style="padding-left: 3em; margin-top: -1em;">Color contrast</a></li>
+                        <li><a href="#Accessibility_Audio" style="padding-left: 3em; margin-top: -1em;">Audio</a></li>
+                    </ul>
+
+                </li><!-- / Accessibility -->
+
+                <li><!-- / Usability -->
+
+                    <a href="#Usability" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu"
+                       class="collapsed">Usability&nbsp;<span class="caret arrow"></span></a>
+
+                    <ul class="nav nav-pills nav-stacked collapse" id="item2" style="height: 0px;">
+                        <li><a href="#Usability" style="padding-left: 3em; margin-top: -1em;">Introduction</a></li>
+                        <li><a href="#Usability_Interface" style="padding-left: 3em; margin-top: -1em;">Interface</a></li>
+                        <li><a href="#Usability_ContentDisplay" style="padding-left: 3em; margin-top: -1em;">Content display</a></li>
+                        <li><a href="#Usability_InformationAccess" style="padding-left: 3em; margin-top: -1em;">Information access</a></li>
+                        <li><a href="#Usability_Navigation" style="padding-left: 3em; margin-top: -1em;">Navigation</a></li>
+                    </ul>
+
+                </li><!-- / Usability -->
+
+                <li><!-- / Mobility -->
+
+                    <a href="#Mobility" data-target="#item3" data-toggle="collapse" data-parent="#stacked-menu"
+                       class="collapsed">Mobility&nbsp;<span class="caret arrow"></span></a>
+
+                    <ul class="nav nav-pills nav-stacked collapse" id="item3" style="height: 0px;">
+                        <li><a href="#Mobility_HighLevelSummary" style="padding-left: 3em; margin-top: -1em;">High Level Summary</a></li>
+                        <li><a href="#Mobility_ContentDisplay" style="padding-left: 3em; margin-top: -1em;">Content display</a></li>
+                    </ul>
+
+                </li><!-- / Mobility -->
+
+            </ul>
+        </div><!-- Left Nav -->
+
+        <!-- Right Nav -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            <div class="col-sm-12">
+                <h1 class="page-header" id="Overview">Overview</h1>
+            </div>
+
+            <div class="col-sm-12">
+                <p>
+                    This User Experience evaluation (Usability, Mobility and Accessibility) was not conducted with any user,
+                    including users of assistive technology.
+                    Once these issues listed here are resolved, it is highly recommended to test the product with target users,
+                    as well as with users of assistive technology.
+                </p>
+                <p>
+                    While most of the information could be accessed by a computer, the initial issues encountered with a
+                    <a
+                        href="#Mobility" target="_blank">mobile browser
+                        <small><i class="fa fa-external-link"></i></small>
+                    </a>
+                    prevented a mobile evaluation.
+                </p>
+                <p>
+                    Select any of the images for a full scale view.
+                </p>
+            </div><!-- / Overview -->
+
+            <div class="col-sm-12">
+                <h2 class="header" id="Accessibility">
+                    Accessibility Evaluation
+                </h2>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12">
+                <h2 class="header" id="Accessibility">
+                    Specifications
+                </h2>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12">
+                <p>
+                    This accessibility audit was conducted on a MacBook Pro with a Macintosh operating system version
+                    10.13.2.
+                </p>
+                <p>
+                    The product was accessed with a Chrome browser via
+                    <a
+                        href="https://harvardtest.sabacloud.com/Saba/Web_spf/NA3T1SNB0035/common/ledetail/HLS-00013380" target="_blank">
+                        https://harvardtest.sabacloud.com/Saba/Web_spf/NA3T1SNB0035/common/ledetail/HLS-00013380
+                        <small><i class="fa fa-external-link"></i></small>
+                    </a>
+                </p>
+                <p>
+                    The testing tools used for this audit were:
+                </p>
+                <ul>
+                    <li>
+                        <a
+                        href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/" target="_blank">
+                            Google Inspect for code inspection
+                            <small><i class="fa fa-external-link"></i></small>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                        href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en" target="_blank">
+                            Chrome Vox browser extension to simulate screen reader technology
+                            <small><i class="fa fa-external-link"></i></small>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                        href="https://webaim.org/resources/contrastchecker/" target="_blank">
+                            WebAIM Color Contrast Checker to check the validity of the color contrast for visual impairment
+                            <small><i class="fa fa-external-link"></i></small>
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    While most of the information was accessible by a computer, the issues encountered with a
+                    <a
+                        href="#Mobility" target="_blank">mobile browser
+                        <small><i class="fa fa-external-link"></i></small>
+                    </a>
+                    determined that a complete mobile evaluation cannot be completed until these
+                    issues are resolved.
+                </p>
+            </div><!-- / Accessibility Specifications -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Accessibility_ALTinformation">
+                    Accessibility of information - <code>ALT</code> information
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Most images in color banners don’t have <code>ALT</code> tag information (see icon of folder next to
+                            the header “Protecting High Risk Confidential Information”).
+                            When a screen reader accesses them, it detects them only as “image”.
+                        </td>
+                        <td>
+                            Provide descriptions for all images,
+                            regardless if they are meaningful to the content or just decorations.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentNavigation_05.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentNavigation_05.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The information accessed by a screen reader seems to refer to the filename of this image.
+                        </td>
+                        <td>
+                            Provide descriptions for all images,
+                            regardless if they are meaningful to the content or just decorations.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_imageALT_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_imageALT_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Accessibility_TextContent">
+                    Accessibility of information - Text content
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The paragraphs sown below the title “Confidentiality Scenario”
+                            are not accessible by a screen reader.
+                            This information is not available neither in the audio track, nor in the transcript.
+                        </td>
+                        <td>
+                            Make all the textual information available to screen readers.
+                            Provide consistency with
+                            A. Information that is present both in the audio track and matched in the transcript,
+                            B. questions and
+                            C. navigation instructions throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_06.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_06.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Although readable in a linear fashion (one column at the time)
+                            table information should always be structured in a HTML table.
+                        </td>
+                        <td>
+                            Use HTML tables with all tabular information throughout the presentation.
+                            Never use HTML tables for page layout.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentTable_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentTable_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Because the text slides used for this sequence advance automatically while the audio plays,
+                            it is not possible for a screen reader to access both the audio and textual information
+                            on the page.
+                            This information is different than the one in the transcript. This content is not displayed
+                            consistently with the rest of the presentation, where each new content is presented on
+                            new slides.
+                            These slides also don’t show the navigation dots.
+                        </td>
+                        <td>
+                            Separate each phrase and corresponding audio on separate slides.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_11.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_11.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Accessibility_Navigation">
+                    Accessibility of information - Navigation
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-12">
+                <h4 class="header" id="#Accessibility_Navigation">
+                    Navigation buttons of the audio controller and of the slides.
+                </h4>
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The buttons on the audio track controller (audio volume control,
+                            play and replay) are detected by a screen reader just as “button”.
+                        </td>
+                        <td>
+                            Similar to the images, provide descriptive information for buttons.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            The previous button is interpreted by a screen reader as 4 separate letters:
+                            “P”, “R”, “E”, “V”
+                        </td>
+                        <td>
+                            Similar to the images, provide descriptive information for buttons.
+                            In this case the equivalent of an image <code>ALT</code> tag could spell out “previous”.
+                        </td>
+                    </tr>
+
+                </table>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Navigation by keys-only cannot access icons and text of the last two radio buttons.
+                            Screenreader access only the filename of the warning icons.
+                            On other slides these icons don’t have <code>ALT</code> tags.
+                        </td>
+                        <td>
+                            Place in ALT tags descriptive information. The <code>ALT</code> tag for the warning icons could be
+                            “This answer is not correct”, for the green check icon “This answer is correct”.
+                            Use only one and a consistent type of error icon throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_03.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_03.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Findings and recommendations
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>
+                                    The pop up should fill up the available display area (100% width and height).
+                                    A close pop-up should be available.
+                                </li>
+                                <li>
+                                    The content cannot be scaled up by command - + (plus) or command — - (minus)
+                                </li>
+                                <li>
+                                    The left navigation is not necessary since this content has to be addressed linearly,
+                                    nor can be accessed subjectively.
+                                </li>
+                                <li>
+                                    The “Transcript” tab should clearly indicate that this transcript should be related
+                                    to the instance of displayed content.
+                                </li>
+                                <li>
+                                    The “next” button becomes enabled before the video is completed.
+                                </li>
+                                <li>
+                                    The left navigation doesn’t show the areas of content within each left navigation
+                                    topic.
+                                    If the left navigation is there to access any area of content,
+                                    the sub-content is not currently available.
+                                </li>
+                                <li>
+                                    Though the “Next” buttons not enabled until each content page is reviewed
+                                    (especially videos), users can easily bypass this restriction by selecting the next
+                                    content page in the left nav - provide consistent interaction rules by
+                                    either always enabling the Next button or by disabling the selection of the
+                                    next content page in the left nav.
+                                </li>
+                                <li>
+                                    An audio volume control is shown on all the slides.
+                                    This control is duplicated in the control bar of the videos.
+                                    It is also available on slides that don’t have neither video or audio -
+                                    remove the audio volume buttons from all the slides except the ones with the
+                                    audio content.
+                                </li>
+                                <li>
+                                    On slides with neither video nor audio, the Transcript tab should be disabled.
+                                </li>
+                                <li>
+                                    When the very first slide is shown (Ethics 101 for Student Attorneys),
+                                    the content of the transcript is “Welcome”, which is the title for the next slide.
+                                </li>
+                                <li>
+                                    In the slide "Ethics 101: The Exercise of Judgment" the title on the slide is
+                                    "Exercise of Judgment",
+                                    while in all the other slides the title of the slide matches the one
+                                    in the transcript.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_scale01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_scale01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            There are design and interaction inconsistencies between slides with videos,
+                            slides with audio and slides with neither video, nor audio.
+                        </td>
+                        <td>
+                            Ensure consistency throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Except for Close Captions, none of the buttons on the right hand side of the
+                            video controls work.
+                        </td>
+                        <td>
+                            Do not show these buttons if their functionality is not available.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_video_fullScreen01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_video_fullScreen01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            When going from the previous slide to this one,
+                            the highlight on the navigation dots skips the dot previous to this one (dot #7).
+                        </td>
+                        <td>
+                            Provide consistent navigation clues throughout the presentation..
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_04.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_04.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            When going from the previous slide to this one,
+                            the highlight on the navigation dots moves to dot #7.
+                        </td>
+                        <td>
+                            Provide consistent navigation clues throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentNavigation_052.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentNavigation_052.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Accessibility_ColorContrast">
+                    Accessibility of information - Color contrast
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-12">
+                <p>
+                    Web Content Accessibility Guidelines 2.0 level AA requires a contrast ratio of 4.5:1
+                    for normal text and 3:1 for large text.
+                    Large text is defined as 14 point (typically 18.66px) and bold or larger,
+                    or 18 point (typically 24px) or larger.
+                </p>
+
+                <h4 class="header" id="#Accessibility_Navigation">
+                    Navigation buttons of throughout the presentation.
+                </h4>
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Start and Submit buttons throughout the presentation.
+                        </td>
+                        <td>
+                            The contrast ratio between the color of the type <code>#FFFFFF</code> and the background
+                            <code>#35CBF2</code>
+                            is equal to 1.91:1. Change the background color from <code>#35CBF2</code> to
+                            <code>#027CAC</code>
+                            to reach a contrast ratio above the required 4.5:1, or change the background color
+                            of the button to white <code>#FFFFFF</code> and the color of the font to a blue
+                            with sufficient
+                            contrast <code>#027CAC</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Disabled Prev and Next buttons.
+                        </td>
+                        <td>
+                            The contrast ratio between the color of the type <code>#838383</code> and the background
+                            <code>#D6D6D6</code>
+                            is equal to 2.61:1 - Increase the font-size of the from 8 points to 12 points.
+                            Change the font color from <code>#838383</code> to <code>#5C5C5C</code> to reach a contrast ratio above
+                            the required 4.5:1.
+                        </td>
+                    </tr>
+
+                </table>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Paragraph "Develop an understanding of the duties..."
+                            and all the other slides with this font size, font color and background color.
+                        </td>
+                        <td>
+                            The contrast ratio between the color of the type <code>#FFFFFF</code> and the background
+                            <code>#02A1E0</code>
+                            is equal to 2.93:1. Increase the font-size of the from 8 points to 12 points.
+                            Change the background color from <code>#02A1E0</code> to <code>#027CAC</code> to reach a contrast ratio above
+                            the required 4.5:1.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentColorContrast_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentColorContrast_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The contrast ratio between the color of the type <code>#FFFFFF</code>
+                            and the background <code>#2C9189</code> is equal to 3.81:1..
+                        </td>
+                        <td>
+                            Increase the font-size of the  from 8 points to 12 points.
+                            Change the background color from <code>#2C9189</code> to <code>#288179</code> to reach a contrast ratio above the required 4.5:1.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentColorContrast_02.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentColorContrast_02.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The contrast ratio between the color of the subdued type
+                            in the left navigation <code>#909090</code> and the background <code>#F3F3F3</code> is equal to 2.88:1.
+                        </td>
+                        <td>
+                            Increase the font-size of the  from 7 points to 12 points.
+                            Change the font color from <code>#909090</code> to <code>#6E6E6E</code>.
+                            <br>
+                            Alternatively, change the font color to <code>#757575</code> and the background color
+                                to <code>#FFFFFF</code> to reach a contrast ratio above the required 4.5:1.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_02.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_02.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Accessibility_Audio">
+                    Accessibility of information - Audio
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The first half of the audio track matches the content of the paragraph displayed
+                            on the slide.
+                            While the second half of the audio track displays two new paragraphs and a button,
+                            the audio track becomes silent, although it still plays.
+                        </td>
+                        <td>
+                            The information from the audio track and its relationship with the information shown on the
+                            slides should be consistent throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_06.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_06.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Unless the cursor is moved over the image, there is no indication that the scrolling
+                            of this content can be interrupted.
+                            This is a useful and accessible feature but it should indicated on this interface.
+                        </td>
+                        <td>
+                            Show a caption with "Click on the content area to control the scrolling of the content"
+                            or in the audio and the transcript.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            The functionality of the scrolling of this content via mouse click is unpredictable.
+                            Once the scrolling reaches the bottom of the document,
+                            it automatically scrolls back to the top.
+                            At this point several mouse clicks cannot initiate the scrolling again.
+                        </td>
+                        <td>
+                            When scrolling content, always show scroll bars to indicate the progress of this action.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_scroll01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_scroll01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Text entry area doesn’t provide any boundary. An excess of text bleeds outside
+                            the text entry area and disables the functionality of the Submit button.
+                        </td>
+                        <td>
+                            Keep the text within a defined text area with a scrolling bar when needed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            While the Submit button doesn’t advance to the next slide until content is typed in
+                            the text entry area, the Next button is enabled.
+                        </td>
+                        <td>
+                            Provide consistency of behavior with all the interface elements.
+                            Here both the Submit and Next buttons should be disabled until
+                            text content is provided by the user.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentCapacity_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentCapacity_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            In this and other instances,
+                            while in all the slides the transcript reflects the content of the audio,
+                            on this slide only the first paragraph is recorded,
+                            while the rest (about 80%) of the audio track is silent.
+                            It is not apparent yet that the extra transcript belongs to a video that will be played later.
+                        </td>
+                        <td>
+                            The content of the transcript should match the instance of the content of each slide.
+                            This slide should only show the paragraph that matches the audio track.
+                            The audio track should contain content related to each slide.
+                            It shouldn’t be silent as in this slide.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_02.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_02.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            On this and other slides a portion of the audio track is silent.
+                        </td>
+                        <td>
+                            The audio track should contain content related to each slide.
+                            It shouldn’t be silent as in this slide.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_10.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_10.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Once on these slides, the audio track automatically starts but the audio is silent.
+                        </td>
+                        <td>
+                            Do not show the audio track controller if there is no available audio.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_07.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_07.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+
+                <a href="hls-ocp_contentAudio_08.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_08.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+
+                <a href="hls-ocp_contentAudio_09.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_09.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <h2 class="header" id="Usability">
+                    Usability Evaluation
+                </h2>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Usability">
+                    Specifications
+                </h3>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12">
+                <p>
+                    This usability audit was conducted on a MacBook Pro with a Macintosh operating system version
+                    10.13.2.
+                </p>
+                <p>
+                    The product was accessed with a Chrome browser via
+                    <a
+                        href="https://harvardtest.sabacloud.com/Saba/Web_spf/NA3T1SNB0035/common/ledetail/HLS-00013380" target="_blank">
+                        https://harvardtest.sabacloud.com/Saba/Web_spf/NA3T1SNB0035/common/ledetail/HLS-00013380
+                        <small><i class="fa fa-external-link"></i></small>
+                    </a>
+                </p>
+                <p>
+                    The testing tool used for this audit was:
+                </p>
+                <ul>
+                    <li>
+                        <a
+                        href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/" target="_blank">
+                            Google Inspect for code inspection
+                            <small><i class="fa fa-external-link"></i></small>
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    While most of the information was accessible by a computer, the issues encountered with a
+                    <a
+                        href="#Mobility" target="_blank">mobile browser
+                        <small><i class="fa fa-external-link"></i></small>
+                    </a>
+                    determined that a complete mobile evaluation cannot be completed until these
+                    issues are resolved.
+                </p>
+            </div><!-- / Usability Specifications -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Usability_Interface">
+                    Usability of information - Interface consistency
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            While on some slides the header of the transcript matches the apparent header of the slide,
+                            on other slides (Pick One, Takeaways, etc.)
+                            either the transcript doesn’t match the title of the slide or the slide
+                            doesn’t show the tile of the transcript.
+                        </td>
+                        <td>
+                            The headings of transcripts and slides should match consistently throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentRadioButton_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentRadioButton_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            In this page, the video is played by the user,
+                            while on previous slides the video starts automatically.
+                        </td>
+                        <td>
+                            Provide consistency of controls throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_video_autoStart.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_video_autoStart.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            On the "Competence and Diligence / Scenario Summary" the selection of the Submit button,
+                            although enabled, doesn't provide any feedback.
+                            On "Pick One", the Submit button triggers a warning pop-up.
+                        </td>
+                        <td>
+                            Provide consistency of behavior throughout the presentation.
+                            Either disable the Submit button until the action requirements are met,
+                            or provide a warning.
+                            Because of potential accessibility issues and to simplify the user interface behavior,
+                            the former option is recommended.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentWarning_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentWarning_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The selection of each item is replicated in the sentence above. The design of this
+                            interface doesn’t employ
+                            standard web interface elements like radio buttons.
+                        </td>
+                        <td>
+                            Use typical web interface conventions and an accessible layout throughout the interface.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentRadioButton_011.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentRadioButton_011.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Usability_ContentDisplay">
+                    Usability of information - Content display
+                </h3>
+                <p>
+                    Checkboxes and radio buttons have inconsistent visual clues from one summary to another.
+                    At times, they are highlighted on mouse-over,
+                    other when the wrong and correct answers are provided -
+                    provide consistent visual clues throughout the presentation.
+                </p>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            While the content of the first two tabs show the "Confidentiality of Information" header,
+                            the rest of the tabs don't show any header.
+                            This header should also refer to the selected link,
+                            for instance when selected "Rule 1.6(a)",
+                            the header of the correspondent paragraph should be “Rule 1.6(a) Confidentiality of Information”.
+                            <br>
+                            While there is no space prior to the parenthesis in "Rule 1.6(a)", there is a space in "Rule 1.6 (c)".
+                        </td>
+                        <td>
+                            Provide consistency of information (headings in the case)
+                            throughout the content of the same topic.
+                            Provide consistency of information display
+                            (character spacing in the case) throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentConsistency_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentConsistency_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The warning icons (yellow triangular) and the error icons (red "X")
+                            shown next to the wrong answers are confusing.
+                        </td>
+                        <td>
+                            Use only one and a consistent type of error icon throughout the presentation.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Although each radio button provides a different explanation which is useful to the user
+                            (after the Submit button is selected)
+                            the explanations for the other radio buttons cannot be accessed unless a user
+                            accesses this slide by going back, selecting and submitting.
+                        </td>
+                        <td>
+                            Allow for all the information to be accessed. In this case, allow for the selection and
+                            submittal of all the radio buttons without leaving this slide.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_031.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_031.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The audio track scrolls without audio and the video doesn’t start automatically,
+                            nor there is the instruction to start the video.
+                            The Next button is active although the video hasn’t been played yet.
+                        </td>
+                        <td>
+                            The audio track should not be shown when it is not necessary.
+                            The video should either start automatically or
+                            instructions should instruct the user to play the video.
+                            The next button should either remain disable until the video is played or always enabled.
+                            These conventions should be consistent throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_04.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_04.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            When the audio reads the second paragraph,
+                            the grey background appears a few seconds before the text.
+                        </td>
+                        <td>
+                            Provide consistent visual clues throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_041.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_041.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Usability_InformationAccess">
+                    Usability of information - Information access
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            In this example of 730 characters, the text becomes illegible.
+                        </td>
+                        <td>
+                            The font size should always be consistent (12 points)
+                            and within a defined text area with a scrolling bar when needed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            The text submitted in the previous slide and displayed here is not accessible
+                            neither by tab key, nor by a screen reader.
+                        </td>
+                        <td>
+                            Allow all textual content to be accessible by screen readers.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentCapacity_02.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentCapacity_02.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The audio track scrolls without audio.
+                            <br>
+                            The audio track automatically stops one third of the way while showing a paragraph and the
+                            <br>
+                            Start button. Users could select the Start button without realizing that by selecting the
+                            audio play button more information (the text above the Start button) is still available.
+                            <br>
+                            The selection of the Start button would not allow access to the second paragraph.
+                            <br>
+                            There is no information for the access of the second paragraph. If the second paragraph
+                            is displayed via the audio play button, the Start button is no longer visible.
+                            <br>
+                            Since there is no punctuation mark (.) after the last sentence of the second paragraph,
+                            users may assume that more information is available but not visible, including the Start
+                            button.
+                            <br>
+                            When the audio play button is selected to access the second paragraph,
+                            the Next button becomes disabled until the end of this silent audio track.
+                        </td>
+                        <td>
+                            The access to all the information of each slide should be evident and consistent
+                            throughout the presentation.
+                            <br>
+                            Either show a text slide with no audio or an audio slide with the text in the Transcript tab.
+                            The behavior of the Next button should be consistent with the rest of the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentAudio_05.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentAudio_05.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Usability_Navigation">
+                    Usability of information - Navigation
+                </h3>
+            </div><!-- / Section sub heading -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Under "Competence and Diligence", the left navigation menu shows 8 items,
+                            including the title slide, although the second slide shows 11 navigation dots at
+                            the bottom of the page.
+                            It appears that the slide "Pick One" contains 6 additional slides.
+                        </td>
+                        <td>
+                            Allow for visual consistency between the left navigation and the slides.
+                            Either list all the 12 slides in the left navigation, or show 7 dots on each slide.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            When this page is displayed, the equivalent link in the left navigation is not highlighted.
+                        </td>
+                        <td>
+                            Provide consistent navigation clues throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_03.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_03.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Under "Duty and Confidentiality", the left navigation lists 15 slides,
+                            while the first slide shows only 12 navigation dots.
+                        </td>
+                        <td>
+                            Allow for visual consistency between the left navigation and the slides.
+                            Either list all the 12 slides in the left navigation, or show 15 dots on each slide.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_02.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_02.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Under "Duty and Confidentiality", it is difficult to distinguish the links
+                            that wrap from the links with single line of text.
+                            At a first glance the left navigation link "High Risk Confidential Information Exercise"
+                            appears as two separate links.
+                        </td>
+                        <td>
+                            Indent the wrapped text to avoid ambiguities, especially if the navigation dots of the
+                            slides don't match the number of the equivalent left navigation links.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_navigation_021.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_navigation_021.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            The is no visual reference between the selected link and the related paragraph.
+                            Once a link is selected, and if users become distracted, is impossible to determine the
+                            relationship between the selected link and the displayed paragraph.
+                        </td>
+                        <td>
+                            Paragraph headers should refer to the selected link.
+                            For instance, when selected "Rule 1.6(a)",
+                            the header of the correspondent paragraph should be
+                            "Rule 1.6(a) Confidentiality of Information".
+                            Additionally, but not an alternative, keep the selected link highlighted once it is selected,
+                            instead of returning it to the non-selected state.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentConsistency_01.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentConsistency_01.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Inconsistent with other slides (most of which with video content) users can easily move to
+                            the next slide without reviewing the information on this slide.
+                        </td>
+                        <td>
+                            Display a (green) check icon next to each selected link and allow
+                            to go to the next slide only when all links are selected.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentConsistency_011.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentConsistency_011.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-6">
+                <table class="table table-bordered table-condensed">
+                    <tr>
+                        <th>
+                            Finding
+                        </th>
+                        <th>
+                            Recommendation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            This slide doesn't show the navigation dots,
+                            although they show on the previous and following slides.
+                        </td>
+                        <td>
+                            Provide consistent navigation clues throughout the presentation.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-6 img-hover">
+                <a href="hls-ocp_contentNavigation_06.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="hls-ocp_contentNavigation_06.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+            </div><!-- / Section information -->
+
+            <div class="col-sm-12">
+                <hr>
+            </div><!-- / Section ruler -->
+
+
+            <div class="col-sm-12">
+                <h2 class="header" id="Mobility">
+                    Mobility Evaluation
+                </h2>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Moility">
+                    Specifications
+                </h3>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12">
+                <p>
+                    This mobility audit was conducted on a Samsung S8 and on Android operating system.
+                </p>
+                <p>
+                    The product was accessed with the Samsung default mobile browser via
+                    <a
+                        href="https://harvardtest.sabacloud.com/Saba/Web_spf/NA3T1SNB0035/common/ledetail/HLS-00013380" target="_blank">
+                        https://harvardtest.sabacloud.com/Saba/Web_spf/NA3T1SNB0035/common/ledetail/HLS-00013380
+                        <small><i class="fa fa-external-link"></i></small>
+                    </a>
+                </p>
+                <p>
+                    The issues encountered with a mobile browser determined that a complete mobile evaluation
+                    cannot be completed until these issues are resolved.
+                </p>
+            </div><!-- / Mobility Specifications -->
+
+            <div class="col-sm-12">
+                <h3 class="header" id="Mobility_HighLevelSummary">
+                    High level summary
+                </h3>
+                <p>
+                    The access to the information of this product is not optimal.
+                    A complete mobile evaluation can be conducted once that mobile display issues are resolved.
+                </p>
+                <p>
+                    Lack of responsiveness either interferes with, or obliterates the content.
+                </p>
+                <p>
+                    Here are a few example screen captures.
+                </p>
+            </div><!-- / Section heading -->
+
+            <div class="col-sm-12" id="Mobility_ContentDisplay">
+                <hr>
+            </div><!-- / Section ruler -->
+
+            <div class="col-sm-3 img-hover">
+                <a href="Screenshot_20180113-223155.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-223155.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Login screen.
+                </p>
+            </div>
+
+            <div class="col-sm-3 img-hover">
+                <a href="Screenshot_20180113-223659.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-223659.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Scrolled pop-ups.
+                </p>
+            </div>
+
+            <div class="col-sm-3 img-hover">
+                <a href="Screenshot_20180113-223750.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-223750.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Video display, wwelcome video.
+                </p>
+            </div>
+
+            <div class="col-sm-3 img-hover">
+                <a href="Screenshot_20180113-223837.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-223837.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Video display from a slide.
+                </p>
+            </div>
+
+            <div class="col-sm-6 img-hover">
+                <a href="Screenshot_20180113-224022.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-224022.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Left navigation.
+                </p>
+            </div>
+
+            <div class="col-sm-6 img-hover">
+                <a href="Screenshot_20180113-224101.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-224101.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Empty pop-up when left navigation links are selected.
+                </p>
+            </div>
+
+            <div class="col-sm-6 img-hover">
+                <a href="Screenshot_20180113-224035.png" target="_blank"
+                   title="Select to open full size image in a new tab">
+                    <img src="Screenshot_20180113-224035.png" width="100%" class="border img-responsive img-rounded">
+                </a>
+                <p class="text-muted">
+                    Empty pop-up when Transcript tab is selected.
+                </p>
+            </div>
+
+            <div class="col-sm-12" style="margin-top:40em">&nbsp;</div>
+            <!-- This div is here only to allow for enough blank vertical space
+            so that if the last content scrolls to the top of the browser page
+            when selected by an anchor link. -->
+
+        </div><!-- Right Nav -->
+
+    </div><!-- / row -->
+
+</div><!-- / container-fluid -->
+
+
+<!-- Bootstrap script for collapse side nav - start
+================================================== -->
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js -->
+<script type="text/javascript" src="jquery.min.js"></script>
+<!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js -->
+<script type="text/javascript" src="bootstrap.min.js"></script>
+
+<!-- Bootstrap script for collapse side nav - end
+================================================== -->
+
+
+<!-- Script for smooth scroll - start
+================================================== -->
+<script>
+      $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+
+            var target = $(this.hash);
+
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+              if (target.length) {
+
+                  $('html, body').animate({
+
+                      scrollTop: target.offset().top-70
+
+                  }, 1000);
+
+                  e.preventDefault();
+
+              }
+
+          }
+
+    });
+
+
+</script>
+
+<!-- Script for smooth scroll - end
+================================================== -->
+
+
+<div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span
+        class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1552</span> x <span
+        class="tooltipHeight" id="winHeight">369</span><br><span class="tooltipTitle">Viewport size: </span><span
+        class="tooltipWidth" id="vpWidth">1552</span> x <span class="tooltipHeight" id="vpHeight">369</span></div>
+</body>
+</html>
