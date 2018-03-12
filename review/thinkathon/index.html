@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
     <title>Harvard Applications</title>
   </head>
   <body>
@@ -74,21 +76,162 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="card" style="margin-top: 2em">
-            <h5 class="card-title text-center">Search Harvard Applications</h5><div class="card-body">
+        <div class="container-fluid">
+          <div class="col-sm-12"
+               style="
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              min-width: 0;
+              word-wrap: break-word;
+              background-color: #fff;
+              background-clip: border-box;
+              border: 1px solid rgba(0,0,0,.125);
+              border-radius: .25rem;
+              margin-top: 2em;">
+            <div class="row">
+              <div class="col-sm-12" style="margin-bottom: 1em">
+                <h5 class="text-center">Search Harvard Applications</h5>
+              </div>
+            </div>
+            <div class="row justify-content-md-center">
+              <div class="col col-lg-3">
+                <div class="input-group">
+                  <div class="form-group row">
+                    <label for="exampleFormControlSelect1" class="col-form-label" style="padding-right: 2em; padding-left: 2em; ">I am</label>
+                  </div>
+                  <div>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Faculty</option>
+                      <option>Staff</option>
+                      <option>Student</option>
+                      <option>Researcher</option>
+                      <option>Alumni</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group row" hidden>
+                      <label for="inputPassword" class="col-form-label">
+                        I am&nbsp;
+                      </label>
+                      <div>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-auto">
+                <label for="search" class="col-form-label">Searching for</label>
+              </div>
+              <div class="col col-lg-5">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="search" placeholder="Application name, features, function" aria-label="Application name, features, function" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button">Search</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div><!--/ row-->
+      </div><!--/ row - Search-->
       <div class="row">
-        <div class="col">
-          <div class="card" style="margin-top: 1em">
-            <h5 class="card-title text-center">Browse Harvard Applications</h5><div class="card-body">
+        <div class="container-fluid">
+          <div class="col-sm-12"
+               style="
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              min-width: 0;
+              word-wrap: break-word;
+              background-color: #fff;
+              background-clip: border-box;
+              border: 1px solid rgba(0,0,0,.125);
+              border-radius: .25rem;
+              margin-top: 2em;
+              padding: 1em;">
+            <div class="row">
+              <div class="col-sm-12">
+                <h5 class="text-center">Browse Harvard Applications</h5>
+              </div>
+            </div>
+            <div class="row justify-content-md-center">
+              <div class="col col-lg-4" style="margin-top: 1em">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5>Faculty</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div><!--/ row - col col-lg-4 -->
+              <div class="col col-lg-4" style="margin-top: 1em">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5>Staff</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div><!--/ row - col col-lg-4 -->
+              <div class="col col-lg-4" style="margin-top: 1em">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5>Student</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div><!--/ row - col col-lg-4 -->
+            </div>
+            <div class="row justify-content-md-center" style="margin-top: 1em">
+              <div class="col col-lg-4" style="margin-top: 1em">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5>Researcher</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div><!--/ row - col col-lg-4 -->
+              <div class="col col-lg-4" style="margin-top: 1em">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5>Alumni</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div><!--/ row - col col-lg-4 -->
+              <div class="col col-lg-4" style="margin-top: 1em">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5>Other</h5>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div><!--/ row - col col-lg-4 -->
             </div>
           </div>
         </div>
-      </div><!--/ row-->
+      </div><!--/ row - Browse-->
     </div><!--/ container-->
 
 
