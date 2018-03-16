@@ -16,7 +16,7 @@
     <title>Harvard Applications</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><img src="image/harvard-logo.png" alt="Harvard logo" style="margin-bottom: -.32em"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,9 +24,10 @@
 
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item dropdown">
           <li class="nav-item">
             <a class="nav-link" href="myFavorite.html">
               <span class="oi oi-heart" style="font-size: .75em;" title="My Apps icon"></span>
@@ -77,23 +78,61 @@
           <!--<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>-->
         <!--</form>-->
       </div>
-    </nav>
-    <div class="container">
-      <div class="row justify-content-md-center" style="margin-top: 14em">
-        <div class="col-12" style="margin-bottom: 2em">
-          <h5 class="text-center">Search Harvard Applications</h5>
-        </div>
-          <div class="col-6 col-offset-6">
-            <div class="input-group">
-              <input type="text" class="form-control" id="search" placeholder="Application name, features, function" aria-label="Application name, features, function" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <a class="btn btn-primary" href="search_result.html" role="button">Search</a>
-              </div>
-            </div>
-          </div>
-      </div>
+    </nav><!-- / navbar -->
 
-    </div><!--/ container-fluid - Search-->
+    <div class="container-fluid">
+      <div class="row justify-content-md-center" style="margin-top: 6em">
+        <div class="col-12">
+          <h5 class="text-center">applicationName</h5>
+        </div>
+      </div><!--/ row - Search-->
+
+      <div class="col-8" style="margin-top: 2em">
+          <div class="alert alert-warning" role="alert">
+            <h6>News: applicationName will be updated to a new version on dd/mm/yyyy</h6>
+          </div>
+        </div><!--/ search results count -->
+
+      <div class="container">
+        <hr>
+        <div class="row">
+          <div class="col-1">
+            <img
+                    class="card-img-top"
+                    src="https://its.unl.edu/images/services/icons/AppDevelopmentD_Icon-01_0.png"
+                    alt="Application logo"
+                    style="width: 100%">
+          </div>
+          <div class="col">
+            <h5>
+              Application name
+            </h5>
+            <p>
+              Application description, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+              beatae vitae dicta sunt explicabo.
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+              fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            </p>
+              <hr>
+            <p>
+              Application version, upcoming updates, etc.
+            </p>
+            <p>
+              <a class="btn btn-outline-primary" href="applicationFav.html" role="button" target="_blank">
+                <span class="oi oi-heart" style="font-size: .75em;" title="My Apps icon"></span>
+                Mark as favorite
+              </a>
+              <a type="link" class="btn btn-link" href="https://trainingportal.harvard.edu/" target="_blank">Knowledge articles</a>
+              <a type="link" class="btn btn-link" href="https://harvard.service-now.com/ithelp?id=submit_ticket&sys_id=3f1dd0320a0a0b99000a53f7604a2ef9" target="_blank">Outstanding tickets</a>
+              <a class="btn btn-primary" href="https://peoplesoft.harvard.edu/" role="button" target="_blank">Launch application</a>
+            </p>
+          </div>
+        </div><!--/ application instance -->
+
+      </div><!--/ search results -->
+
+    </div><!--/ container-fluid -->
 
 
 
