@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta http-equiv="refresh" content="1; index3.html">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!--Fontawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <img src="img-nav_top.png" alt="Canvas left nav" style="height: 63px">
+            </div>
+            <div>
+                <img src="img-nav_left.png" alt="Canvas left nav" style="width: 84px">
+
+                <img src="img-nav_left2.png" alt="Canvas left nav" style="width: 186px; margin-bottom: -2px;">
+
+            </div>
+            <div style="position: absolute; top: 4em; left: 22em; width: 60em;">
+                <h3>
+                    <a href="#">
+                        Admin Console
+                    </a>
+                    <i class="fa fa-chevron-right" style="font-size: .65em; color: grey;"></i>
+                    Set Course Visibility
+                </h3>
+                <h4>
+                    Set Course Visibility
+                </h4>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="School">School</label>
+                            <input type="text" class="form-control" id="School" value="Harvard College/GSAS"
+                            style="
+                            border: 1px solid #fff;
+                            display: inline;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="Term">Term</label>
+                            <select class="form-control" id="Term">
+                              <option>Spring 2 2018</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="Visibility">Visibility</label>
+                            <select class="form-control" id="Visibility">
+                              <option>Course</option>
+                              <option>Institution</option>
+                              <option>Public</option>
+                            </select>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked> Customize
+                                    </label>
+                                </div>
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="Syllabus">Syllabus</label>
+                                        <select class="form-control" id="Syllabus">
+                                            <option>Course</option>
+                                            <option>Institution</option>
+                                            <option selected>Public</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-default" type="submit" style="margin-top: 1.75em" disabled>Set Visibility</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="alert alert-info" role="alert">Processing your request...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
