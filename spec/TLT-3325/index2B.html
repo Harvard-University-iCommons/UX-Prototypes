@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
+        <meta http-equiv="refresh" content="1; index3.html">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -59,16 +62,13 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-
                         <div class="form-group">
-
-                            <label for="dynamic_select">Visibility</label>
-                            <select class="form-control" id="dynamic_select">
-                              <option value="indexA.html">Course</option>
-                              <option value="indexB.html">Institution</option>
-                              <option value="indexC.html">Public</option>
+                            <label for="Visibility">Visibility</label>
+                            <select class="form-control" id="Visibility">
+                              <option>Course</option>
+                              <option selected>Institution</option>
+                              <option>Public</option>
                             </select>
-
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-body">
@@ -81,8 +81,8 @@
                                     <div class="form-group">
                                         <label for="Syllabus">Syllabus</label>
                                         <select class="form-control" id="Syllabus">
-                                            <option selected>Course</option>
-                                            <option>Institution</option>
+                                            <option>Course</option>
+                                            <option selected>Institution</option>
                                             <option>Public</option>
                                         </select>
                                     </div>
@@ -91,28 +91,15 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <a class="btn btn-primary" href="index2.html" role="button" style="margin-top: 1.75em">
-                            Set Visibility
-                        </a>
-
+                        <button class="btn btn-default" type="submit" style="margin-top: 1.75em" disabled>Set Visibility</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="alert alert-info" role="alert">Processing your request...</div>
                     </div>
                 </div>
             </div>
         </div>
     </body>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        $(function(){
-          // bind change event to select
-          $('#dynamic_select').on('change', function () {
-              var url = $(this).val(); // get selected value
-              if (url) { // require a URL
-                  window.location = url; // redirect
-              }
-              return false;
-          });
-        });
-    </script>
-
 </html>
