@@ -1,0 +1,268 @@
+<!--HTML wire frames for DART 2.0 - home page-->
+<!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/favicon-16x16.png">
+  <link rel="mask-icon" color="#5bbad5" href="https://s3.amazonaws.com/vpal-static-findability-assets/branding/harvard/favicons/safari-pinned-tab.svg">
+  <title>DART 2.0 - home page</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>DART 2.0 - home page</title>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Navigation */
+
+nav {
+  width: 7em;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+nav ul {
+  padding: 20px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  padding: 5px 0;
+  color: #000;
+  font-size: .85em;
+  text-decoration: none;
+  font-family: "semi",sans-serif;
+  font-weight: 100;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+nav ul li a:hover {
+  color: blue;
+}
+a.active {
+  font-weight: 900;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 5rem;
+  color: #34495E;
+}
+
+/* Sections */
+
+section {
+  width: 100%;
+  padding: 1em;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  height: 450px;
+  text-align: center;
+}
+section:nth-child(even) {
+  background: #fff;
+}
+section:nth-child(odd) {
+  background: #fff;
+}
+.sections section:first-child {
+  margin-top: 0px;
+}
+section.active {}
+
+footer {
+  height: 500px;
+  background: #fff;
+}
+
+  </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+
+  </script>
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+
+  </script>
+
+
+</head>
+
+<body translate="no">
+
+  <div class="sections">
+    <section id="1" class="active">
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-lg-2 col-xs-6">
+          <div style="background-color: #ecf0f1; padding: 1em;">
+            Branding - logo
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://i.ytimg.com/vi/g6Up1p7Ltkc/sddefault.jpg" style="width: 100%; opacity: .5; position: absolute; clip: rect(30px,300px,202px,0px); margin: 8em 6em 4em -6em;">
+        </div>
+        <div class="col-md-5">
+          <img src="https://vpal-static-findability-dev.s3.amazonaws.com/search/img/background_skyline_lowquality.jpg" style="width: 100%; opacity: .25;">
+          <img src="dart2.0-home_wireframe_assets_search.svg" style="width: 100%; position: relative; margin-top: -30em; z-index: 2000">
+        </div>
+        <div class="col-md-3">
+          <img src="https://i.ytimg.com/vi/ElKw-a84qE8/sddefault.jpg" style="width: 100%; opacity: .5; position: absolute; clip: rect(30px,300px,202px,0px); margin: 12em 0em 0em -14em;">
+        </div>
+      </div>
+    </section>
+
+    <section id="2" class="" style="height: 600px;">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="dart2.0-home_wireframe_assets_why.svg" style="width: 80%;">
+        </div>
+      </div>
+    </section>
+
+    <section id="3" class="" style="height: 600px;">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="dart2.0-home_wireframe_assets_how.svg" style="width: 80%;">
+        </div>
+      </div>
+    </section>
+
+    <section id="4" class="" style="height: 500px;">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="dart2.0-home_wireframe_assets_who.svg" style="width: 80%;">
+        </div>
+      </div>
+    </section>
+
+    <section id="5" class="" style="height: 600px;">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="dart2.0-home_wireframe_assets_what.svg" style="width: 80%;">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+
+  <nav>
+    <ul>
+      <li><a href="#" class="">explore</a></li>
+      <li><a href="#" class="">about</a></li>
+      <li><a href="#1" class="active">DART</a></li>
+      <li><a href="#2" class="">why?</a></li>
+      <li><a href="#3" class="">how?</a></li>
+      <li><a href="#4" class="">who?</a></li>
+      <li><a href="#5" class="">what?</a></li>
+    </ul>
+  </nav>
+
+
+
+  <footer>
+    <div class="row">
+        <div class="col-md-12">
+          <img src="dart2.0-home_wireframe_assets_footer.svg" style="width: 80%;">
+        </div>
+      </div>
+  </footer>
+
+  <script class="cssdeck" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js"></script>
+
+
+  <script>
+        var sections = $('section'),
+  nav = $('nav'),
+  nav_height = nav.outerHeight();
+
+  $(window).on('scroll', function () {
+    var cur_pos = $(this).scrollTop();
+
+    sections.each(function () {
+      var top = $(this).offset().top - nav_height,
+      bottom = top + $(this).outerHeight();
+
+      if (cur_pos >= top && cur_pos <= bottom) {
+        nav.find('a').removeClass('active');
+        sections.removeClass('active');
+
+        $(this).addClass('active');
+        nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+      }
+    });
+  });
+
+  nav.find('a').on('click', function () {
+    var $el = $(this),
+    id = $el.attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - nav_height },
+    500);
+
+    return false;
+  });
+        //# sourceURL=pen.js
+
+  </script>
+
+
+</body>
+</html>
