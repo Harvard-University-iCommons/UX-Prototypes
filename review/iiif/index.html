@@ -1,0 +1,463 @@
+<!--HTML wire frames for Harvard IIIF 2.0 - home page-->
+<!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
+<!--There are 12 UI comments in this commit-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.harvard.edu" itemprop="url">
+        <link rel="shortcut icon" type="image/ico" href="/sites/all/themes/hedu2015/assets/img/favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png">
+        <meta name="msapplication-TileImage" content="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#222222">
+        <title itemprop="name">Harvard University IIIF</title>
+        <meta name="description" content="Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globallIIIF adoption at Harvard is a collaborative effort that began in earnest in 2014.  HarvardX, Harvard Art Museums, Harvard University Information Technology, Harvard Library, and various faculty have contributed in some way to increasing the visibility and use of IIIF at Harvard. The IIIF/Mirador Working Group guides and coordinates IIIF/Mirador-related efforts across the University.  As such, no one group “owns” IIIF at Harvard. The IIIF at Harvard website aims to highlight the collaborations and projects at Harvard that have utilized IIIF or Mirador in some capacity.">
+
+      <!-- Bootstrap -->
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+      <style>
+          @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Navigation */
+
+
+        nav ul li a:hover {
+          color: blue;
+        }
+        a.active {
+          font-weight: 900;
+          font-size: 1.25em;
+          border-bottom: 2px solid red;
+        }
+
+        /* Headings */
+
+        h1 {
+          font-size: 5rem;
+          color: #34495E;
+        }
+
+        /* Sections */
+
+        section {
+          width: 100%;
+          padding: 4em;
+          background: #fff;
+          border-bottom: 1px solid #ccc;
+          height: 520px;
+          text-align: center;
+        }
+        section:nth-child(even) {
+          background: #fff;
+        }
+        section:nth-child(odd) {
+          background: #fff;
+        }
+        .sections section:first-child {
+          margin-top: 0px;
+        }
+        section.active {}
+
+        footer {
+          height: 500px;
+          background: #fff;
+        }
+
+      </style>
+
+      <script>
+      window.console = window.console || function(t) {};
+
+      </script>
+
+
+      <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+
+      </script>
+
+
+    </head>
+
+    <body translate="no">
+
+<!--UI comment #1 - adding top margin because of the fixed navbar-->
+        <div class="sections" style="margin-top: 4em;">
+            <section id="1" class="active"><!-- splash carousel-->
+                <div class="row">
+                     <div class="col-md-8 col-md-offset-2">
+                        <div class="carousel slide" id="carousel-example-captions" data-ride="carousel">
+
+<!--UI comment # 2 - modifying the color of the Bootstrap indicator -->
+                            <style>
+                              .carousel-indicators .active
+                              {
+                              background-color: #666;
+                              border: 1px solid #666;
+                              }
+
+                            </style>
+
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-captions" data-slide-to="0" class="active" style="border: 1px solid #666;"></li>
+                                <li data-target="#carousel-example-captions" data-slide-to="1" class="" style="border: 1px solid #666;"></li>
+                                <li data-target="#carousel-example-captions" data-slide-to="2" class="" style="border: 1px solid #666;"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active" style="background-image: url('http://iiif.harvard.edu/wp-content/uploads/2017/03/banner.jpg');
+                         background-repeat: no-repeat;
+                         background-size: 900px;
+                         width:900px;
+                         height:440px;
+                         background-position:top;">
+
+<!--UI comment #3 - since opacity cannot be applied to div background images, adding a white div with opacity -->
+                                    <div style="width: 900px; height: 440px; display: block; position: relative; background-color: white; opacity: .5;"></div>
+
+<!--UI comment #4 - changing the font color of the Bootstrap carousel -->
+                                    <div class="carousel-caption" style="color: black; margin-left: -8em;">
+                                    <h3>
+                                        Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
+                                    </h3>
+                                    <h4>
+                                        Internal stakeholders (Harvard departments and groups who want to improve IIIF at Harvard)
+                                        with a link to the IIIF page
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="item" style="background-image: url('http://104.236.212.13/wp-content/uploads/2016/01/download.png');
+                         background-repeat: no-repeat;
+                         background-size: 900px;
+                         width:900px;
+                         height:440px;
+                         background-position:top;">
+
+<!--UI comment #5 - since opacity cannot be applied to div background images, adding a white div with opacity-->
+                            <div style="width: 900px; height: 440px; display: block; position: relative; background-color: white; opacity: .75;"></div>
+
+<!--UI comment #6 - changing the font color of the Bootstrap carousel -->
+                            <div class="carousel-caption" style="color: black; margin-left: -8em;">
+                                <h3>
+                                    Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
+                                </h3>
+                                <h4>
+                                    Researchers who are looking to learn more about IIIF and how they can get IIIF support at
+                                    Harvard with a link to Collaborators
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('http://104.236.212.13/wp-content/uploads/2016/01/utagawa.jpg');
+                         background-repeat: no-repeat;
+                         background-size: 900px;
+                         width:900px;
+                         height:440px;
+                         background-position:top;">
+
+<!--UI comment #7 - since opacity cannot be applied to div background images, adding a white div with opacity-->
+                        <div style="width: 900px; height: 440px; display: block; position: relative; background-color: white; opacity: .75;"></div>
+
+<!--UI comment #8 - changing the font color of the Bootstrap carousel -->
+                        <div class="carousel-caption" style="color: black; margin-left: -8em;">
+                            <h3>
+                                Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
+                            </h3>
+                            <h4>
+                                External IIIF users / developers who want to learn more about Harvard is implementing IIIF
+                                (showcase of projects) with links to Collaborators and Resources
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                    <a href="#carousel-example-captions" class="left carousel-control" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a href="#carousel-example-captions" class="right carousel-control" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+                </div>
+
+            </section><!--/ splash carousel-->
+
+<!--UI comment #9 - the height of each section varies based on the vertical requirements of its content-->
+            <section id="2" style="height: 20em;"><!-- @Harvard-->
+                <div class="row">
+              <div class="col-md-2 col-md-offset-1" style="height: 18em;">
+                <img src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png">
+              </div>
+              <div class="col-md-8" style="position: relative; height: 18em;">
+
+<!--UI comment #10 - the top % varies based on the amount of text within this paragraph, so that it can align with the image-->
+                  <p class="text-left" style="position: absolute; top: 40%; transform: translateY(-50%); padding: 2em;">
+                      The International Image Interoperability Framework (IIIF) at Harvard University website is a
+                      centralized resource for documentation, development, and use case scenarios regarding the display and
+                      sharing of cultural heritage materials stored within the various Harvard University collections.
+                      Partners include the
+                      <a href="http://library.harvard.edu" target="_blank">Harvard Library</a>,&nbsp;the
+                      <a href="http://www.harvardartmuseums.org" target="_blank">Harvard Art Museums</a>,
+                      <a href="http://harvardx.harvard.edu" target="_blank">HarvardX</a>,
+                      <a href="http://huit.harvard.edu/" target="_blank">Harvard University Information Technology</a>
+                      (<a href="http://www.darthcrimson.org" target="_blank">Arts &amp; Humanities Research Computing</a>,
+                      the
+                      <a href="http://atg.fas.harvard.edu/" target="_blank">FAS Academic Technology Group</a>,
+                      <a href="http://huit.harvard.edu/services/library-technology-services" target="_blank">Library
+                          Technology Services</a>), and various academic departments.
+                  </p>
+              </div>
+            </div>
+            </section><!--/ @Harvard-->
+
+            <section id="3" style="height: 22em;"><!-- IIIF-->
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-1" style="position: relative; height: 22em;">
+                      <p class="text-left" style="position: absolute; top: 30%; transform: translateY(-50%); padding: 2em;">
+                          The
+                          <strong>International Image Interoperability Framework (IIIF)</strong>
+                          defines universal standards for describing and delivering images over the web,
+                          and is the result of collaborative efforts across universities, museums, libraries,
+                          and other cultural heritage institutions around the world.
+                          The framework specifies two APIs, one for <em>image retrieval</em> and one for <em>image display</em>,
+                          discussed in detail below.
+                          Institutions that provide IIIF endpoints for their materials are able to
+                          share these materials with anyone worldwide using a IIIF-compatible viewer.
+                          This provides an unprecedented level of exposure for archives and repositories.
+                      </p>
+                  </div>
+                  <div class="col-md-2" style="height: 22em;">
+                    <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/chronique.png" style="width: 14em;">
+                  </div>
+                </div>
+              </section><!--/ IIIF-->
+
+            <section id="4" style="height: 24em;"><!-- Mirador-->
+                <div class="row">
+                  <div class="col-md-2 col-md-offset-1" style="height: 24em;">
+                    <img src="http://showcase.iiif.io/img/showcase/mirador.jpg" style="width: 14em;">
+                  </div>
+                  <div class="col-md-8" style="position: relative; height: 20em;">
+                      <p class="text-left" style="position: absolute; top: 35%; transform: translateY(-50%); padding: 2em;">
+                          <strong>Mirador</strong> is a configurable, extensible, and easy-to-integrate image viewer, which
+                          enables image annotation and comparison of images from repositories dispersed around the world.
+                          Mirador has been optimized to display resources from repositories that support the
+                          <a href="http://iiif.io/">International Image Interoperability Framework</a> (IIIF) APIs. It
+                          provides a tiling windowed environment for comparing multiple image-based resources, synchronized
+                          structural and visual navigation of content using
+                          <a href="https://openseadragon.github.io/">OpenSeadragon</a>,
+                          <a href="http://www.openannotation.org/">Open Annotation</a> compliant annotation creation and viewing
+                          on deep-zoomable canvases, metadata display, book reading, bookmarking and more.
+                          <a href="http://iiif.github.io/mirador/">Additional information available at the official Mirador site</a>.
+                      </p>
+                  </div>
+                </div>
+            </section><!--/ Mirador-->
+
+            <section id="5" style="height: 26em;"><!-- Collaborators-->
+                <div class="row">
+
+                    <div class="col-md-8 col-md-offset-1" style="position: relative; height: 22em;">
+                        <p class="text-left" style="position: absolute; top: 40%; transform: translateY(-50%); padding: 2em;">
+                          <strong>Collaborators</strong>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                          officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="col-md-2" style="height: 22em;">
+
+<!-- UI comment # 11 - clipping the image within a diamond shape -->
+                      <style>
+                          .imagecontainer{
+                             margin:50px auto;
+                             display:block;
+                             width:160px;
+                             height:160px;
+                             overflow:hidden;
+                             border-radius: 10px;
+                             transform: rotate(45deg);
+                             -ms-transform: rotate(45deg); /* IE 9 */
+                             -webkit-transform: rotate(45deg); /* Safari and Chrome */
+                             position:relative;
+                             margin-right: 2em;
+
+                             /* non-essential styling */
+                             -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+                             box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .05);
+
+                            }
+                            .imagecontainer img{
+                             transform: rotate(-45deg);
+                             -ms-transform: rotate(-45deg); /* IE 9 */
+                             -webkit-transform: rotate(-45deg); /* Safari and Chrome */
+                             position:absolute;
+                             top:-100px;
+                             left:-100px;
+                            }
+                            figcaption{
+                             transform: rotate(45deg);
+                             -ms-transform: rotate(45deg); /* IE 9 */
+                             -webkit-transform: rotate(45deg);
+
+                             /* non-essential styling */
+                             margin:-80px 0 0 -160px;
+                             font-family:'Oswald', Arial, Sans;
+                             font-size:20px;
+                             text-transform:uppercase;
+                             letter-spacing:.05em;
+                            }
+                      </style><!--/ Clipping the image within a diamond shape -->
+
+                        <div class="imagecontainer">
+                            <img alt="" src="http://104.236.212.13/wp-content/uploads/2016/03/48309546.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </section><!--/ Collaborators-->
+
+            <section id="6" style="height: 18em;"><!-- Resources-->
+                <div class="row">
+                  <div class="col-md-3 col-md-offset-1" style="height: 18em;">
+                    <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/MediaManagerCanvas.png" style="width: 18em;">
+                  </div>
+                  <div class="col-md-7" style="position: relative; height: 18em;">
+                      <p class="text-left" style="position: absolute; top: 30%; transform: translateY(-50%); padding: 2em;">
+                          (Resources page, sort of a “getting started” page. Central location for advice and guidance.
+                          Past and present workshops and events, blog posts,
+                          walkthrough documentation and working group milestones)
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                          officia deserunt mollit anim id est laborum.
+                      </p>
+                  </div>
+                </div>
+            </section><!--/ Resources-->
+
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .75; box-shadow: inset 0 0px 0 ;">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand">
+
+<!--UI comment #12 - eventually we'll need to use a logo from a more reliable source-->
+                  <img src="http://www.sciencephilanthropyalliance.org/wp-content/uploads/2016/01/harvard-logo.png" style="width: 5em;">
+              </a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#1" class="active">Welcome</a></li>
+                <li><a href="#2" class="">@Harvard</a></li>
+                <li><a href="#3" class="">IIIF</a></li>
+                <li><a href="#4" class="">Mirador</a></li>
+                <li><a href="#5" class="">Collaborators</a></li>
+                <li><a href="#6" class="">Resources</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div id="footer" class="footer" style="padding: 2em; margin: 2em;">
+            <div class="center">
+                <div class="col-md-6">
+                    © International Image Interoperability Framework at Harvard University
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="http://www.darthcrimson.org" target="_blank">Maintained by Harvard University Arts &amp; Humanities Research Computing</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js"></script>
+
+
+        <script>
+              var sections = $('section'),
+        nav = $('nav'),
+        nav_height = nav.outerHeight();
+
+        $(window).on('scroll', function () {
+          var cur_pos = $(this).scrollTop();
+
+          sections.each(function () {
+            var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+              nav.find('a').removeClass('active');
+              sections.removeClass('active');
+
+              $(this).addClass('active');
+              nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
+          });
+        });
+
+        nav.find('a').on('click', function () {
+          var $el = $(this),
+          id = $el.attr('href');
+
+          $('html, body').animate({
+            scrollTop: $(id).offset().top - nav_height },
+          500);
+
+          return false;
+        });
+              //# sourceURL=pen.js
+
+        </script>
+
+
+  </body>
+
+</html>
