@@ -1,6 +1,6 @@
 <!--HTML wire frames for Harvard IIIF 2.0 - home page-->
 <!--Dynamic menu from Code Pen https://codepen.io/rishabhp/pen/aNXVbQ-->
-<!--There are 12 UI comments in this commit-->
+<!--There are 11 UI comments in this commit-->
 
 
 
@@ -14,13 +14,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="canonical" href="https://www.harvard.edu" itemprop="url">
-        <link rel="shortcut icon" type="image/ico" href="/sites/all/themes/hedu2015/assets/img/favicon.ico">
+        <link rel="shortcut icon" type="image/ico" href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/img/favicon.ico">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png">
-        <meta name="msapplication-TileImage" content="/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon-precomposed" href="https://www.harvard.edu/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png">
+        <meta name="msapplication-TileImage" content="https://www.harvard.edu/sites/all/themes/hedu2015/assets/img/apple-touch-icon-144x144.png">
         <meta name="msapplication-TileColor" content="#222222">
         <title itemprop="name">Harvard University IIIF</title>
-        <meta name="description" content="Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globallIIIF adoption at Harvard is a collaborative effort that began in earnest in 2014.  HarvardX, Harvard Art Museums, Harvard University Information Technology, Harvard Library, and various faculty have contributed in some way to increasing the visibility and use of IIIF at Harvard. The IIIF/Mirador Working Group guides and coordinates IIIF/Mirador-related efforts across the University.  As such, no one group “owns” IIIF at Harvard. The IIIF at Harvard website aims to highlight the collaborations and projects at Harvard that have utilized IIIF or Mirador in some capacity.">
+        <meta name="description" content="Harvard University is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference global IIIF adoption at Harvard is a collaborative effort that began in earnest in 2014.  HarvardX, Harvard Art Museums, Harvard University Information Technology, Harvard Library, and various faculty have contributed in some way to increasing the visibility and use of IIIF at Harvard. The IIIF/Mirador Working Group guides and coordinates IIIF/Mirador-related efforts across the University.  As such, no one group “owns” IIIF at Harvard. The IIIF at Harvard website aims to highlight the collaborations and projects at Harvard that have utilized IIIF or Mirador in some capacity.">
 
       <!-- Bootstrap -->
       <!-- Latest compiled and minified CSS -->
@@ -137,9 +137,32 @@
           background-color: #FFDB6D;
         }
 
+        .navbar-font_IIIF {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 10px;
+        }
+
+        .font_IIIF {
+            font-size: .8em;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            line-height: 2em;
+        }
+
+        .footer_font_IIIF {
+          font-size: 1.25rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .footer {
           background: #fff;
-          font-size: 1.75rem;
           opacity: .65;
         }
 
@@ -156,19 +179,18 @@
 <!--UI comment #1 - adding top margin because of the fixed navbar-->
         <div style="margin-top: 4em;">
             <div class="colorBkgd" data-color="white" style="position: absolute;"></div>
-            <div id="1" class="active" data-color="white" style="margin-top: 6em; margin-bottom: 5em;"><!-- splash carousel-->
+            <section id="1" class="active" data-color="white" style="margin-top: -1.1em; margin-bottom: -2em;"><!-- splash carousel-->
                 <div class="row">
                      <div class="col-md-12">
                         <div class="carousel slide" id="carousel-example-captions" data-ride="carousel">
 
-<!--UI comment # 2 - modifying the color of the Bootstrap indicator -->
+<!--UI comment #2 - modifying the color of the Bootstrap indicator -->
                             <style>
                               .carousel-indicators .active
                               {
                               background-color: #666;
                               border: 1px solid #666;
                               }
-
                             </style>
 
                             <ol class="carousel-indicators">
@@ -181,14 +203,14 @@
                          background-repeat: no-repeat;
                          background-size: 100%;
                          width:100%;
-                         height:600px;
+                         height:400px;
                          background-position:top;">
 
 <!--UI comment #3 - since opacity cannot be applied to div background images, adding a white div with opacity -->
-                                    <div style="width: 100%; height: 600px; display: block; position: relative; background-color: white; opacity: .5;"></div>
+                                    <div style="width: 100%; height: 400px; display: block; position: relative; background-color: white; opacity: .5;"></div>
 
 <!--UI comment #4 - changing the font color of the Bootstrap carousel -->
-                                    <div class="carousel-caption" style="color: black; margin-left: -8em;">
+                                    <div class="carousel-caption " style="color: black; margin-left: -8em;">
                                     <h3>
                                         Splash image conveying the unique aspects of Harvard IIIF and with a focus on the three primary users
                                     </h3>
@@ -202,11 +224,11 @@
                          background-repeat: no-repeat;
                          background-size: 100%;
                          width:100%;
-                         height:600px;
+                         height:400px;
                          background-position:top;">
 
 <!--UI comment #5 - since opacity cannot be applied to div background images, adding a white div with opacity-->
-                            <div style="width: 100%; height: 600px; display: block; position: relative; background-color: white; opacity: .75;"></div>
+                            <div style="width: 100%; height: 400px; display: block; position: relative; background-color: white; opacity: .75;"></div>
 
 <!--UI comment #6 - changing the font color of the Bootstrap carousel -->
                             <div class="carousel-caption" style="color: black; margin-left: -8em;">
@@ -223,11 +245,11 @@
                          background-repeat: no-repeat;
                          background-size: 100%;
                          width:100%;
-                         height:600px;
+                         height:400px;
                          background-position:top;">
 
 <!--UI comment #7 - since opacity cannot be applied to div background images, adding a white div with opacity-->
-                        <div style="width: 100%; height: 600px; display: block; position: relative; background-color: white; opacity: .75;"></div>
+                        <div style="width: 100%; height: 400px; display: block; position: relative; background-color: white; opacity: .75;"></div>
 
 <!--UI comment #8 - changing the font color of the Bootstrap carousel -->
                         <div class="carousel-caption" style="color: black; margin-left: -8em;">
@@ -253,9 +275,9 @@
             </div>
                 </div>
 
-            </div><!--/ splash carousel-->
+            </section><!--/ splash carousel-->
 
-            <div id="2" class="colorBkgd" data-color="atHarvard"><!-- @Harvard-->
+            <section id="2" class="colorBkgd" data-color="atHarvard"><!-- @Harvard-->
                 <div class="row">
                     <div class="col-md-11 col-md-offset-1">
                         <h2 class="pull-left">
@@ -264,11 +286,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2 col-md-offset-1">
+                    <div class="col-md-3 col-md-offset-1">
                         <img src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png">
                     </div>
-                    <div class="col-md-8">
-                        <p class="text-left">
+                    <div class="col-md-7">
+                        <p class="text-left font_IIIF">
                             The International Image Interoperability Framework (IIIF) at Harvard University website is a
                             centralized resource for documentation, development, and use case scenarios regarding the display and
                             sharing of cultural heritage materials stored within the various Harvard University collections.
@@ -285,9 +307,9 @@
                         </p>
                     </div>
                 </div>
-            </div><!--/ @Harvard-->
+            </section><!--/ @Harvard-->
 
-            <div id="3" class="colorBkgd" data-color="iiif"><!-- IIIF-->
+            <section id="3" class="colorBkgd" data-color="iiif"><!-- IIIF-->
                 <div class="row">
                     <div class="col-md-11 col-md-offset-1">
                         <h2 class="pull-left">
@@ -297,7 +319,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-8 col-md-offset-1">
-                      <p class="text-left">
+                      <p class="text-left font_IIIF">
                           The
                           <strong>International Image Interoperability Framework (IIIF)</strong>
                           defines universal standards for describing and delivering images over the web,
@@ -314,9 +336,9 @@
                     <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/chronique.png" style="width: 10em;">
                   </div>
                 </div>
-              </div><!--/ IIIF-->
+              </section><!--/ IIIF-->
 
-            <div id="4" class="colorBkgd" data-color="mirador"><!-- Mirador-->
+            <section id="4" class="colorBkgd" data-color="mirador"><!-- Mirador-->
                 <div class="row">
                     <div class="col-md-11 col-md-offset-1">
                         <h2 class="pull-left">
@@ -329,7 +351,7 @@
                     <img src="http://showcase.iiif.io/img/showcase/mirador.jpg" style="width: 10em;" class="pull-left">
                   </div>
                   <div class="col-md-8">
-                      <p class="text-left">
+                      <p class="text-left font_IIIF">
                           <strong>Mirador</strong> is a configurable, extensible, and easy-to-integrate image viewer, which
                           enables image annotation and comparison of images from repositories dispersed around the world.
                           Mirador has been optimized to display resources from repositories that support the
@@ -343,9 +365,9 @@
                       </p>
                   </div>
                 </div>
-            </div><!--/ Mirador-->
+            </section><!--/ Mirador-->
 
-            <div id="5" class="colorBkgd" data-color="collaborators"><!-- Collaborators-->
+            <section id="5" class="colorBkgd" data-color="collaborators"><!-- Collaborators-->
                 <div class="row">
                     <div class="col-md-8 col-md-offset-1">
                         <h2 class="pull-left" >
@@ -355,7 +377,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-1">
-                        <p class="text-left">
+                        <p class="text-left font_IIIF">
                           <strong>Collaborators</strong>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                           dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -364,9 +386,9 @@
                           officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
-                    <div class="col-md-2" style="height: 22em;">
+                    <div class="col-md-3" style="height: 22em;">
 
-<!-- UI comment # 11 - clipping the image within a diamond shape -->
+<!-- UI comment # 9 - clipping the image within a diamond shape -->
                       <style>
                           .imagecontainer{
                              margin:50px auto;
@@ -413,9 +435,9 @@
                         </div>
                     </div>
                 </div>
-            </div><!--/ Collaborators-->
+            </section><!--/ Collaborators-->
 
-            <div id="6" class="colorBkgd" data-color="resources"><!-- Resources-->
+            <section id="6" class="colorBkgd" data-color="resources"><!-- Resources-->
                 <div class="row">
                     <div class="col-md-8 col-md-offset-1">
                         <h2 class="pull-left">
@@ -424,11 +446,11 @@
                     </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-3 col-md-offset-1">
+                  <div class="col-md-4 col-md-offset-1">
                     <img src="http://iiif.harvard.edu/wp-content/uploads/2016/01/MediaManagerCanvas.png" style="width: 14em;">
                   </div>
-                  <div class="col-md-7">
-                      <p class="text-left">
+                  <div class="col-md-6">
+                      <p class="text-left font_IIIF">
                           (Resources page, sort of a “getting started” page. Central location for advice and guidance.
                           Past and present workshops and events, blog posts,
                           walkthrough documentation and working group milestones)
@@ -440,11 +462,11 @@
                       </p>
                   </div>
                 </div>
-            </div><!--/ Resources-->
+            </section><!--/ Resources-->
 
         </div>
 
-        <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .75; box-shadow: inset 0 0px 0 ;">
+        <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .75; box-shadow: inset 0 0px 0 ;"><!-- navbar -->
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -454,14 +476,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="#" class="navbar-brand">
-
-<!--UI comment #12 - eventually we'll need to use a logo from a more reliable source-->
-                  <a href="http://iiif.harvard.edu" title=""><img id="logoImage" src="http://104.236.212.13/wp-content/uploads/2016/01/shieldlogo.png" alt="" title="" style="width: 1.5em; margin-top: .25em;"></a>
-              </a>
+              <a href="http://iiif.harvard.edu" class="navbar-brand" style="margin-top: -.25em; white-space: nowrap;">
+                  <span>
+                      <img id="logoImage" src="http://iiif.harvard.edu/wp-content/uploads/2016/02/International_Image_Interoperability_Framework_logo.png" alt="" title="" style="width: 1.75em;">
+                  </span>
+                    <span class="font_IIIF">
+                        @Harvard
+                    </span>
+                </a>
             </div>
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-right navbar-font_IIIF">
                 <li><a href="#1" class="active">Welcome</a></li>
                 <li><a href="#2" class="">@Harvard</a></li>
                 <li><a href="#3" class="">IIIF</a></li>
@@ -471,60 +496,95 @@
               </ul>
             </div>
           </div>
-        </nav>
+        </nav><!-- / navbar -->
 
-        <div id="footer" class="footer" style="padding: 2em;">
+        <div id="footer" class="footer" style="padding: 1em;"><!-- footer -->
             <div class="row">
                 <div class="col-md-2">
-                    <img src="http://www.sciencephilanthropyalliance.org/wp-content/uploads/2016/01/harvard-logo.png" style="width: 10em; margin-right: 2em;">
+                    <img src="http://www.sciencephilanthropyalliance.org/wp-content/uploads/2016/01/harvard-logo.png" style="width: 6em; margin-right: 2em;">
                 </div>
-                <div class="col-md-5">
-                    © International Image Interoperability Framework at Harvard University
+                <div class="col-md-5 footer_font_IIIF">
+                     © International Image Interoperability Framework at Harvard University
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 footer_font_IIIF">
                     <a href="http://www.darthcrimson.org" target="_blank" class="pull-right">
                         Maintained by Harvard University Arts &amp; Humanities Research Computing
                     </a>
                 </div>
             </div>
-        </div>
+        </div><!--/ footer -->
 
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-
-
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!--UI comment #10 - script for color change upon scroll-->
         <script>
-        $(window).scroll(function () {
+            $(window).scroll(function () {
 
-          // selectors
-          var $window = $(window),
-          $body = $('body'),
-          $panel = $('.colorBkgd');
+              // selectors
+              var $window = $(window),
+              $body = $('body'),
+              $panel = $('.colorBkgd');
 
-          // Change 33% earlier than scroll position so colour is there when you arrive.
-          var scroll = $window.scrollTop() + $window.height() / 3;
+              // Change 33% earlier than scroll position so colour is there when you arrive.
+              var scroll = $window.scrollTop() + $window.height() / 3;
 
-          $panel.each(function () {
-            var $this = $(this);
+              $panel.each(function () {
+                var $this = $(this);
 
-            // if position is within range of this panel.
-            // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-            // Remember we set the scroll to 33% earlier in scroll var.
-            if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+                // if position is within range of this panel.
+                // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+                // Remember we set the scroll to 33% earlier in scroll var.
+                if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
 
-              // Remove all classes on body with color-
-              $body.removeClass(function (index, css) {
-                return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+                  // Remove all classes on body with color-
+                  $body.removeClass(function (index, css) {
+                    return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+                  });
+
+                  // Add class of currently active div
+                  $body.addClass('color-' + $(this).data('color'));
+                }
               });
 
-              // Add class of currently active div
-              $body.addClass('color-' + $(this).data('color'));
+            }).scroll();
+            //# sourceURL=pen.js
+        </script>
+
+<!--UI comment #11 - script for underlining navbar items upon scroll-->
+    <script>
+              var sections = $('section'),
+        nav = $('nav'),
+        nav_height = nav.outerHeight();
+
+        $(window).on('scroll', function () {
+          var cur_pos = $(this).scrollTop();
+
+          sections.each(function () {
+            var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+              nav.find('a').removeClass('active');
+              sections.removeClass('active');
+
+              $(this).addClass('active');
+              nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
             }
           });
+        });
 
-        }).scroll();
-        //# sourceURL=pen.js
+        nav.find('a').on('click', function () {
+          var $el = $(this),
+          id = $el.attr('href');
+
+          $('html, body').animate({
+            scrollTop: $(id).offset().top - nav_height },
+          400);
+
+          return false;
+        });
+              //# sourceURL=pen.js
+
         </script>
 
 
