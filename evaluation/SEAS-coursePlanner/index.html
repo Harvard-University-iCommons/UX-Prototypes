@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+      <title>SEAS / SEAS Course Planning - Comparison study</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- Icon library at https://fontawesome.com/icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <!--Styles for images-->
+    <style>
+          .img-border {
+            border:1px solid #eee;
+          }
+          .img-rounded {
+            border-radius: 6px;
+          }
+          .img-hover img {
+              -webkit-transition: all .3s ease; /* Safari and Chrome */
+              -moz-transition: all .3s ease; /* Firefox */
+              -o-transition: all .3s ease; /* IE 9 */
+              -ms-transition: all .3s ease; /* Opera */
+              transition: all .3s ease;
+          }
+          .img-hover img:hover {
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-transform:translateZ(0) scale(1.01); /* Safari and Chrome */
+              -moz-transform:scale(1.01); /* Firefox */
+              -ms-transform:scale(1.01); /* IE 9 */
+              -o-transform:translatZ(0) scale(1.01); /* Opera */
+              transform:translatZ(0) scale(1.01);
+
+            border:1px solid #A51C30;
+          }
+
+          ul {
+          line-height: 1.2;
+          }
+    </style>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <span class="navbar-brand" style="margin-top:.5em">
+            <img src="harvard-logo.png">
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item navbar-text active">
+                    SEAS / SEAS Course Planning - Comparison study
+                </li>
+            </ul>
+        </div>
+    </nav><!-- /Top Navigation -->
+
+    <div class="row">
+
+      <!-- Side Navigation -->
+      <nav class="col-md-2 d-none d-md-block navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav" style="margin-top: 4.3em;">
+        <div class="sidebar-sticky">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#overview">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#coursePlanner">Course Planner</a>
+                <ul style="list-style-type:none">
+                  <li><a class="nav-link js-scroll-trigger" href="#courseInformation">Course information</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#courseLinkFilter">Links and filters</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#courseMobile">Mobile</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#googleCalendar">Google Calendar</a>
+                <ul style="list-style-type:none">
+                  <li><a class="nav-link js-scroll-trigger" href="#googleCalendar-interface">Interface</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#googleCalendar-eventInformation">Event details, filters and links</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#googleCalendar-mobile">Mobile</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#outlookCalendar">Outlook Calendar</a>
+                <ul style="list-style-type:none">
+                  <li><a class="nav-link js-scroll-trigger" href="#outlookCalendar-interface">Interface</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#outlookCalendar-eventInformation">Event details, filters and links</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#outlookCalendar-mobile">Mobile</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#coursePlanneraRecomendation">Recommendations</a>
+                <ul style="list-style-type:none">
+                  <li><a class="nav-link js-scroll-trigger" href="#coursePlanneraRecomendation-interface_current">Current interface</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#coursePlanneraRecomendation-interface_proposed">Proposed interface</a></li>
+                  <li><a class="nav-link js-scroll-trigger" href="#outlookCalendar-interface_proposed_mobile">Proposed Mobile interface</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav><!-- /Side Navigation -->
+
+      <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
+
+      <!-- Overview -->
+      <section id="overview">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h1 class="page-header">Overview</h1>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+                  <p>
+                      A competitor analysis consists of
+                      knowing how to research properly,
+                      understanding exactly what information to looking for and
+                      synthesizing that information before acting on findings.
+                      <br>
+                      Competitor analyses help solve usability problems,
+                      help understand where the product or service stands in the market,
+                      inform the design process
+                      to know the strengths and weaknesses of the competition,
+                      to have reliable evidence when making product changes and
+                      to focus efforts in a target market.
+                      <small class="text-muted text-right">
+                          (Reference:
+                          <a href="https://usabilitygeek.com/how-to-do-ux-competitor-analysis/" target="_blank">
+                              https://usabilitygeek.com/how-to-do-ux-competitor-analysis/
+                          </a>)
+                      </small>
+                  </p>
+
+                  <p>
+                      This study examines the current Course Planner interface and features,
+                      as well as two popular calendar products: Google Calendar and Outlook Calendar.
+                      This process helps to inform recommendations for improvements of the Course Planner interface.
+                  </p>
+                  <p>
+                      Select any of the images for a full scale viewon a new browser tab .
+                  </p>
+              </div>
+
+          </div>
+        </div>
+      </section><!-- / Overview -->
+
+
+
+      <!-- SEAS Course Planning - Features -->
+      <section id="coursePlanner" class="bg-light">
+        <div class="container-fluid">
+          <!-- Course information -->
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+
+              <h2>SEAS Course Planning - Features</h2>
+               <p>
+                  The main purpose of  EAS Course Planning is to show a weekly view of courses,
+                  which can be listed according to term selections
+                  and filtered according to undergraduate status and catalog prefix.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course information -->
+      <section id="courseInformation" class="bg-light">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Course information</h3>
+              <p>
+                  Course details (course catalog number and time) can be viewed upon mouse-over.
+              </p>
+
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              Upon mouse-over
+              <ol type="A">
+                  <li>
+                      The course elements scheduled to begin at the same hour overlap the others courses
+                  </li>
+                  <li>
+                      Within the highlighted hour range,
+                      all the instances of the course "touched" by the mouse-over are made relevant.
+                      A stylized tooltip shows course details information
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="coursePlan-view_week_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="coursePlan-view_week_annotated.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Annotated screen capture of the SEAS Course Planning interface at
+                    <a href="https://info.seas.harvard.edu/courses/#/schedule" target="_blank">
+                      https://info.seas.harvard.edu/courses/#/schedule
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Course information -->
+
+      <!-- Links and filters -->
+      <section id="courseLinkFilter" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+
+              <h3>Links and filters</h3>
+              <p>
+                  Drop down options can either show different content or filter the displayed information.
+              </p>
+
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              <ol type="A">
+                <li>
+                    Selections from the "Semester" drop down change the information on the web page
+                </li>
+                <li>
+                    Selections from the "Undergraduate Status" and the "Catalog Prefix " drop downs
+                    filter the information on the web page
+                </li>
+            </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="coursePlan-view_week_selection_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="coursePlan-view_week_selection_annotated.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Annotated screen capture of the SEAS Course Planning interface at
+                    <a href="https://info.seas.harvard.edu/courses/#/schedule" target="_blank">
+                      https://info.seas.harvard.edu/courses/#/schedule
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Links and filters -->
+
+      <!-- Mobile -->
+      <section id="courseMobile" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+
+              <h3>Mobile</h3>
+              <p>
+                  Although this interface could be easily viewed on a mobile device, it is not currently resoponsive.
+              </p>
+
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              <ol>
+                  <li>
+                      The SEAS Course Planning interface is not responsive,
+                      since it doesn't adjust to the mobile display and requires horizontal scrolling
+                  </li>
+                  <li>
+                      The selection of the "Semester" drop down is compromised by the
+                      "FOUR YEAR PLAN" link.
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-3 img-hover">
+              <a href="coursePlan-view_week_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="coursePlan-view_week_mobile.jpg" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+            </div>
+            <div class="col-lg-6 img-hover">
+              <a href="coursePlan-view_week_mobile_land.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="coursePlan-view_week_mobile_land.jpg" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+            </div>
+            <div class="col-lg-6 offset-md-3">
+              <p class="text-muted">
+                  <small>
+                    Screen captures of the SEAS Course Planning interface on a Samsung 9, Android OS, at
+                    <a href="https://info.seas.harvard.edu/courses/#/schedule" target="_blank">
+                      https://info.seas.harvard.edu/courses/#/schedule
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Mobile -->
+      <!-- / SEAS Course Planning - Features -->
+
+
+
+      <!-- Google Calendar - Features -->
+      <section id="googleCalendar" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Google Calendar - Features</h2>
+              <p>
+                Google calendar events can viewed by day, week, month or year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section><!-- / Google Calendar - Features -->
+
+      <!-- Google Calendar -  Interface -->
+      <section id="googleCalendar-interface" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Interface</h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              Upon mouse-over
+              <ol type="A">
+                  <li>
+                      The interface displays of a number of events that share the same starting time
+                  </li>
+                  <li>
+                      Overlapping events don't compromise the indication of event length
+                  </li>
+                  <li>
+                      Current day is highlighted
+                  </li>
+                  <li>
+                      Interface layout allows for additional content
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="googleCalendar-view_week_annotated.png" target="_blank" title="Select to open full size image in a new tab">
+                  <img src="googleCalendar-view_week_annotated.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Annotated screen capture of the Google Calendar interface at
+                    <a href="https://www.google.com/calendar" target="_blank">
+                      https://www.google.com/calendar
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Interface -->
+
+      <!-- Google Calendar -  Event details, filters and links -->
+      <section id="googleCalendar-eventInformation" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Event details, filters and links</h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              <ol type="A">
+                <li>
+                  Selections of available calendar time allow to create a new event
+                </li>
+                <li>
+                  Selections of an existing event shows the event name, time and location
+                </li>
+                <li>
+                  Each event can be viewed, edited, duplicated or deleted, in addition to other choices
+                </li>
+                <li>
+                  Navigation links view other time events
+                </li>
+                <li>
+                  Search for events by any related detail
+                </li>
+                <li>
+                  Filters show different time lengths and calendars
+                </li>
+                <li>
+                  The timeline matches the viewer's timezone
+                </li>
+            </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="googleCalendar-view_week_selection_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                <img src="googleCalendar-view_week_selection_annotated.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                <small>
+                  Annotated screen capture of the Google Calendar interface at
+                  <a href="https://www.google.com/calendar" target="_blank">
+                    https://www.google.com/calendar
+                  </a>
+                </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Event details, filters and links -->
+
+      <!-- Mobile -->
+      <section id="googleCalendar-mobile" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+
+              <h3>Mobile</h3>
+              <p>
+                Although a broader time period compromises the details of evens that are scheduled at the same time,
+                "zooming" in and out from week to day view is intuitive and responsive.
+              </p>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 img-hover">
+              <a href="googleCalendar-view_day7_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="googleCalendar-view_day7_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Week view
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-3 img-hover">
+              <a href="googleCalendar-view_day3_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="googleCalendar-view_day3_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    3-day view
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-3 img-hover">
+              <a href="googleCalendar-view_day_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="googleCalendar-view_day_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Day view
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-3 img-hover">
+              <a href="googleCalendar-view_detail_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="googleCalendar-view_detail_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Event details
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-12">
+              <p class="text-muted">
+                <small>
+                  Screen captures of the Google Calendar interface on a Samsung 9, Android OS, at
+                  <a href="https://www.google.com/calendar" target="_blank">
+                    https://www.google.com/calendar
+                  </a>
+                </small>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- / Mobile -->
+
+
+
+      <!-- Outlook Calendar - Features -->
+      <section id="outlookCalendar" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Outlook Calendar - Features</h2>
+              <p>
+                Outlook calendar events can viewed by day, week or month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section><!-- / Outlook Calendar - Features -->
+
+      <!-- Outlook Calendar -  Interface -->
+      <section id="outlookCalendar-interface" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Interface</h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              Upon mouse-over
+              <ol type="A">
+                  <li>
+                      The interface displays of a number of events that share the same starting time
+                  </li>
+                  <li>
+                      Similar to Course Planner, events don't overlap
+                  </li>
+                  <li>
+                      Current day is highlighted
+                  </li>
+                  <li>
+                      Interface layout allows for additional content
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="outlookCalendar-view_week_annotated.png" target="_blank" title="Select to open full size image in a new tab">
+                  <img src="outlookCalendar-view_week_annotated.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Annotated screen capture of the Outlook Calendar interface at
+                    <a href="https://office.live.com/start/Calendar.aspx" target="_blank">
+                      https://office.live.com/start/Calendar.aspx
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Interface -->
+
+      <!-- Outlook Calendar -  Event details, filters and links -->
+      <section id="outlookCalendar-eventInformation" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Event details, filters and links</h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              <ol type="A">
+                <li>
+                  Selections of available calendar time allow to create a new event
+                </li>
+                <li>
+                  Selections of an existing event shows the event name, time and location
+                </li>
+                <li>
+                  Each event can be viewed, edited or deleted
+                </li>
+                <li>
+                  Navigation links view other time events
+                </li>
+                <li>
+                  Search for events by any related detail
+                </li>
+                <li>
+                  Filters show different time lengths and calendars
+                </li>
+                <li>
+                  The timeline matches the viewer's timezone
+                </li>
+            </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="outlookCalendar-view_week_selection_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                <img src="outlookCalendar-view_week_selection_annotated.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                <small>
+                  Annotated screen capture of the Outlook Calendar interface at
+                  <a href="https://office.live.com/start/Calendar.aspx" target="_blank">
+                    https://office.live.com/start/Calendar.aspx
+                  </a>
+                </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Event details, filters and links -->
+
+      <!-- Mobile -->
+      <section id="outlookCalendar-mobile" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+
+              <h3>Mobile</h3>
+              <p>
+                Although a broader time period compromises the details of evens that are scheduled at the same time,
+                "zooming" in and out from 3 to 1 day view is intuitive and responsive.
+              </p>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 offset-lg-3 img-hover">
+              <a href="outlookCalendar-view_day3_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="outlookCalendar-view_day3_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    3-day view
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-3 img-hover">
+              <a href="outlookCalendar-view_day_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="outlookCalendar-view_day_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Day view
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-3 img-hover">
+              <a href="outlookCalendar-view_detail_mobile.jpg" target="_blank"
+                           title="Select to open full size image in a new tab">
+                  <img src="outlookCalendar-view_detail_mobile.jpg" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Event details
+                  </small>
+              </p>
+            </div>
+
+            <div class="col-lg-9 offset-lg-3">
+              <p class="text-muted">
+                <small>
+                  Screen captures of the Outlook Calendar interface on a Samsung 9, Android OS, at
+                  <a href="https://office.live.com/start/Calendar.aspx" target="_blank">
+                    https://office.live.com/start/Calendar.aspx
+                  </a>
+                </small>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- / Mobile -->
+
+
+      <!-- Recommendations -->
+      <section id="coursePlanneraRecomendation" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Recommendations</h2>
+              <p>
+                The following wireframes propose several usable improvements to the current Course Planner interface.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section><!-- / Recommendations -->
+
+      <!-- Recommendations - Current Interface -->
+      <section id="coursePlanneraRecomendation-interface_current" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Current Interface</h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              Usability issues to resolve
+              <ol type="A">
+                  <li>
+                      All selections are within drop down menus
+                  </li>
+                  <li>
+                      Course details can be accessed only via mouse-over
+                  </li>
+                  <li>
+                      Course details are limited to the catalog name and scheduled time
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="wireframe-coursePlanner_current.png" target="_blank" title="Select to open full size image in a new tab">
+                  <img src="wireframe-coursePlanner_current.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Wireframe of current Course Planner interface -
+                    <a href="https://drive.google.com/open?id=1fj1ciW_7vu7Nzh_Q39dbmOQBiUpv4o93GqilblcLB6Y" target="_blank">
+                      Google Drive
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Recommendations - Current Interface -->
+
+      <!-- Recommendations - Proposed Interface -->
+      <section id="coursePlanneraRecomendation-interface_proposed" class="bg-light">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-11">
+              <h3>Proposed Interface</h3>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-3">
+              Usability issues to resolve
+              <ol type="A">
+                  <li>
+                      All selections are within drop down menus
+                  </li>
+                  <li>
+                      Course details can be accessed only via mouse-over
+                  </li>
+                  <li>
+                      Course details are limited to the catalog name and scheduled time
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="wireframe-coursePlanner_current.png" target="_blank" title="Select to open full size image in a new tab">
+                  <img src="wireframe-coursePlanner_current.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Wireframe of current Course Planner interface -
+                    <a href="https://drive.google.com/open?id=1fj1ciW_7vu7Nzh_Q39dbmOQBiUpv4o93GqilblcLB6Y" target="_blank">
+                      Google Drive
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- / Recommendations - Proposed Interface -->
+
+    </main><!-- /Main -->
+
+    </div>
+
+    <!-- Footer -->
+    <!--<footer class="py-5 bg-dark">-->
+      <!--<div class="container">-->
+        <!--<p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>-->
+      <!--</div>-->
+    <!--</footer>-->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+  </body>
+
+</html>
