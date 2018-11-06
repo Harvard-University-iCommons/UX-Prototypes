@@ -65,12 +65,17 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item navbar-text active">
                     SEAS / SEAS Course Planning - Comparison study
                 </li>
             </ul>
+            <span class="navbar-text ml-auto">
+                <small>
+                    Last update: 2018-11-06
+                </small>
+            </span>
         </div>
     </nav><!-- /Top Navigation -->
 
@@ -116,7 +121,6 @@
                 <ul style="list-style-type:none">
                   <li><a class="nav-link js-scroll-trigger" href="#coursePlanneraRecomendation-interface_current">Current interface</a></li>
                   <li><a class="nav-link js-scroll-trigger" href="#coursePlanneraRecomendation-interface_proposed">Proposed interface</a></li>
-                  <li><a class="nav-link js-scroll-trigger" href="#outlookCalendar-interface_proposed_mobile">Proposed Mobile interface</a></li>
                 </ul>
               </li>
             </ul>
@@ -720,7 +724,19 @@
             <div class="col-lg-8 mx-auto">
               <h2>Recommendations</h2>
               <p>
-                The following wireframes propose several usable improvements to the current Course Planner interface.
+                The following interaction flows and wireframes propose usability improvements for the current Course Planner interface.
+              </p>
+              <p>
+                  The effect of an event is represented by an <strong>interaction flow</strong>  connection.
+                  The interaction flow expresses a change of state of the user interface.
+                  An event can also trigger an action,
+                  which is executed prior to updating the state of the user interface; for example,
+                  a delete or update operation on instances of a database.
+              </p>
+              <p>
+                  <strong>Wireframes</strong>, also known as a page schematic or screen blueprint,
+                  are visual guides that represent the skeletal framework of a website.
+                  Wireframes are created for the purpose of arranging elements to best accomplish a particular purpose.
               </p>
             </div>
           </div>
@@ -736,8 +752,51 @@
             </div>
           </div>
           <div class="row">
+            <div class="col-lg-11">
+              <h4>Interaction flow</h4>
+            </div>
+          </div>
+          <div class="row">
 
             <div class="col-lg-3">
+              Usability issues to resolve
+              <ol type="A">
+                  <li>
+                      Only the week view is available, which would be readable only on a large display
+                  </li>
+                  <li>
+                      Course details can be accessed eithr via mouse-over or by viewing the Four Year Plan interface
+                  </li>
+                  <li>
+                      Course details are limited to the catalog name and scheduled time
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-9 img-hover">
+              <a href="SEAS-interactionFlow-coursePlanner.png" target="_blank" title="Select to open full size image in a new tab">
+                  <img src="SEAS-interactionFlow-coursePlanner.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Interaction flow of current Course Planner interface - Source file on
+                    <a href="https://drive.google.com/open?id=1r52CmHa1GqLseDCGi2IDdHPpbI_2H449T-NV4IVxPVo" target="_blank">
+                      Google Drive
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div><!-- / Recommendations - Current Interface - interaction flow -->
+
+            <div class="row">
+                <div class="col-lg-11">
+                    <h4>Wireframe</h4>
+                </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-3">
               Usability issues to resolve
               <ol type="A">
                   <li>
@@ -757,7 +816,7 @@
               </a>
               <p class="text-muted">
                   <small>
-                    Wireframe of current Course Planner interface -
+                    Wireframe of current Course Planner interface - Source file on
                     <a href="https://drive.google.com/open?id=1fj1ciW_7vu7Nzh_Q39dbmOQBiUpv4o93GqilblcLB6Y" target="_blank">
                       Google Drive
                     </a>
@@ -765,51 +824,83 @@
               </p>
             </div>
 
-          </div>
+          </div><!-- / Recommendations - Current Interface - desktop -->
+          <div class="row">
+
+            <div class="col-lg-3">
+              Mobile issues to resolve
+              <ol type="A">
+                  <li>
+                      Horizontal scroll is needed to view all the information
+                  </li>
+                  <li>
+                      Course details can be accessed only via mouse-over
+                  </li>
+                  <li>
+                      Course details are limited to the catalog name and scheduled time
+                  </li>
+              </ol>
+            </div>
+            <div class="col-lg-3 img-hover">
+              <a href="wireframe-coursePlanner_current_mobile.png" target="_blank" title="Select to open full size image in a new tab">
+                  <img src="wireframe-coursePlanner_current_mobile.png" width="100%" class="img-border img-fluid img-rounded">
+              </a>
+              <p class="text-muted">
+                  <small>
+                    Wireframe of current Course Planner mobile interface - Source file on
+                    <a href="https://drive.google.com/open?id=1fj1ciW_7vu7Nzh_Q39dbmOQBiUpv4o93GqilblcLB6Y" target="_blank">
+                      Google Drive
+                    </a>
+                  </small>
+              </p>
+            </div>
+
+          </div><!-- / Recommendations - Current Interface - mobile -->
         </div>
       </section><!-- / Recommendations - Current Interface -->
 
       <!-- Recommendations - Proposed Interface -->
-      <section id="coursePlanneraRecomendation-interface_proposed" class="bg-light">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-11">
-              <h3>Proposed Interface</h3>
-            </div>
-          </div>
-          <div class="row">
+      <!--<section id="coursePlanneraRecomendation-interface_proposed" class="bg-light">-->
+        <!--<div class="container-fluid">-->
+          <!--<div class="row">-->
+            <!--<div class="col-lg-11">-->
+              <!--<h3>Proposed Interface</h3>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="row">-->
 
-            <div class="col-lg-3">
-              Usability issues to resolve
-              <ol type="A">
-                  <li>
-                      All selections are within drop down menus
-                  </li>
-                  <li>
-                      Course details can be accessed only via mouse-over
-                  </li>
-                  <li>
-                      Course details are limited to the catalog name and scheduled time
-                  </li>
-              </ol>
-            </div>
-            <div class="col-lg-9 img-hover">
-              <a href="wireframe-coursePlanner_current.png" target="_blank" title="Select to open full size image in a new tab">
-                  <img src="wireframe-coursePlanner_current.png" width="100%" class="img-border img-fluid img-rounded">
-              </a>
-              <p class="text-muted">
-                  <small>
-                    Wireframe of current Course Planner interface -
-                    <a href="https://drive.google.com/open?id=1fj1ciW_7vu7Nzh_Q39dbmOQBiUpv4o93GqilblcLB6Y" target="_blank">
-                      Google Drive
-                    </a>
-                  </small>
-              </p>
-            </div>
+            <!--<div class="col-lg-3">-->
+              <!--Usability issues to resolve-->
+              <!--<ol type="A">-->
+                  <!--<li>-->
+                      <!--All selections are within drop down menus-->
+                  <!--</li>-->
+                  <!--<li>-->
+                      <!--Course details can be accessed only via mouse-over-->
+                  <!--</li>-->
+                  <!--<li>-->
+                      <!--Course details are limited to the catalog name and scheduled time-->
+                  <!--</li>-->
+              <!--</ol>-->
+            <!--</div>-->
+            <!--<div class="col-lg-9 img-hover">-->
+              <!--<a href="wireframe-coursePlanner_current.png" target="_blank" title="Select to open full size image in a new tab">-->
+                  <!--<img src="wireframe-coursePlanner_current.png" width="100%" class="img-border img-fluid img-rounded">-->
+              <!--</a>-->
+              <!--<p class="text-muted">-->
+                  <!--<small>-->
+                    <!--Wireframe of current Course Planner interface - -->
+                    <!--<a href="https://drive.google.com/open?id=1fj1ciW_7vu7Nzh_Q39dbmOQBiUpv4o93GqilblcLB6Y" target="_blank">-->
+                      <!--Google Drive-->
+                    <!--</a>-->
+                  <!--</small>-->
+              <!--</p>-->
+            <!--</div>-->
 
-          </div>
-        </div>
-      </section><!-- / Recommendations - Proposed Interface -->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</section>-->
+          <!-- / Recommendations - Proposed Interface -->
 
     </main><!-- /Main -->
 
