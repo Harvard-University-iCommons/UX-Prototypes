@@ -58,8 +58,8 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #2F2D30;">
+      <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
           <img src="img/harvard-logo.png" alt="Harvard University logo" style="width: 70%;">
         </a>
@@ -78,16 +78,15 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" style="color: #fed136;">The&nbsp;Team</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item text-center">
               <a class="nav-link js-scroll-trigger" href="module.html">Course Modules</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="https://dash.harvard.edu/handle/1/37622301" target="_blank">
-                Publications
-              <i class="fas fa-external-link-alt"></i>
+              <a class="nav-link js-scroll-trigger" href="news.html">
+                News
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item text-center">
               <a class="nav-link js-scroll-trigger" href="opportunity.html">Post-doc Opportunities</a>
             </li>
           </ul>
@@ -97,15 +96,20 @@
 
     <!-- Header -->
     <header class="masthead">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12">
-            <div class="intro-text" style="padding-top: 150px; padding-bottom: 20px;">
-              <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 2em;">
-                <span style="font-size: larger; color: #FFDB6D; font-weight: 400;">Embedded</span>
-                <span style="font-size: larger;">Ethic</span><span><strong style="color: #FFDB6D; font-size: larger;">CS</strong> @ Harvard:
-                bringing ethical reasoning into the computer science curriculum,
-                because ethics and social responsibility are part of the computer scientist’s work.</span>
+            <div class="intro-text" style="padding-top: 140px; padding-bottom: 10px;">
+              <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.5em;">
+                <span style="font-size: larger; color: #FFDB6D; font-weight: 400;">Embedded
+                  EthiCS
+                </span>
+                <span style="font-size: smaller;">
+                @
+                  </span>
+                <span>
+                  Harvard: bringing ethical reasoning into the computer science curriculum.
+                </span>
               </div>
             </div>
           </div>
@@ -114,183 +118,196 @@
     </header>
 
     <!-- about-mission -->
-    <section style="margin-top: -8em;">
+    <section style="margin-top: -5em;">
+
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Meet the Team</h2>
+            <h2 class="section-heading">Meet the Team</h2>
             <h3 class="section-subheading text-muted">
-               Embedded EthiCS is inherently interdisciplinary.
-              Understanding, evaluating, and successfully
-              defending arguments about what should be done falls within the purview of the normative
-              disciplines, most notably ethics, a subfield of philosophy.
-              Harvard Computer Science and Philosophy Department faculty
+              Embedded EthiCS is a collaboration between philosophers and computer sciences at all levels.
+              It is organized by a team of faculty from both fields.
+              It is taught by advanced philosophy graduate students alongside computer science faculty.
+              And our post-doctoral fellows run a week
+              <a href="#teachLab" class="moreInfo">
+                Teaching Lab
+              </a>
+              for advanced graduate students in both fields to develop course modules.
             </h3>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-11">
-              <h4 class="subheading" style="font-size: xx-large;">
-                Faculty Team Leaders
+      <!--Faculty-->
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-11">
+            <h4 class="subheading" style="font-size: xx-large;">
+              Faculty Team Leaders
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/JeffBehrends.jpg" alt="Jeff Behrends">
+              <h4>Jeff<br>Behrends
+                <sup><i class="fas fa-camera fa-sm text-muted"></i></sup></h4>
+              <p class="text-muted">Lecturer in Philosophy</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/BarbaraGrosz.jpg" alt="Barbara Grosz">
+              <h4>Barbara<br>Grosz
+                <sup><i class="fas fa-camera fa-sm text-muted"></i></sup></h4>
+              <p class="text-muted">Higgins Professor of Natural Sciences</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/RadhikaNagpal.jpeg" alt="Radhika Nagpal">
+              <h4>Radhika<br>Nagpal</h4>
+              <p class="text-muted">Fred Kavli Professor of Computer Science</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/AlisonSimmons.jpeg" alt="Alison Simmons">
+              <h4>Alison<br>Simmons
+                <sup><i class="fas fa-camera fa-sm text-muted"></i></sup></h4>
+              <p id="davidGrant" class="text-muted">Samuel H. Wolcott Professor of Philosophy</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/StephenChong.jpg" alt="Stephen Chong">
+              <h4>
+                Stephen<br>Chong
               </h4>
+              <p id="stephenChong" class="text-muted">
+                Gordon McKay Professor of Computer Science
+              </p>
             </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center" style="margin-top: -2em; margin-bottom: 3em;">
+          <div class="col-md-10 col-xs-12 text-muted">
+            <small>
+              <i class="fas fa-camera"></i>
+              Photo credits: Rose Lincoln, Harvard Staff Photographer
+            </small>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/JeffBehrends.jpg" alt="">
-                <h4>Jeff Behrends</h4>
-                <p class="text-muted">Lecturer in Philosophy</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/BarbaraGrosz.jpg" alt="">
-                <h4>Barbara Grosz</h4>
-                <p class="text-muted">Higgins Professor of Natural Science</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/RadhikaNagpal.jpeg" alt="">
-                <h4>Radhika Nagpal</h4>
-                <p class="text-muted">Fred Kavli Professor of Computer Science</p>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/AlisonSimmons.jpeg" alt="">
-                <h4>Alison Simmons</h4>
-                <p id="davidGrant" class="text-muted">Samuel H. Wolcott Professor of Philosophy</p>
-              </div>
-            </div>
+      <!--Post-Doctoral-->
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-11">
+            <h4 class="subheading" style="font-size: xx-large;">
+              Post-Doctoral Team
+            </h4>
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-11">
-              <h4 class="subheading" style="font-size: xx-large;">
-                Post-Doctoral Team
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-11">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/DavidGrayGrant.jpg" alt="">
-                <h4>David Gray Grant</h4>
-                <p class="text-muted">Post-doctoral Fellow</p>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-11">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/DavidGrayGrant.jpg" alt="David Gray Grant">
+              <h4>David<br>Gray Grant</h4>
+              <p class="text-muted">Post-doctoral Fellow</p>
               </div>
             </div>
-          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-11">
-              <h4 class="subheading" style="font-size: xx-large;">
-                Graduate Team
-              </h4>
-            </div>
+      <!--Graduate-->
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-11">
+            <h4 class="subheading" style="font-size: xx-large;">
+              Graduate Team
+            </h4>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
+      <div class="container">
+        <div class="row justify-content-md-center">
 
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/DianaAcostaNova.jpg" alt="">
-                <h4>Diana Acosta Nova</h4>
-                <p class="text-muted">Graduate Student in Philosophy, Teaching Fellow</p>
-              </div>
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/DianaAcostaNova.jpg" alt="Diana Acosta Nova">
+              <h4>Diana<br>Acosta Nova</h4>
+              <p class="text-muted">Graduate Student in Philosophy, Teaching Fellow</p>
             </div>
-
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/LilyHu.png" alt="">
-                <h4>Lily Hu</h4>
-                <p class="text-muted">
-                  Graduate Student in Applied Mathematics
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/RonniSadovsky.jpg" alt="">
-                <h4>Ronni Sadovsky</h4>
-                <p class="text-muted">
-                  Graduate Student in Philosophy, Ethics Pedagogy Fellow of the Edmond J. Safra Center for Ethics, former Teaching Fellow
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/KateVredenbugh.jpg" alt="">
-                <h4>Kate Vredenbugh</h4>
-                <p class="text-muted">
-                  Graduate Student in Philosophy, Teaching Fellow
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-2">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/CatWade.jpg" alt="">
-                <h4>Cat Wade</h4>
-                <p class="text-muted">
-                  Graduate Student in Philosophy, Teaching Fellow
-                </p>
-              </div>
-            </div>
-
           </div>
+
+          <div class="col-sm-6 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/LilyHu.png" alt="Lily Hu">
+              <h4>Lily<br>Hu</h4>
+              <p class="text-muted">
+                Graduate Student in Applied Mathematics
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/RonniSadovsky.jpg" alt="Ronni Sadovsky">
+              <h4>Ronni<br>Sadovsky</h4>
+              <p class="text-muted">
+                Graduate Student in Philosophy, Ethics Pedagogy Fellow of the Edmond J. Safra Center for Ethics, former Teaching Fellow
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/KateVredenbugh.jpg" alt="Kate Vredenbugh">
+              <h4>Kate<br>Vredenbugh</h4>
+              <p class="text-muted">
+                Graduate Student in Philosophy, Teaching Fellow
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-2">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/CatWade.jpg" alt="Cat Wade">
+              <h4>Cat<br>Wade</h4>
+              <p class="text-muted">
+                Graduate Student in Philosophy, Teaching Fellow
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-11">
-              <h4 class="subheading" style="font-size: xx-large;">
-                Administrative Support
-              </h4>
-            </div>
+      <!--Administrative-->
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-11">
+            <h4 class="subheading" style="font-size: xx-large;">
+              Administrative Support
+            </h4>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-11">
-              <div class="team-member">
-                <img class="mx-auto rounded-circle" src="img/team/GabriellaFee.jpg" alt="">
-                <h4>Gabriella Fee</h4>
-                <p class="text-muted">
-                  Administrator
-                </p>
-              </div>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-11">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/GabriellaFee.jpg" alt="Gabriella Fee">
+              <h4>Gabriella<br>Fee</h4>
+              <p class="text-muted">
+                Administrator
+              </p>
             </div>
           </div>
         </div>
@@ -299,22 +316,34 @@
     </section>
 
     <!-- Teaching Lab -->
-    <section>
+    <section id="teachLab" style="margin-top: -13em;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">
+            <h2 class="section-heading">
               Teaching Lab
             </h2>
             <h3 class="section-subheading text-muted">
-              Our mission is to work with faculty to support the SEAS academic plan and to bolster educational excellence throughout all undergraduate engineering activities.
-              <br>
-The SEAS academic plan emphasizes the need for hands-on engineering experiences and student design projects. The Active Learning Laboratories are expected to take the lead and excel in supporting these student experiences. Our support team is composed of full-time engineer/scientist staff members across many disciplines
+              (This information should include:
+              (i) the Teaching Team meets weekly;
+              (ii) what happens in the meeting (to develop and refine course modules, coordinate the module topics and,
+              develop assignments, explore targeted ethical challenges, discuss readings…;
+              (iii) our aims in developing modules are to identify compelling
+              real-life case studies tied to course content,
+              to design in-class activities that challenge students develop their ethical reasoning skills,
+              and to create out-of-class assignments that encourage students
+              put what they’ve learned in class into practice.)
+            </h3>
+            <h3 class="section-subheading text-muted" style="margin-top: -2.5em;">
+              <a class="btn btn-primary" href="module.html" role="button" style="color: #fff; background-color: #007bff; border-color: #007bff;">
+                Explore Course Modules
+              </a>
             </h3>
           </div>
-          <div class="col-lg-12 text-center">
+          <div class="col-lg-8 text-center mx-auto">
             <figure class="figure">
-              <img src="img/lab/G11Strengthofmaterials.jpg" class="figure-img img-fluid rounded" alt="Students in the teaching lab">
+              <!--Image from https://www.flickr.com/photos/grinnell/6838820266/in/album-72157649172492365/-->
+              <img src="img/lab/6838820266_cd9d8783e5_k.jpg" class="figure-img img-fluid rounded" alt="Students in the teaching lab">
               <figcaption class="figure-caption">A caption for the above image.</figcaption>
             </figure>
           </div>
