@@ -30,8 +30,18 @@
     <link href="css/agency.min.css" rel="stylesheet">
 
     <style>
+
+      body {
+      background-image: url(img/body-bg.jpg);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-size: cover;
+      }
+
+
       a.moreInfo:link, a.moreInfo:visited {
-          color: #D16103;
+          color: #AB4E03;
           text-decoration: none;
           background-color: transparent;
           -webkit-text-decoration-skip: objects;
@@ -71,6 +81,9 @@
           Menu
           <i class="fas fa-bars"></i>
         </button>
+        <h2 hidden>
+          Follow these links to navigate access the content of this website
+        </h2>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
@@ -82,7 +95,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="team.html">The&nbsp;Team</a>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="module.html">Course Modules</a>
             </li>
             <li class="nav-item">
@@ -95,29 +108,21 @@
       </div>
     </nav>
 
+    <h1 hidden>
+      Embedded ethics at Harvard: Harvard: bringing ethical reasoning into the computer science curriculum.
+    </h1>
+
     <header class="masthead">
-      <div class="container" style="margin-top: 10em;">
-        <div class="row">
+      <div class="container">
+        <div class="row" style="margin-top: 8em;">
           <div class="col-md-6 col-sm-12" style="padding: 1em;">
-              <img src="img/banner/tagline.png" style="width: 100%;">
+            <img src="img/banner/tagline.png" style="width: 100%;" usemap="#apply" alt="Apply to Embedded EthiCS from Harvard Philosopy and SEAS">
+            <map name="apply">
+              <area shape="rect" coords="300,163,415,204" href="https://academicpositions.harvard.edu/postings/8639" alt="Apply to Embedded EthiCS from Harvard Philosopy and SEAS" target="_blank">
+            </map>
           </div>
-          <div class="col-md-6 col-sm-12" style="padding: 1em; ">
-              <img src="img/banner/6838824806_c55480e761_z.jpg" style="width: 100%;">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div style="background: none repeat scroll 0 0 rgba(30, 30, 30, 0.80); line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.5em; padding: 1em;">
-              <p style="font-size: larger; color: #FFDB6D; font-weight: 400;">
-                New Post-doc!
-              </p>
-              <p>
-                <a class="btn btn-primary btn-lg" href="https://academicpositions.harvard.edu/postings/8639" target="_blank" role="button" style="color: #D16103;">
-                  Apply here
-                </a>
-              </p>
-                to Embedded EthiCS from Harvard Philosophy and SEAS
-            </div>
+          <div class="col-md-6 col-sm-12" style="padding: 1em;">
+              <img src="img/banner/6838824806_c55480e761_z.jpg" style="width: 100%;" alt="Students in a classroom">
           </div>
         </div>
       </div>
@@ -130,7 +135,7 @@
 
         <div class="row">
           <div class="col-lg-12 text-center">
-            <!--<h2 class="section-heading text-uppercase">Ethical reasoning</h2>-->
+            <h2 hidden>Ethical reasoning</h2>
             <h3 class="section-subheading text-muted">
               Ethical reasoning is an essential skill for today’s computer scientists.
               Embedded EthiCS teaches students how to think through the ethical and social implications of their work.
@@ -142,7 +147,7 @@
 
         <div class="row text-center">
 
-        <div class="row">
+          <div class="row">
           <div class="col-lg-12">
             <ul class="timeline">
               <li>
@@ -252,17 +257,19 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <h4>Be part of Embedded EthiCS!</h4>
+                  <h4 style="color: #000;">Be part of Embedded EthiCS!</h4>
                 </div>
               </li>
             </ul>
           </div>
         </div>
+
         </div>
       </div>
     </section>
 
     <!-- Introduction video -->
+    <h2 hidden>Introduction video</h2>
     <div style="margin-top: -5em;">
       <div class="container">
         <div class="row">
@@ -289,7 +296,7 @@
             </a>
 
             <div class="copyright mr-auto">
-            <span>Copyright © 2018 The President and Fellows of Harvard College</span>  |
+            <span style="color: #A6A6A6">Copyright © 2018 The President and Fellows of Harvard College</span>  |
             <a href="http://accessibility.harvard.edu/">Accessibility</a> |
             <a href="http://www.harvard.edu/reporting-copyright-infringements">Report Copyright Infringement</a>
             </div>

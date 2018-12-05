@@ -31,11 +31,19 @@
 
     <style>
       a.moreInfo:link, a.moreInfo:visited {
-          color: #D16103;
+          color: #AB4E03;
           text-decoration: none;
           background-color: transparent;
           -webkit-text-decoration-skip: objects;
           font-size: 1.05em;
+      }
+
+      a.moreInfoBtn:link, a.moreInfoBtn:visited, a.moreInfoBtn:hover {
+          color: #fff;
+          text-decoration: none;
+          background-color: #007bff;
+          border-color: #007bff;
+          -webkit-text-decoration-skip: objects;
       }
 
       section h3.section-subheading {
@@ -67,6 +75,9 @@
           Menu
           <i class="fas fa-bars"></i>
         </button>
+        <h2 hidden>
+          Follow these links to navigate access the content of this website
+        </h2>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
@@ -78,7 +89,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" style="color: #fed136;">The&nbsp;Team</a>
             </li>
-            <li class="nav-item text-center">
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="module.html">Course Modules</a>
             </li>
             <li class="nav-item">
@@ -91,12 +102,16 @@
       </div>
     </nav>
 
+    <h1 hidden>
+      Embedded ethics at Harvard: Harvard: bringing ethical reasoning into the computer science curriculum.
+    </h1>
+
     <!-- Header -->
     <header class="masthead">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div style=" margin-top: 9em; padding: 1em; background: none repeat scroll 0 0 rgba(30, 30, 30, 0.62);">
+            <div style="margin-top: 9em; padding: 1em; background: none repeat scroll 0 0 rgba(108, 109, 110, 0);">
               <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.3em;">
                 <span style="color: #FFDB6D; font-weight: 400;">
                   Embedded EthiCS
@@ -327,7 +342,7 @@
               and research topics of mutual interest in computer ethics.
             </h3>
             <h3 class="section-subheading text-muted" style="margin-top: -2.5em;">
-              <a class="btn btn-primary" href="module.html" role="button" style="color: #fff; background-color: #007bff; border-color: #007bff;">
+              <a class="btn moreInfoBtn" href="module.html" role="button" style="">
                 Explore Course Modules
               </a>
             </h3>
@@ -355,7 +370,7 @@
             </a>
 
             <div class="copyright mr-auto">
-            <span>Copyright © 2018 The President and Fellows of Harvard College</span>  |
+            <span style="color: #A6A6A6">Copyright © 2018 The President and Fellows of Harvard College</span>  |
             <a href="http://accessibility.harvard.edu/">Accessibility</a> |
             <a href="http://www.harvard.edu/reporting-copyright-infringements">Report Copyright Infringement</a>
             </div>
