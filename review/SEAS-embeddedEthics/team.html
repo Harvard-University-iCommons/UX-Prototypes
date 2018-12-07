@@ -12,7 +12,7 @@
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <title>Embedded EthiCS Team</title>
+    <title>Team | Embedded EthiCS</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
       }
 
       section h3.section-subheading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 400;
       font-style: normal;
       margin-bottom: 75px;
@@ -59,47 +59,59 @@
       color: #999;
       }
 
+      .navbar-nav {
+      font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+      font-size: 90%;
+      font-weight: 400;
+      }
+
+      .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+      }
+
+      a.nav-link {
+      color: #fff;
+      padding: 1.1em 1em!important;
+      }
+
     </style>
 
   </head>
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #2F2D30;">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <img src="img/harvard-logo.png" alt="Harvard University logo" style="width: 70%;">
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <h2 hidden>
-          Follow these links to navigate access the content of this website
-        </h2>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html">About&nbsp;Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style="color: #fed136;">The&nbsp;Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="module.html">Course Modules</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="news.html">
-                News
-              </a>
-            </li>
-          </ul>
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="#">
+        <img src="img/harvard-logo.png" alt="Harvard University logo" width="200">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #fed136;">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="module.html">Course Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">
+              News
+            </a>
+          </li>
+        </ul>
       </div>
+
     </nav>
 
     <h1 hidden>
@@ -111,7 +123,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div style="margin-top: 9em; padding: 1em; background: none repeat scroll 0 0 rgba(108, 109, 110, 0);">
+            <div style="margin-top: 6em; padding: 1em; background: none repeat scroll 0 0 rgba(108, 109, 110, 0);">
               <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.3em;">
                 <span style="color: #FFDB6D; font-weight: 400;">
                   Embedded EthiCS
@@ -128,11 +140,12 @@
     <!-- about-mission -->
     <section style="margin-top: -6em;">
 
+      <!--Intro paragraph-->
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Meet the Team</h2>
-            <h3 class="section-subheading text-muted">
+            <h3 class="section-subheading">
               Embedded EthiCS is a collaboration between philosophers and computer scientists.
               It is organized by a team of faculty from both fields.
               It is taught by advanced philosophy graduate students alongside computer science faculty.
@@ -258,7 +271,7 @@
 
           <div class="col-sm-6 col-md-2">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/LilyHu.png" alt="Lily Hu">
+              <img class="mx-auto rounded-circle" src="img/team/LilyHu.jpg" alt="Lily Hu">
               <h4>Lily<br>Hu</h4>
               <p class="text-muted">
                 Graduate Student in Applied Mathematics
@@ -351,7 +364,6 @@
             <figure class="figure">
               <!--Image from https://www.flickr.com/photos/grinnell/6838820266/in/album-72157649172492365/-->
               <img src="img/lab/6838820266_cd9d8783e5_k.jpg" class="figure-img img-fluid rounded" alt="Students in the teaching lab">
-              <figcaption class="figure-caption">A caption for the above image.</figcaption>
             </figure>
           </div>
         </div>

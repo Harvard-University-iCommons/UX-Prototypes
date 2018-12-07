@@ -39,7 +39,7 @@
       }
 
       section h3.section-subheading {
-      font-size: 1.5em;
+      font-size: 1.25em;
       font-weight: 400;
       font-style: normal;
       margin-bottom: 75px;
@@ -51,47 +51,59 @@
       color: #999;
       }
 
+      .navbar-nav {
+      font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+      font-size: 90%;
+      font-weight: 400;
+      }
+
+      .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+      }
+
+      a.nav-link {
+      color: #fff;
+      padding: 1.1em 1em!important;
+      }
+
     </style>
 
   </head>
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #2F2D30;">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <img src="img/harvard-logo.png" alt="Harvard University logo" style="width: 70%;">
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <h2 hidden>
-          Follow these links to navigate access the content of this website
-        </h2>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html">About&nbsp;Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="team.html">The&nbsp;Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style="color: #fed136;">Course Modules</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="news.html">
-                News
-              </a>
-            </li>
-          </ul>
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="#">
+        <img src="img/harvard-logo.png" alt="Harvard University logo" width="200">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #fed136;">Course Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">
+              News
+            </a>
+          </li>
+        </ul>
       </div>
+
     </nav>
 
     <h1 hidden>
@@ -103,7 +115,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div style=" margin-top: 9em; padding: 1em; background: none repeat scroll 0 0 rgba(108, 109, 110, 0);">
+            <div style=" margin-top: 6em; padding: 1em; background: none repeat scroll 0 0 rgba(108, 109, 110, 0);">
               <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.3em;">
                 <span style="color: #FFDB6D; font-weight: 400;">
                   Embedded EthiCS
@@ -118,11 +130,12 @@
     </header>
 
     <section id="module">
+      <!--Intro paragraph-->
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center" style="margin-top: -6em;">
             <h2 class="section-heading">Repository of Open Source Course Modules</h2>
-            <h3 class="section-subheading text-muted">
+            <h3 class="section-subheading">
               The Embedded EthiCS approach builds short ethics modules into computer science courses in the
               core computer science curriculum.
             </h3>
@@ -135,7 +148,8 @@
 
           <div class="col-sm-6 col-md-3">
             <div class="team-member">
-              <img class="rounded-circle img-fluid" src="img/about/ModuatorIllustrationBanner_2.jpg" alt="Image of a digital model">
+              <!--Image from https://www.flickr.com/photos/grinnell/6838820266/in/album-72157649172492365/-->
+              <img class="rounded-circle img-fluid" src="img/module/6838820266_cabb842084_z.jpg" alt="Student meeting">
               <h4>
                 <strong>identify</strong>
                 <span style="font-weight: 400;">
@@ -147,7 +161,8 @@
 
           <div class="col-sm-6 col-md-3">
             <div class="team-member">
-              <img class="rounded-circle img-fluid" src="img/about/hackharvard_web_slide.jpg" alt="Student studying">
+              <!--Image from https://www.flickr.com/photos/grinnell/21878502902/in/album-72157649172492365/-->
+              <img class="rounded-circle img-fluid" src="img/module/21878502902_7226555e96_z.jpg" alt="Student discussion">
               <h4>
                 <strong>reason</strong>
                 <span style="font-weight: 400;">
@@ -159,7 +174,8 @@
 
           <div class="col-sm-6 col-md-3">
             <div class="team-member">
-              <img class="rounded-circle img-fluid" src="img/about/Superfludity_Banner.jpeg" alt="">
+              <!--Image from https://www.flickr.com/photos/grinnell/28695283714/in/album-72157649172492365/-->
+              <img class="rounded-circle img-fluid" src="img/module/28695283714_2324ea8180_z.jpg" alt="Student discussion">
               <h4>
                 <strong>communicate</strong>
                 <span style="font-weight: 400;">
@@ -171,7 +187,8 @@
 
           <div class="col-sm-6 col-md-3">
             <div class="team-member">
-              <img class="rounded-circle img-fluid" src="img/about/igem_lab_web1.jpg" alt="Students in chemical lab">
+              <!--Image from https://www.flickr.com/photos/grinnell/16646995538/in/album-72157649172492365/-->
+              <img class="rounded-circle img-fluid" src="img/module/16646995538_afa020ba12_z.jpg" alt="Student design session">
               <h4>
                 <strong>design</strong>
                 <span style="font-weight: 400;">
@@ -197,10 +214,7 @@
               <tbody>
                 <tr>
                   <th scope="row">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x" style="color: #52854C;"></i>
-                      <i class="fas fa-play fa-stack-1x fa-inverse"></i>
-                    </span>
+                    <i class="fas fa-check-square fa-lg" style="color: #52854C; margin-right: .5em;"></i>
                   </th>
                   <td>
                     CS 134: Networks
@@ -209,7 +223,7 @@
                     Upper-level undergraduate
                   </td>
                   <td>
-                    <a href="module1.html" target="_blank" class="moreInfo">
+                    <a href="module1.html" class="moreInfo">
                       Facebook, Fake News, and the Ethics of Censorship
                     </a>
                   </td>
@@ -219,10 +233,7 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x" style="color: #52854C;"></i>
-                      <i class="fas fa-play fa-stack-1x fa-inverse"></i>
-                    </span>
+                    <i class="fas fa-check-square fa-lg" style="color: #52854C; margin-right: .5em;"></i>
                   </th>
                   <td>
                     ENG-SCI 28: Technology, Ethics, and Society
@@ -231,7 +242,7 @@
                     Upper-level undergraduate
                   </td>
                   <td>
-                    <a href="module1.html" target="_blank" class="moreInfo">
+                    <a href="module1.html" class="moreInfo">
                       Technology-society linkages as seen through three analytic lenses: risk, inequality, and human dignity
                     </a>
                   </td>
@@ -241,10 +252,7 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x" style="color: #8996A0;"></i>
-                      <i class="fas fa-step-forward fa-stack-1x fa-inverse"></i>
-                    </span>
+                    <i class="fas fa-hourglass-half fa-lg" style="color: #AB4E03; margin-right: .5em;"></i>
                   </th>
                   <td>
                     CS 181: Intelligent Machines: Perception, Learning, and Uncertainty
@@ -253,7 +261,7 @@
                     Upper-level undergraduate
                   </td>
                   <td>
-                    <a href="module1.html" target="_blank" class="moreInfo">
+                    <a href="module1.html" class="moreInfo">
                       Machine learning, probabilistic reasoning and decision making in uncertain environments
                     </a>
                   </td>
@@ -263,21 +271,16 @@
                 </tr>
               </tbody>
             </table>
+            <hr>
             <p>
               Legend
             </p>
             <p>
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x" style="color: #8996A0;"></i>
-                <i class="fas fa-step-forward fa-stack-1x fa-inverse"></i>
-              </span>
+              <i class="fas fa-check-square fa-lg" style="color: #52854C; margin-right: .5em;"></i>
               Completed module
             </p>
             <p>
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x" style="color: #52854C;"></i>
-                <i class="fas fa-play fa-stack-1x fa-inverse"></i>
-              </span>
+              <i class="fas fa-hourglass-half fa-lg" style="color: #AB4E03; margin-right: .5em;"></i>
               In progress module
             </p>
           </div>
