@@ -38,6 +38,14 @@
           font-size: 1.05em;
       }
 
+      a.moreInfoBtn:link, a.moreInfoBtn:visited, a.moreInfoBtn:hover {
+          color: #fff;
+          text-decoration: none;
+          background-color: #007bff;
+          border-color: #007bff;
+          -webkit-text-decoration-skip: objects;
+      }
+
       section h3.section-subheading {
       font-size: 1.25em;
       font-weight: 400;
@@ -101,6 +109,9 @@
               News
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
         </ul>
       </div>
 
@@ -129,15 +140,35 @@
       </div>
     </header>
 
+    <!-- Teaching Lab -->
+    <section id="teachLab" style="margin-top: -6em;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">
+              Teaching Lab
+            </h2>
+            <h3 class="section-subheading text-muted">
+              The Embedded EthiCS Teaching Lab is a weekly seminar
+              for our team of graduate students and postdoctoral fellows.
+              <br>
+              In the lab, our graduate students and postdoctoral fellows collaborate with one another
+              to develop and refine course modules, identify pedagogical challenges and strategies for addressing them,
+              and research topics of mutual interest in computer ethics.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="module">
       <!--Intro paragraph-->
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center" style="margin-top: -6em;">
+          <div class="col-lg-12 text-center" style="margin-top: -16em;">
             <h2 class="section-heading">Repository of Open Source Course Modules</h2>
             <h3 class="section-subheading">
-              The Embedded EthiCS approach builds short ethics modules into computer science courses in the
-              core computer science curriculum.
+              The Embedded EthiCS course modules help students to...
             </h3>
           </div>
         </div>
@@ -206,7 +237,7 @@
                 <tr>
                   <th scope="col"></th>
                   <th scope="col">Course</th>
-                  <th scope="col">CS Area</th>
+                  <th scope="col">Course Level</th>
                   <th scope="col">Module</th>
                   <th scope="col">Module&nbsp;Author</th>
                 </tr>
@@ -252,7 +283,7 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <i class="fas fa-check-square fa-lg" style="color: #AB4E03;"></i>
+                    <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
                   <td>
                     CS 152: Programming Languages
@@ -271,7 +302,7 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <i class="fas fa-check-square fa-lg" style="color: #AB4E03;"></i>
+                    <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
                   <td>
                     CS 165: Data Systems
@@ -290,13 +321,13 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    <i class="fas fa-check-square fa-lg" style="color: #AB4E03;"></i>
+                    <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
                   <td>
                     CS 181: Machine Learning
                   </td>
                   <td>
-                    Introductory undergraduate
+                    Upper-level undergraduate
                   </td>
                   <td>
                     <a href="module-CS181.html" class="moreInfo">
