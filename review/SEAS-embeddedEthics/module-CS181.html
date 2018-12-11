@@ -68,6 +68,26 @@
       padding: 1.1em 1em!important;
       }
 
+      .dont-break-out {
+
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+
+    }
+
     </style>
 
   </head>
@@ -431,9 +451,7 @@
                     <ul>
                       <li>
                         Barocas and Selbst, “Big Data’s Disparate Impact”
-                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899" target="_blank" class="moreInfo dont-break-out">
-                          (2016, excerpts). California Law Review.
-                          </a>
+                        (2016, excerpts). California Law Review.
                         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899" target="_blank" class="moreInfo dont-break-out">
                           https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899
                         <sup><i class="fas fa-external-link-alt fa-sm"></i></sup></a>.
