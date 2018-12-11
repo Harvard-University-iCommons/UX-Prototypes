@@ -68,6 +68,26 @@
       padding: 1.1em 1em!important;
       }
 
+      .dont-break-out {
+
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+
+    }
+
     </style>
 
   </head>
@@ -309,16 +329,16 @@
                       <strong>
                         Connection to Course Technical Material:
                       </strong>
-                      In the module, we discuss one of the topics that frames the course: the increasing ability to
-                      gather and store machine-generated data, and the growing understanding that the methods used to
-                      store and access those data play a key role in determining how valuable they are to the
-                      individuals and organizations that use them.
+                      In the module, we consider the relationship between ethical concerns about privacy and two central
+                      course topics: the increasing ability to gather and store machine-generated data, and the growing
+                      understanding that the methods used to store and access those data play a key role in determining
+                      how valuable they are to the individuals and organizations that use them.
                     </p>
                   </div>
                   <div class="col-4">
                     <p class="text-muted small">
-                      This topic was chosen because it is one of the central ethical issues that students will face if
-                      they go on to work on data storage design.
+                      We decided to focus on privacy in this course because it is one of the central ethical issues that
+                      students will need to address if they go on to work on data storage design.
                     </p>
                   </div>
                 </div>
@@ -462,7 +482,9 @@
                   <div class="col-8">
                     <ul>
                       <li>
-                        A selection from the Stanford Encyclopedia of Philosophy article "<a href="https://plato.stanford.edu/entries/it-privacy/" target="_blank" class="moreInfo">Privacy and Information Technology
+                        Jeroen van den Hoven et al, "Privacy and Information Technology" (2014).
+                        The Stanford Encyclopedia of Philosophy.
+                        <a href="https://plato.stanford.edu/entries/it-privacy/" target="_blank" class="moreInfo dont-break-out">https://plato.stanford.edu/entries/it-privacy/
                         <sup><i class="fas fa-external-link-alt fa-sm"></i></sup></a>".
                       </li>
                     </ul>
@@ -472,12 +494,13 @@
                       This reading was excerpted from the Stanford Encyclopedia of Philosophy article “Privacy and
                       Information Technology.” The Stanford Encyclopedia of philosophy is an excellent resource for
                       clear and concise overviews of different philosophical topics. This reading provides the main
-                      philosophical content of the module. The reading introduces students to background on how
+                      philosophical content for the module. The reading introduces students to background on how
                       information technology has impacted privacy. It then discusses accounts of the value of privacy,
                       introducing the distinction between reductionist accounts of privacy, which take privacy to be
                       important only insofar as it protects other values, and non-reductionist accounts of privacy,
-                      which take privacy to be valuable in itself. In the module, we discuss this distinction in terms
-                      of accounts of privacy that value it instrumentally (reductively) or finalally (non-reductively).
+                      which take privacy to be valuable for its own sake. In the module, we discuss this distinction in
+                      terms of accounts of privacy that value it instrumentally (reductively) or finally
+                      (non-reductively).
                     </p>
                   </div>
                 </div>
@@ -492,17 +515,19 @@
                   <div class="col-8">
                     <ul>
                       <li>
-                        <a href="https://www.inforights.im/media/1186/cl_eu_commission_factsheet_right_to_be-forgotten.pdf" target="_blank" class="moreInfo">A Factsheet from the EU on their "Right to be Forgotten" Ruling
+                        A Factsheet from the European Commission on the European Union’s "Right to be Forgotten" Ruling.
+                        <a href="https://www.inforights.im/media/1186/cl_eu_commission_factsheet_right_to_be-forgotten.pdf" target="_blank" class="moreInfo dont-break-out">
+                          https://www.inforights.im/media/1186/cl_eu_commission_factsheet_right_to_be-forgotten.pdf
                         <sup><i class="fas fa-external-link-alt fa-sm"></i></sup></a>.
                       </li>
                     </ul>
                   </div>
                   <div class="col-4">
                     <p class="text-muted small">
-                      The EU factsheet then gives an example of a privacy protection in the idea of the right to be
-                      forgotten. It also encourages students to begin thinking about whether rights are absolute, i.e.,
-                      should never be infringed upon. The factsheet explicitly discusses the claim that the right to be
-                      forgotten is not absolute.
+                      This EU factsheet explains one type of privacy protection: the EU’s so-called “right to be
+                      forgotten.” It also encourages students to begin thinking about whether privacy rights are
+                      absolute, i.e., should never be violated. (The factsheet explicitly discusses the claim that the
+                      right to be forgotten is not absolute.)
                     </p>
                   </div>
                 </div>
@@ -517,17 +542,19 @@
                   <div class="col-8">
                     <ul>
                       <li>
-                        <a href="https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau" target="_blank" class="moreInfo">•	A Planet Money episode on credit scores and Equifax.
+                        <i>A Planet Money</i>
+                        episode on credit scores and Equifax.
+                        <a href="https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau" target="_blank" class="moreInfo dont-break-out">
+                          https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau
                         <sup><i class="fas fa-external-link-alt fa-sm"></i></sup></a>.
                       </li>
                     </ul>
                   </div>
                   <div class="col-4">
                     <p class="text-muted small">
-                      This Planet Money Episode on credit scores gives additional, more detailed background on privacy
-                      issues raised by data collection and storage. The podcast episode discusses the history of data
-                      collection for credit scoring, and modern day data collection and storing practices for credit
-                      scoring.
+                      This Planet Money episode on credit scores gives additional, more detailed background on privacy
+                      issues raised by data collection and storage. The episode discusses the history of data collection
+                      for credit scoring, and modern day data collection and storing practices for credit scoring.
                     </p>
                   </div>
                 </div>
@@ -575,8 +602,8 @@
                     <p class="text-muted small">
                       There are a number of accounts of why privacy is valuable in the philosophical literature, so
                       someone using this module in a particular course context may want to use accounts of privacy that
-                      are tailored to other material from the course. In this module, we discussed Nagel’s (1998)
-                      “Concealment and Exposure” (the “getting along” account) and Scanlon’s (1975) “Thompson on
+                      are tailored to other material from the course. In this module, we discuss Nagel’s 1998 article
+                      “Concealment and Exposure” (the “getting along” account) and Scanlon’s 1975 article “Thompson on
                       Privacy” (the “good in itself” account).
                     </p>
                   </div>
@@ -599,16 +626,16 @@
                     </p>
                     <ol>
                       <li>
-                        Does the company in question treat privacy as a right or as a value? Why do you think this?
+                        Does the company in question treat privacy as a right or as a value? Explain your answer.
                       </li>
                       <li>
                         What kinds of features would you expect their data storage and transfer systems to have, in
-                        light of the way you take them to treat privacy?
+                        light of the way they treat privacy?
                       </li>
                       <li>
                         Give at least one reason the company could appeal to
                         <strong>in support of</strong>
-                        their decision to treat privacy in this way (feel free to use hypothetical cases/examples)
+                        their decision to treat privacy in this way (feel free to use hypothetical cases/examples).
                       </li>
                       <li>
                         Finally, think of at least one
@@ -622,19 +649,19 @@
                   </div>
                   <div class="col-4">
                     <p class="text-muted small">
-                      This class activity asks students to apply the material on moral rights and values and the value
-                      of privacy to the real-world case of Apple and Google’s official statements about the importance
-                      of privacy. Apple states that privacy is a human right, while Google explains that privacy is an
-                      important value, but that there are other, competing values that are promoted when individuals
-                      provide Google with their data. This activity helps students to appreciate that such privacy
-                      policies have (differing) philosophical foundations, and to think about the merits of different
-                      approaches to privacy.
+                      This class activity asks students to apply module material on moral rights and values and the
+                      value of privacy to the real-world case of Apple and Google’s official statements about the
+                      importance of privacy. Apple states that privacy is a human right, while Google explains that
+                      privacy is an important value, but that there are other, competing values that are promoted when
+                      individuals provide Google with their data. This activity helps students to appreciate that such
+                      privacy policies have (differing) philosophical foundations, and to think about the merits of
+                      different approaches to privacy.
                     </p>
                     <p class="text-muted small">
-                      In conducting the discussion, it is helpful for the Embedded EthiCS teaching assistant to
-                      emphasize one key point: viewing privacy as a right implies that it cannot be freely traded off
-                      against other values, such as national security. This point helps to explain nature of the recent
-                      dispute between the FBI and Apple over end-to-end encryption.
+                      In conducting the discussion, it is helpful for the Embedded EthiCS TA to emphasize one key point:
+                      viewing privacy as a right implies that it cannot be freely traded off against other values, such
+                      as national security. This point helps to explain nature of the recent dispute between the FBI and
+                      Apple over end-to-end encryption.
                     </p>
                   </div>
                 </div>
@@ -654,15 +681,15 @@
                       In the follow-up assignment, students collaboratively analyze a detailed case study that asks them
                       to think through the implications of the choice whether to treat privacy as a value or a right for
                       data system design in healthcare. The case study describes a new start-up, Babyscripts, that has
-                      developed a mobile app aimed at the early identification of potentially serious complications in
-                      pregnancy and an increased quality of care.
+                      developed a mobile app aimed at increasing the quality of care in pregnancy by helping to identify
+                      potentially serious complications.
                     </p>
                     <p>
                       Students review the case study independently and make two posts to a graded discussion forum. In
                       the first, students explain why they think that privacy is a right or a value in the domain of
                       healthcare. In the second, they elaborate on at least one implication of their position on privacy
-                      as a right or value for how Babyscripts should design their data storage and transfer system on
-                      their app.
+                      as a right or value for how Babyscripts should design their app’s data storage and transfer
+                      system.
                     </p>
                   </div>
                   <div class="col-4">
@@ -689,7 +716,7 @@
                     </p>
                     <ul>
                       <li>
-                        The topic of the module directly connects course technical material to an important, current
+                        The topic of the module directly connects course technical material to an important contemporary
                         social issue. In our experience, students respond favorably to module topics of this kind.
                       </li>
                       <li>
