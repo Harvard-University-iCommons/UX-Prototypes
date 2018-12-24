@@ -92,6 +92,59 @@
       height: 10em;
       }
 
+      /* Responsive data table from https://css-tricks.com/responsive-data-tables/ */
+    /* This query will take effect for any screen smaller than 760px and also iPads specifically. */
+	@media
+	  only screen
+    and (max-width: 760px), (min-device-width: 768px)
+    and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+
+    tr:nth-child(odd) {
+      background: #eee;
+    }
+
+		td-responsive {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+		}
+
+		td-responsive:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			padding-right: 10px;
+			white-space: nowrap;
+			font-weight: bold;
+		}
+
+		/* Label the data */
+		td:nth-of-type(1):before { content: "Status"; font-weight: bold; margin-right: 1em; }
+		td:nth-of-type(2):before { content: "Course"; font-weight: bold; margin-right: 1em; }
+		td:nth-of-type(3):before { content: "Course Level"; font-weight: bold; margin-right: 1em; }
+		td:nth-of-type(4):before { content: "Module"; font-weight: bold; margin-right: 1em; }
+		td:nth-of-type(5):before { content: "Module Author"; font-weight: bold; margin-right: 1em; }
+	    }
+
     </style>
 
   </head>
@@ -271,128 +324,128 @@
         <!--table with course modules-->
         <div class="row">
           <div class="col-md-12">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col">Course</th>
-                  <th scope="col">Course Level</th>
-                  <th scope="col">Module</th>
-                  <th scope="col">Module&nbsp;Author</th>
+            <table class="table" role="table">
+              <thead role="rowgroup">
+                <tr role="row">
+                  <th scope="col" role="columnheader"></th>
+                  <th scope="col" role="columnheader">Course</th>
+                  <th scope="col" role="columnheader">Course Level</th>
+                  <th scope="col" role="columnheader">Module</th>
+                  <th scope="col" role="columnheader">Module&nbsp;Author</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">
+              <tbody role="rowgroup">
+                <tr role="row">
+                  <td role="cell">
                     <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
-                  </th>
-                  <td>
+                  </td>
+                  <td role="cell">
                     CS 134: Networks
                   </td>
-                  <td>
+                  <td role="cell">
                     Upper-level undergraduate
                   </td>
-                  <td>
+                  <td role="cell">
                     <a href="module-CS134.html" class="moreInfo">
                       Facebook, Fake News, and the Ethics of Censorship
                     </a>
                   </td>
-                  <td>
+                  <td role="cell">
                     David Gray Grant
                   </td>
                 </tr>
-                <tr>
-                  <th scope="row">
+                <tr role="row">
+                  <td role="cell">
                     <i class="fas fa-hourglass-half fa-lg" style="color: #AB4E03;"></i>
-                  </th>
-                  <td>
+                  </td>
+                  <td role="cell">
                     CS 61: Systems Programming and Machine Organization
                   </td>
-                  <td>
+                  <td role="cell">
                     Introductory undergraduate
                   </td>
-                  <td>
+                  <td role="cell">
                     <a href="module-CS061.html" class="moreInfo">
                       ASCII, Unicode, and the Ethics of Natural Language Representation
                     </a>
                   </td>
-                  <td>
+                  <td role="cell">
                     Cat Wade
                   </td>
                 </tr>
-                <tr>
+                <tr role="row">
                   <th scope="row">
                     <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
-                  <td>
+                  <td role="cell">
                     CS 152: Programming Languages
                   </td>
-                  <td>
+                  <td role="cell">
                     Upper-level undergraduate
                   </td>
-                  <td>
+                  <td role="cell">
                     <a href="module-CS152.html" class="moreInfo">
                       Ethics in Software Verification and Validation
                     </a>
                   </td>
-                  <td>
+                  <td role="cell">
                     David Gray Grant
                   </td>
                 </tr>
-                <tr>
+                <tr role="row">
                   <th scope="row">
                     <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
-                  <td>
+                  <td role="cell">
                     CS 165: Data Systems
                   </td>
-                  <td>
+                  <td role="cell">
                     Upper-level undergraduate
                   </td>
-                  <td>
+                  <td role="cell">
                     <a href="module-CS165.html" class="moreInfo">
                       Privacy in the Design of Data Systems
                     </a>
                   </td>
-                  <td>
+                  <td role="cell">
                     Kate Vredenburgh
                   </td>
                 </tr>
-                <tr>
+                <tr role="row">
                   <th scope="row">
                     <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
-                  <td>
+                  <td role="cell">
                     CS 181: Machine Learning
                   </td>
-                  <td>
+                  <td role="cell">
                     Upper-level undergraduate
                   </td>
-                  <td>
+                  <td role="cell">
                     <a href="module-CS181.html" class="moreInfo">
                       Discrimination and Machine Learning
                     </a>
                   </td>
-                  <td>
+                  <td role="cell">
                     Kate Vredenburgh
                   </td>
                 </tr>
-                <tr>
+                <tr role="row">
                   <th scope="row">
                     <i class="fas fa-check-square fa-lg" style="color: #52854C;"></i>
                   </th>
-                  <td>
+                  <td role="cell">
                     CS 263: Systems Security
                   </td>
-                  <td>
+                  <td role="cell">
                     Graduate
                   </td>
-                  <td>
+                  <td role="cell">
                     <a href="module-CS263.html" class="moreInfo">
                       The Ethics of Hacking Back
                     </a>
                   </td>
-                  <td>
+                  <td role="cell">
                     David Gray Grant
                   </td>
                 </tr>
