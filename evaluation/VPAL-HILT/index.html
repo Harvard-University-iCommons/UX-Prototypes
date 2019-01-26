@@ -1,0 +1,930 @@
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon"
+              href="http://guidelines.hwp.harvard.edu/system/files/styles/os_files_small/private/guidelines/files/shield_rgb.png?itok=MpxLoPm7">
+
+        <title>VPAL / HILT Accessibility</title>
+
+        <!-- Bootstrap core CSS -->
+        <!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="dashboard.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]>
+        <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="ie-emulation-modes-warning.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-e-->
+
+        <!-- Harvard Branding -->
+        <style>
+              .nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+                color: #fff;
+                background-color: #A51C30;
+              }
+              a {
+                color: #A51C30;
+                text-decoration: none;
+              }
+              h1, h2{
+                color: #A51C30;
+              }
+              h2{
+                color: #A51C30;
+                border-top:1px solid #eee;
+                padding: 1em 0 0 0;
+              }
+              img.border {
+                border:1px solid #eee;
+              }
+              .img-hover img {
+                  -webkit-transition: all .3s ease; /* Safari and Chrome */
+                  -moz-transition: all .3s ease; /* Firefox */
+                  -o-transition: all .3s ease; /* IE 9 */
+                  -ms-transition: all .3s ease; /* Opera */
+                  transition: all .3s ease;
+              }
+              .img-hover img:hover {
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                  -webkit-transform:translateZ(0) scale(1.01); /* Safari and Chrome */
+                  -moz-transform:scale(1.01); /* Firefox */
+                  -ms-transform:scale(1.01); /* IE 9 */
+                  -o-transform:translatZ(0) scale(1.01); /* Opera */
+                  transform:translatZ(0) scale(1.01);
+
+                border:1px solid #A51C30;
+              }
+              .grayscale {
+                -webkit-filter: brightness(1.10) grayscale(100%) contrast(90%);
+                -moz-filter: brightness(1.10) grayscale(100%) contrast(90%);
+                filter: brightness(1.10) grayscale(100%);
+              }
+              .text-muted-description { /*component descendent to indent description*/
+                color: #777;
+                padding-left:1em;
+              }
+              .table {
+               font-size: 1em;
+               }
+
+
+        </style><!-- /Harvard Branding -->
+
+        <!-- CharftJS -->
+        <script src="https://www.chartjs.org/dist/2.7.3/Chart.bundle.js"></script>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" style="margin-bottom:.45em">
+                        <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
+                    </a>
+                    <a class="navbar-brand">
+                        <strong>HILT Accessibility</strong> / VPAL
+                    </a>
+                </div><!-- / navbar-header -->
+
+            </div><!-- / container-fluid -->
+        </nav><!-- / navbar -->
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <!-- Left Nav -->
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-pills nav-stacked left-menu" id="stacked-menu" style="margin-left:-1.25em">
+
+                        <li><a href="#Overview">Overview</a></li>
+
+                        <li><!-- Accessibility -->
+
+                            <a href="#Accessibility" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu"
+                               class="collapsed">Accessibility&nbsp;<span class="caret arrow"></span></a>
+
+                            <ul class="nav nav-pills nav-stacked collapse" id="item2" style="height: 0px;">
+                                <li><a href="#AccessibilitySpecifications" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
+                                <li><a href="#AccessibilitySummary" style="padding-left: 3em; margin-top: -1em;">Summary</a></li>
+                                <li><a href="#AccessibilityLandingPage" style="padding-left: 3em; margin-top: -1em;">Landing page</a></li>
+                            </ul>
+
+                        </li><!-- / Accessibility -->
+
+                    </ul>
+                </div><!-- Left Nav -->
+
+                <!-- Right Nav -->
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+                    <div class="col-sm-12">
+                        <h1 class="page-header" id="Overview">Overview</h1>
+                    </div>
+
+
+                    <div class="col-sm-12">
+                        <p>
+                            This Accessibility evaluation was not conducted with any user of assistive technology. It is
+                            highly recommended to test the product with target users, as well as with users of assistive
+                            technology.
+                        </p>
+                        <p>
+                            Select any of the images for a full scale view.
+                        </p>
+                    </div><!-- / Overview -->
+
+                    <div class="col-sm-12">
+                        <h2 class="header" id="Accessibility">
+                            Accessibility Evaluation
+                        </h2>
+                    </div><!-- / Accessibility header-->
+
+                    <div class="col-sm-12">
+                        <h3 class="header" id="AccessibilitySpecifications">
+                            Specifications
+                        </h3>
+                    </div><!-- / Specifications header-->
+
+                    <div class="col-sm-12">
+                        <p>
+                            This accessibility audit was conducted on a MacBook Pro with a Macintosh operating system version
+                            10.13.6.
+                        </p>
+                        <p>
+                            The product was accessed with a Chrome browser via
+                            <a href="https://hilt.harvard.edu/" target="_blank">
+                                https://hilt.harvard.edu/
+                                <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                            </a>
+                        </p>
+                        <p>
+                            The testing tools used for this audit were:
+                        </p>
+                        <ul>
+                            <li>
+                                <a href="https://www.apple.com/accessibility/mac/vision/" target="_blank">
+                                    VoiceOver
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                                to simulate screen reader technology
+                            </li>
+                            <li>
+                                <a
+                                        href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en"
+                                        target="_blank">
+                                    Chrome Vox browser extension
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                                to simulate screen reader technology
+                            </li>
+                            <li>
+                                <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/"
+                                        target="_blank">
+                                    Google Inspect
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                                for code inspection
+                            </li>
+                            <li>
+                                <a href="https://webaim.org/resources/contrastchecker/" target="_blank">
+                                    WebAIM Color Contrast Checker
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                                to check the validity of the color contrast for visual impairment
+                            </li>
+                        </ul>
+                    </div><!-- / Specifications information-->
+
+                    <div class="col-sm-12">
+                        <h3 class="header" id="AccessibilitySummary">
+                            Summary
+                        </h3>
+                    </div><!-- / Summary header-->
+
+                    <div class="col-sm-12">
+                        <p>
+                            An inspection of the content revealed several accessibility issues.
+                            <br>
+                            <strong>
+                                Even though most of the required A and AA WCAG 2.0 guidelines were detected, only
+                                testing with native users of assistive technology will ensure that all the content is
+                                properly accessible.
+                            </strong>
+                            <br>
+                            User testing should be scheduled after all the accessibility issues listed below are
+                            addressed.
+                        </p>
+                    </div><!-- / Summary information-->
+
+                    <div class="col-sm-12">
+                        <h3 class="header" id="AccessibilityLandingPage">
+                            Landing Page
+                        </h3>
+                    </div><!-- /  Landing Page heading-->
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div style="width: 20em; margin: 0 auto;">
+                                <canvas id="chartjs-4" class="chartjs" style="display: block; margin-bottom: 2em;"></canvas>
+                                <script>
+                                    new Chart(document.getElementById("chartjs-4"),{
+                                        "type":"doughnut","data":{
+                                            "labels":["74% Inaccessible"],
+                                            "datasets":[{
+                                                "label":"My First Dataset",
+                                                "data":[74,26],
+                                                "backgroundColor":["rgb(204, 0, 0)","rgb(240, 240, 240)"]
+                                            }]
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➊
+                                        </span>
+                                        Form elements do not have associated labels.
+                                    </td>
+                                    <td width="50%">
+                                        Labels ensure that form controls are announced properly by assistive technologies,
+                                        like screen readers.
+                                        <br>
+                                        <a href="https://dequeuniversity.com/rules/axe/2.2/label?application=lighthouse" target="_blank">
+                                            Learn more about labels.
+                                            <sup><i class="fas fa-external-link-alt fa-sm"></i></sup>
+                                        </a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing element
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;label&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;span class="screen-reader-text"&gt;Search&lt;/span&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;input placeholder="Search by Keyword" name="_sf_search[]" class="sf-input-text ui-autocomplete-input" type="text" value="" title="" autocomplete="off"&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;/label&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Associate the <code>&lt;label&gt;</code> tag with the input field using the for
+                                        attribute whose value is the id attribute of the input. This creates an explicit,
+                                        rather than implicit, association between the label and the input field.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;label&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;span class="screen-reader-text" <strong>for="SearchByKeyword"</strong>&gt;Search&lt;/span&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;input placeholder="Search by Keyword" <strong>id="SearchByKeyword"</strong> name="_sf_search[]" class="sf-input-text ui-autocomplete-input" type="text" value="" title="" autocomplete="off"&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;/label&gt;</code>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 1-->
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➋
+                                        </span>
+                                        Background and foreground colors do not have a sufficient contrast ratio.
+                                    </td>
+                                    <td width="50%">
+                                        Labels ensure that form controls are announced properly by assistive technologies,
+                                        like screen readers.
+                                        <br>
+                                        <a href="https://dequeuniversity.com/rules/axe/2.2/color-contrast?application=lighthouse" target="_blank">
+                                            Learn more about color contrast.
+                                            <sup><i class="fas fa-external-link-alt fa-sm"></i></sup>
+                                        </a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ol start="21">
+                                            <li>
+                                                <code>&lt;p&gt;125 Mt. Auburn Street, 4th Floor &lt;br&gt; Cambridge, MA 02138&lt;/p&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;a href="mailto:hilt@harvard.edu"&gt;hilt@harvard.edu&lt;/a&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;p class="copyright"&gt;Copyright © 2018 The President and Fellows of Harvard College | &lt;a href="http://accessibility.harvard.edu/"&gt;Accessibility&lt;/a&gt; | &lt;a href="http://www.harvard.edu/reporting-copyright-infringements"&gt;Report Copyright Infringement&lt;/a&gt;&lt;/p&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;a href="http://accessibility.harvard.edu/"&gt;Accessibility&lt;/a&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;a href="http://www.harvard.edu/reporting-copyright-infringements"&gt;Report Copyright Infringement&lt;/a&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>placeholder</code> text in each search form
+                                            </li>
+                                            <li>
+                                                Twitter icon
+                                            </li>
+                                            <li>
+                                                HILT icon
+                                            </li>
+                                        </ol>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Ensure color contrast of at least 4.5:1 for small text or 3:1 for large text, even
+                                        if text is part of an image. Large text has been defined in the requirements as 18pt
+                                        or 14pt bold.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ol start="21">
+                                            <li>Use footer background color <code>#6B7485</code> instead of <code>#88959f</code></li>
+                                            <li>Use footer background color <code>#6B7485</code> instead of <code>#88959f</code></li>
+                                            <li>Use font color <code>#FFFFFF</code> instead of <code>#D6D8DA</code></li>
+                                            <li>Use font color <code>#FFFFFF</code> instead of <code>#D6D8DA</code></li>
+                                            <li>Use font color <code>#FFFFFF</code> instead of <code>#D6D8DA</code></li>
+                                            <li>Use font color <code>#636363</code> instead of <code>#9B9C9D</code></li>
+                                            <li>
+                                                Use image background color <code>#93939A</code> instead of <code>#C6C6C8</code>
+                                                or better yet
+                                                image background color <code>#FFFFFF</code> and Twitter icon transparent or <code>#88959f</code>
+                                            </li>
+                                            <li>Use image background color <code>#D0D1D2</code> or lighter, instead of transparent</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 2-->
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➌
+                                        </span>
+                                        Broken links.
+                                    </td>
+                                    <td width="50%">
+                                        "Skip to content" links facilitate navigation for assistive technology users.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;a href="#main"&gt;Skip to content&lt;/a&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Ensure that all links are active. The target <code>#main</code> of this "skip to
+                                        content" link is not present on this web page.
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 3-->
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➍
+                                        </span>
+                                        Descriptive links.
+                                    </td>
+                                    <td width="50%">
+                                        Links allow users to navigate a website or web application. An effective link is
+                                        self-explanatory, telling the user where they will go if they click on the link.
+                                        Links are also easy to distinguish from other content.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;a href="..."&gt;Read More »&lt;/a&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Ensure that the link text make sense out of context and that it is self-explanatory.
+                                        <a href="https://accessibility.huit.harvard.edu/write-helpful-links" target="_blank">
+                                            Learn more about descriptive links
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;a href="..."&gt;Read More <strong>about Into Practice</strong>&lt;/a&gt;</code>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 4-->
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➎
+                                        </span>
+                                        Descriptive links.
+                                    </td>
+                                    <td width="50%">
+                                        Each image requires alternative text that is equivalent to the information it
+                                        conveys, unless the image is purely decorative and provides no useful information.
+                                        So you need to be careful about what value you give the <code>alt</code>
+                                        attribute.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;div class="..." style="background-image: url(img.png)"&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;a href="..."&gt;&lt;/a&gt;</code>
+                                        <br>
+                                        <code>&lt;/div&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Supply alternative text through the alt attribute. The alternative text should
+                                        provide information equivalent to what’s conveyed in the image.
+                                        <a href="https://accessibility.huit.harvard.edu/example-alt-tag" target="_blank">
+                                            Learn more about alternative text
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;div class="..."&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;a href="..."&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;img src="..." alt="Screen capture of Into Practice article about Pushing students to confront limits by transforming the abstract to physical form"&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;/a&gt;</code>
+                                        <br>
+                                        <code>&lt;/div&gt;</code>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 5-->
+
+                        </div><!-- / Landing Page findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                            <a href="img-landingPage_annotated.png" target="_blank"
+                               title="Select to open full size image in a new tab">
+                                <img src="img-landingPage_annotated.png" width="100%" class="border img-responsive img-rounded">
+                            </a>
+                            <p class="text-muted">
+                                Landing page at
+                                <a href="https://hilt.harvard.edu/" target="_blank">
+                                    https://hilt.harvard.edu/
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                            </p>
+                        </div><!-- / Landing Page image-->
+                    </div><!-- / Landing Page findings and recommendations 1 through 5-->
+
+                    <div class="row" style="margin-top:4em">
+                        <div class="col-sm-6">
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➏
+                                        </span>
+                                        Headings structure.
+                                    </td>
+                                    <td width="50%">
+                                        The heading levels (1-6) are often considered a way of describing and determining
+                                        the “importance” of a heading, with h1 being the most important.
+                                        <br>
+                                        Reflecting structure accurately allows screen-reader users to use their screen
+                                        reader's heading-navigation feature to navigate by heading level, building up an
+                                        idea of document structure. It also ensures that, for people who use custom
+                                        stylesheets, heading structure is preserved even when the appearance of headings is
+                                        changed.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Heading structure is absent and inconsistent
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Heading levels determine the structure of a page, and this structure depends on
+                                        sections belonging to subsections. Using heading levels to describe this
+                                        relationship is quite simple: An <code>h2</code> would head a section that may
+                                        contain subsections. To show that these are subsections, you would code their
+                                        headings with an <code>h3</code>.
+                                        <a href="https://accessibility.huit.harvard.edu/%E2%9C%8E-practice-heading-structure" target="_blank">
+                                            Learn more about headings
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 6-->
+                        </div><!-- / Landing Page findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                        <a href="img-landingPage_heading_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                            <img src="img-landingPage_heading_annotated.png" width="100%" class="border img-responsive img-rounded">
+                        </a>
+                        <p class="text-muted">
+                            Landing page at
+                            <a href="https://hilt.harvard.edu/" target="_blank">
+                                https://hilt.harvard.edu/
+                                <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                            </a>
+                        </p>
+                    </div><!-- / Landing Page image-->
+                    </div><!-- / Landing Page findings and recommendations 6-->
+
+                    <div class="row" style="margin-top:4em">
+                        <div class="col-sm-6">
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➐
+                                        </span>
+                                        Encode elements in a logical order.
+                                    </td>
+                                    <td width="50%">
+                                        Screen readers read page content in a linear order, which is defined by the
+                                        order that content appears in the source code (the Document Object Model) at a
+                                        given time. Sometimes, when visual positioning is used to change the linear
+                                        order for display purposes, the logical order is lost when read by a screen
+                                        reader. This can affect both blind screen-reader users and sighted people with
+                                        reading difficulties who are listening to content being read.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Each topic title (e.g.: "What Content Type?" by 71) is disconnected by its content (check boxes by 72)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Make sure that content is announced in a logical order. Use CSS to position
+                                        content, rather than layout tables. Be aware of the potential effects on reading
+                                        flow when using CSS to position content in a location that’s significantly
+                                        different from where it appears in the content order. Use a DOM inspection tool
+                                        to check the rendered code order, especially when the content is dynamically
+                                        updated.
+                                        <a href="https://accessibility.huit.harvard.edu/encode-elements-logical-order" target="_blank">
+                                            Learn more about logical order
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 7-->
+                        </div><!-- / Landing Page findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                        <a href="img-landingPage_structure_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                            <img src="img-landingPage_structure_annotated.png" width="100%" class="border img-responsive img-rounded">
+                        </a>
+                        <p class="text-muted">
+                            Landing page at
+                            <a href="https://hilt.harvard.edu/" target="_blank">
+                                https://hilt.harvard.edu/
+                                <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                            </a>
+                        </p>
+                    </div><!-- / Landing Page image-->
+                    </div><!-- / Landing Page findings and recommendations 7-->
+
+                    <div class="row" style="margin-top:4em">
+                        <div class="col-sm-6">
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➑
+                                        </span>
+                                        Interactive controls must be keyboard focusable.
+                                        For users who either cannot or choose not to use a mouse, keyboard navigation is
+                                        their primary means of reaching everything on screen. This audience includes
+                                        users with motor impairments, such as Repetitive Stress Injury (RSI) or
+                                        paralysis, as well as screen reader users. For a good keyboarding experience aim
+                                        to have a logical tab order and easily discernable focus styles.
+                                    </td>
+                                    <td width="50%">
+                                        Custom interactive controls are keyboard focusable and display a focus indicator.
+                                        <a href="https://developers.google.com/web/fundamentals/accessibility/how-to-review#start_with_the_keyboard" target="_blank">
+                                            Learn more about keyboard focusable controls.
+                                        </a>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Each topic title (e.g.: "What Content Type?" by 8) cannot be selected by the use
+                                        of the tab and enter keys.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ul>
+                                            <li>
+                                                If new content is added to the page, try to make sure that the user’s
+                                                focus is directed to that content so they can take action on it. See <a
+                                                    href="https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_at_the_page_level"
+                                                    target="_blank">Managing Focus at the Page Level</a> and <a href="
+https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html" target="_blank">WCAG 3.2.2
+                                            </a> for examples.
+                                            </li>
+                                            <li>
+                                                Check all custom controls for an appropriate role and any required ARIA
+                                                attributes that confer their state. For example, a custom checkbox will
+                                                need a role=”checkbox” and aria-checked=”true|false” to properly convey
+                                                its state. See the <a
+                                                    href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/"
+                                                    target="_blank">Introduction to ARIA</a> for a general overview of
+                                                how ARIA can provide missing semantics for custom controls.
+                                            </li>
+                                            <li>
+                                                The flow of information should make sense. Because screen readers
+                                                navigate the page in DOM order, if you’ve used CSS to visually
+                                                reposition elements, they may be announced in a nonsensical sequence. If
+                                                you need something to appear earlier in the page, try to physically move
+                                                it earlier in the DOM.
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 8-->
+                        </div><!-- / Landing Page findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                        <a href="img-landingPage_focus_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                            <img src="img-landingPage_focus_annotated.png" width="100%" class="border img-responsive img-rounded">
+                        </a>
+                        <p class="text-muted">
+                            Landing page at
+                            <a href="https://hilt.harvard.edu/" target="_blank">
+                                https://hilt.harvard.edu/
+                                <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                            </a>
+                        </p>
+                    </div><!-- / Landing Page image-->
+                    </div><!-- / Landing Page findings and recommendations 8-->
+
+                    <div class="col-sm-12">
+                        <hr>
+                    </div><!-- / Section ruler -->
+
+
+                    <div class="col-sm-12" style="margin-top:40em">&nbsp;</div>
+                    <!--This div is here only to allow for enough blank vertical space so that if the last content scrolls to the top of the browser page when selected by an anchor link. -->
+
+                </div><!-- Right Nav -->
+
+            </div><!-- / row -->
+
+        </div><!-- / container-fluid -->
+
+
+        <!-- Bootstrap script for collapse side nav - start
+        ================================================== -->
+
+        <script async="" src="//www.google-analytics.com/analytics.js"></script>
+        <!-- http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js -->
+        <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap script for collapse side nav - end
+        ================================================== -->
+
+
+        <!-- Script for smooth scroll - start
+        ================================================== -->
+        <script>
+                  $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+
+                    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+
+                        var target = $(this.hash);
+
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+                          if (target.length) {
+
+                              $('html, body').animate({
+
+                                  scrollTop: target.offset().top-70
+
+                              }, 1000);
+
+                              e.preventDefault();
+
+                          }
+
+                      }
+
+                });
+
+
+
+        </script>
+
+        <!-- Script for smooth scroll - end
+        ================================================== -->
+
+
+        <div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span
+                class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1552</span> x <span
+                class="tooltipHeight" id="winHeight">369</span><br><span class="tooltipTitle">Viewport size: </span><span
+                class="tooltipWidth" id="vpWidth">1552</span> x <span class="tooltipHeight" id="vpHeight">369</span></div>
+    </body>
+</html>
