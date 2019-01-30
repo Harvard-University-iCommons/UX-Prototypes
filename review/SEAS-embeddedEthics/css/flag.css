@@ -30,3 +30,11 @@
   0%   {left: -18em; top: 30em}
   100%  {left: -.5em; top: 30em}
 }
+
+.alert-flag {
+padding: 0em;
+background-color: #ffffff;
+color: #000;
+border-color: #17419E;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
