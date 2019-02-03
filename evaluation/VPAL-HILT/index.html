@@ -100,12 +100,21 @@
 
             <div class="container-fluid">
 
-                <div class="navbar-header">
+                <div class="navbar-header" style="width: 100%;">
 
-                    <a class="navbar-brand" style="margin-bottom:.45em">
-                        <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
-                    </a>
-                    <p class="navbar-text" style="color: #ccc; font-size: 1.5em;">HILT Accessibility / VPAL</p>
+                    <div class="container-fluid">
+
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <a class="navbar-brand">
+                                <img src="https://rawgit.com/Harvard-University-iCommons/UX-Prototypes/master/image/harvard-logo.png">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-9" style="margin-top:-.35em;">
+                            <p class="navbar-text" style="color: #ccc; font-size: 1.5em;">VPAL / HILT User Experience</p>
+                        </div>
+
+                    </div>
+
                 </div><!-- / navbar-header -->
 
             </div><!-- / container-fluid -->
@@ -138,6 +147,14 @@
                             </ul>
 
                         </li><!-- / Accessibility -->
+
+                        <li class="text-muted" style="padding-left: 1em; margin-top: .75em;"><!-- Usability -->
+                            Usability
+                        </li><!-- /Usability -->
+
+                        <li class="text-muted" style="padding-left: 1em; margin-top: 1.5em;"><!-- Mobility -->
+                            Mobility
+                        </li><!-- /Mobility -->
 
                     </ul>
                 </div><!-- Left Nav -->
@@ -339,30 +356,17 @@
 
                             <table class="table table-bordered table-condensed">
                                 <tr>
-                                    <th>
+                                    <th colspan="2">
                                         Finding
-                                    </th>
-                                    <th>
-                                        Recommendation
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td width="50%">
+                                    <td colspan="2">
                                         <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
                                             ➋
                                         </span>
                                         Background and foreground colors do not have a sufficient contrast ratio.
-                                    </td>
-                                    <td width="50%">
-                                        Labels ensure that form controls are announced properly by assistive technologies,
-                                        like screen readers.
-                                        <br>
-                                        <a href="https://dequeuniversity.com/rules/axe/2.2/color-contrast?application=lighthouse" target="_blank">
-                                            Learn more about color contrast.
-                                            <sup><i class="fas fa-external-link-alt fa-sm"></i></sup>
-                                        </a>
-
-                                    </td>
+                                    <td>
                                 </tr>
                                 <tr>
                                     <th colspan="2">
