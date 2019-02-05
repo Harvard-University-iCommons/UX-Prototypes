@@ -138,7 +138,7 @@
                                 <li><a href="#AccessibilitySpecifications" style="padding-left: 3em; margin-top: -1em;">Specifications</a></li>
                                 <li><a href="#AccessibilitySummary" style="padding-left: 3em; margin-top: -1em;">Summary</a></li>
                                 <li><a href="#AccessibilityLandingPage" style="padding-left: 3em; margin-top: -1em;">Landing page</a></li>
-                                <li class="text-muted" style="padding-left: 3em; padding-top: -.5em;"><span>About HILT</span></li>
+                                <li><a href="#AccessibilityAboutHILT" style="padding-left: 3em; margin-top: -1em;">About HILT</a></li>
                                 <li class="text-muted" style="padding-left: 3em; padding-top: .5em;"><span>Funding Opportunities</span></li>
                                 <li class="text-muted" style="padding-left: 3em; margin-top: .5em;"><span>Resources</span></li>
                                 <li class="text-muted" style="padding-left: 3em; margin-top: .5em;"><span>Ideas and Tools</span></li>
@@ -268,7 +268,8 @@
                     </div><!-- /  Landing Page heading-->
 
                     <div class="row">
-                        <div class="col-sm-6">
+
+                    <div class="col-sm-12">
                             <div style="width: 20em; margin: 0 auto;">
                                 <canvas id="chartjs-4" class="chartjs" style="display: block; margin-bottom: 2em;"></canvas>
                                 <script>
@@ -284,6 +285,9 @@
                                     });
                                 </script>
                             </div>
+                    </div><!-- /  Landing page  chart-->
+
+                        <div class="col-sm-6">
 
                             <table class="table table-bordered table-condensed">
                                 <tr>
@@ -356,12 +360,12 @@
 
                             <table class="table table-bordered table-condensed">
                                 <tr>
-                                    <th colspan="2">
+                                    <th>
                                         Finding
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td>
                                         <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
                                             ➋
                                         </span>
@@ -369,12 +373,12 @@
                                     <td>
                                 </tr>
                                 <tr>
-                                    <th colspan="2">
+                                    <th>
                                         Failing elements
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td>
                                         <ol start="21">
                                             <li>
                                                 <code>&lt;p&gt;125 Mt. Auburn Street, 4th Floor &lt;br&gt; Cambridge, MA 02138&lt;/p&gt;</code>
@@ -405,19 +409,19 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th colspan="2">
+                                    <th>
                                         Recommendation
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td>
                                         Ensure color contrast of at least 4.5:1 for small text or 3:1 for large text, even
                                         if text is part of an image. Large text has been defined in the requirements as 18pt
                                         or 14pt bold.
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
+                                    <td>
                                         <ol start="21">
                                             <li>Use footer background color <code>#6B7485</code> instead of <code>#88959f</code></li>
                                             <li>Use footer background color <code>#6B7485</code> instead of <code>#88959f</code></li>
@@ -608,7 +612,7 @@
                         <div class="col-sm-6 img-hover">
                             <a href="img-landingPage_annotated.png" target="_blank"
                                title="Select to open full size image in a new tab">
-                                <img src="img-landingPage_annotated.png" width="100%" class="border img-responsive img-rounded">
+                                <img src="img-landingPage_annotated.png" width="100%" class="border img-responsive img-rounded" alt="Screen capture of the landing page with accessibility annotations">
                             </a>
                             <p class="text-muted">
                                 Landing page at
@@ -854,7 +858,7 @@ https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-cha
                         <div class="col-sm-6 img-hover">
                         <a href="img-landingPage_focus_annotated.png" target="_blank"
                            title="Select to open full size image in a new tab">
-                            <img src="img-landingPage_focus_annotated.png" width="100%" class="border img-responsive img-rounded">
+                            <img src="img-landingPage_focus_annotated.png" width="100%" class="border img-responsive img-rounded" alt="Screen capture of the landing page with accessibility annotations">
                         </a>
                         <p class="text-muted">
                             Landing page at
@@ -866,9 +870,281 @@ https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-cha
                     </div><!-- / Landing Page image-->
                     </div><!-- / Landing Page findings and recommendations 8-->
 
+
                     <div class="col-sm-12">
                         <hr>
                     </div><!-- / Section ruler -->
+
+
+                    <div class="col-sm-12">
+                        <h3 class="header" id="AccessibilityAboutHILT">
+                            About HILT
+                        </h3>
+                    </div><!-- /  About HILT heading-->
+
+                    <div class="row">
+
+                    <div class="col-sm-12">
+                        <div style="width: 20em; margin: 0 auto;">
+                                <canvas id="chartjs-5" class="chartjs" style="display: block; margin-bottom: 2em;"></canvas>
+                                <script>
+                                    new Chart(document.getElementById("chartjs-5"),{
+                                        "type":"doughnut","data":{
+                                            "labels":["6% Inaccessible"],
+                                            "datasets":[{
+                                                "label":"My First Dataset",
+                                                "data":[6,94],
+                                                "backgroundColor":["rgb(204, 0, 0)","rgb(240, 240, 240)"]
+                                            }]
+                                        }
+                                    });
+                                </script>
+                            </div>
+                    </div><!-- /  About HILT chart-->
+
+                        <div class="col-sm-6">
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➊
+                                        </span>
+                                        Form elements do not have associated labels.
+                                    </td>
+                                    <td width="50%">
+                                        Labels ensure that form controls are announced properly by assistive technologies,
+                                        like screen readers.
+                                        <br>
+                                        <a href="https://dequeuniversity.com/rules/axe/2.2/label?application=lighthouse" target="_blank">
+                                            Learn more about labels.
+                                            <sup><i class="fas fa-external-link-alt fa-sm"></i></sup>
+                                        </a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing element
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;label&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;span class="screen-reader-text"&gt;Search&lt;/span&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;input placeholder="Search by Keyword" name="_sf_search[]" class="sf-input-text ui-autocomplete-input" type="text" value="" title="" autocomplete="off"&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;/label&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Associate the <code>&lt;label&gt;</code> tag with the input field using the for
+                                        attribute whose value is the id attribute of the input. This creates an explicit,
+                                        rather than implicit, association between the label and the input field.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <code>&lt;label&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;span class="screen-reader-text" <strong>for="SearchByKeyword"</strong>&gt;Search&lt;/span&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;input placeholder="Search by Keyword" <strong>id="SearchByKeyword"</strong> name="_sf_search[]" class="sf-input-text ui-autocomplete-input" type="text" value="" title="" autocomplete="off"&gt;</code>
+                                        <br>
+                                        &nbsp;&nbsp;<code>&lt;/label&gt;</code>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 1-->
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➋
+                                        </span>
+                                        Background and foreground colors do not have a sufficient contrast ratio.
+                                    <td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ol start="21">
+                                            <li>
+                                                <code>&lt;p&gt;125 Mt. Auburn Street, 4th Floor &lt;br&gt; Cambridge, MA 02138&lt;/p&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;a href="mailto:hilt@harvard.edu"&gt;hilt@harvard.edu&lt;/a&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;p class="copyright"&gt;Copyright © 2018 The President and Fellows of Harvard College | &lt;a href="http://accessibility.harvard.edu/"&gt;Accessibility&lt;/a&gt; | &lt;a href="http://www.harvard.edu/reporting-copyright-infringements"&gt;Report Copyright Infringement&lt;/a&gt;&lt;/p&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;a href="http://accessibility.harvard.edu/"&gt;Accessibility&lt;/a&gt;</code>
+                                            </li>
+                                            <li>
+                                                <code>&lt;a href="http://www.harvard.edu/reporting-copyright-infringements"&gt;Report Copyright Infringement&lt;/a&gt;</code>
+                                            </li>
+                                            <li>
+                                                Twitter icon
+                                            </li>
+                                            <li>
+                                                HILT icon
+                                            </li>
+                                        </ol>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Ensure color contrast of at least 4.5:1 for small text or 3:1 for large text, even
+                                        if text is part of an image. Large text has been defined in the requirements as 18pt
+                                        or 14pt bold.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ol start="21">
+                                            <li>Use footer background color <code>#6B7485</code> instead of <code>#88959f</code></li>
+                                            <li>Use footer background color <code>#6B7485</code> instead of <code>#88959f</code></li>
+                                            <li>Use font color <code>#FFFFFF</code> instead of <code>#D6D8DA</code></li>
+                                            <li>Use font color <code>#FFFFFF</code> instead of <code>#D6D8DA</code></li>
+                                            <li>Use font color <code>#FFFFFF</code> instead of <code>#D6D8DA</code></li>
+                                            <li>
+                                                Use image background color <code>#93939A</code> instead of <code>#C6C6C8</code>
+                                                or better yet
+                                                image background color <code>#FFFFFF</code> and Twitter icon transparent or <code>#88959f</code>
+                                            </li>
+                                            <li>Use image background color <code>#D0D1D2</code> or lighter, instead of transparent</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 2-->
+
+                        </div><!-- / About HILT Page findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                            <a href="img-aboutPage_annotated.png" target="_blank"
+                               title="Select to open full size image in a new tab">
+                                <img src="img-aboutPage_annotated.png" width="100%" class="border img-responsive img-rounded" alt="Screen capture of the about HILT page with accessibility annotations">
+                            </a>
+                            <p class="text-muted">
+                                About HILT page at
+                                <a href="https://hilt.harvard.edu/about-hilt/" target="_blank">
+                                    https://hilt.harvard.edu/about-hilt/
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                            </p>
+                        </div><!-- / About HILT Page image-->
+
+                    </div><!-- / About HILT Page findings and recommendations 1 through 2-->
+
+                    <div class="row" style="margin-top:4em">
+
+                        <div class="col-sm-6">
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                    <th>
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <!--http://xahlee.info/comp/unicode_circled_numbers.html-->
+                                        <span style="font-size: 2em; vertical-align: middle; color: rgb(204, 0, 0);">
+                                            ➌
+                                        </span>
+                                        Headings structure.
+                                    </td>
+                                    <td width="50%">
+                                        The heading levels (1-6) are often considered a way of describing and determining
+                                        the “importance” of a heading, with h1 being the most important.
+                                        <br>
+                                        Reflecting structure accurately allows screen-reader users to use their screen
+                                        reader's heading-navigation feature to navigate by heading level, building up an
+                                        idea of document structure. It also ensures that, for people who use custom
+                                        stylesheets, heading structure is preserved even when the appearance of headings is
+                                        changed.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Failing elements
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Heading structure is absent and inconsistent
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        Recommendation
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Heading levels determine the structure of a page, and this structure depends on
+                                        sections belonging to subsections. Using heading levels to describe this
+                                        relationship is quite simple: An <code>h2</code> would head a section that may
+                                        contain subsections. To show that these are subsections, you would code their
+                                        headings with an <code>h3</code>.
+                                        <a href="https://accessibility.huit.harvard.edu/%E2%9C%8E-practice-heading-structure" target="_blank">
+                                            Learn more about headings
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Finding 6-->
+                        </div><!-- / About HILT Page findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                        <a href="img-aboutPage_heading_annotated.png" target="_blank"
+                           title="Select to open full size image in a new tab">
+                            <img src="img-aboutPage_heading_annotated.png" width="100%" class="border img-responsive img-rounded" alt="Screen capture of the about HILT page with accessibility annotations">
+                        </a>
+                        <p class="text-muted">
+                            About HILT page at
+                            <a href="https://hilt.harvard.edu/about-hilt/" target="_blank">
+                                https://hilt.harvard.edu/about-hilt/
+                                <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                            </a>
+                        </p>
+                    </div><!-- / About HILT Page image-->
+
+                    </div><!-- / About HILT findings and recommendations 3-->
 
 
                     <div class="col-sm-12" style="margin-top:40em">&nbsp;</div>
