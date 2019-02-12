@@ -139,7 +139,7 @@
                                 <li><a href="#AccessibilitySummary" style="padding-left: 3em; margin-top: -1em;">Summary</a></li>
                                 <li><a href="#AccessibilityLandingPage" style="padding-left: 3em; margin-top: -1em;">Landing page</a></li>
                                 <li><a href="#AccessibilityAboutHILT" style="padding-left: 3em; margin-top: -1em;">About HILT</a></li>
-                                <li class="text-muted" style="padding-left: 3em; padding-top: .5em;"><span>Funding Opportunities</span></li>
+                                <li><a href="#AccessibilityFundingOpportunities" style="padding-left: 3em; margin-top: -1em;">Funding Opportunities</a></li>
                                 <li class="text-muted" style="padding-left: 3em; margin-top: .5em;"><span>Resources</span></li>
                                 <li class="text-muted" style="padding-left: 3em; margin-top: .5em;"><span>Ideas and Tools</span></li>
                                 <li class="text-muted" style="padding-left: 3em; margin-top: .5em;"><span>Events</span></li>
@@ -269,7 +269,7 @@
 
                     <div class="row">
 
-                    <div class="col-sm-12">
+                        <div class="col-sm-12">
                             <div style="width: 20em; margin: 0 auto;">
                                 <canvas id="chartjs-4" class="chartjs" style="display: block; margin-bottom: 2em;"></canvas>
                                 <script>
@@ -870,11 +870,9 @@ https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-cha
                     </div><!-- / Landing Page image-->
                     </div><!-- / Landing Page findings and recommendations 8-->
 
-
                     <div class="col-sm-12">
                         <hr>
                     </div><!-- / Section ruler -->
-
 
                     <div class="col-sm-12">
                         <h3 class="header" id="AccessibilityAboutHILT">
@@ -884,7 +882,7 @@ https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-cha
 
                     <div class="row">
 
-                    <div class="col-sm-12">
+                        <div class="col-sm-12">
                         <div style="width: 20em; margin: 0 auto;">
                                 <canvas id="chartjs-5" class="chartjs" style="display: block; margin-bottom: 2em;"></canvas>
                                 <script>
@@ -985,7 +983,7 @@ https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-cha
                                             ➋
                                         </span>
                                         Background and foreground colors do not have a sufficient contrast ratio.
-                                    <td>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>
@@ -1145,6 +1143,70 @@ https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-cha
                     </div><!-- / About HILT Page image-->
 
                     </div><!-- / About HILT findings and recommendations 3-->
+
+                    <div class="col-sm-12">
+                        <hr>
+                    </div><!-- / Section ruler -->
+
+                    <div class="col-sm-12">
+                        <h3 class="header" id="AccessibilityFundingOpportunities">
+                            Funding Opportunities
+                        </h3>
+                    </div><!-- /  Funding Opportunities heading-->
+
+                    <div class="row">
+
+                        <div class="col-sm-12">
+                        <div style="width: 20em; margin: 0 auto;">
+                                <canvas id="chartjs-6" class="chartjs" style="display: block; margin-bottom: 2em;"></canvas>
+                                <script>
+                                    new Chart(document.getElementById("chartjs-6"),{
+                                        "type":"doughnut","data":{
+                                            "labels":["80% Inaccessible"],
+                                            "datasets":[{
+                                                "label":"My First Dataset",
+                                                "data":[80,20],
+                                                "backgroundColor":["rgb(204, 0, 0)","rgb(240, 240, 240)"]
+                                            }]
+                                        }
+                                    });
+                                </script>
+                            </div>
+                    </div><!-- /  Funding Opportunities chart-->
+
+                        <div class="col-sm-6">
+
+                            <table class="table table-bordered table-condensed">
+                                <tr>
+                                    <th>
+                                        Finding
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Consistent findings as on the About Hilt page (form labels, color contrast,
+                                        heading structure)
+                                    </td>
+                                </tr>
+
+                            </table><!-- /  Findings -->
+
+                        </div><!-- / Funding Opportunities findings and recommendations-->
+                        <div class="col-sm-6 img-hover">
+                            <a href="img-fundingOpportunitiesPage__heading_annotated.png" target="_blank"
+                               title="Select to open full size image in a new tab">
+                                <img src="img-fundingOpportunitiesPage__heading_annotated.png" width="100%" class="border img-responsive img-rounded" alt="Screen capture of the Funding Opportunity page with accessibility annotations">
+                            </a>
+                            <p class="text-muted">
+                                About HILT page at
+                                <a href="https://hilt.harvard.edu/funding-opportunities/" target="_blank">
+                                    https://hilt.harvard.edu/funding-opportunities/
+                                    <small><i class="fas fa-external-link-alt fa-sm"></i></small>
+                                </a>
+                            </p>
+                        </div><!-- / Funding Opportunities image-->
+
+                    </div><!-- / Funding Opportunities findings-->
 
 
                     <div class="col-sm-12" style="margin-top:40em">&nbsp;</div>
