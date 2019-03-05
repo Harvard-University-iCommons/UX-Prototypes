@@ -149,8 +149,7 @@
     <!--Definition-->
     <div class="container" style="margin-top: 7em;">
 
-      <section id="module">
-        <div class="container">
+      <section role="contentinfo" aria-label="Breadcrumbs">
 
           <div class="row">
             <div class="col">
@@ -164,22 +163,26 @@
                 </a>
                 /
                 HTML content
-
               </p>
             </div>
-          </div><!--Breadcrumbs-->
+          </div>
 
-          <div class="row">
-            <div class="col">
-              <hr>
-            </div>
-          </div><!--ruler-->
+      </section><!--Breadcrumbs-->
 
-          <div class="col">
+      <div class="row">
+        <div class="col">
+          <hr>
+        </div>
+      </div><!--ruler-->
+
+      <div class="row">
+        <div class="col-8 mx-auto">
+
+          <section role="contentinfo" aria-label="Content structure">
             <h2>
               HTML content
             </h2>
-            <h3>
+            <h3 id="contentStructure">
               Content structure
             </h3>
             <p>
@@ -194,7 +197,7 @@
             <h4>
               Example of initial content structure
             </h4>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <ol>
                 <li>Branding</li>
                 <li>Navigation</li>
@@ -205,7 +208,7 @@
             <h4>
               Example of content with additional detail
             </h4>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <ol>
                 <li>
                   Branding
@@ -273,7 +276,7 @@
             <h4>
               Example of content with HTML structure
             </h4>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <ol>
                 <li>
                   Branding
@@ -338,7 +341,11 @@
                 </li>
               </ol>
             </div>
+          </section><!--Content structure-->
 
+          <section role="contentinfo" aria-label="HTML styles">
+
+            <div id="htmlStyles" style="margin-bottom: 6em;"></div>
             <h3>
               HTML styles
             </h3>
@@ -387,7 +394,7 @@
             <p>
               This example sets the text color of the <code class="w3-codespan">&lt;h1&gt;</code> element to blue:
             </p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <div class="w3-code notranslate htmlHigh">
                 <span style="color:brown"><span style="color:mediumblue">&lt;</span>h1<span
                         style="color:red"> style<span style="color:mediumblue">="color:blue;"</span></span><span
@@ -406,7 +413,7 @@
               An internal CSS is defined in the <code class="w3-codespan">&lt;head&gt;</code> section of an HTML page,
               within a <code class="w3-codespan">&lt;style&gt;</code> element:
             </p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>!DOCTYPE<span
                       style="color:red"> html</span><span style="color:mediumblue">&gt;</span></span>
               <br>
@@ -483,7 +490,7 @@
               section of the HTML page:
             </p>
 
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>!DOCTYPE<span
                       style="color:red"> html</span><span style="color:mediumblue">&gt;</span></span>
               <br>
@@ -534,7 +541,7 @@
             <p>
               Here is how the "styles.css" looks:
             </p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown">
  body <span style="color:black">{</span><span style="color:red"><br>&nbsp;&nbsp;background-color<span
                       style="color:mediumblue"><span style="color:black">:</span> powderblue<span
@@ -550,9 +557,33 @@
               CSS Fonts
             </h5>
             <p>The CSS <code class="w3-codespan">color</code> property defines the text color to be used.</p>
+
+            <p class="alert-info col-7 ml-4">
+              <a href="https://htmlcolorcodes.com/" target="_blank">
+                <i class="fas fa-info-circle"></i>
+                HTML color codes
+              </a>
+            </p>
+
             <p>The CSS <code class="w3-codespan">font-family</code> property defines the font to be used.</p>
+
+            <p class="alert-info col-7 ml-4">
+              <a href="https://websitesetup.org/web-safe-fonts-html-css/" target="_blank">
+                <i class="fas fa-info-circle"></i>
+                Web "safe" fonts
+              </a>
+            </p>
+
             <p>The CSS <code class="w3-codespan">font-size </code> property defines the text size to be used.</p>
-            <div class="alert alert-secondary col-6" role="alert">
+
+            <p class="alert-info col-7 ml-4">
+              <a href="https://kyleschaeffer.com/css-font-size-em-vs-px-vs-pt-vs-percent" target="_blank">
+                <i class="fas fa-info-circle"></i>
+                CSS Font-Size: em vs. px vs. pt vs. percent
+              </a>
+            </p>
+
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>!DOCTYPE<span
                       style="color:red"> html</span><span style="color:mediumblue">&gt;</span></span><br>
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>html<span style="color:mediumblue">&gt;</span></span><br><span
@@ -587,7 +618,7 @@
               CSS Border
             </h5>
             <p>The CSS <code class="w3-codespan">border</code> property defines a border around an HTML element:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown">
  p <span style="color:black">{</span><span style="color:red"><br>&nbsp;&nbsp;border<span style="color:mediumblue"><span
                       style="color:black">:</span> 1px
@@ -600,7 +631,7 @@ solid powderblue<span style="color:black">;</span></span><br></span><span style=
             </h5>
             <p>The CSS <code class="w3-codespan">padding</code> property defines a padding (space) between
               the text and the border:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown">
  p <span style="color:black">{</span><span style="color:red"><br>&nbsp; border<span style="color:mediumblue"><span style="color:black">:</span> 1px
 solid powderblue<span style="color:black">;</span></span><br>&nbsp; padding<span style="color:mediumblue"><span style="color:black">:</span> 30px<span style="color:black">;</span></span><br></span><span style="color:black">}</span> </span>
@@ -610,7 +641,7 @@ solid powderblue<span style="color:black">;</span></span><br>&nbsp; padding<span
               CSS Margin
             </h5>
             <p>The CSS <code class="w3-codespan">margin</code> property defines a margin (space) outside the border:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown">
  p <span style="color:black">{</span><span style="color:red"><br>&nbsp; border<span style="color:mediumblue"><span style="color:black">:</span> 1px
 solid powderblue<span style="color:black">;</span></span><br>&nbsp;&nbsp;margin<span style="color:mediumblue"><span style="color:black">:</span> 50px<span style="color:black">;</span></span><br>
@@ -623,7 +654,7 @@ solid powderblue<span style="color:black">;</span></span><br>&nbsp;&nbsp;margin<
             <p><strong>Note:</strong> The id of an element should be unique within a page, so the id selector is used to select one unique element!</p>
             <p>To define a specific style for one special element, add an <code class="w3-codespan">id</code> attribute
               to the element:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span style="color:red"> id<span style="color:mediumblue">="p01"</span></span><span style="color:mediumblue">&gt;</span></span>
             </div>
             <p>then define a style for the element with the specific id:</p>
@@ -636,11 +667,11 @@ solid powderblue<span style="color:black">;</span></span><br>&nbsp;&nbsp;margin<
               The <code>class</code> Attribute
             </h5>
             <p>To define a style for special types of elements, add a <code class="w3-codespan">class</code> attribute to the element:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>p<span style="color:red"> class<span style="color:mediumblue">="error"</span></span><span style="color:mediumblue">&gt;</span></span>
             </div>
             <p>then define a style for the elements with the specific class:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown">
 p.error <span style="color:black">{</span><span style="color:red"><br>&nbsp;&nbsp;color<span style="color:mediumblue"><span style="color:black">:</span> red<span style="color:black">;</span></span><br></span><span style="color:black">}</span> </span>
             </div>
@@ -650,23 +681,104 @@ p.error <span style="color:black">{</span><span style="color:red"><br>&nbsp;&nbs
             </h5>
             <p>External style sheets can be referenced with a full URL or with a path relative to the current web page.</p>
             <p>This example uses a full URL to link to a style sheet:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>link<span style="color:red"> rel<span style="color:mediumblue">="stylesheet"</span> href<span style="color:mediumblue">="https://www.w3schools.com/html/styles.css"</span></span><span style="color:mediumblue">&gt;</span></span>
             </div>
             <p>This example links to a style sheet located in the html folder on the current web site:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>link<span style="color:red"> rel<span style="color:mediumblue">="stylesheet"</span> href<span style="color:mediumblue">="/html/styles.css"</span></span><span style="color:mediumblue">&gt;</span></span>
             </div>
             <p>This example links to a style sheet located in the same folder as the current page:</p>
-            <div class="alert alert-secondary col-6" role="alert">
+            <div class="alert alert-secondary col-8" role="alert">
               <span style="color:brown"><span style="color:mediumblue">&lt;</span>link<span style="color:red"> rel<span style="color:mediumblue">="stylesheet"</span> href<span style="color:mediumblue">="styles.css"</span></span><span style="color:mediumblue">&gt;</span></span>
             </div>
 
-          </div>
-        </div>
-      </section>
+            <sup class="text-muted">(Source: <a href="https://www.w3schools.com" target="_blank">w3schools</a>)</sup>
 
-      <sup class="text-muted">(Source: <a href="https://www.w3schools.com" target="_blank">w3schools</a>)</sup>
+          </section><!--HTML styles-->
+
+          <div id="testingEnvironment" style="margin-bottom: 6em;"></div>
+
+          <section role="contentinfo" aria-label="Testing Environment">
+            <h3>
+              Testing Environment
+            </h3>
+            <p>
+              In addition to reviewing and testing user interface code and designs on our computer, online resources
+              allow to upload and review html code on online repositories. This approach also allow access to our code
+              by other users, for reviews and even contribution.
+            </p>
+            <h4>
+              GitHub
+            </h4>
+            <p>
+              <a href="https://github.com/" target="_blank">
+                GitHub
+              </a>
+              is a code hosting platform for collaboration and version control. GitHub lets you (and others) work
+              together on projects.
+            </p>
+            <p>
+              GitHub is not meant to display HTML pages.
+              Many GitHub repositories don't use GitHub Pages to host their HTML files.
+              If you try to open raw version of any HTML, CSS or JS file in a web browser directly from GitHub, all you will
+              see is a source code. GitHub forces them to use the "text/plain" content-type, so they cannot be interpreted.
+            </p>
+            <p>
+              It is possible to view GitHub stored code as HTML pages, as long as your GitHub repository is public and
+              that you don't mind to wait a little while for the recently revised HTML files to finally display.
+            </p>
+            <h4>
+              GitHack
+            </h4>
+            <p>
+              Online services like
+              <a href="https://raw.githack.com/" target="_blank">
+                GitHack
+              </a>
+              can display GitHub stored code as HTML pages.
+              It is not advisable to rely on this approach for hosting websites, since it is not designed to handle
+              frequent access, nor timely display of recently edited HTML files.
+            </p>
+            <p>
+              GitHack, and silimar servivces, art useful for allowing others to review your user interface design and code
+              prior to publishing it in a public or provate domain.
+            </p>
+            <p>
+              Here are
+              <a href="https://alternativeto.net/software/raw-githack-com/" target="_blank">
+                alternatives to GitHack
+              </a>
+            </p>
+          </section><!--Testing Environment-->
+
+          <div id="htmlContentExercise" style="margin-bottom: 6em;"></div>
+
+          <section role="contentinfo" aria-label="HTML content exercise" class="mb-5">
+            <h3>
+              HTML content exercise
+            </h3>
+            <ol>
+              <li>
+                Define the content of a web site using a bullet list
+              </li>
+              <li>
+                Add to the above bullet list HTML tags
+              </li>
+              <li>
+                Using the HTML page implemented on the exercise for
+                <a href="workplan-process_train_intro.html#htmlIntroductionExercise">
+                  HTML introduction</a>,
+                add to it the above content
+              </li>
+              <li>
+                Add basic styles to the above web page.
+              </li>
+            </ol>
+          </section><!--HTML content exercises-->
+
+        </div>
+      </div>
 
     </div>
 
@@ -680,9 +792,6 @@ p.error <span style="color:black">{</span><span style="color:red"><br>&nbsp;&nbs
     $(".popover-link").popover();
 
     </script>
-
-
-
 
   </body>
 
