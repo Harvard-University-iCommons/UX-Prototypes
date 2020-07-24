@@ -44,6 +44,10 @@
     <!-- Custom styles for news flag -->
     <link href="css/flag.css" rel="stylesheet">
 
+    <!-- Vimeo api -->
+    <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+
     <style>
 
       body {
@@ -95,17 +99,77 @@
       padding: 1.1em 1em!important;
       }
 
+      .group {
+  position: relative;
+      padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.group iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#poster-image {
+                  background: url('img/home_video_background.png') center center;
+                background-size: cover;
+                bottom: 0;
+                left: 16px;
+                opacity: 1.0;
+                position: absolute;
+                right: 0;
+                top: 16px;
+                z-index: 10;
+                height: 281px;
+                width: 500px;
+  transition: all 0.3s ease-in;
+}
     </style>
 
   </head>
 
   <body id="page-top">
 
+  <!--News flag 2  -->
+  <div class="box" id="one" hidden>
+      <a href="https://blog.mozilla.org/blog/2019/04/30/2-4-million-in-prizes-for-schools-teaching-ethics-alongside-computer-science/" target="_blank">
+        <div class="alert alert-flag alert-primary alert-dismissible fade show" role="alert">
+          <img src="img/flag/theMozzillaBlog.png" class="card-img-top" alt="Harvard Gazette logo">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true" style="color: #ffffff;">&times;</span>
+          </button>
+          <p style="margin-left: 1em;">
+            $2.4 Million in Prizes for Schools Teaching Ethics Alongside Computer Science
+          </p>
+        </div>
+      </a>
+    </div>
+
+  <!--News flag 1  -->
+  <div class="box" id="two" hidden>
+      <a href="https://news.harvard.edu/gazette/story/2019/04/harvards-embedded-ethics-program-wins-grant/" target="_blank">
+        <div class="alert alert-flag alert-primary alert-dismissible fade show" role="alert">
+          <img src="img/flag/harvardGazette.png" class="card-img-top" alt="Harvard Gazette logo">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true" style="color: #ffffff;">&times;</span>
+          </button>
+          <p style="margin-left: 1em;">
+            Embedded EthiCS wins $150,000 grant. Program aims to make everyday technology more ethical.
+          </p>
+        </div>
+      </a>
+    </div>
+
   <!--News flag  -->
   <div class="box" id="one" hidden>
       <a href="https://www.thecrimson.com/article/2019/2/22/embedded-ethiCS-expands/" target="_blank">
         <div class="alert alert-flag alert-primary alert-dismissible fade show" role="alert">
-          <img src="img/flag/harvardCrimson.png" class="card-img-top" alt="Harvard Gazette logo">
+          <img src="img/flag/harvardCrimson.png" class="card-img-top" alt="Harvard Crimson logo">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true" style="color: #ffffff;">&times;</span>
           </button>
@@ -146,6 +210,9 @@
           <li class="nav-item">
             <a class="nav-link" href="publications.html">Publications</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
         </ul>
       </div>
 
@@ -161,8 +228,8 @@
           <div class="row d-flex align-items-center" style="margin-top: 5.7em;">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding: 1em;">
 
-                <div class="intro-text text-center">
-                <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.5em;">
+              <div class="intro-text text-center">
+                  <div class="intro-lead-in" style="line-height: 1.5em; font-family:verdana,arial,sans-serif; font-style: normal; color: #fff; font-size: 1.5em;">
                     <span style="font-size: larger; color: #FFDB6D; font-weight: 400;">Embedded
                       EthiCS
                     </span>
@@ -180,9 +247,9 @@
                   <hr hidden>
                   <p style="color: #FFDB6D; font-weight: 400;" hidden>
                     Post-Doc Opportunity!
-                    <a class="btn btn-primary" href="https://academicpositions.harvard.edu/postings/8639" target="_blank" role="button" style="color: #873E03;">
-                    Apply here
-                  </a>
+                    <a class="btn btn-primary" href="https://academicpositions.harvard.edu/postings/9386" target="_blank" role="button" style="color: #873E03;">
+                      Apply here
+                    </a>
                   </p>
                   <!--1 of 2 - Hidden from February through September - end -->
                   </div>
@@ -190,7 +257,19 @@
 
               </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding: 1em;">
-                <img src="img/banner/6838824806_c55480e761_z.jpg" style="width: 100%;" alt="Students in a classroom" class="img-fluid">
+                
+              <!-- <img class="MyVideo" src="img/home_video_background.png" alt="" data-videoId="344805927" data-url="http://vimeo.com/344805927"> -->
+
+              <!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/344805927" width="640" height="360" frameborder="0" allowfullscreen>
+                <img class="MyVideo" src="img/home_video_background.png" alt="" data-videoId="344805927" data-url="http://vimeo.com/344805927">
+              </iframe> -->
+                  
+                <div id="poster-image" onmousedown="myFunction()></div>
+                <div class="group" id="process-video"></div>
+                  <iframe id="player_344805927" src="https://player.vimeo.com/video/344805927?wmode=opaque&api=1  &amp;player_id=vimeo&amp;title=0&amp;byline=0&amp;portrait=1&amp;badge=0&amp;color=ffffff&amp;wmode=opaque" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -353,6 +432,8 @@
               <div class="copyright mr-auto">
                 <span style="color: #A6A6A6">Except where otherwise noted, content on this site is licensed under a </span>
                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+                |
+                <a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy">Accessibility</a>
               </div>
             </div>
           </nav>
@@ -373,6 +454,23 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+
+    <script>
+    document.getElementById("poster-image").onmousedown = function() { fadeImage() };
+
+function fadeImage() {
+  document.getElementById("poster-image").style.display = "none";
+}
+
+$(document).ready(function(){
+    var player = $("#player_344805927");
+        froogaloop = $f(player[0].id);
+
+    player.mouseover(function(){
+        froogaloop.api('play');
+    })
+});
+    </script>
 
   </body>
 

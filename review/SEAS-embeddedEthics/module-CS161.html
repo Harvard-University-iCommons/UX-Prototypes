@@ -24,7 +24,7 @@
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <title>Course Modules | CS 061 | Embedded EthiCS @ Harvard</title>
+    <title>Course Modules | CS 161 | Embedded EthiCS @ Harvard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -151,7 +151,7 @@
         <div class="row">
           <div class="col-md-12">
             <a href="module.html" class="moreInfo">Course Modules</a>
-            / CS 61: Systems Programming and Machine Organization
+            / CS 161: Operating Systems 
           </div>
         </div>
     </div>
@@ -204,7 +204,7 @@
                       <strong>
                         Course:
                       </strong>
-                      CS 61: Systems Programming and Machine Organization
+                      CS 161: Operating Systems 
                     </p>
                     <p>
                       <strong>
@@ -216,23 +216,14 @@
                       <strong>
                         Course Description:
                       </strong>
-                      “CS 61 is a first course in computer systems programming, meaning the creation of high-performance
-                      programs that use computer hardware effectively. Although many programs today are written in
-                      high-level programming languages—and many programs simply glue together existing components—the
-                      best programmers are craftspeople who understand their tools. For software builders, this requires
-                      a working knowledge of computer internal organization. It means understanding how machines
-                      interpret instructions, how compilers turn programming languages into instructions, and how
-                      operating systems combine programs and libraries to create running code. And it requires
-                      understanding the factors that affect code performance.
-                    </p>
-                    <p>
-                      CS 61 introduces you the tools you need to build robust, efficient software and the mental tools
-                      you need to understand software systems written by others. We hope you'll discover that systems
-                      software development is fun and worth the effort. We intend the course to be broadly accessible,
-                      though it will be easier for those who have some experience with systems programming in C++ or
-                      other C-like languages.
-                      (<a href="https://cs61.seas.harvard.edu/site/2018/CourseDescription/" target="_blank" class="moreInfo">Course description
-                        <sup><i class="fas fa-external-link-alt fa-sm"></i></sup></a>)"
+                    "This is an in-depth course in operating systems design and implementation, focusing on multicore operating systems
+                    kernels. Operating systems are some of the most complex software artifacts that exist. Kernels abstract the features
+                    provided by computer hardware, making those features safer and more convenient to use. This means that OS designers have
+                    to understand how hardware works (at least at the level of specifications) and how software works. OS programmers also
+                    must become comfortable with navigating in, and contributing to, code bases too large to wholly understand. Most of us
+                    can pick up this important skill.
+                    (<a href="https://read.seas.harvard.edu/cs161-19/" target="_blank" class="moreInfo">Course description
+                      <sup><i class="fas fa-external-link-alt fa-sm"></i></sup></a>)"
                     </p>
                   </div>
                   <div class="col-4">
@@ -251,19 +242,19 @@
                       <strong>
                         Module Topic:
                       </strong>
-                      ASCII, Unicode, and the Ethics of Natural Language Representation
+                      Ethical Tradeoffs in System Design: Performance versus Correctness
                     </p>
                     <p>
                       <strong>
                         Module Author:
                       </strong>
-                      Cat Wade
+                      Kate Vredenburgh
                     </p>
                     <p>
                       <strong>
                         Semesters Taught:
                       </strong>
-                      Fall 2018
+                      Spring 2019
                     </p>
                     <p>
                       <strong>
@@ -275,50 +266,19 @@
                         systems <span class="badge badge-primary">CS</span>
                       </dd>
                       <dd>
-                        ASCII <span class="badge badge-primary">CS</span>
-                      </dd>
-                      <dd>
-                        Unicode  <span class="badge badge-primary">CS</span>
-                      </dd>
-                      <dd>
-                        natural language encoding  <span class="badge badge-primary">CS</span>
-                      </dd>
-                      <dd>
-                        harm <span class="badge badge-warning">phil</span>
-                      </dd>
-                      <dd>
-                        representational harm <span class="badge badge-warning">phil</span>
-                      </dd>
-                      <dd>
-                        allocative harm <span class="badge badge-warning">phil</span>
-                      </dd>
-                      <dd>
-                        stereotypes <span class="badge badge-warning">phil</span>
+                        cost-benefit analysis <span class="badge badge-warning">phil</span>
                       </dd>
                     </dl>
                     <p>
                       <strong>
                         Module Overview:
                       </strong>
-                      In this module, we consider the ethics of natural language representation in modern software
-                      systems. Software systems play an increasingly central role in how we communicate with one
-                      another, and the computer scientists who design these systems are sometimes faced with difficult
-                      choices about what representational resources they should make available to their users. To what
-                      extent, for instance, should social media platforms support the vast array of languages used
-                      throughout the world? To what extent should the developers of smartphone operating systems provide
-                      their users with emoji reflecting the diverse identities and communicative needs of members of
-                      minority groups?
-                    </p>
-                    <p>
-                      This module is co-taught by the professor for the course and the Embedded EthiCS TA. After an
-                      introduction to the ethical issues considered in the module from the TA, the professor gives a
-                      brief presentation on the technical dimensions of the module’s core case study: the shift from
-                      ASCII to Unicode, and the associated choices developers made about which languages to support. The
-                      TA then leads a discussion of the effects these choices had on members of different linguistic
-                      communities, and why those effects matter from an ethical perspective. Finally, students consider
-                      various strategies the developers of Unicode might adopt in order to better address the needs of
-                      minority communities, consistent with other needs the system is designed to satisfy and relevant
-                      technical constraints.
+                    In designing operating systems, engineers need to <i>trade off</i> different positive and negative features of operating
+                    systems that cannot be realized at the same time. Different ways of trading off desiderata impose different costs and
+                    benefits on relevant stakeholders. This module uses <i>cost-benefit analysis</i> as a moral framework to decide on the best way
+                    to decide about these tradeoffs, ethically speaking. The example of designing a system that has fine- or coarse-grained
+                    locking is used throughout the lecture as a way to think systematically about those tradeoffs using cost-benefit
+                    analysis.
                     </p>
                   </div>
                   <div class="col-4">
@@ -337,20 +297,13 @@
                       <strong>
                         Connection to Course Technical Material:
                       </strong>
-                      This module occurs during the course’s first unit on data representation and storage. The
-                      professor’s presentation during the module expands on the technical material already covered in
-                      this unit, considering how it applies to the module’s central case study: the shift from ASCII to
-                      Unicode. This sets the TA up to lead a discussion of how the technical issues discussed by the
-                      professor interact with broader social and ethical concerns.
+                    This module uses the example of deciding whether to use fine- or coarse-grained locking to illustrate the tradeoff
+                    between correctness and performance. Fine- and coarse-grained locking are taught to students earlier in the semester.
                     </p>
                   </div>
                   <div class="col-4">
                     <p class="text-muted small">
-                      We have found that it is important to build modules around real-world case studies that both
-                      connect strongly to technical material discussed in the course and raise ethical issues that
-                      students can readily appreciate. The shift from ASCII to Unicode has both features. Further,
-                      Unicode is the standard for encoding emojis, which provide a particularly intuitive and relatable
-                      way to illustrate the module’s core philosophical concepts (see the sample class activity below).
+                      
                     </p>
                   </div>
                 </div>
@@ -358,32 +311,6 @@
                 <div class="row">
                   <div class="col">
                     <hr>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-12">
-                    <p>
-                      &copy; 2018 by Cat Wade,
-                      "ASCII, Unicode, and the Ethics of Natural Language Representation"
-                      is made available under a
-                      <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" class="moreInfo">Creative
-                        Commons Attribution 4.0 International license (CC BY 4.0)</a>.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-12">
-                    <p>
-                      For the purpose of attribution, cite as:
-                      Cat Wade and Eddie Kohler,
-                      "ASCII, Unicode, and the Ethics of Natural Language Representation"
-                      for CS 61: Systems Programming and Machine Organization,
-                      Fall 2018,
-                      <a href="https://embeddedethics.seas.harvard.edu/" target="_blank" class="moreInfo">Embedded EthiCS @ Harvard</a>.
-                      <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" class="moreInfo">CC BY 4.0</a>.
-                    </p>
                   </div>
                 </div>
 
@@ -406,20 +333,14 @@
                     </p>
                     <ol>
                       <li>
-                        Familiarize students with the technical aspects of ASCII and Unicode, as well as the social
-                        and technical considerations that drove the shift from ASCII to Unicode.
+                        Introduce students to the framework of cost-benefit analysis as a tool for thinking through ethical tradeoffs.
                       </li>
                       <li>
-                        Introduce students to two philosophical concepts that are useful for evaluating formal systems
-                        for representing natural language, allocative harm and representational harm.
+                        Familiarize students with the strengths and criticisms of this framework.  
                       </li>
                       <li>
-                        Give students practice applying these concepts to evaluate choices made by software developers
-                        about what representational resources to provide to their users.
-                      </li>
-                      <li>
-                        Give students practice identifying and evaluating possible strategies for alleviating
-                        representational harms in the design of formal systems for representing natural languages.
+                        Give students practice applying cost-benefit analysis to make a decision about whether to use fine- or coarse-grained
+                        locking in an imaginary scenario.
                       </li>
                     </ol>
                   </div>
@@ -441,24 +362,22 @@
                     </p>
                     <ol>
                       <li>
-                        How should software developers decide what representational resources to make available to their
-                        users for use in communication?
+                        How should software developers make tradeoffs between performance and correctness?
                       </li>
                       <li>
-                        In what ways can the choices developers make about what representational resources to make
-                        available negatively affect the members of different communities, including minority
-                        communities?
+                        What are the strengths and weaknesses of the cost-benefit analysis framework?
                       </li>
                       <li>
-                        What is the difference between 'representational' and 'allocative' harm?
+                        Does the distribution of costs and benefits matter morally? 
                       </li>
                       <li>
-                        What are stereotypes, and in what ways can relying on stereotypes harm others?
+                        Should the calculation of costs and benefits be sensitive to individuals’ responsibility for those costs and benefits? 
                       </li>
                       <li>
-                        Were the choices made by the developers of ASCII and Unicode the right choices, given the
-                        constrains they were operating under, or were there other choices that would have been better
-                        from an ethical perspective?
+                        Can costs and benefits be monetized, or otherwise placed on a single scale, or are they instead incommensurable?
+                      </li>
+                      <li>
+                        Should future costs and benefits be discounted? 
                       </li>
                     </ol>
                   </div>
@@ -480,15 +399,15 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-4 mx-auto text-center">
-                    <div class="alert alert-info" role="alert">
-                      Under Construction
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
                   <div class="col-8">
+                    <ul>
+                        <li>
+                          Boardman (2006), "Cost-Benefit Analysis: Concepts and Practice, excerpts."  
+                        </li>
+                        <li>
+                          Heinzerling and Ackerman (2002), “Pricing the Priceless.” 
+                        </li>
+                    </ul>
                     <p>
                       <strong>
                         Key Philosophical Concepts:
@@ -496,19 +415,23 @@
                     </p>
                     <ul>
                       <li>
-                        Harm and intent.
+                        Costs and benefits  
                       </li>
                       <li>
-                        Representational harms and allocative harms.
+                        Discounting 
                       </li>
                       <li>
-                        Stereotypes.
+                        Distribution
+                      </li>
+                      <li>
+                        Incommensurable values 
                       </li>
                     </ul>
                   </div>
                   <div class="col-4">
                     <p class="text-muted small">
-
+                        Cost-Benefit Analysis gives an introduction to cost-benefit analysis. “Pricing the Priceless” outlines arguments in
+                        favor of and against cost-benefit analysis.
                     </p>
                   </div>
                 </div>
@@ -524,14 +447,6 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-4 mx-auto text-center">
-                    <div class="alert alert-info" role="alert">
-                      Under Construction
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
                   <div class="col-12">
                     <p>
                       <strong>
@@ -540,22 +455,19 @@
                     </p>
                     <ol>
                       <li>
-                        An introduction to the ethics of character encoding: should emoji be more inclusive?
+                        Introduction to costs and benefits and the problem of tradeoffs.
                       </li>
                       <li>
-                        Technical material – ASCII, Unicode, UTF-8.
+                        Example: fine- vs. coarse-grained locking and the trade-off between performance and correctness. 
                       </li>
                       <li>
-                        Representational harm vs. allocative harm.
+                        Cost-benefit analysis.
                       </li>
                       <li>
-                        Active learning exercise: how could developers make the current set of emoji more inclusive?
+                        Criticisms of cost-benefit analysis. 
                       </li>
                       <li>
-                        Representational and allocative harms in the development of ASCII and Unicode.
-                      </li>
-                      <li>
-                        Remaining ethical issues with Unicode, and how best to address them.
+                        Active learning activity: choosing between fine- and coarse-grained locking. 
                       </li>
                     </ol>
                   </div>
@@ -570,13 +482,24 @@
                 <div class="row">
                   <div class="col-8">
                     <p>
-                      <strong>
-                        Sample Class Activity:
-                      </strong>
-                      After being introduced to the concept of representational harm, students are presented with a
-                      slide containing the current set of ‘yellow’ emoji representing families of different kinds. In
-                      small groups, students discuss what kinds of families are left out from the current set, and
-                      whether those omissions constitute representational harms.
+                        <strong>
+                            Sample Class Activity:
+                        </strong>
+                        <p>Students are asked to read the scenario below: </p>
+                        <p class="ml-5">
+                            Imagine that you work for a company that designs operating systems for large-scale water treatment plants. A water
+                            treatment plant removes contaminants from water that humans will consume and factories will use; factory equipment
+                            can tolerate higher levels of impurities than humans can tolerate. Representatives from the Cambridge city
+                            government are thinking about purchasing your OS. However, the officials complain that your OS has poor scalability
+                            as the number of contamination sensors to monitor gets large. You debug the scaling problem and learn that it is
+                            caused by the use of coarse-grained locking inside your OS. A city official suggests that you modify the OS to use
+                            fine-grained locking. However, the redesign would need to be finished quickly, or else you will lose the government
+                            contract.
+                        </p>
+                        <p>
+                            Students are then broken up into small groups and asked to deliberate about what they would do in this scenario.
+                            Following the small group discussion, the Embedded EthiCS fellow leads a class-wide debrief.
+                        </p>
                     </p>
                   </div>
                   <div class="col-4">
